@@ -1,0 +1,140 @@
+% xelatex 模板 - 摩托车维修全手册
+% 目标：A4 单栏，中文，章节书签，手机友好
+
+\documentclass[11pt,a4paper,oneside]{book}
+
+\usepackage[fontset=none]{ctex}
+\usepackage[a4paper,top=2.3cm,bottom=2.3cm,left=2.2cm,right=2.2cm,headheight=14pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{xcolor}
+% pandoc longtable 列宽用到 \real{...}（来自 siunitx）
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+
+% 中文断行优化
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% 字体设置
+% macOS 系统自带 .ttc 字体必须用 Path + 文件名的写法，
+% 单写字体名 fontspec 找不到（Hiragino Sans GB.ttc 含 5 个字重）
+\defaultfontfeatures{Path = /System/Library/Fonts/}
+\setCJKmainfont[
+  UprightFont = Hiragino Sans GB.ttc,
+  BoldFont = STHeiti Medium.ttc,
+  ItalicFont = STHeiti Light.ttc,
+  BoldItalicFont = STHeiti Medium.ttc
+]{}
+\setCJKsansfont[
+  UprightFont = Hiragino Sans GB.ttc,
+  BoldFont = STHeiti Medium.ttc
+]{}
+\setCJKmonofont{STHeiti Light.ttc}
+% 西文也用系统自带字体，避免依赖 BasicTeX 没有的 Latin Modern
+\setmainfont{Hiragino Sans GB.ttc}
+
+% pandoc 会把某些 markdown 表格转成 longtable 并写出
+%   {\def\LTcaptype{none} % do not increment counter
+% 但 ctex/xeCJK 环境下 'none' 这个 counter 没定义，会编译失败。
+% 兜底：在 begin{document} 前定义这个 counter，让 caption 跳号失效但表格正常渲染。
+\newcounter{none}
+
+% pandoc 在 enumerate/itemize 块开头会写 \tightlist，
+% 原本依赖 enumitem 包提供。我们没用 enumitem，把它定义为空操作即可。
+\providecommand{\tightlist}{}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small 摩托车维修全手册}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% 章节标题样式（手机友好：清晰醒目）
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\centering}
+  {\chaptertitlename\ \thechapter}{1.2ex}{\Huge}
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection}{1em}{}
+
+% 目录样式
+\renewcommand{\cftchapfont}{\bfseries\large}
+\renewcommand{\cftsecfont}{\normalsize}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftchappagefont}{\bfseries}
+\setlength{\cftbeforechapskip}{8pt}
+
+% 超链接（PDF 书签）
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue!70!black,
+  citecolor=black,
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=2,
+  bookmarksnumbered=true,
+  pdfstartview=FitH,
+  pdftitle={摩托车维修全手册},
+  pdfauthor={贾维斯 编},
+  pdfsubject={摩托车维修通用工具书},
+  pdfkeywords={摩托车,维修,保养,故障诊断,改装}
+}
+
+% 代码块
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  rulecolor=\color{black!20},
+  backgroundcolor=\color{black!3}
+}
+
+\begin{document}
+
+% 封面页
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\fontsize{36pt}{44pt}\selectfont\bfseries 摩托车维修全手册}\\[1.5cm]
+{\Large 从入门到精通的实用工具书}\\[2cm]
+{\large 贾维斯\quad 编}\\[1cm]
+{\large \today}\\[4cm]
+\begin{minipage}{0.85\textwidth}
+\centering\small
+工具书 · 教科书 · 经验库\\[0.5em]
+6 卷 · 25 章 · 10 附录 · 约 30,000 行
+\end{minipage}
+\vfill
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+
+\mainmatter
+
+$body$
+
+\end{document}
