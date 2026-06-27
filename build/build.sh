@@ -18,22 +18,38 @@ cd "$ROOT"
 # ─────────────── 1. 合并 markdown ───────────────
 # 顺序：vol01..vol06 → appendix；每个文件之间加水平分割 + 元信息注释，
 # 这样 pandoc 能识别 chapter / section 分页点。
+# 把文件内的独立 `---` 行替换为水平分割线注释
+# （pandoc 默认把开头的 --- 当 YAML，会让 CH07 内部的 --- 触发解析错误）
+# 使用 awk 一次性处理每个文件
+process_file() {
+  local f="$1"
+  local is_first="$2"
+  if [ "$is_first" -eq 1 ]; then
+    printf '<!-- file: %s -->\n\n' "$f"
+    sed 's/^---$/<!-- horizontal-rule -->/' "$f"
+    printf '\n'
+  else
+    printf '\n\n<!-- separator -->\n\n<!-- file: %s -->\n\n' "$f"
+    sed 's/^---$/<!-- horizontal-rule -->/' "$f"
+    printf '\n'
+  fi
+}
+
 {
+  first=1
   for vol in "${SRC_VOL[@]}"; do
     [ -d "$vol" ] || continue
     for f in "$vol"/*.md; do
       [ -f "$f" ] || continue
-      printf '\n\n---\n\n<!-- file: %s -->\n\n' "$f"
-      cat "$f"
-      printf '\n'
+      process_file "$f" "$first"
+      first=0
     done
   done
   if [ -d "$APPENDIX_DIR" ]; then
     for f in "$APPENDIX_DIR"/*.md; do
       [ -f "$f" ] || continue
-      printf '\n\n---\n\n<!-- file: %s -->\n\n' "$f"
-      cat "$f"
-      printf '\n'
+      process_file "$f" "$first"
+      first=0
     done
   fi
 } > "$MERGED"
