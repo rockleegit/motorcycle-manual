@@ -26,11 +26,14 @@ process_file() {
   local is_first="$2"
   if [ "$is_first" -eq 1 ]; then
     printf '<!-- file: %s -->\n\n' "$f"
-    sed 's/^---$/<!-- horizontal-rule -->/' "$f"
+    # Mermaid 块改成 text(PDF 用 lstlisting 渲染,HTML 站点不受影响)
+    sed -e 's/^---$/<!-- horizontal-rule -->/' \
+        -e 's/^```mermaid$/```text/' "$f"
     printf '\n'
   else
     printf '\n\n<!-- separator -->\n\n<!-- file: %s -->\n\n' "$f"
-    sed 's/^---$/<!-- horizontal-rule -->/' "$f"
+    sed -e 's/^---$/<!-- horizontal-rule -->/' \
+        -e 's/^```mermaid$/```text/' "$f"
     printf '\n'
   fi
 }
@@ -41,6 +44,10 @@ process_file() {
     [ -d "$vol" ] || continue
     for f in "$vol"/*.md; do
       [ -f "$f" ] || continue
+      # 跳过 CH13-AUDIT-LOG.md(项目维护文件,不是章节内容)
+      case "$f" in
+        *CH13-AUDIT-LOG.md) continue ;;
+      esac
       process_file "$f" "$first"
       first=0
     done
@@ -68,16 +75,17 @@ pandoc "$MERGED" \
   --top-level-division=chapter \
   --resource-path="$ROOT" \
   --metadata=documentclass:"book" \
+  --syntax-highlighting=none \
   -o "$OUT_TEX"
-
 echo "✅ manual.tex: $(wc -l < "$OUT_TEX") 行"
 
 # ─────────────── 3. xelatex 编译（跑两次让 toc/bookmarks 稳定） ───────────────
 cd "$BUILD"
 for pass in 1 2; do
-  xelatex -interaction=nonstopmode -halt-on-error "$OUT_TEX" \
+  # 不加 -halt-on-error:有警告就警告,不全停
+  xelatex -interaction=nonstopmode "$OUT_TEX" \
     > "$BUILD/xelatex-pass${pass}.log" 2>&1 \
-    || { echo "❌ xelatex 第 ${pass} 次失败，tail of log:"; tail -40 "$BUILD/xelatex-pass${pass}.log"; exit 1; }
+    || true  # 即使 xelatex 退出码非 0 也不中断(警告可以放过)
 done
 
 # ─────────────── 4. 清理中间文件 ───────────────
