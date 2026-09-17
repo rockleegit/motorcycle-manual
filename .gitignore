@@ -1,3 +1,14 @@
 .DS_Store
+
+# LaTeX 构建中间产物（可由 build.sh 重新生成，不入库）
 build/realcheck.aux
 build/realcheck.log
+build/manual.aux
+build/manual.log
+build/manual.out
+build/manual.toc
+build/xelatex-pass*.log
+build/*.synctex.gz
+
+# manual.pdf 与 build/摩托车维修全手册.pdf 内容完全相同（md5 一致），只保留后者
+build/manual.pdf
