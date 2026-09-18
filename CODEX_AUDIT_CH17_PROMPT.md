@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol04/CH17-油液规格.md(729 行)
+1. ./PRINCIPLES.md
+2. ./vol04/CH17-油液规格.md(729 行)
 
 ## 审校 6 维度
 

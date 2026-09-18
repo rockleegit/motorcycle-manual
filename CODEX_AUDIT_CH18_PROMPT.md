@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol05/CH18-调校与优化.md(525 行)
+1. ./PRINCIPLES.md
+2. ./vol05/CH18-调校与优化.md(525 行)
 
 ## 审校 6 维度
 

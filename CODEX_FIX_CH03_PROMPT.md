@@ -7,8 +7,8 @@ CH03 第一次独立审校(综合 6.5/10)识别出 8 处物理/技术错误:**4 
 CH03 是**安全规范章节**(5星),错误特别危险。本章改动必须**严格保守**——任何"看似更安全"的描述如果失实,反而误导新手。
 
 代码规范:
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH03-安全规范.md
+1. ./PRINCIPLES.md
+2. ./vol01/CH03-安全规范.md
 
 ## 8 处具体修改(每处 1 个 patch)
 
@@ -92,7 +92,7 @@ CH03 是**安全规范章节**(5星),错误特别危险。本章改动必须**�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认没有未提交改动
 3. 逐个 patch 8 处错误
 4. **不**执行 `git add` 或 `git commit`

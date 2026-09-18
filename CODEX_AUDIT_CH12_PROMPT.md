@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准,制动部分)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH12-制动系统.md(1562 行)
+1. ./PRINCIPLES.md(尤其 §八 必查标准,制动部分)
+2. ./vol03/CH12-制动系统.md(1562 行)
 3. **确认"盘磨损+液压离合"已修**
 
 ## 审校 6 维度

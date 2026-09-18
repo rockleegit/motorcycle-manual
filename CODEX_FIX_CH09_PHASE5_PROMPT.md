@@ -88,7 +88,7 @@ CH09 Phase 5 终审(综合 8.0/10,**从 7.4 跃升 +0.6**)识别出 10 处错:**
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 10 处
 4. **不**执行 `git add` 或 `git commit`

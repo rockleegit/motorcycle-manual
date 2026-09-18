@@ -11,8 +11,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(基础规范,§八 必查标准重点看)
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH01-摩托车构造概论.md(2637 行)
+1. ./PRINCIPLES.md(基础规范,§八 必查标准重点看)
+2. ./vol01/CH01-摩托车构造概论.md(2637 行)
 3. 之前 CH13 审校用的 CODEX_AUDIT_PROMPT.md 看 V2 的 6 个维度
 
 ## 审校 6 维度(每项 1-10 分,不要相互影响)

@@ -54,7 +54,7 @@ A01 Phase 5 终审(综合 7.0/10,从 5.3 跃升 +1.7)识别出 5 处错:**2 中�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 5 处
 4. **不**执行 `git add` 或 `git commit`

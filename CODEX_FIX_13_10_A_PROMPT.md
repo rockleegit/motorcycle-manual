@@ -13,8 +13,8 @@ Phase 5 + 13.10 专项审报告(13.10 综合 5.3/10)识别出 11 处必须改的
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(找 13.10 段)
-2. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
+1. ./vol03/CH13-电气系统.md(找 13.10 段)
+2. ./PRINCIPLES.md
 
 ## 11 处具体修改
 

@@ -15,8 +15,8 @@ CH13 第一遍审校(6.3/10)报告"建议修改"列第 2 条:
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(找 13.2 段,大约 300-400 行)
-2. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(来源等级)
+1. ./vol03/CH13-电气系统.md(找 13.2 段,大约 300-400 行)
+2. ./PRINCIPLES.md(来源等级)
 3. CH13.1-电工学基础.md 13.X.5 三相相量(可引用)
 
 ## 必给数据(7-10 项)

@@ -11,8 +11,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(基础规范,§八 必查标准重点看)
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH02-维修工具和设备.md(1725 行)
+1. ./PRINCIPLES.md(基础规范,§八 必查标准重点看)
+2. ./vol01/CH02-维修工具和设备.md(1725 行)
 3. CH01 审校 prompt `CODEX_AUDIT_CH01_PROMPT.md` 作为风格参考
 
 ## 审校 6 维度(每项 1-10 分,不要相互影响)

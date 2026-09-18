@@ -147,8 +147,8 @@ cat >> "$OUT" << 'MIDDLE'
 ## 必读：项目规范
 
 请先读这两个文件再动笔：
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md （原理层深度规范，必读）
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH
+1. ./PRINCIPLES.md （原理层深度规范，必读）
+2. ./vol03/CH
 MIDDLE
 echo -n "${CH_NUM}" >> "$OUT"
 cat >> "$OUT" << 'MIDDLE'
@@ -166,8 +166,8 @@ cat >> "$OUT" << 'MIDDLE'
 ## 参考标杆
 
 CH12 制动系统和 CH06 发动机系统 已重写完成，**你必须先读完它们**理解原理层的深度标准：
-- /Users/liyuanbin/motorcycle-manual/vol03/CH12-制动系统.md
-- /Users/liyuanbin/motorcycle-manual/vol03/CH06-发动机系统.md
+- ./vol03/CH12-制动系统.md
+- ./vol03/CH06-发动机系统.md
 
 看它们的【机制】段落格式、【来源】等级标注、【老师傅一句话】白话总结、【机制小结】末尾汇总。
 MIDDLE
@@ -245,10 +245,10 @@ X.4 类型对比与工程取舍（300-500 字）
 
 ## 工作流程
 
-1. `cat /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md` - 读规范
-2. `cat /Users/liyuanbin/motorcycle-manual/vol03/CHXX-XXX.md` - 读原章节
-3. `cat /Users/liyuanbin/motorcycle-manual/vol03/CH12-制动系统.md` - 读标杆
-4. `cat /Users/liyuanbin/motorcycle-manual/vol03/CH06-发动机系统.md` - 读标杆
+1. `cat ./PRINCIPLES.md` - 读规范
+2. `cat ./vol03/CHXX-XXX.md` - 读原章节
+3. `cat ./vol03/CH12-制动系统.md` - 读标杆
+4. `cat ./vol03/CH06-发动机系统.md` - 读标杆
 5. 分析空白点，列在回复里
 6. 直接编辑原章节文件（用 patch 工具，**不要 write_file 全文覆盖**）
 7. 写完后 `wc -l` 和 `wc -m` 报告字数
@@ -289,5 +289,5 @@ TAIL
 
 echo "✓ Generated $OUT"
 echo "  Size: $(wc -c < "$OUT") bytes"
-echo "  CH file: /Users/liyuanbin/motorcycle-manual/vol03/${CH_FILE}"
-echo "  Run: codex exec --full-auto \"\$(cat $OUT)\" in /Users/liyuanbin/motorcycle-manual"
+echo "  CH file: ./vol03/${CH_FILE}"
+echo "  Run: codex exec --full-auto \"\$(cat $OUT)\" in the repo root"

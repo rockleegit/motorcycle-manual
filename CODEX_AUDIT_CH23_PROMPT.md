@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol06/CH23-美洲品牌.md(512 行)
+1. ./PRINCIPLES.md
+2. ./vol06/CH23-美洲品牌.md(512 行)
 
 ## 审校 6 维度
 

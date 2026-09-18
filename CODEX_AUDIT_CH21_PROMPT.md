@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol06/CH21-日本四大厂.md(601 行)
+1. ./PRINCIPLES.md
+2. ./vol06/CH21-日本四大厂.md(601 行)
 
 ## 审校 6 维度
 

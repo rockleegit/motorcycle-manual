@@ -113,11 +113,13 @@ pandoc "$MERGED" \
   -o "$SITE_RAW" 2>/dev/null
 
 # 用 Python 注入(避免 heredoc 转义陷阱:用文件 + r-string)
-python3 << 'PYEOF'
+BUILD_DIR="$BUILD" python3 << 'PYEOF'
+import os
 import re
 from pathlib import Path
 
-build = Path('/Users/liyuanbin/motorcycle-manual/build')
+# 构建目录：优先用环境变量 BUILD_DIR（脚本调用时导出），否则回退到当前工作目录
+build = Path(os.environ.get('BUILD_DIR', '.')).resolve()
 src = (build / 'site_raw.html').read_text()
 
 # CSS(简版,只保留关键)

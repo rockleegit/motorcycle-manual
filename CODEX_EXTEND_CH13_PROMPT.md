@@ -11,8 +11,8 @@
 - 这章叫"电工学基础",**写法上要像教科书:原理 + 公式 + 数值 + 实战案例 + 反直觉点**
 
 代码规范(必读):
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(机制深度规范,⭐⭐⭐/⭐⭐/⭐/❓ 四级来源)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(主体,要在合适位置加引用,但**本任务不动主体**,引用由 Jarvis 加)
+1. ./PRINCIPLES.md(机制深度规范,⭐⭐⭐/⭐⭐/⭐/❓ 四级来源)
+2. ./vol03/CH13-电气系统.md(主体,要在合适位置加引用,但**本任务不动主体**,引用由 Jarvis 加)
 
 ## 12 个必须扩展的电工学概念
 
@@ -136,9 +136,9 @@
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
-2. `cat /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md | head -80`
-3. `cat /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md` —— 整体扫一遍,确保与主体呼应
+1. `cd .`
+2. `cat ./PRINCIPLES.md | head -80`
+3. `cat ./vol03/CH13-电气系统.md` —— 整体扫一遍,确保与主体呼应
 4. **新建文件** `vol03/CH13.1-电工学基础.md`(用 `write_file`,**不要**用 `cat << EOF` heredoc)
 5. 写完后:
    - `wc -l vol03/CH13.1-电工学基础.md` —— 报告行数

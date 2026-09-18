@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol02/CH04-故障诊断方法论.md(1947 行)
+1. ./PRINCIPLES.md
+2. ./vol02/CH04-故障诊断方法论.md(1947 行)
 
 ## 审校 6 维度
 

@@ -10,8 +10,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol05/CH19-常见改装.md(744 行)
+1. ./PRINCIPLES.md
+2. ./vol05/CH19-常见改装.md(744 行)
 
 ## 审校 6 维度
 

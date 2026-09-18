@@ -82,7 +82,7 @@ Codex 反馈:**CH11 本身也存在"预载=更硬/更软"旧口径**,CH18 修完
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 9 处
 4. **不**执行 `git add` 或 `git commit`

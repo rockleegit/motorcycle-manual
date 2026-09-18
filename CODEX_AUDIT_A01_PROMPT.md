@@ -14,11 +14,11 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/appendix/A01-附录.md(916 行,速查表型)
-3. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md + CH13.1(电气原理,主要参考)
-4. /Users/liyuanbin/motorcycle-manual/vol03/CH07-燃油供给系统.md
-5. /Users/liyuanbin/motorcycle-manual/vol03/CH06-发动机系统.md
+1. ./PRINCIPLES.md
+2. ./appendix/A01-附录.md(916 行,速查表型)
+3. ./vol03/CH13-电气系统.md + CH13.1(电气原理,主要参考)
+4. ./vol03/CH07-燃油供给系统.md
+5. ./vol03/CH06-发动机系统.md
 
 ## 审校 6 维度
 

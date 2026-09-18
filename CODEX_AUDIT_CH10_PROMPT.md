@@ -11,8 +11,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准,传动部分)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH10-传动系统.md(1597 行)
+1. ./PRINCIPLES.md(尤其 §八 必查标准,传动部分)
+2. ./vol03/CH10-传动系统.md(1597 行)
 3. **确认"行星齿轮+链速公式"已修**——第 1 轮审校的修复
 
 ## 审校 6 维度

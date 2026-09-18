@@ -78,7 +78,7 @@ CH04 是**诊断方法论**,错误会让新手"按错误路径操作",严重时�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 7 处
 4. **不**执行 `git add` 或 `git commit`

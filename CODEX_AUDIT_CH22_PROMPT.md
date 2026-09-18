@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol06/CH22-欧洲品牌.md(660 行)
+1. ./PRINCIPLES.md
+2. ./vol06/CH22-欧洲品牌.md(660 行)
 
 ## 审校 6 维度
 

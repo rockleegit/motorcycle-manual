@@ -88,7 +88,7 @@ CH10 第 2 轮审校(综合 6.6/10,从 5.6 升 +1.0,目前最大跃升)识别出
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 8 处
 4. **不**执行 `git add` 或 `git commit`

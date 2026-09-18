@@ -12,8 +12,8 @@
 ## 必读：项目规范
 
 请先读这两个文件再动笔：
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md （原理层深度规范，必读）
-2. /Users/liyuanbin/motorcycle-manual/vol03/{{CH文件}} （本章原文）
+1. ./PRINCIPLES.md （原理层深度规范，必读）
+2. ./vol03/{{CH文件}} （本章原文）
 
 ## 上下文
 
@@ -99,8 +99,8 @@ X.4 类型对比与工程取舍
 
 ## 工作流程
 
-1. `cat /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md` - 读规范
-2. `cat /Users/liyuanbin/motorcycle-manual/vol03/{{CH文件}}` - 读原章节
+1. `cat ./PRINCIPLES.md` - 读规范
+2. `cat ./vol03/{{CH文件}}` - 读原章节
 3. 分析空白点，列在回复里
 4. 直接编辑原章节文件（用 patch 工具，**不要 write_file 全文覆盖**）
 5. 写完后 `wc -l` 和 `wc -m` 报告字数
@@ -168,9 +168,9 @@ X.4 类型对比与工程取舍
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md （规范）
+1. ./PRINCIPLES.md （规范）
 2. `git show {{hash}}` 查看本次改动
-3. 改动后的章节文件：`/Users/liyuanbin/motorcycle-manual/vol03/{{CH文件}}`
+3. 改动后的章节文件：`./vol03/{{CH文件}}`
 
 ## 审校维度（每项 1-10 分）
 

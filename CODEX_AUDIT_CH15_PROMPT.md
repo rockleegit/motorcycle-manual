@@ -10,8 +10,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准)
-2. /Users/liyuanbin/motorcycle-manual/vol04/CH15-保养周期表.md(661 行,表格型)
+1. ./PRINCIPLES.md(尤其 §八 必查标准)
+2. ./vol04/CH15-保养周期表.md(661 行,表格型)
 
 ## 审校 6 维度
 

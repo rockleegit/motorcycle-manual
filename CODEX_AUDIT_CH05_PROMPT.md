@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol02/CH05-典型故障汇总.md(2065 行,**超过边界**)
+1. ./PRINCIPLES.md
+2. ./vol02/CH05-典型故障汇总.md(2065 行,**超过边界**)
 
 ## 审校 6 维度
 

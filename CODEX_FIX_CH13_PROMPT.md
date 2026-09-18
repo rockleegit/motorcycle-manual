@@ -6,8 +6,8 @@
 **这次任务只有 1 个目标:用 patch 工具把这 6 处全改了。不动其他任何文字。**
 
 代码规范:
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md (改这个文件)
+1. ./PRINCIPLES.md
+2. ./vol03/CH13-电气系统.md (改这个文件)
 3. 改前先 `git diff` 看当前未提交状态
 
 ## 6 处硬错误(每处 1 个 patch)
@@ -108,8 +108,8 @@
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
-2. `cat /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md | head -80` —— 读规范前 80 行
+1. `cd .`
+2. `cat ./PRINCIPLES.md | head -80` —— 读规范前 80 行
 3. `git diff` —— 看当前是否有未提交改动(应该没有,如果有,先 `git status` 报告)
 4. `git log --oneline -3` —— 看最近 commit
 5. **逐个 patch** 6 处错误,**每个错误用 1 次 patch 工具调用**:

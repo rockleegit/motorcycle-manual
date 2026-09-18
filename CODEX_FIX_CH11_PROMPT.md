@@ -68,7 +68,7 @@ CH11 是行走系统。**已审过 1 轮**——之前修过"离心力+倒立叉
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 7 处
 4. **不**执行 `git add` 或 `git commit`

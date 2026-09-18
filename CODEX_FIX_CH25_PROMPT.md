@@ -137,7 +137,7 @@ CH25 是其他品牌章节,**首次审校**。**核心问题**:
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 10 处
 4. **不**执行 `git add` 或 `git commit`

@@ -90,7 +90,7 @@ CH15 是保养周期表,**首次审校**。**最大问题**:"表格看起来太�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 9 处
 4. **不**执行 `git add` 或 `git commit`

@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准,车架部分)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH14-车架与外观.md(1210 行)
+1. ./PRINCIPLES.md(尤其 §八 必查标准,车架部分)
+2. ./vol03/CH14-车架与外观.md(1210 行)
 3. **确认"拖曳距+车架碰撞机制"已修**
 
 ## 审校 6 维度

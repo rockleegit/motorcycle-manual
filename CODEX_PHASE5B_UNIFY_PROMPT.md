@@ -13,9 +13,9 @@ Phase 5 二次对照审校(8.1/10)发现 4 项口径不统一:
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(主体,1358 行)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH13.1-电工学基础.md(扩展,**口径标准**)
-3. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(来源等级)
+1. ./vol03/CH13-电气系统.md(主体,1358 行)
+2. ./vol03/CH13.1-电工学基础.md(扩展,**口径标准**)
+3. ./PRINCIPLES.md(来源等级)
 
 ## 4 项口径标准(以 CH13.1 为准,主体对齐)
 

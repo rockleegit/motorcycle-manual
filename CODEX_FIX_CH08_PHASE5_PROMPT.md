@@ -72,7 +72,7 @@ CH08 Phase 5 终审(综合 6.7/10,从 6.6 跃升 +0.1)识别出 8 处错:**6 中
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 8 处
 4. **不**执行 `git add` 或 `git commit`

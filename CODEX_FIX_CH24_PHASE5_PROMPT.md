@@ -80,7 +80,7 @@ Phase 5 终审是**第二轮对照**——找 Phase 1 修错时**漏的错** + *
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 7 处(原 6 + 补 1)
 4. **不**执行 `git add` 或 `git commit`

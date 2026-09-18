@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol06/CH25-其他品牌.md(582 行)
+1. ./PRINCIPLES.md
+2. ./vol06/CH25-其他品牌.md(582 行)
 
 ## 审校 6 维度
 

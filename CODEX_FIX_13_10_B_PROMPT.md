@@ -11,8 +11,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(找 13.10 段,大约 1080-1290 行)
-2. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
+1. ./vol03/CH13-电气系统.md(找 13.10 段,大约 1080-1290 行)
+2. ./PRINCIPLES.md
 
 ## 3 处具体修改
 

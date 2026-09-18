@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准,行走部分)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH11-行走系统.md(994 行)
+1. ./PRINCIPLES.md(尤其 §八 必查标准,行走部分)
+2. ./vol03/CH11-行走系统.md(994 行)
 3. **确认"离心力+倒立叉"已修**——第 1 轮审校修复
 
 ## 审校 6 维度

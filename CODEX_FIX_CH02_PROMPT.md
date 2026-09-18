@@ -7,8 +7,8 @@ CH02 第一次独立审校(综合 5.9/10)识别出 10 处物理错误:**3 处高
 CH02 是工具类章节,目标读者是维修摩托车的新手。**这些错误特别危险**——新手一旦学会了错误的工具用法,会买错工具或用错工具。
 
 代码规范:
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(§八 必查标准)
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH02-维修工具和设备.md(改这个文件)
+1. ./PRINCIPLES.md(§八 必查标准)
+2. ./vol01/CH02-维修工具和设备.md(改这个文件)
 
 ## 10 处具体修改(每处 1 个 patch)
 
@@ -128,7 +128,7 @@ CH02 是工具类章节,目标读者是维修摩托车的新手。**这些错误
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认没有未提交改动
 3. 逐个 patch 10 处错误,**每个错误用 1 次 patch 工具调用**:
    - 锚点用 old_string 包含前后 3-5 行保证唯一

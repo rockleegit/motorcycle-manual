@@ -50,7 +50,7 @@ CH12 Phase 5 终审(综合 7.6/10,从 7.9 **略降** -0.3)识别出 6 处错:**4
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 6 处
 4. **不**执行 `git add` 或 `git commit`

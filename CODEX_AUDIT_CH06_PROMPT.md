@@ -10,9 +10,9 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准,发动机部分)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH06-发动机系统.md(2473 行)
-3. /Users/liyuanbin/motorcycle-manual/CODEX_AUDIT_PROMPT.md 看 V2 的 6 维度
+1. ./PRINCIPLES.md(尤其 §八 必查标准,发动机部分)
+2. ./vol03/CH06-发动机系统.md(2473 行)
+3. ./CODEX_AUDIT_PROMPT.md 看 V2 的 6 维度
 
 ## 审校 6 维度
 

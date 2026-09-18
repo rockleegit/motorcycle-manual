@@ -141,7 +141,7 @@ CH09 是冷却系统。**首次审校**——以前没审过。
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 14 处
 4. **不**执行 `git add` 或 `git commit`

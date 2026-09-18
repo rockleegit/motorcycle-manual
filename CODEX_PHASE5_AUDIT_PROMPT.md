@@ -10,9 +10,9 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md (§八 必查标准,**核心依据**)
-2. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(主体)
-3. /Users/liyuanbin/motorcycle-manual/vol03/CH13.1-电工学基础.md(扩展)
+1. ./PRINCIPLES.md (§八 必查标准,**核心依据**)
+2. ./vol03/CH13-电气系统.md(主体)
+3. ./vol03/CH13.1-电工学基础.md(扩展)
 4. `git log -3 --oneline` 看最近 commit 状态
 
 ## 重点核查清单(逐项)

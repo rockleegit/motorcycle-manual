@@ -11,8 +11,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(基础规范)
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH03-安全规范.md(1658 行)
+1. ./PRINCIPLES.md(基础规范)
+2. ./vol01/CH03-安全规范.md(1658 行)
 
 ## 审校 6 维度(每项 1-10 分,不要相互影响)
 

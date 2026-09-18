@@ -17,7 +17,7 @@ CH13 第一遍审校(6.3/10)没有仔细看 13.10 老师傅经验段。这次**�
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md(找 13.10 段)
+1. ./vol03/CH13-电气系统.md(找 13.10 段)
 2. PRINCIPLES.md(基础规范)
 
 ## 审校维度

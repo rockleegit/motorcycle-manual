@@ -98,7 +98,7 @@ CH16 是日常检查,**首次审校**。**高危项**(胎压/刹车/灯光)错�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 8 处
 4. **不**执行 `git add` 或 `git commit`

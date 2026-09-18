@@ -104,7 +104,7 @@ CH05 是**典型故障汇总**,**最危险**的章节——错误"故障原因�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 12 处
 4. **不**执行 `git add` 或 `git commit`

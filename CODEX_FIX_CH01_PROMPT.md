@@ -7,8 +7,8 @@ CH01 第一次独立审校(综合 6.7/10)识别出 9 处物理错误:**2 处高�
 CH01 是入门总览章节,目标读者是完全不懂摩托车的新手。**这些错误特别危险**——因为新手一旦接受了错误概念,以后改起来就难了。
 
 代码规范:
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(§八 必查标准)
-2. /Users/liyuanbin/motorcycle-manual/vol01/CH01-摩托车构造概论.md(改这个文件)
+1. ./PRINCIPLES.md(§八 必查标准)
+2. ./vol01/CH01-摩托车构造概论.md(改这个文件)
 
 ## 9 处具体修改(每处 1 个 patch)
 
@@ -97,7 +97,7 @@ CH01 是入门总览章节,目标读者是完全不懂摩托车的新手。**这
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认没有未提交改动
 3. 逐个 patch 9 处错误,**每个错误用 1 次 patch 工具调用**:
    - 锚点用 old_string 包含前后 3-5 行保证唯一

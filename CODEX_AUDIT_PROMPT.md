@@ -6,9 +6,9 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md （规范）
+1. ./PRINCIPLES.md （规范）
 2. `git show HEAD` 查看本次改动
-3. 改动后的章节文件：`/Users/liyuanbin/motorcycle-manual/vol03/{{CH文件}}`
+3. 改动后的章节文件：`./vol03/{{CH文件}}`
 
 ## 审校维度（每项 1-10 分）
 

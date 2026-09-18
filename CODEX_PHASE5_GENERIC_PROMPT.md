@@ -13,9 +13,9 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md(尤其 §八 必查标准)
-2. /Users/liyuanbin/motorcycle-manual/CHAPTER_PATH(待审校章)
-3. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md + CH13.1(参)
+1. ./PRINCIPLES.md(尤其 §八 必查标准)
+2. ./CHAPTER_PATH(待审校章)
+3. ./vol03/CH13-电气系统.md + CH13.1(参)
 4. **章节 AUDIT-LOG** — 看本章节历次审校 + 修了什么
 
 ## Phase 5 特有审校维度

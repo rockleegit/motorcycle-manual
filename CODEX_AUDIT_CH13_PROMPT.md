@@ -13,10 +13,10 @@
 
 ## 必读(按这个顺序读)
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md —— 规范(机制深度 / 物理正确性 / 来源标注)
+1. ./PRINCIPLES.md —— 规范(机制深度 / 物理正确性 / 来源标注)
 2. `git log --oneline -5` —— 看历史(注意 CH12 7.2/10、CH14 5.4/10、CH11 5.0/10 的修复模式)
-3. /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md —— 本章原文
-4. /Users/liyuanbin/motorcycle-manual/CODEX_AUDIT_PROMPT.md —— 原审校模板(看前任同事怎么打分)
+3. ./vol03/CH13-电气系统.md —— 本章原文
+4. ./CODEX_AUDIT_PROMPT.md —— 原审校模板(看前任同事怎么打分)
 
 ## 审校 6 个维度(每项 1-10 分,不要相互影响)
 

@@ -73,7 +73,7 @@ CH06 是**发动机系统**,9 个系统章节里最核心,任何错都会污染�
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 6 处
 4. **不**执行 `git add` 或 `git commit`

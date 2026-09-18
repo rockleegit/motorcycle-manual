@@ -74,7 +74,7 @@ Phase 1 修了"皮带 vs 链条",**但平台归属错仍留/引入**:
 
 ## 工作流程
 
-1. `cd /Users/liyuanbin/motorcycle-manual`
+1. `cd .`
 2. `git diff` 确认无未提交改动
 3. 逐个 patch 7 处
 4. **不**执行 `git add` 或 `git commit`

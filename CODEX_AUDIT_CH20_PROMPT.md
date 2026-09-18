@@ -9,8 +9,8 @@
 
 ## 必读
 
-1. /Users/liyuanbin/motorcycle-manual/PRINCIPLES.md
-2. /Users/liyuanbin/motorcycle-manual/vol05/CH20-故障案例集.md(707 行,案例型)
+1. ./PRINCIPLES.md
+2. ./vol05/CH20-故障案例集.md(707 行,案例型)
 
 ## 审校 6 维度
 

@@ -1,4 +1,4 @@
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol01/CH01-摩托车构造概论.md -->
+<!-- file: ./vol01/CH01-摩托车构造概论.md -->
 
 # 第一卷：入门基础
 
@@ -2649,7 +2649,7 @@ N → 1 → 2 → 3 → 4 → 5 → N（循环）
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol01/CH02-维修工具和设备.md -->
+<!-- file: ./vol01/CH02-维修工具和设备.md -->
 
 # 第2章 维修工具和设备
 
@@ -4411,7 +4411,7 @@ OBD（On-Board Diagnostics，车载诊断系统）能读取车辆故障码。
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol01/CH03-安全规范.md -->
+<!-- file: ./vol01/CH03-安全规范.md -->
 
 # 第3章 安全规范
 
@@ -6099,7 +6099,7 @@ OBD（On-Board Diagnostics，车载诊断系统）能读取车辆故障码。
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol02/CH04-故障诊断方法论.md -->
+<!-- file: ./vol02/CH04-故障诊断方法论.md -->
 
 # 第4章 故障诊断方法论
 
@@ -8066,7 +8066,7 @@ ________
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol02/CH05-典型故障汇总.md -->
+<!-- file: ./vol02/CH05-典型故障汇总.md -->
 
 # 第5章 典型故障汇总
 
@@ -10157,7 +10157,7 @@ ________
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH06-发动机系统.md -->
+<!-- file: ./vol03/CH06-发动机系统.md -->
 
 # 第6章 发动机系统
 
@@ -12649,7 +12649,7 @@ C - 六角对边（C=16mm, F=21mm）
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH07-燃油供给系统.md -->
+<!-- file: ./vol03/CH07-燃油供给系统.md -->
 
 # 第7章 燃油供给系统
 
@@ -13754,7 +13754,7 @@ P_fuel = P_intake + ΔP
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH08-进气排气系统.md -->
+<!-- file: ./vol03/CH08-进气排气系统.md -->
 
 # 第8章 进气排气系统
 
@@ -15170,7 +15170,7 @@ ECU 监测这个电压，构成**闭环控制**：电压偏高（浓）→ 缩�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH09-冷却系统.md -->
+<!-- file: ./vol03/CH09-冷却系统.md -->
 
 # 第9章 冷却系统
 
@@ -16427,7 +16427,7 @@ LMTD 越大，传热驱动力越大，散热器效率越高。**LMTD 受入口/�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH10-传动系统.md -->
+<!-- file: ./vol03/CH10-传动系统.md -->
 
 # 第10章 传动系统
 
@@ -18047,7 +18047,7 @@ GL-5 常用于高负荷齿轮副，例如很多汽车差速器和部分摩托车
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH11-行走系统.md -->
+<!-- file: ./vol03/CH11-行走系统.md -->
 
 # 第11章 行走系统
 
@@ -19061,7 +19061,7 @@ T = I × ω × Ω
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH12-制动系统.md -->
+<!-- file: ./vol03/CH12-制动系统.md -->
 
 # 第12章 制动系统
 
@@ -20632,7 +20632,7 @@ BB - 类型代码（BB = 街车片、RC = 赛车片、SC = 烧结陶瓷片 等�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH13-电气系统.md -->
+<!-- file: ./vol03/CH13-电气系统.md -->
 
 # 第13章 电气系统
 
@@ -22140,7 +22140,7 @@ graph TD
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH13.1-电工学基础.md -->
+<!-- file: ./vol03/CH13.1-电工学基础.md -->
 
 # 13.X 电工学基础（扩展阅读）
 
@@ -22445,7 +22445,7 @@ EMC 是电磁兼容：既不让自己的电路干扰别人，也不被别人干�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol03/CH14-车架与外观.md -->
+<!-- file: ./vol03/CH14-车架与外观.md -->
 
 # 第14章 车架与外观
 
@@ -23662,7 +23662,7 @@ O₂ + 2H₂O + 4e⁻ → 4OH⁻
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol04/CH15-保养周期表.md -->
+<!-- file: ./vol04/CH15-保养周期表.md -->
 
 # 第15章 保养周期表
 
@@ -24334,7 +24334,7 @@ O₂ + 2H₂O + 4e⁻ → 4OH⁻
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol04/CH16-日常检查.md -->
+<!-- file: ./vol04/CH16-日常检查.md -->
 
 # 第16章 日常检查
 
@@ -25054,7 +25054,7 @@ O₂ + 2H₂O + 4e⁻ → 4OH⁻
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol04/CH17-油液规格.md -->
+<!-- file: ./vol04/CH17-油液规格.md -->
 
 # 第17章 油液规格
 
@@ -25833,7 +25833,7 @@ JASO T 903 湿式离合器分类：
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol05/CH18-调校与优化.md -->
+<!-- file: ./vol05/CH18-调校与优化.md -->
 
 # 第18章 调校与优化
 
@@ -26461,7 +26461,7 @@ JASO T 903 湿式离合器分类：
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol05/CH19-常见改装.md -->
+<!-- file: ./vol05/CH19-常见改装.md -->
 
 # 第19章 常见改装
 
@@ -27278,7 +27278,7 @@ JASO T 903 湿式离合器分类：
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol05/CH20-故障案例集.md -->
+<!-- file: ./vol05/CH20-故障案例集.md -->
 
 # 第20章 故障案例集
 
@@ -28027,7 +28027,7 @@ JASO T 903 湿式离合器分类：
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol06/CH21-日本四大厂.md -->
+<!-- file: ./vol06/CH21-日本四大厂.md -->
 
 # 第21章 日本四大厂（本田、雅马哈、川崎、铃木）
 
@@ -28635,7 +28635,7 @@ JASO T 903 湿式离合器分类：
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol06/CH22-欧洲品牌.md -->
+<!-- file: ./vol06/CH22-欧洲品牌.md -->
 
 # 第22章 欧洲品牌（凯旋、宝马、杜卡迪、KTM、Aprilia、Moto Guzzi）
 
@@ -29317,7 +29317,7 @@ Haynes/Clymer 等第三方维修手册**覆盖部分车型**（以车系、年�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol06/CH23-美洲品牌.md -->
+<!-- file: ./vol06/CH23-美洲品牌.md -->
 
 # 第23章 美洲品牌（哈雷、印第安、其他）
 
@@ -29853,7 +29853,7 @@ Haynes/Clymer 等第三方维修手册**覆盖部分车型**（以车系、年�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol06/CH24-国产品牌.md -->
+<!-- file: ./vol06/CH24-国产品牌.md -->
 
 # 第24章 国产品牌（钱江、春风、隆鑫、宗申、力帆等）
 
@@ -30490,7 +30490,7 @@ Haynes/Clymer 等第三方维修手册**覆盖部分车型**（以车系、年�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/vol06/CH25-其他品牌.md -->
+<!-- file: ./vol06/CH25-其他品牌.md -->
 
 # 第25章 其他品牌（电动摩托、ADV、踏板、品牌杂项）
 
@@ -31197,7 +31197,7 @@ Haynes/Clymer 等第三方维修手册**覆盖部分车型**（以车系、年�
 
 <!-- separator -->
 
-<!-- file: /Users/liyuanbin/motorcycle-manual/appendix/A01-附录.md -->
+<!-- file: ./appendix/A01-附录.md -->
 
 # 附录 A01：摩托车维修速查表大全
 
