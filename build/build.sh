@@ -5,9 +5,15 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Windows(Git Bash) 下 pandoc / xelatex / python 都是原生程序，认不出 /c/... 形式，
+# 这里统一转成 C:/... （cygpath -m 用正斜杠，Python 字符串里也能直接用）。
+# macOS / Linux 没有 cygpath，保持原样即可。
+if command -v cygpath >/dev/null 2>&1; then
+  ROOT="$(cygpath -m "$ROOT")"
+fi
 BUILD="$ROOT/build"
-SRC_VOL=("$ROOT/vol01" "$ROOT/vol02" "$ROOT/vol03" "$ROOT/vol04" "$ROOT/vol05" "$ROOT/vol06")
-APPENDIX_DIR="$ROOT/appendix"
+SRC_VOL=("./vol01" "./vol02" "./vol03" "./vol04" "./vol05" "./vol06")
+APPENDIX_DIR="./appendix"
 MERGED="$BUILD/merged.md"
 TEMPLATE="$BUILD/template.tex"
 OUT_TEX="$BUILD/manual.tex"
@@ -44,9 +50,10 @@ process_file() {
     [ -d "$vol" ] || continue
     for f in "$vol"/*.md; do
       [ -f "$f" ] || continue
-      # 跳过 CH13-AUDIT-LOG.md(项目维护文件,不是章节内容)
+      # 跳过 AUDIT-LOG.md(项目维护文件,不是章节内容)
+      # 注意:每章都有独立的审校日志,必须全量排除,否则会被当作章节并入成品
       case "$f" in
-        *CH13-AUDIT-LOG.md) continue ;;
+        *AUDIT-LOG*.md) continue ;;
       esac
       process_file "$f" "$first"
       first=0
@@ -55,6 +62,10 @@ process_file() {
   if [ -d "$APPENDIX_DIR" ]; then
     for f in "$APPENDIX_DIR"/*.md; do
       [ -f "$f" ] || continue
+      # 附录同样要排除审校日志（A01-AUDIT-LOG.md 否则会被当成附录正文并入成品）
+      case "$f" in
+        *AUDIT-LOG*.md) continue ;;
+      esac
       process_file "$f" "$first"
       first=0
     done
@@ -67,7 +78,7 @@ echo "✅ merged.md: $(wc -l < "$MERGED") 行, $(wc -c < "$MERGED") 字节"
 # 资源路径已设好，pandoc 在 merged.md 里相对路径找图；
 # --toc 自动生成目录；--template 用我们的 xelatex 模板。
 pandoc "$MERGED" \
-  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+latex_macros \
+  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+tex_math_single_backslash+latex_macros \
   --to=latex \
   --template="$TEMPLATE" \
   --toc \
@@ -88,7 +99,26 @@ for pass in 1 2; do
     || true  # 即使 xelatex 退出码非 0 也不中断(警告可以放过)
 done
 
-# ─────────────── 4. 清理中间文件 ───────────────
+# ─────────────── 4. 缺字检查（换字体/换平台后最容易踩的坑） ───────────────
+# 《手册》正文含 ⭐ ❓ ✓ ✗ 等符号，常规中文字体多未收录；template.tex 里已用
+# newunicodechar 回退到 Segoe UI Symbol。这里把漏网字符暴露出来，避免 PDF 里
+# 出现空白而无人察觉。
+if [ -f "$BUILD/xelatex-pass2.log" ]; then
+  # 注意：grep 无匹配时返回 1，在本脚本的 set -e / pipefail 下会让整体中止，
+  # 所以整条管道末尾必须兜一个 || true。
+  MISSING="$(grep -a "Missing character" "$BUILD/xelatex-pass2.log" \
+             | sed 's/.*Missing character: //' | sort -u || true)"
+  if [ -n "$MISSING" ]; then
+    echo ""
+    echo "⚠️  发现缺字（PDF 中会显示为空白），需要补进 template.tex 的字体回退表："
+    echo "$MISSING" | head -20
+    echo ""
+  else
+    echo "✅ 无缺字检查通过"
+  fi
+fi
+
+# ─────────────── 5. 清理中间文件 ───────────────
 rm -f "$BUILD"/manual.aux "$BUILD"/manual.log "$BUILD"/manual.out "$BUILD"/manual.toc \
       "$BUILD"/xelatex-pass*.log
 
@@ -105,7 +135,7 @@ echo "页数：$(pdfinfo "$OUT_PDF" 2>/dev/null | awk '/^Pages/{print $2}')"
 # ─────────────── 5. 输出 EPUB（手机阅读 + 全文搜索） ───────────────
 EPUB_OUT="$BUILD/摩托车维修全手册.epub"
 pandoc "$MERGED" \
-  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+latex_macros \
+  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+tex_math_single_backslash+latex_macros \
   --to=epub3 \
   --toc --toc-depth=3 \
   --metadata=title:"摩托车维修全手册" \
@@ -119,7 +149,7 @@ ls -lh "$EPUB_OUT"
 # ─────────────── 6. 输出 HTML 静态站（带模糊搜索） ───────────────
 SITE_HTML="$BUILD/摩托车维修全手册_网站.html"
 pandoc "$MERGED" \
-  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+latex_macros \
+  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+tex_math_single_backslash+latex_macros \
   --to=html5 \
   --standalone \
   --toc --toc-depth=3 \

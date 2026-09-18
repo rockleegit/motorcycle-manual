@@ -20,28 +20,76 @@
 \usepackage{titlesec}
 \usepackage{tocloft}
 \usepackage{hyperref}
+% pandoc 数学输出用到的标准宏包（行内公式与数学环境）
+% 注意：本文件是 pandoc 模板，注释里也不能出现裸露的美元符号，会被当成模板变量
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{newunicodechar}
+
+% ── PDF 渲染专用字形回退 ──────────────────────────────────────────
+% 正文用到的下列字符在西文字体（Times New Roman / Consolas）中不存在，
+% 直接编译会在 PDF 里产生空白（Missing character）。这里统一回退到
+% Windows 自带的 Segoe UI Symbol（下列码位它全覆盖）。
+% 注意：**只影响 PDF 渲染**，Markdown 源文件与 HTML / EPUB 产物保持原字符不变。
+% 各字符的写法用 \char"XXXX 而不是直接写字符本身，避免 newunicodechar 自递归。
+\newfontfamily\symfont{seguisym.ttf}[Path = C:/Windows/Fonts/]
+\newunicodechar{⭐}{{\symfont\char"2B50}}   % 来源等级标记
+\newunicodechar{❓}{{\symfont\char"2753}}   % 存疑标记
+\newunicodechar{✓}{{\symfont\char"2713}}
+\newunicodechar{✗}{{\symfont\char"2717}}
+\newunicodechar{⚠}{{\symfont\char"26A0}}
+\newunicodechar{⏱}{{\symfont\char"23F1}}
+\newunicodechar{🎯}{{\symfont\char"1F3AF}}
+\newunicodechar{━}{{\symfont\char"2501}}
+\newunicodechar{℃}{{\symfont\char"2103}}
+\newunicodechar{℉}{{\symfont\char"2109}}
+\newunicodechar{∝}{{\symfont\char"221D}}
+\newunicodechar{⊕}{{\symfont\char"2295}}
+\newunicodechar{⊖}{{\symfont\char"2296}}
+\newunicodechar{⊙}{{\symfont\char"2299}}
+\newunicodechar{⊗}{{\symfont\char"2297}}
+\newunicodechar{⏚}{{\symfont\char"23DA}}
+\newunicodechar{⏛}{{\symfont\char"23DB}}
+\newunicodechar{▭}{{\symfont\char"25AD}}
+\newunicodechar{◀}{{\symfont\char"25C0}}
+\newunicodechar{▶}{{\symfont\char"25B6}}
+\newunicodechar{️}{\relax}                 % U+FE0F 变体选择符，丢弃
+% ────────────────────────────────────────────────────────────────
 
 % 中文断行优化
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
 
-% 字体设置
-% macOS 系统自带 .ttc 字体必须用 Path + 文件名的写法，
-% 单写字体名 fontspec 找不到（Hiragino Sans GB.ttc 含 5 个字重）
-\defaultfontfeatures{Path = /System/Library/Fonts/}
+% 允许数学模式里出现汉字（本书有 \(U_{端}=U_{oc}-I(R_{内}+R_{线}+R_{触点})\)
+% 这类中文下标公式）。xeCJK 默认在数学模式中不接管汉字，会回退到西文字体导致缺字。
+\xeCJKsetup{CJKmath=true}
+
+% 字体设置（Windows 版）
+% Windows 系统字体同样需要 Path + 文件名的写法，单写字体名 fontspec 解析不稳定。
+% 中文正文用微软雅黑（msyh.ttc / 粗体 msyhbd.ttc），等宽用黑体；
+% 西文用系统自带 Times New Roman / Consolas，避免依赖发行版未装的 Latin Modern。
+\defaultfontfeatures{Path = C:/Windows/Fonts/}
 \setCJKmainfont[
-  UprightFont = Hiragino Sans GB.ttc,
-  BoldFont = STHeiti Medium.ttc,
-  ItalicFont = STHeiti Light.ttc,
-  BoldItalicFont = STHeiti Medium.ttc
+  UprightFont = msyh.ttc,
+  BoldFont = msyhbd.ttc,
+  AutoFakeSlant = 0.2
 ]{}
 \setCJKsansfont[
-  UprightFont = Hiragino Sans GB.ttc,
-  BoldFont = STHeiti Medium.ttc
+  UprightFont = msyh.ttc,
+  BoldFont = msyhbd.ttc,
+  AutoFakeSlant = 0.2
 ]{}
-\setCJKmonofont{STHeiti Light.ttc}
-% 西文也用系统自带字体，避免依赖 BasicTeX 没有的 Latin Modern
-\setmainfont{Hiragino Sans GB.ttc}
+\setCJKmonofont{simhei.ttf}
+\setmainfont[
+  UprightFont = times.ttf,
+  BoldFont = timesbd.ttf,
+  ItalicFont = timesi.ttf,
+  BoldItalicFont = timesbi.ttf
+]{}
+\setmonofont[
+  UprightFont = consola.ttf,
+  BoldFont = consolab.ttf
+]{}
 
 % pandoc 会把某些 markdown 表格转成 longtable 并写出
 %   {\def\LTcaptype{none} % do not increment counter
@@ -103,6 +151,22 @@
 }
 
 % 代码块
+% pandoc 在未启用 --listings 时输出的是 verbatim 环境，而 verbatim 默认不折行，
+% 长命令行会大幅溢出页面（实测最大超宽 508pt ≈ 18cm）。这里用 fvextra 的
+% Verbatim 重定义 verbatim，恢复自动折行，并补上边框与底色，
+% 使外观与原 --listings 方案（basicstyle/frame/backgroundcolor）保持一致。
+\usepackage{fvextra}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+  breaklines=true,
+  breakanywhere=true,
+  breaksymbolleft={},
+  fontsize=\small,
+  frame=single,
+  framesep=3mm,
+  rulecolor=\color{black!20},
+  fillcolor=\color{black!3}
+}
+
 \lstset{
   basicstyle=\ttfamily\small,
   breaklines=true,
@@ -125,7 +189,7 @@
 \begin{minipage}{0.85\textwidth}
 \centering\small
 工具书 · 教科书 · 经验库\\[0.5em]
-6 卷 · 25 章 · 10 附录 · 约 30,000 行
+6 卷 · 25 章 · 附录 12 节 · 约 32,000 行
 \end{minipage}
 \vfill
 \end{titlepage}

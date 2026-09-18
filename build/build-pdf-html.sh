@@ -61,7 +61,7 @@ echo "✅ 已合并 → $MERGED"
 
 # ─────────────── 2. 生成 LaTeX ───────────────
 pandoc "$MERGED" \
-  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+latex_macros \
+  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+tex_math_single_backslash+latex_macros \
   --to=latex \
   --template="$TEMPLATE" \
   --toc \
@@ -103,7 +103,7 @@ fi
 # ─────────────── 4. HTML 单页(带 fuse.js 搜索 + CSS) ───────────────
 SITE_RAW="$BUILD/site_raw.html"
 pandoc "$MERGED" \
-  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+latex_macros \
+  --from=markdown+yaml_metadata_block+raw_html+raw_tex+tex_math_dollars+tex_math_single_backslash+latex_macros \
   --to=html5 \
   --standalone \
   --toc --toc-depth=3 \
