@@ -5,174 +5,45 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>摩托车维修全手册</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+  
+<style>
+  body { margin: 0; padding: 0; font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.7; color: #222; background: #fafafa; }
+  header.app-bar { position: sticky; top: 0; z-index: 100; background: #1a1a1a; color: #fff; padding: 10px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+  header.app-bar h1 { font-size: 16px; font-weight: 600; margin: 0; flex: 0 0 auto; }
+  header.app-bar .search-wrap { flex: 1 1 auto; position: relative; }
+  header.app-bar input#search { width: 100%; padding: 8px 12px 8px 36px; border: none; border-radius: 6px; font-size: 15px; background: #333; color: #fff; outline: none; }
+  header.app-bar .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999; pointer-events: none; }
+  #search-results { position: fixed; top: 50px; left: 0; right: 0; max-height: 60vh; overflow-y: auto; background: #fff; border-bottom: 2px solid #1a1a1a; z-index: 99; display: none; box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+  #search-results.active { display: block; }
+  #search-results .result { padding: 12px 16px; border-bottom: 1px solid #eee; cursor: pointer; }
+  #search-results .result:hover { background: #f0f7ff; }
+  #search-results .result h4 { margin: 0 0 4px 0; font-size: 15px; color: #1a1a1a; }
+  #search-results .result .excerpt { font-size: 13px; color: #666; }
+  #search-results .no-result { padding: 20px; text-align: center; color: #999; }
+  #search-results mark { background: #ffe066; color: #000; padding: 0 2px; }
+  main.layout { display: flex; min-height: calc(100vh - 50px); }
+  aside.sidebar { width: 280px; flex: 0 0 280px; background: #fff; border-right: 1px solid #e0e0e0; padding: 16px; overflow-y: auto; height: calc(100vh - 50px); position: sticky; top: 50px; }
+  aside.sidebar ul { list-style: none; padding: 0; margin: 0; }
+  aside.sidebar a { display: block; padding: 6px 10px; color: #333; text-decoration: none; font-size: 14px; }
+  aside.sidebar a:hover { background: #f0f7ff; }
+  article.content { flex: 1 1 auto; padding: 24px 32px; max-width: 920px; margin: 0 auto; background: #fff; }
+  article.content h1, article.content h2, article.content h3 { scroll-margin-top: 60px; }
+  article.content h1 { font-size: 24px; }
+  article.content h2 { font-size: 20px; border-bottom: 2px solid #1a1a1a; padding-bottom: 4px; }
+  article.content h3 { font-size: 17px; }
+  article.content code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-size: 90%; }
+  article.content pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 13px; }
+  article.content table { border-collapse: collapse; margin: 12px 0; font-size: 13px; width: 100%; }
+  article.content th, article.content td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  article.content th { background: #f4f4f4; }
+</style>
+
 </head>
-<body>
-<header class="app-bar"><button class="menu-toggle">☰</button><h1>🏍️ 摩托车维修全手册</h1><div class="search-wrap"><span class="search-icon">🔍</span><input type="search" id="search" placeholder="搜索：液压、点火、气门间隙、刹车油 DOT 4..." autocomplete="off"></div></header><div id="search-results"></div><main class="layout"><aside class="sidebar"><h2>📑 目录</h2><details open><summary>全手册目录</summary>
+<body><header class="app-bar"><h1>摩托车维修全手册</h1><span class="search-icon">🔍</span><div class="search-wrap"><input id="search" type="text" placeholder="搜索章节、术语..." autocomplete="off"></div></header><div id="search-results"></div><main class="layout"><article class="content">
+<header id="title-block-header">
+<h1 class="title">摩托车维修全手册</h1>
+</header>
+<aside class="sidebar" id="sidebar"><nav id="TOC">
 <ul>
 <li><a href="#第一卷入门基础"
 id="toc-第一卷入门基础">第一卷：入门基础</a></li>
@@ -184,21 +55,21 @@ id="toc-第一卷入门基础">第一卷：入门基础</a></li>
 id="toc-摩托车分类按维修重要性重新组织">1.1
 摩托车分类（按维修重要性重新组织）</a>
 <ul>
-<li><a href="#为什么分类很重要" id="toc-为什么分类很重要">1.1.0
+<li><a href="#为什么分类很重要" id="toc-为什么分类很重要">1.1.1
 为什么分类很重要？</a></li>
-<li><a href="#按用途分类最实用" id="toc-按用途分类最实用">1.1.1
+<li><a href="#按用途分类最实用" id="toc-按用途分类最实用">1.1.2
 按用途分类（最实用）</a></li>
-<li><a href="#按发动机布局分类" id="toc-按发动机布局分类">1.1.2
+<li><a href="#按发动机布局分类" id="toc-按发动机布局分类">1.1.3
 按发动机布局分类</a></li>
-<li><a href="#按气门机构分类" id="toc-按气门机构分类">1.1.3
+<li><a href="#按气门机构分类" id="toc-按气门机构分类">1.1.4
 按气门机构分类</a></li>
-<li><a href="#按冷却方式分类" id="toc-按冷却方式分类">1.1.4
+<li><a href="#按冷却方式分类" id="toc-按冷却方式分类">1.1.5
 按冷却方式分类</a></li>
-<li><a href="#按最终传动分类" id="toc-按最终传动分类">1.1.5
+<li><a href="#按最终传动分类" id="toc-按最终传动分类">1.1.6
 按最终传动分类</a></li>
-<li><a href="#其他分类简单说明" id="toc-其他分类简单说明">1.1.6
+<li><a href="#其他分类简单说明" id="toc-其他分类简单说明">1.1.7
 其他分类（简单说明）</a></li>
-<li><a href="#按排量分级维修视角" id="toc-按排量分级维修视角">1.1.7
+<li><a href="#按排量分级维修视角" id="toc-按排量分级维修视角">1.1.8
 按排量分级（维修视角）</a></li>
 </ul></li>
 <li><a href="#整车架构详细工作原理" id="toc-整车架构详细工作原理">1.2
@@ -1159,7 +1030,7 @@ id="toc-老师傅不外传的-8-个诀窍">7.10.2 老师傅不外传的 8 个诀
 <li><a href="#进阶学习路径-1" id="toc-进阶学习路径-1">7.10.7
 进阶学习路径 ●●</a></li>
 <li><a href="#网络实战案例汇编来自论坛技师分享-1"
-id="toc-网络实战案例汇编来自论坛技师分享-1">7.10.9
+id="toc-网络实战案例汇编来自论坛技师分享-1">7.10.8
 网络实战案例汇编（来自论坛、技师分享）●●</a></li>
 <li><a href="#案例-a老款本田-cb500-化油器车型加油门熄火"
 id="toc-案例-a老款本田-cb500-化油器车型加油门熄火">案例 A：老款本田
@@ -1218,6 +1089,10 @@ id="toc-速查表30-秒定位你的进排气问题">8.0.3 速查表（30
 秒定位你的进排气问题）</a></li>
 <li><a href="#学完本章你将能-2" id="toc-学完本章你将能-2">8.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#进气排气系统原理层" id="toc-进气排气系统原理层">8.1
+进气排气系统原理层</a>
+<ul>
 <li><a href="#进气排气系统原理层系统功能与设计目标"
 id="toc-进气排气系统原理层系统功能与设计目标">8.1.1
 进气排气系统原理层：系统功能与设计目标</a></li>
@@ -1481,6 +1356,10 @@ id="toc-速查表30-秒定位你的冷却问题">9.0.3 速查表（30
 秒定位你的冷却问题）</a></li>
 <li><a href="#学完本章你将能-3" id="toc-学完本章你将能-3">9.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#冷却系统原理层" id="toc-冷却系统原理层">9.1
+冷却系统原理层</a>
+<ul>
 <li><a href="#冷却系统原理层系统功能与设计目标"
 id="toc-冷却系统原理层系统功能与设计目标">9.1.1
 冷却系统原理层：系统功能与设计目标</a></li>
@@ -1697,6 +1576,10 @@ id="toc-速查表30-秒定位你的传动问题">10.0.3 速查表（30
 秒定位你的传动问题）</a></li>
 <li><a href="#学完本章你将能-4" id="toc-学完本章你将能-4">10.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#传动系统原理层" id="toc-传动系统原理层">10.1
+传动系统原理层</a>
+<ul>
 <li><a href="#传动系统原理层系统功能与设计目标"
 id="toc-传动系统原理层系统功能与设计目标">10.1.1
 传动系统原理层：系统功能与设计目标</a></li>
@@ -1879,6 +1762,10 @@ id="toc-速查表30-秒定位你的行走问题">11.0.3 速查表（30
 秒定位你的行走问题）</a></li>
 <li><a href="#学完本章你将能-5" id="toc-学完本章你将能-5">11.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#行走系统原理层" id="toc-行走系统原理层">11.1
+行走系统原理层</a>
+<ul>
 <li><a href="#行走系统原理层系统功能与设计目标"
 id="toc-行走系统原理层系统功能与设计目标">11.1.1
 行走系统原理层：系统功能与设计目标</a></li>
@@ -2317,121 +2204,6 @@ id="toc-注意-关于数据来源的重要声明-6">【注意】
 <li><a href="#重要提醒-6" id="toc-重要提醒-6">重要提醒</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#x-电工学基础扩展阅读" id="toc-x-电工学基础扩展阅读">13.X
-电工学基础（扩展阅读）</a>
-<ul>
-<li><a href="#x.1-欧姆定律-kclkvl-实战"
-id="toc-x.1-欧姆定律-kclkvl-实战">13.X.1 欧姆定律 + KCL/KVL 实战</a>
-<ul>
-<li><a href="#机制" id="toc-机制">机制</a></li>
-<li><a href="#公式" id="toc-公式">公式</a></li>
-<li><a href="#数值" id="toc-数值">数值</a></li>
-<li><a href="#实战案例" id="toc-实战案例">实战案例</a></li>
-<li><a href="#反直觉点" id="toc-反直觉点">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.2-线束压降设计" id="toc-x.2-线束压降设计">13.X.2
-线束压降设计</a>
-<ul>
-<li><a href="#机制-1" id="toc-机制-1">机制</a></li>
-<li><a href="#公式-1" id="toc-公式-1">公式</a></li>
-<li><a href="#数值-1" id="toc-数值-1">数值</a></li>
-<li><a href="#实战案例-1" id="toc-实战案例-1">实战案例</a></li>
-<li><a href="#反直觉点-1" id="toc-反直觉点-1">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.3-接地搭铁设计原理" id="toc-x.3-接地搭铁设计原理">13.X.3
-接地（搭铁）设计原理</a>
-<ul>
-<li><a href="#机制-2" id="toc-机制-2">机制</a></li>
-<li><a href="#公式-2" id="toc-公式-2">公式</a></li>
-<li><a href="#数值-2" id="toc-数值-2">数值</a></li>
-<li><a href="#实战案例-2" id="toc-实战案例-2">实战案例</a></li>
-<li><a href="#反直觉点-2" id="toc-反直觉点-2">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.4-戴维南等效电路" id="toc-x.4-戴维南等效电路">13.X.4
-戴维南等效电路</a>
-<ul>
-<li><a href="#机制-3" id="toc-机制-3">机制</a></li>
-<li><a href="#公式-3" id="toc-公式-3">公式</a></li>
-<li><a href="#数值-3" id="toc-数值-3">数值</a></li>
-<li><a href="#实战案例-3" id="toc-实战案例-3">实战案例</a></li>
-<li><a href="#反直觉点-3" id="toc-反直觉点-3">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.5-三相相量与整流桥" id="toc-x.5-三相相量与整流桥">13.X.5
-三相相量与整流桥</a>
-<ul>
-<li><a href="#机制-4" id="toc-机制-4">机制</a></li>
-<li><a href="#公式-4" id="toc-公式-4">公式</a></li>
-<li><a href="#数值-4" id="toc-数值-4">数值</a></li>
-<li><a href="#实战案例-4" id="toc-实战案例-4">实战案例</a></li>
-<li><a href="#反直觉点-4" id="toc-反直觉点-4">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.6-scr可控硅触发角与导通角"
-id="toc-x.6-scr可控硅触发角与导通角">13.X.6
-SCR（可控硅）触发角与导通角</a>
-<ul>
-<li><a href="#机制-5" id="toc-机制-5">机制</a></li>
-<li><a href="#公式-5" id="toc-公式-5">公式</a></li>
-<li><a href="#数值-5" id="toc-数值-5">数值</a></li>
-<li><a href="#实战案例-5" id="toc-实战案例-5">实战案例</a></li>
-<li><a href="#反直觉点-5" id="toc-反直觉点-5">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.7-rl-瞬态与续流保护"
-id="toc-x.7-rl-瞬态与续流保护">13.X.7 RL 瞬态与续流保护</a>
-<ul>
-<li><a href="#机制-6" id="toc-机制-6">机制</a></li>
-<li><a href="#公式-6" id="toc-公式-6">公式</a></li>
-<li><a href="#数值-6" id="toc-数值-6">数值</a></li>
-<li><a href="#实战案例-6" id="toc-实战案例-6">实战案例</a></li>
-<li><a href="#反直觉点-6" id="toc-反直觉点-6">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.8-二极管-稳压管非线性"
-id="toc-x.8-二极管-稳压管非线性">13.X.8 二极管 / 稳压管非线性</a>
-<ul>
-<li><a href="#机制-7" id="toc-机制-7">机制</a></li>
-<li><a href="#公式-7" id="toc-公式-7">公式</a></li>
-<li><a href="#数值-7" id="toc-数值-7">数值</a></li>
-<li><a href="#实战案例-7" id="toc-实战案例-7">实战案例</a></li>
-<li><a href="#反直觉点-7" id="toc-反直觉点-7">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.9-emc-滤波与抗干扰" id="toc-x.9-emc-滤波与抗干扰">13.X.9
-EMC 滤波与抗干扰</a>
-<ul>
-<li><a href="#机制-8" id="toc-机制-8">机制</a></li>
-<li><a href="#公式-8" id="toc-公式-8">公式</a></li>
-<li><a href="#数值-8" id="toc-数值-8">数值</a></li>
-<li><a href="#实战案例-8" id="toc-实战案例-8">实战案例</a></li>
-<li><a href="#反直觉点-8" id="toc-反直觉点-8">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.10-保险丝-i-t-特性数学描述"
-id="toc-x.10-保险丝-i-t-特性数学描述">13.X.10 保险丝 I-t
-特性（数学描述）</a>
-<ul>
-<li><a href="#机制-9" id="toc-机制-9">机制</a></li>
-<li><a href="#公式-9" id="toc-公式-9">公式</a></li>
-<li><a href="#数值-9" id="toc-数值-9">数值</a></li>
-<li><a href="#实战案例-9" id="toc-实战案例-9">实战案例</a></li>
-<li><a href="#反直觉点-9" id="toc-反直觉点-9">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.11-功率与能量守恒链路"
-id="toc-x.11-功率与能量守恒链路">13.X.11 功率与能量守恒链路</a>
-<ul>
-<li><a href="#机制-10" id="toc-机制-10">机制</a></li>
-<li><a href="#公式-10" id="toc-公式-10">公式</a></li>
-<li><a href="#数值-10" id="toc-数值-10">数值</a></li>
-<li><a href="#实战案例-10" id="toc-实战案例-10">实战案例</a></li>
-<li><a href="#反直觉点-10" id="toc-反直觉点-10">反直觉点</a></li>
-</ul></li>
-<li><a href="#x.12-自感-互感基础" id="toc-x.12-自感-互感基础">13.X.12
-自感 / 互感基础</a>
-<ul>
-<li><a href="#机制-11" id="toc-机制-11">机制</a></li>
-<li><a href="#公式-11" id="toc-公式-11">公式</a></li>
-<li><a href="#数值-11" id="toc-数值-11">数值</a></li>
-<li><a href="#实战案例-11" id="toc-实战案例-11">实战案例</a></li>
-<li><a href="#反直觉点-11" id="toc-反直觉点-11">反直觉点</a></li>
-</ul></li>
-<li><a href="#本章小结-12" id="toc-本章小结-12">本章小结</a></li>
-</ul></li>
 <li><a href="#第13章-电气系统" id="toc-第13章-电气系统">第13章
 电气系统</a>
 <ul>
@@ -2444,6 +2216,10 @@ id="toc-速查表30-秒定位你的电气问题">13.0.3 速查表（30
 秒定位你的电气问题）</a></li>
 <li><a href="#学完本章你将能-7" id="toc-学完本章你将能-7">13.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#电气系统原理层" id="toc-电气系统原理层">13.1
+电气系统原理层</a>
+<ul>
 <li><a href="#电气系统原理层系统功能与设计目标"
 id="toc-电气系统原理层系统功能与设计目标">13.1.1
 电气系统原理层：系统功能与设计目标</a></li>
@@ -2568,19 +2344,14 @@ ECU（行车电脑）</a></li>
 <ul>
 <li><a href="#案例-1电启动没反应" id="toc-案例-1电启动没反应">13.8.1
 案例 1：电启动没反应 ●●●</a></li>
-<li><a href="#测点图" id="toc-测点图">13.8.1 测点图</a></li>
 <li><a href="#案例-2充电指示灯亮" id="toc-案例-2充电指示灯亮">13.8.2
 案例 2：充电指示灯亮 ●●</a></li>
-<li><a href="#测点图-1" id="toc-测点图-1">13.8.2 测点图</a></li>
 <li><a href="#案例-3大灯不亮" id="toc-案例-3大灯不亮">13.8.3 案例
 3：大灯不亮 ●●</a></li>
-<li><a href="#测点图-2" id="toc-测点图-2">13.8.3 测点图</a></li>
 <li><a href="#案例-4转向灯频率不对" id="toc-案例-4转向灯频率不对">13.8.4
 案例 4：转向灯频率不对</a></li>
-<li><a href="#测点图-3" id="toc-测点图-3">13.8.4 测点图</a></li>
 <li><a href="#案例-5电瓶桩头腐蚀" id="toc-案例-5电瓶桩头腐蚀">13.8.5
 案例 5：电瓶桩头腐蚀</a></li>
-<li><a href="#测点图-4" id="toc-测点图-4">13.8.5 测点图</a></li>
 </ul></li>
 <li><a href="#电气系统实战" id="toc-电气系统实战">13.9 电气系统实战</a>
 <ul>
@@ -2655,7 +2426,7 @@ id="toc-案例-j本田-nc750x-喇叭不响">案例 J：本田 NC750X
 <li><a href="#这些案例的共同教训-7"
 id="toc-这些案例的共同教训-7">这些案例的共同教训 ●●</a></li>
 </ul></li>
-<li><a href="#本章小结-13" id="toc-本章小结-13">本章小结</a>
+<li><a href="#本章小结-12" id="toc-本章小结-12">本章小结</a>
 <ul>
 <li><a href="#关键技能清单-7"
 id="toc-关键技能清单-7">关键技能清单</a></li>
@@ -2667,6 +2438,120 @@ id="toc-注意-关于数据来源的重要声明-7">【注意】
 关于数据来源的重要声明</a></li>
 <li><a href="#重要提醒-7" id="toc-重要提醒-7">重要提醒</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#电工学基础扩展阅读" id="toc-电工学基础扩展阅读">13.11
+电工学基础（扩展阅读）</a>
+<ul>
+<li><a href="#欧姆定律-kclkvl-实战"
+id="toc-欧姆定律-kclkvl-实战">13.11.1 欧姆定律 + KCL/KVL 实战</a>
+<ul>
+<li><a href="#机制" id="toc-机制">机制</a></li>
+<li><a href="#公式" id="toc-公式">公式</a></li>
+<li><a href="#数值" id="toc-数值">数值</a></li>
+<li><a href="#实战案例" id="toc-实战案例">实战案例</a></li>
+<li><a href="#反直觉点" id="toc-反直觉点">反直觉点</a></li>
+</ul></li>
+<li><a href="#线束压降设计" id="toc-线束压降设计">13.11.2
+线束压降设计</a>
+<ul>
+<li><a href="#机制-1" id="toc-机制-1">机制</a></li>
+<li><a href="#公式-1" id="toc-公式-1">公式</a></li>
+<li><a href="#数值-1" id="toc-数值-1">数值</a></li>
+<li><a href="#实战案例-1" id="toc-实战案例-1">实战案例</a></li>
+<li><a href="#反直觉点-1" id="toc-反直觉点-1">反直觉点</a></li>
+</ul></li>
+<li><a href="#接地搭铁设计原理" id="toc-接地搭铁设计原理">13.11.3
+接地（搭铁）设计原理</a>
+<ul>
+<li><a href="#机制-2" id="toc-机制-2">机制</a></li>
+<li><a href="#公式-2" id="toc-公式-2">公式</a></li>
+<li><a href="#数值-2" id="toc-数值-2">数值</a></li>
+<li><a href="#实战案例-2" id="toc-实战案例-2">实战案例</a></li>
+<li><a href="#反直觉点-2" id="toc-反直觉点-2">反直觉点</a></li>
+</ul></li>
+<li><a href="#戴维南等效电路" id="toc-戴维南等效电路">13.11.4
+戴维南等效电路</a>
+<ul>
+<li><a href="#机制-3" id="toc-机制-3">机制</a></li>
+<li><a href="#公式-3" id="toc-公式-3">公式</a></li>
+<li><a href="#数值-3" id="toc-数值-3">数值</a></li>
+<li><a href="#实战案例-3" id="toc-实战案例-3">实战案例</a></li>
+<li><a href="#反直觉点-3" id="toc-反直觉点-3">反直觉点</a></li>
+</ul></li>
+<li><a href="#三相相量与整流桥" id="toc-三相相量与整流桥">13.11.5
+三相相量与整流桥</a>
+<ul>
+<li><a href="#机制-4" id="toc-机制-4">机制</a></li>
+<li><a href="#公式-4" id="toc-公式-4">公式</a></li>
+<li><a href="#数值-4" id="toc-数值-4">数值</a></li>
+<li><a href="#实战案例-4" id="toc-实战案例-4">实战案例</a></li>
+<li><a href="#反直觉点-4" id="toc-反直觉点-4">反直觉点</a></li>
+</ul></li>
+<li><a href="#scr可控硅触发角与导通角"
+id="toc-scr可控硅触发角与导通角">13.11.6 SCR（可控硅）触发角与导通角</a>
+<ul>
+<li><a href="#机制-5" id="toc-机制-5">机制</a></li>
+<li><a href="#公式-5" id="toc-公式-5">公式</a></li>
+<li><a href="#数值-5" id="toc-数值-5">数值</a></li>
+<li><a href="#实战案例-5" id="toc-实战案例-5">实战案例</a></li>
+<li><a href="#反直觉点-5" id="toc-反直觉点-5">反直觉点</a></li>
+</ul></li>
+<li><a href="#rl-瞬态与续流保护" id="toc-rl-瞬态与续流保护">13.11.7 RL
+瞬态与续流保护</a>
+<ul>
+<li><a href="#机制-6" id="toc-机制-6">机制</a></li>
+<li><a href="#公式-6" id="toc-公式-6">公式</a></li>
+<li><a href="#数值-6" id="toc-数值-6">数值</a></li>
+<li><a href="#实战案例-6" id="toc-实战案例-6">实战案例</a></li>
+<li><a href="#反直觉点-6" id="toc-反直觉点-6">反直觉点</a></li>
+</ul></li>
+<li><a href="#二极管-稳压管非线性" id="toc-二极管-稳压管非线性">13.11.8
+二极管 / 稳压管非线性</a>
+<ul>
+<li><a href="#机制-7" id="toc-机制-7">机制</a></li>
+<li><a href="#公式-7" id="toc-公式-7">公式</a></li>
+<li><a href="#数值-7" id="toc-数值-7">数值</a></li>
+<li><a href="#实战案例-7" id="toc-实战案例-7">实战案例</a></li>
+<li><a href="#反直觉点-7" id="toc-反直觉点-7">反直觉点</a></li>
+</ul></li>
+<li><a href="#emc-滤波与抗干扰" id="toc-emc-滤波与抗干扰">13.11.9 EMC
+滤波与抗干扰</a>
+<ul>
+<li><a href="#机制-8" id="toc-机制-8">机制</a></li>
+<li><a href="#公式-8" id="toc-公式-8">公式</a></li>
+<li><a href="#数值-8" id="toc-数值-8">数值</a></li>
+<li><a href="#实战案例-8" id="toc-实战案例-8">实战案例</a></li>
+<li><a href="#反直觉点-8" id="toc-反直觉点-8">反直觉点</a></li>
+</ul></li>
+<li><a href="#保险丝-i-t-特性数学描述"
+id="toc-保险丝-i-t-特性数学描述">13.11.10 保险丝 I-t
+特性（数学描述）</a>
+<ul>
+<li><a href="#机制-9" id="toc-机制-9">机制</a></li>
+<li><a href="#公式-9" id="toc-公式-9">公式</a></li>
+<li><a href="#数值-9" id="toc-数值-9">数值</a></li>
+<li><a href="#实战案例-9" id="toc-实战案例-9">实战案例</a></li>
+<li><a href="#反直觉点-9" id="toc-反直觉点-9">反直觉点</a></li>
+</ul></li>
+<li><a href="#功率与能量守恒链路" id="toc-功率与能量守恒链路">13.11.11
+功率与能量守恒链路</a>
+<ul>
+<li><a href="#机制-10" id="toc-机制-10">机制</a></li>
+<li><a href="#公式-10" id="toc-公式-10">公式</a></li>
+<li><a href="#数值-10" id="toc-数值-10">数值</a></li>
+<li><a href="#实战案例-10" id="toc-实战案例-10">实战案例</a></li>
+<li><a href="#反直觉点-10" id="toc-反直觉点-10">反直觉点</a></li>
+</ul></li>
+<li><a href="#自感-互感基础" id="toc-自感-互感基础">13.11.12 自感 /
+互感基础</a>
+<ul>
+<li><a href="#机制-11" id="toc-机制-11">机制</a></li>
+<li><a href="#公式-11" id="toc-公式-11">公式</a></li>
+<li><a href="#数值-11" id="toc-数值-11">数值</a></li>
+<li><a href="#实战案例-11" id="toc-实战案例-11">实战案例</a></li>
+<li><a href="#反直觉点-11" id="toc-反直觉点-11">反直觉点</a></li>
+</ul></li>
+<li><a href="#本章小结-13" id="toc-本章小结-13">本章小结</a></li>
 </ul></li>
 <li><a href="#第14章-车架与外观" id="toc-第14章-车架与外观">第14章
 车架与外观</a>
@@ -2680,6 +2565,10 @@ id="toc-速查表30-秒定位你的车架外观问题">14.0.3 速查表（30
 秒定位你的车架/外观问题）</a></li>
 <li><a href="#学完本章你将能-8" id="toc-学完本章你将能-8">14.0.4
 学完本章你将能</a></li>
+</ul></li>
+<li><a href="#车架系统原理层" id="toc-车架系统原理层">14.1
+车架系统原理层</a>
+<ul>
 <li><a href="#车架系统原理层系统功能与设计目标"
 id="toc-车架系统原理层系统功能与设计目标">14.1.1
 车架系统原理层：系统功能与设计目标</a></li>
@@ -4535,67 +4424,7 @@ id="toc-a.11.3-注意-数据来源声明">A.11.3 【注意】 数据来源声明
 </ul></li>
 </ul></li>
 </ul>
-</details></aside><article class="content">
-
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; padding: 0; font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.7; color: #222; background: #fafafa; }
-  header.app-bar { position: sticky; top: 0; z-index: 100; background: #1a1a1a; color: #fff; padding: 10px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-  header.app-bar h1 { font-size: 16px; font-weight: 600; margin: 0; flex: 0 0 auto; }
-  header.app-bar .search-wrap { flex: 1 1 auto; position: relative; }
-  header.app-bar input#search { width: 100%; padding: 8px 12px 8px 36px; border: none; border-radius: 6px; font-size: 15px; background: #333; color: #fff; outline: none; }
-  header.app-bar input#search::placeholder { color: #999; }
-  header.app-bar .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999; pointer-events: none; }
-  header.app-bar button.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; padding: 4px 8px; }
-  #search-results { position: fixed; top: 50px; left: 0; right: 0; max-height: 60vh; overflow-y: auto; background: #fff; border-bottom: 2px solid #1a1a1a; z-index: 99; display: none; box-shadow: 0 4px 12px rgba(0,0,0,.1); }
-  #search-results.active { display: block; }
-  #search-results .result { padding: 12px 16px; border-bottom: 1px solid #eee; cursor: pointer; }
-  #search-results .result:hover { background: #f0f7ff; }
-  #search-results .result h4 { margin: 0 0 4px 0; font-size: 15px; color: #1a1a1a; }
-  #search-results .result .excerpt { font-size: 13px; color: #666; }
-  #search-results .result .meta { font-size: 11px; color: #999; margin-top: 2px; }
-  #search-results .no-result { padding: 20px; text-align: center; color: #999; }
-  #search-results mark { background: #ffe066; color: #000; padding: 0 2px; }
-  main.layout { display: flex; min-height: calc(100vh - 50px); }
-  aside.sidebar { width: 280px; flex: 0 0 280px; background: #fff; border-right: 1px solid #e0e0e0; padding: 16px; overflow-y: auto; height: calc(100vh - 50px); position: sticky; top: 50px; }
-  aside.sidebar h2 { font-size: 13px; font-weight: 600; color: #666; margin: 0 0 12px 0; }
-  aside.sidebar ul { list-style: none; padding: 0; margin: 0; }
-  aside.sidebar a { display: block; padding: 6px 10px; color: #333; text-decoration: none; font-size: 14px; border-radius: 4px; line-height: 1.4; }
-  aside.sidebar a:hover { background: #f0f7ff; color: #1a1a1a; }
-  aside.sidebar ul ul { margin-left: 16px; }
-  aside.sidebar ul ul a { font-size: 13px; color: #666; }
-  aside.sidebar details { margin-bottom: 8px; }
-  aside.sidebar details summary { cursor: pointer; padding: 4px 0; font-weight: 600; font-size: 14px; color: #1a1a1a; }
-  article.content { flex: 1 1 auto; padding: 24px 32px; max-width: 920px; margin: 0 auto; background: #fff; }
-  article.content h1, article.content h2, article.content h3 { scroll-margin-top: 60px; }
-  article.content h1 { font-size: 24px; margin: 24px 0 16px; }
-  article.content h2 { font-size: 20px; margin: 24px 0 12px; border-bottom: 2px solid #1a1a1a; padding-bottom: 4px; }
-  article.content h3 { font-size: 17px; margin: 20px 0 10px; color: #333; }
-  article.content p { margin: 0 0 12px 0; }
-  article.content code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-size: 90%; }
-  article.content pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 13px; line-height: 1.5; }
-  article.content table { border-collapse: collapse; margin: 12px 0; font-size: 13px; width: 100%; }
-  article.content th, article.content td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
-  article.content th { background: #f4f4f4; }
-  article.content blockquote { border-left: 4px solid #1a1a1a; padding: 4px 12px; margin: 12px 0; background: #f8f8f8; color: #555; }
-  .target-highlight { background: #fff3a3; padding: 2px 0; animation: fadeOut 2s forwards; }
-  @keyframes fadeOut { 0% { background: #fff3a3; } 100% { background: transparent; } }
-  @media (max-width: 768px) {
-    header.app-bar h1 { font-size: 14px; }
-    header.app-bar button.menu-toggle { display: block; }
-    main.layout { display: block; }
-    aside.sidebar { position: fixed; top: 50px; left: -300px; width: 280px; height: calc(100vh - 50px); transition: left 0.2s; z-index: 98; box-shadow: 2px 0 8px rgba(0,0,0,.2); }
-    aside.sidebar.open { left: 0; }
-    article.content { padding: 16px; max-width: 100%; }
-    #search-results { top: 50px; }
-  }
-</style>
-
-
-<header id="title-block-header">
-<h1 class="title">摩托车维修全手册</h1>
-</header>
-
+</nav></aside>
 <!-- file: ./vol01/CH01-摩托车构造概论.md -->
 <section id="第一卷入门基础" class="level1">
 <h1>第一卷：入门基础</h1>
@@ -4626,7 +4455,7 @@ id="toc-a.11.3-注意-数据来源声明">A.11.3 【注意】 数据来源声明
 <section id="摩托车分类按维修重要性重新组织" class="level2">
 <h2>1.1 摩托车分类（按维修重要性重新组织）</h2>
 <section id="为什么分类很重要" class="level3">
-<h3>1.1.0 为什么分类很重要？</h3>
+<h3>1.1.1 为什么分类很重要？</h3>
 <p>【问答】 <strong>新手问答</strong>：为什么要先学分类？</p>
 <p>因为不同类型的摩托，结构差异巨大。比如你骑的是凯旋Scrambler
 1200X（双缸水冷），但网上查到的资料大部分是日系四缸教程。两者的气门调整、点火顺序都不一样。</p>
@@ -4635,7 +4464,7 @@ id="toc-a.11.3-注意-数据来源声明">A.11.3 【注意】 数据来源声明
 错！哈雷V双和雅马哈跨平面双，结构完全不同。</p>
 </section>
 <section id="按用途分类最实用" class="level3">
-<h3>1.1.1 按用途分类（最实用）</h3>
+<h3>1.1.2 按用途分类（最实用）</h3>
 <p>这是新手最需要了解的分类。不同用途的摩托，维修重点天差地别。</p>
 <!-- horizontal-rule -->
 <section id="街车streetnaked" class="level4">
@@ -5498,7 +5327,7 @@ Milwaukee-Eight 114）：</p>
 </section>
 </section>
 <section id="按发动机布局分类" class="level3">
-<h3>1.1.2 按发动机布局分类</h3>
+<h3>1.1.3 按发动机布局分类</h3>
 <section id="气缸数详解" class="level4">
 <h4>气缸数详解</h4>
 <p>新手经常问：“单缸和双缸到底有什么区别？” 这里详细讲。</p>
@@ -5888,7 +5717,7 @@ Triple 765、Tiger 900、Sprint</p>
 </section>
 </section>
 <section id="按气门机构分类" class="level3">
-<h3>1.1.3 按气门机构分类</h3>
+<h3>1.1.4 按气门机构分类</h3>
 <p>气门机构决定气门如何打开和关闭。</p>
 <section id="顶置气门-ohvover-head-valve" class="level4">
 <h4>顶置气门 OHV（Over Head Valve）</h4>
@@ -5946,7 +5775,7 @@ Desmo：机械开启 → 机械关闭</code></pre>
 </section>
 </section>
 <section id="按冷却方式分类" class="level3">
-<h3>1.1.4 按冷却方式分类</h3>
+<h3>1.1.5 按冷却方式分类</h3>
 <section id="风冷air-cooled" class="level4">
 <h4>风冷（Air-cooled）</h4>
 <p><strong>是什么</strong>：靠气流经过散热片直接散热。</p>
@@ -6086,7 +5915,7 @@ Desmo：机械开启 → 机械关闭</code></pre>
 </section>
 </section>
 <section id="按最终传动分类" class="level3">
-<h3>1.1.5 按最终传动分类</h3>
+<h3>1.1.6 按最终传动分类</h3>
 <section id="链条传动chain-drive" class="level4">
 <h4>链条传动（Chain Drive）</h4>
 <p><strong>是什么</strong>：用链条将动力从变速箱传递到后轮。</p>
@@ -6255,7 +6084,7 @@ Desmo：机械开启 → 机械关闭</code></pre>
 </section>
 </section>
 <section id="其他分类简单说明" class="level3">
-<h3>1.1.6 其他分类（简单说明）</h3>
+<h3>1.1.7 其他分类（简单说明）</h3>
 <table>
 <thead>
 <tr>
@@ -6284,8 +6113,8 @@ Desmo：机械开启 → 机械关闭</code></pre>
 </table>
 </section>
 <section id="按排量分级维修视角" class="level3">
-<h3>1.1.7 按排量分级（维修视角）</h3>
-<p>1.1.6
+<h3>1.1.8 按排量分级（维修视角）</h3>
+<p>1.1.7
 给的是”小/中/大/超大”的粗分法，便于记忆。这里再给一套更细的分级口径，重点不是背数字，而是让你知道<strong>排量档位会影响哪些维修决策</strong>。</p>
 <table>
 <thead>
@@ -6338,7 +6167,7 @@ Desmo：机械开启 → 机械关闭</code></pre>
 → 小双缸 → 四缸/大V缸”变难。</p>
 <p>【注意】 <strong>常见误解</strong>：“排量大就一定难修” —
 部分对。大排量单缸反而简单；真正决定难度的是<strong>缸数与布局</strong>。（本节细分口径与
-1.1.6 粗分口径并存，用途不同。）</p>
+1.1.7 粗分口径并存，用途不同。）</p>
 <!-- horizontal-rule -->
 </section>
 </section>
@@ -18613,8 +18442,8 @@ TDC 再转曲轴 360°，会到同一缸的另一个 TDC。</li>
 <p>【经验】
 <strong>老师傅经验</strong>：火花塞盒子上有型号，型号里有热值代号。比如
 NGK CR9E，<strong>9 就是热值</strong>。<strong>数字 =
-散热等级</strong>，但不同品牌的”数字”不能直接比较——NGK 的 9 等于 Denso
-的 9 还是多少，<strong>两家算法不一样</strong>。</p>
+散热等级</strong>，但不同品牌的”数字”不能直接比较——NGK 的 9 对应 Denso
+的哪个编号，<strong>必须查官方对照表——两家算法不一样，不能按数字直接等值替换</strong>。</p>
 </section>
 <section id="火花塞材质怎么选" class="level3">
 <h3>6.4.5 火花塞材质怎么选 ●●</h3>
@@ -22304,7 +22133,7 @@ bar，远高于进气道喷射，<strong>拆装前必须泄压</strong>。</li>
 <strong>老师傅经验</strong>：<strong>化油器是机械时代的基本功</strong>——电喷时代也要懂化油器原理。<strong>修好化油器的人，对燃油系统理解更深</strong>。</p>
 </section>
 <section id="网络实战案例汇编来自论坛技师分享-1" class="level3">
-<h3>7.10.9 网络实战案例汇编（来自论坛、技师分享）●●</h3>
+<h3>7.10.8 网络实战案例汇编（来自论坛、技师分享）●●</h3>
 <p><strong>这是从 ADVrider、Reddit、BikeChat
 等论坛整理的真实案例</strong>——给新手看”别人怎么翻车的”。</p>
 </section>
@@ -22664,6 +22493,9 @@ bar，远高于进气道喷射，<strong>拆装前必须泄压</strong>。</li>
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="进气排气系统原理层" class="level2">
+<h2>8.1 进气排气系统原理层</h2>
 <section id="进气排气系统原理层系统功能与设计目标" class="level3">
 <h3>8.1.1 进气排气系统原理层：系统功能与设计目标</h3>
 <p>进气排气系统是发动机的「呼吸系统」。进气要把新鲜空气按精确量送进缸里，排气要把燃烧废气按低背压推出缸外。<strong>看似简单，实际涉及气体动力学、热力学、声学、化学反应四个学科</strong>（来源：⭐⭐⭐）。</p>
@@ -24644,6 +24476,9 @@ E-Mark，否则违法</li>
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="冷却系统原理层" class="level2">
+<h2>9.1 冷却系统原理层</h2>
 <section id="冷却系统原理层系统功能与设计目标" class="level3">
 <h3>9.1.1 冷却系统原理层：系统功能与设计目标</h3>
 <p>冷却系统不是「让发动机变冷」的系统——是<strong>让发动机维持在设计温度窗口</strong>的系统。温度太低，机油黏、磨损大、排放差；温度太高，机油烧、零件变形、爆震、卡死。<strong>冷却的本质是热平衡管理</strong>（来源：⭐⭐⭐）。</p>
@@ -26233,6 +26068,9 @@ Revolution Max 平台才把冷却液进缸列入重点怀疑（来源：⭐）</
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="传动系统原理层" class="level2">
+<h2>10.1 传动系统原理层</h2>
 <section id="传动系统原理层系统功能与设计目标" class="level3">
 <h3>10.1.1 传动系统原理层：系统功能与设计目标</h3>
 <p>摩托车传动系统的任务是把曲轴的旋转「翻译」成后轮的旋转，同时在<strong>扭矩、转速、路况、骑手意图</strong>之间做动态调节。<strong>这不是单一部件，是曲轴→初级减速→离合器→变速箱→次级减速→最终传动→后轮</strong>的一条长链（来源：⭐⭐⭐）。</p>
@@ -28491,6 +28329,9 @@ SV650 发动机/变速箱共用机油，通常没有独立齿轮油；具体以�
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="行走系统原理层" class="level2">
+<h2>11.1 行走系统原理层</h2>
 <section id="行走系统原理层系统功能与设计目标" class="level3">
 <h3>11.1.1 行走系统原理层：系统功能与设计目标</h3>
 <p>摩托车行走系统（chassis+wheel+tyre+brake+ABS，刹车和 ABS 在第 12
@@ -32028,589 +31869,8 @@ DOT 5.1 或更高温度窗口刹车片（来源：⭐）
 刹车油工业标准、刹车系统厂家公开资料、摩托车维修论坛共识。</em>
 <em>所有具体车型数据<strong>未经厂家官网实时验证，使用前必须查官方维修手册</strong>。</em></p>
 <!-- separator -->
-<!-- file: ./vol03/CH13.1-电工学基础.md -->
-</section>
-</section>
-</section>
-<section id="x-电工学基础扩展阅读" class="level1">
-<h1>13.X 电工学基础（扩展阅读）</h1>
-<blockquote>
-<p>本章是 CH13
-电气系统的“电工学知识扩展”，<strong>为有一定物理基础或想深入的车主</strong>补充
-12 个关键概念。 写作规范遵循 PRINCIPLES.md，来源等级 ⭐⭐⭐/⭐⭐/⭐/❓
-强制。</p>
-</blockquote>
-<!-- horizontal-rule -->
-<section id="x.1-欧姆定律-kclkvl-实战" class="level2">
-<h2>13.X.1 欧姆定律 + KCL/KVL 实战</h2>
-<section id="机制" class="level3">
-<h3>机制</h3>
-<p>摩托车电路先按“电源、导线、开关、负载、回路”理解。钥匙 ON
-后，电瓶正极经主保险丝、点火开关、分支保险丝送到大灯、尾灯、仪表、ECU
-等负载，最后经搭铁回到电瓶负极。KCL
-说节点电流守恒：主线电流等于各支路电流之和（来源：⭐⭐⭐）。KVL
-说闭合回路中电压升与电压降代数和为零（来源：⭐⭐⭐）。所以灯暗、继电器吸不住、仪表重启，本质上都可以回到“哪一段吃掉了电压”。</p>
-</section>
-<section id="公式" class="level3">
-<h3>公式</h3>
-<p>欧姆定律为 <span
-class="math inline"><em>V</em> = <em>I</em><em>R</em></span>，功率为
-<span
-class="math inline"><em>P</em> = <em>I</em><em>V</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。并联负载电流相加，串联电阻分压；接头氧化后不是“开路”，而是把本来接近
-<span class="math inline">0<em>Ω</em></span>
-的连接点变成一个小电阻。</p>
-</section>
-<section id="数值" class="level3">
-<h3>数值</h3>
-<p>钥匙 ON、大灯开、刹车灯亮时，可用额定功率估算总电流：55 W 大灯约
-<span
-class="math inline">55<em>W</em>/12<em>V</em> = 4.6<em>A</em></span>，21
-W 刹车灯约 <span class="math inline">1.75<em>A</em></span>，5 W 尾灯约
-<span class="math inline">0.42<em>A</em></span>，仪表和 ECU 若合计 10 W
-约 <span class="math inline">0.83<em>A</em></span>（12 V
-标称系统和功率换算来源：⭐⭐⭐；具体功率随车型而变：❓）。主回路总电流约
-<span
-class="math inline">4.6<em>A</em> + 1.75<em>A</em> + 0.42<em>A</em> + 0.83<em>A</em> = 7.6<em>A</em></span>。</p>
-</section>
-<section id="实战案例" class="level3">
-<h3>实战案例</h3>
-<p>如果主电源插头氧化，多出 <span
-class="math inline">0.1<em>Ω</em></span>（小电阻压降计算来源：⭐⭐⭐；氧化量级需实测：❓），7.6
-A 通过时压降为 <span
-class="math inline"><em>V</em> = 7.6<em>A</em> × 0.1<em>Ω</em> = 0.76<em>V</em></span>，发热为
-<span
-class="math inline"><em>P</em> = 7.6<sup>2</sup><em>A</em><sup>2</sup> × 0.1<em>Ω</em> ≈ 5.8<em>W</em></span>。5.8
-W
-集中在一个小端子上，足以让塑料发黄、端子发黑、弹片退火，接触压力继续下降，电阻继续增大。</p>
-</section>
-<section id="反直觉点" class="level3">
-<h3>反直觉点</h3>
-<p>接头发黑导致灯暗，不一定是灯泡坏了，而是灯泡没有拿到足够电压。12 V
-系统少 0.7-1.0 V
-已经很明显，卤素灯亮度对电压很敏感；同一只灯泡，在电瓶端测到 12.6
-V，不代表灯泡插头也有 12.6
-V。诊断时要在负载工作时测灯泡正负端电压，而不是只拔掉插头量空载电压。详见
-13.1.2、13.6.1、13.8.3。</p>
-</section>
-</section>
-<section id="x.2-线束压降设计" class="level2">
-<h2>13.X.2 线束压降设计</h2>
-<section id="机制-1" class="level3">
-<h3>机制</h3>
-<p>导线不是理想导体。电流从电瓶正极到负载，再从负载回到电瓶负极，正线和回路线都要算长度；灯泡、喇叭、风扇这类大电流负载尤其怕线束压降。压降设计的目标不是让导线“能通电”，而是在最大负载时仍让负载端拿到足够电压，并且导线自己不明显发热。摩托车线束又要受振动、弯折、潮气和接头老化影响，所以实际余量要比桌面计算更保守。</p>
-</section>
-<section id="公式-1" class="level3">
-<h3>公式</h3>
-<p>铜线电阻用 <span
-class="math inline"><em>R</em> = <em>ρ</em><em>L</em>/<em>A</em></span>
-估算，其中铜电阻率 <span
-class="math inline"><em>ρ</em> = 1.72 × 10<sup>−8</sup><em>Ω</em> ⋅ <em>m</em></span>（20
-°C 附近教科书值，来源：⭐⭐⭐），<span
-class="math inline"><em>L</em></span> 是来回总长度，<span
-class="math inline"><em>A</em></span> 是截面积。压降为 <span
-class="math inline"><em>V</em><sub><em>d</em><em>r</em><em>o</em><em>p</em></sub> = <em>I</em><em>R</em></span>，线损为
-<span
-class="math inline"><em>P</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。</p>
-</section>
-<section id="数值-1" class="level3">
-<h3>数值</h3>
-<p>以 12 V、55 W 大灯为例，电流约 <span
-class="math inline"><em>I</em> = 55<em>W</em>/12<em>V</em> = 4.6<em>A</em></span>（来源：⭐⭐⭐）。来回线束总长
-3 m（示例值：❓）时，不同铜线截面积计算如下：</p>
-<table>
-<thead>
-<tr>
-<th>截面积</th>
-<th style="text-align: right;">回路电阻</th>
-<th style="text-align: right;">4.6 A 压降</th>
-<th style="text-align: right;">占 12 V 比例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0.5 mm²</td>
-<td style="text-align: right;">0.103 Ω</td>
-<td style="text-align: right;">0.47 V</td>
-<td style="text-align: right;">3.9%</td>
-</tr>
-<tr>
-<td>1.0 mm²</td>
-<td style="text-align: right;">0.052 Ω</td>
-<td style="text-align: right;">0.24 V</td>
-<td style="text-align: right;">2.0%</td>
-</tr>
-<tr>
-<td>1.5 mm²</td>
-<td style="text-align: right;">0.034 Ω</td>
-<td style="text-align: right;">0.16 V</td>
-<td style="text-align: right;">1.3%</td>
-</tr>
-<tr>
-<td>2.5 mm²</td>
-<td style="text-align: right;">0.021 Ω</td>
-<td style="text-align: right;">0.10 V</td>
-<td style="text-align: right;">0.8%</td>
-</tr>
-</tbody>
-</table>
-<p>这些是理想铜线值（来源：⭐⭐⭐），实际还要加开关、保险丝座、接插件、搭铁点电阻（来源：⭐⭐）。</p>
-</section>
-<section id="实战案例-1" class="level3">
-<h3>实战案例</h3>
-<p>在线测压降要让负载工作：大灯打开，万用表黑表笔接电瓶正极，红表笔接大灯正极，读数就是正线压降；再把黑表笔接大灯负极，红表笔接电瓶负极，读数就是回路线压降。正线和回路线加起来超过系统电压的
-3%-5%，也就是 12 V 系统约 0.36-0.60
-V，就要查线束、接头、开关和搭铁（通用低压电路经验阈值，来源：⭐⭐）。</p>
-</section>
-<section id="反直觉点-1" class="level3">
-<h3>反直觉点</h3>
-<p>空载测电压常常会骗人。一个氧化接头在万用表的微小测量电流下几乎不掉压，看起来“有
-12 V”；但大灯一亮，4-5 A
-通过，压降立刻显现。电气诊断要优先做“带负载压降测试”，这比拆开全车线束找断线更快。详见
-13.1.11、13.6.1、13.8.3。</p>
-</section>
-</section>
-<section id="x.3-接地搭铁设计原理" class="level2">
-<h2>13.X.3 接地（搭铁）设计原理</h2>
-<section id="机制-2" class="level3">
-<h3>机制</h3>
-<p>摩托车的“负极线”不一定是一根完整回线，车架、发动机壳体和专用地线共同构成回流路径。典型路径可写成：电瓶负极
-→ 粗搭铁线 → 车架主搭铁点 → 发动机壳体 →
-启动机外壳；另一条小电流路径是：电瓶负极 → 车架 → 线束地汇流点 → ECU
-传感器地 →
-传感器。车架既是结构件，又是电路的一部分，这是摩托车电气和桌面电路最不同的地方。</p>
-</section>
-<section id="公式-2" class="level3">
-<h3>公式</h3>
-<p>接地问题仍服从 <span
-class="math inline"><em>V</em> = <em>I</em><em>R</em></span>（来源：⭐⭐⭐）。同样是
-<span class="math inline">0.01<em>Ω</em></span> 的地线电阻，150 A
-启动电流会产生 <span class="math inline">1.5<em>V</em></span> 压降；但
-0.001 A 传感器电流只产生 <span
-class="math inline">0.00001<em>V</em></span>，几乎可以忽略。问题在于两者如果共用同一段地线，大电流的地电位抬升会叠加到传感器参考地上。</p>
-</section>
-<section id="数值-2" class="level3">
-<h3>数值</h3>
-<p>启动机电流可达 100-200
-A（通用摩托车启动系统范围，来源：⭐⭐），本节按 150 A 计算；ECU
-传感器信号电流常在 mA 或更低量级，某些高阻输入接近 <span
-class="math inline">0.001<em>A</em></span>
-或更低（电子测量输入通用量级，来源：⭐⭐）。一个节气门位置、水温或进气压力传感器如果参考地漂移
-0.1 V，ECU
-读数就可能明显偏移（低压模拟传感器原理，来源：⭐⭐⭐；允许误差看车型：❓）。</p>
-</section>
-<section id="实战案例-2" class="level3">
-<h3>实战案例</h3>
-<p>单点接地适合低噪声电子系统，把多个传感器地汇到 ECU
-附近，减少地环路。多点接地适合车灯、喇叭、风扇等分散大电流负载，线束短、成本低。星形接地是把大电流地、传感器地、屏蔽地分支汇到同一参考点，常见于对抗干扰要求高的
-ECU
-附近。检修时，启动无力但电瓶正常，要查电瓶负极到发动机壳体的粗搭铁线；怠速异常、传感器报码，则要查
-ECU 地和传感器地。</p>
-</section>
-<section id="反直觉点-2" class="level3">
-<h3>反直觉点</h3>
-<p>“搭铁良好”不是一句口号，而是电压参考是否稳定。车架螺栓看着紧，不代表电气上低阻；油漆、锈蚀、铝氧化层、松动垫片都可能让地线变成隐形电阻。最稳的判断方式仍是带负载测压降：启动时测电瓶负极到发动机壳体，如果出现明显电压，搭铁路径就有问题。详见
-13.1.11、13.3.1、13.7.3。</p>
-</section>
-</section>
-<section id="x.4-戴维南等效电路" class="level2">
-<h2>13.X.4 戴维南等效电路</h2>
-<section id="机制-3" class="level3">
-<h3>机制</h3>
-<p>戴维南等效把复杂电源网络简化成“一个理想电压源 +
-一个串联内阻”。对修车最有用的地方，是把电瓶、桩头、主线、继电器触点、搭铁线都看成一个会随电流掉压的电源。起动机一按下，负载电流突然变大，总线电压不是由“电瓶标称
-12 V”决定，而是由开路电压减去所有内阻压降决定。</p>
-</section>
-<section id="公式-3" class="level3">
-<h3>公式</h3>
-<p>等效端电压可写为 <span
-class="math inline"><em>U</em><sub><em>端</em></sub> = <em>U</em><sub><em>o</em><em>c</em></sub> − <em>I</em>(<em>R</em><sub><em>内</em></sub> + <em>R</em><sub><em>线</em></sub> + <em>R</em><sub><em>触</em><em>点</em></sub>)</span>（来源：⭐⭐⭐）。这里
-<span
-class="math inline"><em>U</em><sub><em>o</em><em>c</em></sub></span>
-是电瓶空载电压，<span class="math inline"><em>I</em></span>
-是负载电流，后面的电阻包括电瓶内阻和外部连接电阻。功率损失仍为 <span
-class="math inline"><em>P</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。</p>
-</section>
-<section id="数值-3" class="level3">
-<h3>数值</h3>
-<p>案例：电瓶开路电压 12.6 V，内阻 <span
-class="math inline">0.02<em>Ω</em></span>，线阻和触点合计 <span
-class="math inline">0.01<em>Ω</em></span>，启动电流 150
-A（示例参数，来源：⭐⭐；具体车型需实测：❓）。端电压为 <span
-class="math inline"><em>U</em><sub><em>端</em></sub> = 12.6<em>V</em> − 150<em>A</em> × (0.02<em>Ω</em> + 0.01<em>Ω</em>) = 8.1<em>V</em></span>。这时不是电瓶“消失了”，而是
-4.5 V 掉在电瓶内阻和线路电阻上，热也在这些位置产生。</p>
-</section>
-<section id="实战案例-3" class="level3">
-<h3>实战案例</h3>
-<p>判断起动机能不能转，可以把按钮端当作戴维南输出端。先测电瓶静态电压，再按启动测电瓶桩头电压，最后测起动机端子到壳体电压。如果电瓶桩头仍有
-10 V 以上（阈值依车型和温度，来源：❓），起动机端只剩 7-8
-V，问题多半在线路、继电器或搭铁；如果电瓶桩头本身掉到很低，问题更像电瓶容量、内阻或低温性能。</p>
-</section>
-<section id="反直觉点-3" class="level3">
-<h3>反直觉点</h3>
-<p>按启动按钮时全车灯都暗一下，不是大灯线路突然坏了，而是起动机把公共电源总线拉低。灯、仪表、ECU
-和起动机共享同一电瓶等效源，大电流负载优先暴露内阻。新手容易只看静态
-12.6 V
-就判断电瓶好；实战中，带载电压才反映电瓶和主回路能不能供出功率。详见
-13.1.4、13.1.8、13.8.1、13.9.1。</p>
-</section>
-</section>
-<section id="x.5-三相相量与整流桥" class="level2">
-<h2>13.X.5 三相相量与整流桥</h2>
-<section id="机制-4" class="level3">
-<h3>机制</h3>
-<p>摩托车永磁发电机通常输出三相交流。三组定子绕组在空间上错开，转子磁场扫过它们时，产生三条相位相差
-120° 的正弦波（来源：⭐⭐⭐）。文字相量图可写成：A 相在 0°，B 相滞后
-120°，C 相滞后
-240°；任意时刻总有一相较高、一相较低，六二极管桥就选择最高相接直流正端、最低相接直流负端。整流后每个交流周期有
-6 个脉动峰，明显小于单相整流的低频起伏。</p>
-</section>
-<section id="公式-4" class="level3">
-<h3>公式</h3>
-<p>三相桥式整流的平均直流电压常用 <span
-class="math inline">$U_{平均}=(3\sqrt{2}/\pi) \times U_{相} \approx 1.35
-\times U_{相}$</span> 估算（来源：⭐⭐⭐）。这里按维修常用口径，把 <span
-class="math inline"><em>U</em><sub><em>相</em></sub></span>
-理解为任意两根定子线之间测到的交流有效值；如果教材把相电压定义为相对中性点电压，系数写法会不同，计算前必须确认定义。</p>
-</section>
-<section id="数值-4" class="level3">
-<h3>数值</h3>
-<p>三相桥有 6 个大功率二极管，任意瞬间通常有 2
-个二极管串在电流路径上（来源：⭐⭐⭐）。硅二极管大电流正向压降常在
-0.7-1.0 V 量级（来源：⭐⭐），所以整流桥路径压降约 1.4-2.0
-V（来源：⭐⭐）。发电机低转速时，本来交流幅值就低，二极管压降和线阻会让可用直流电压更紧张；这就是为什么怠速开大灯时电瓶可能仍在补电。</p>
-</section>
-<section id="实战案例-4" class="level3">
-<h3>实战案例</h3>
-<p>测三相发电机时，通常拔开调压整流器插头，在三根黄线或白线之间两两测交流电压，三组读数应大致接近（测量方法来源：⭐⭐；数值看维修手册：❓）。若某一组明显低，可能是定子绕组局部短路或接头烧蚀；若三组都随转速升高而升高，定子大体正常，故障更可能在整流稳压器或电瓶侧。</p>
-</section>
-<section id="反直觉点-4" class="level3">
-<h3>反直觉点</h3>
-<p>三相整流“更稳”不是因为电压神奇地变成直流，而是因为三条波形错开后，最低谷被其他相填上了。单相像一个人推车，力一阵一阵；三相像三个人错开节奏推车，输出更连续。低转速时三相仍有更密集的脉动峰，所以调压器和电瓶更容易把电压滤平。详见
-13.1.6、13.1.7、13.2.2、13.2.3。</p>
-</section>
-</section>
-<section id="x.6-scr可控硅触发角与导通角" class="level2">
-<h2>13.X.6 SCR（可控硅）触发角与导通角</h2>
-<section id="机制-5" class="level3">
-<h3>机制</h3>
-<p>SCR
-可控硅可以理解成“被触发后会锁住导通的单向开关”。摩托车稳压器在检测到电压超过阈值后，会在交流半周的某个时刻触发
-SCR，让定子部分电流走旁路，把本来要进入电瓶和负载的能量改为在线圈、电阻、半导体和散热片上变成热（来源：⭐⭐⭐）。这不是拿电瓶直流正负极硬短路，而是在发电机交流侧或整流侧按时机分流多余能量。</p>
-</section>
-<section id="公式-5" class="level3">
-<h3>公式</h3>
-<p>本节只讲物理意义。触发角 <span class="math inline"><em>α</em></span>
-是从交流波形过零点到 SCR 被点亮的角度；导通角 <span
-class="math inline"><em>θ</em></span> 是 SCR
-在这一半周里真正导通的角度（来源：⭐⭐⭐）。触发越早，导通越久，被分流的能量越多；触发越晚，留给电瓶和负载的能量越多。到电流过零或低于维持电流时，SCR
-才自然关断。</p>
-</section>
-<section id="数值-5" class="level3">
-<h3>数值</h3>
-<p>12 V 铅酸系统常把运行充电电压控制在约 13.5-14.5 V
-范围（通用充电系统目标，来源：⭐⭐；车型以手册为准：❓）。高速时永磁发电机可输出远高于电瓶需要的交流电压（发电机随转速升高原理来源：⭐⭐⭐），稳压器要处理的多余功率会转成热。散热片温度明显高并不自动等于故障，但烫到变色、插头熔化、充电电压失控就必须检修。</p>
-</section>
-<section id="实战案例-5" class="level3">
-<h3>实战案例</h3>
-<p>遇到电瓶过充、灯泡频繁烧、调压器插头发黑，先测电瓶两端：怠速、3000
-rpm、开灯、关灯各测一次。若电压明显超过手册上限（阈值看车型：❓），可能是稳压器失控或地线参考不良；若电压偏低且定子三相正常，可能是稳压器内部开路、整流二极管损坏或接头压降过大。</p>
-</section>
-<section id="反直觉点-5" class="level3">
-<h3>反直觉点</h3>
-<p>SCR
-稳压器发热不是“设计很烂”的直接证据，而是并联分流式稳压的工作方式。永磁发电机不能像汽车励磁发电机那样轻松减少磁场，转子磁铁一直在扫定子，过剩能量必须有去处。工程取舍是结构简单、可靠、成本低，但代价是稳压器和定子承受热负担。详见
-13.1.7、13.2.3、13.8.2。</p>
-</section>
-</section>
-<section id="x.7-rl-瞬态与续流保护" class="level2">
-<h2>13.X.7 RL 瞬态与续流保护</h2>
-<section id="机制-6" class="level3">
-<h3>机制</h3>
-<p>继电器线圈、喷油器线圈、点火线圈初级都是电感。电感的本性是反抗电流变化：通电时电流不能瞬间升到最大，断电时电流也不愿意瞬间变成零（来源：⭐⭐⭐）。开关断开的一瞬间，如果原来的电流无路可走，电感会把自身磁场能量变成高电压，强行寻找放电路径，于是触点打火、晶体管击穿、ECU
-受干扰就出现了。</p>
-</section>
-<section id="公式-6" class="level3">
-<h3>公式</h3>
-<p>电感电压为 <span
-class="math inline"><em>U</em><sub><em>L</em></sub> = −<em>L</em> × <em>d</em><em>I</em>/<em>d</em><em>t</em></span>（来源：⭐⭐⭐）。负号表示电感产生的电压方向总是反抗电流变化。储能公式为
-<span
-class="math inline">$W=\frac{1}{2}LI^2$</span>（来源：⭐⭐⭐）。断电越快，<span
-class="math inline"><em>d</em><em>I</em>/<em>d</em><em>t</em></span>
-越大，尖峰电压越高。</p>
-</section>
-<section id="数值-6" class="level3">
-<h3>数值</h3>
-<p>摩托车小继电器线圈电感可在 100-500 mH
-量级（通用继电器量级，来源：⭐⭐；具体件需测量：❓）。若断电 0.1 ms
-内电流变化率达到 <span
-class="math inline">10<sup>5</sup><em>A</em>/<em>s</em></span>（快速开断示例，来源：⭐⭐），代入
-<span
-class="math inline"><em>U</em><sub><em>L</em></sub> = <em>L</em><em>d</em><em>I</em>/<em>d</em><em>t</em></span>，理论尖峰可到
-10-50 kV。实际会被寄生电容、空气击穿、触点电弧、二极管或 TVS
-限制，不会无限升高（来源：⭐⭐⭐）。</p>
-</section>
-<section id="实战案例-6" class="level3">
-<h3>实战案例</h3>
-<p>普通继电器线圈两端常并联续流二极管，断电时电流绕线圈和二极管衰减，保护开关晶体管（来源：⭐⭐⭐）。点火线圈不能简单用慢速续流二极管把尖峰钳得太低，否则升压不足；常用
-TVS、点火模块钳位和火花塞间隙共同决定能量释放。点火线圈初级断电产生
-100-300 V 量级初级尖峰（来源：⭐⭐），再乘 1:50 到 1:200
-匝比（来源：⭐⭐），次级达到约 10-40 kV、常见 15-40 kV
-是合理结果，具体随线圈、火花塞间隙、缸压和系统类型变化。</p>
-</section>
-<section id="反直觉点-6" class="level3">
-<h3>反直觉点</h3>
-<p>断开电路不一定让电压变小，断开电感反而可能让电压冲到电源电压的 10-100
-倍（来源：⭐⭐⭐）。所以“12 V
-车没有高压危险”只对电瓶直流端大体成立，不适用于点火线圈次级和开断瞬间。拔高压帽、试火花、测点火模块时必须按维修手册操作。详见
-13.1.9、13.4.1、13.4.3。</p>
-</section>
-</section>
-<section id="x.8-二极管-稳压管非线性" class="level2">
-<h2>13.X.8 二极管 / 稳压管非线性</h2>
-<section id="机制-7" class="level3">
-<h3>机制</h3>
-<p>二极管不是一个“只许单向通过的理想门”，而是非线性器件。正向时电压超过一定范围后电流快速上升；反向时只有很小漏电；反向电压再高到击穿区，普通二极管可能损坏，稳压管和
-TVS
-则利用可控击穿来钳位电压（来源：⭐⭐⭐）。摩托车整流桥、稳压基准、瞬态抑制都靠这种非线性。</p>
-</section>
-<section id="公式-7" class="level3">
-<h3>公式</h3>
-<p>维修中常用近似模型：硅二极管正向导通压降 <span
-class="math inline"><em>V</em><sub><em>f</em></sub></span> 约 0.7
-V，锗二极管约 0.3 V，肖特基二极管约 0.3
-V（器件基础量级，来源：⭐⭐；具体看型号曲线：❓）。大电流发热用 <span
-class="math inline"><em>P</em> = <em>I</em> × <em>V</em><sub><em>f</em></sub></span>
-估算（来源：⭐⭐⭐）。</p>
-</section>
-<section id="数值-7" class="level3">
-<h3>数值</h3>
-<p>三相整流桥任一时刻通常两只二极管导通（来源：⭐⭐⭐）。若每只大功率硅二极管压降
-0.7-1.0 V（来源：⭐⭐），总压降约 1.4-2.0 V。10 A
-充电电流下，每只导通二极管发热约 <span
-class="math inline">10<em>A</em> × 0.8<em>V</em> = 8<em>W</em></span>，两只合计约
-16
-W（计算来源：⭐⭐⭐；压降示例来源：⭐⭐）。这就是整流调压器必须贴散热片、涂导热介质、固定在通风位置的原因。</p>
-</section>
-<section id="实战案例-7" class="level3">
-<h3>实战案例</h3>
-<p>二极管损坏有两种常见方向：短路会让交流漏到直流侧、电瓶异常放电或保险丝烧；开路会少用一部分波形，充电能力下降、脉动变大。万用表二极管挡可以做初筛：正向有压降、反向不导通才像正常（方法来源：⭐⭐）。但功率器件有时冷态正常、热态失效，所以充电系统仍要结合运行电压和温升判断。</p>
-</section>
-<section id="反直觉点-7" class="level3">
-<h3>反直觉点</h3>
-<p>二极管“导通”不等于“没有损耗”。在 5 V 数字电路里 0.7 V 很大，在 12 V
-车电系统里也不小；大电流下压降乘电流就是热。整流桥不是被动无损零件，它本身就是充电系统热源之一。详见
-13.1.7、13.2.3、13.8.2。</p>
-</section>
-</section>
-<section id="x.9-emc-滤波与抗干扰" class="level2">
-<h2>13.X.9 EMC 滤波与抗干扰</h2>
-<section id="机制-8" class="level3">
-<h3>机制</h3>
-<p>EMC
-是电磁兼容：既不让自己的电路干扰别人，也不被别人干扰。摩托车最强的干扰源通常是点火系统，火花塞间隙被约
-10-40 kV、常见 15-40 kV
-高压击穿时（来源：⭐⭐），电流在极短时间内突变，线束像天线一样辐射宽频噪声。ECU
-传感器线、仪表线、收音机和改装电子设备如果布线或滤波差，就可能被误触发、死机或读数跳动。</p>
-</section>
-<section id="公式-8" class="level3">
-<h3>公式</h3>
-<p>电容对高频阻抗为 <span
-class="math inline"><em>X</em><sub><em>C</em></sub> = 1/(2<em>π</em><em>f</em><em>C</em>)</span>，频率越高，电容越像低阻旁路（来源：⭐⭐⭐）。电感和磁环对高频呈现更大阻抗，可把共模或差模高频噪声衰减掉（来源：⭐⭐⭐）。这些不是为了改变直流
-12 V，而是给 1-100 MHz
-量级干扰提供更短或更难走的路径（典型干扰频段来源：⭐⭐）。</p>
-</section>
-<section id="数值-8" class="level3">
-<h3>数值</h3>
-<p>常见做法包括：每个 IC 电源脚旁并 0.1 μF
-陶瓷去耦电容（数字电路通用经验，来源：⭐⭐）；电源线或信号线穿磁环，按干扰频段选择阻抗曲线（来源：⭐⭐）；高压点火线用碳芯线或电阻线，火花塞帽内常带
-kΩ
-级电阻以抑制射频噪声（通用点火抗干扰设计，来源：⭐⭐；具体阻值看手册：❓）；关键传感器使用双绞线或屏蔽线（来源：⭐⭐）。</p>
-</section>
-<section id="实战案例-8" class="level3">
-<h3>实战案例</h3>
-<p>改装行车记录仪、USB 充电器、LED
-灯条后，如果仪表闪烁、收音机噪声变大、ABS 或 ECU
-偶发报码，要从走线和供电查起。电源线加保险、从电瓶或受控电源取电、负极回到可靠搭铁点；信号线远离高压线和点火线圈；长线可加磁环；敏感线不要和火花塞高压线平行捆扎。高压线与低压信号线分开走，比事后加滤波更有效。</p>
-</section>
-<section id="反直觉点-8" class="level3">
-<h3>反直觉点</h3>
-<p>抗干扰不是“多包几层胶布”。绝缘胶布解决的是短路风险，不解决高频电磁耦合。高频噪声可以通过空间辐射、电容耦合、地线共阻抗进入电路；线没破皮也会被干扰。布局、接地、屏蔽、滤波要一起看。详见
-13.1.1、13.1.11、13.4.1、13.7.4。</p>
-</section>
-</section>
-<section id="x.10-保险丝-i-t-特性数学描述" class="level2">
-<h2>13.X.10 保险丝 I-t 特性（数学描述）</h2>
-<section id="机制-9" class="level3">
-<h3>机制</h3>
-<p>保险丝靠电流发热熔断，保护的是线束和下游设备。它的行为不是“超过额定电流立刻断”，而是反时限：过载越大，熔断越快；轻微过载可能很久都不断（来源：⭐⭐⭐）。这符合热过程直觉：金属丝温度取决于发热
-<span
-class="math inline"><em>I</em><sup>2</sup><em>R</em></span>、散热、环境温度和持续时间。保险丝额定值是长期承载能力，不是精密电流开关。</p>
-</section>
-<section id="公式-9" class="level3">
-<h3>公式</h3>
-<p>保险丝选型常用 <span
-class="math inline"><em>I</em><sup>2</sup><em>t</em> = <em>K</em></span>
-表示熔化热概念（来源：⭐⭐⭐）。<span
-class="math inline"><em>I</em><sup>2</sup><em>t</em></span>
-越大，进入熔体的热量越多；短路保护要求故障电流能快速给够 <span
-class="math inline"><em>I</em><sup>2</sup><em>t</em></span>，选择性保护则希望下级保险丝先断、上级主保险丝后断或不断（来源：⭐⭐）。</p>
-</section>
-<section id="数值-9" class="level3">
-<h3>数值</h3>
-<p>以 10 A
-汽车片式保险丝为例，可用下表理解过载倍数与时间关系（反时限示意，来源：⭐⭐；具体曲线看厂家数据表：❓）：</p>
-<table>
-<thead>
-<tr>
-<th>电流倍数</th>
-<th style="text-align: right;">电流</th>
-<th>典型结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.1×</td>
-<td style="text-align: right;">11 A</td>
-<td>4 小时内可能不熔</td>
-</tr>
-<tr>
-<td>1.35×</td>
-<td style="text-align: right;">13.5 A</td>
-<td>约 1 小时量级</td>
-</tr>
-<tr>
-<td>2×</td>
-<td style="text-align: right;">20 A</td>
-<td>几秒到几十秒</td>
-</tr>
-<tr>
-<td>5×</td>
-<td style="text-align: right;">50 A</td>
-<td>毫秒级到很短时间</td>
-</tr>
-</tbody>
-</table>
-<p>这些数字不能替代维修手册，只用于说明保险丝不是瞬时开关。</p>
-</section>
-<section id="实战案例-9" class="level3">
-<h3>实战案例</h3>
-<p>如果 10 A 保险丝带着 11 A
-改装负载，可能骑一段才断；如果线束短路到车架，电流可能几十安甚至更高，保险丝会很快熔断。反复烧同一保险丝时，不能换
-15 A 或 20 A 试试，因为原线束可能只按 10 A
-回路设计（线束保护原则来源：⭐⭐）。正确做法是断开负载、查短路、查磨破线、查进水插头。</p>
-</section>
-<section id="反直觉点-9" class="level3">
-<h3>反直觉点</h3>
-<p>保险丝保护的第一对象通常是线，不是昂贵
-ECU。把保险丝加大，等于允许线束在更高电流下继续发热；故障没“修好”，只是把熔断点从几元保险丝转移到线束、接头或电器内部。详见
-13.1.10、13.5.1、13.5.4、13.9.3。</p>
-</section>
-</section>
-<section id="x.11-功率与能量守恒链路" class="level2">
-<h2>13.X.11 功率与能量守恒链路</h2>
-<section id="机制-10" class="level3">
-<h3>机制</h3>
-<p>电气系统所有“有劲没劲”的问题，最后都落到功率和能量守恒。电瓶输出电功率，电机把一部分变成机械功，剩下变成铜损、铁损、摩擦热；点火线圈把低压电能暂存成磁能，再在极短时间内变成高压火花。不要只看电压高低，还要问电流多大、持续多久、能量到哪去了。</p>
-</section>
-<section id="公式-10" class="level3">
-<h3>公式</h3>
-<p>功率为 <span
-class="math inline"><em>P</em> = <em>U</em><em>I</em></span>，能量为
-<span
-class="math inline"><em>E</em> = <em>P</em><em>t</em></span>，电感储能为
-<span
-class="math inline">$W=\frac{1}{2}LI^2$</span>（来源：⭐⭐⭐）。效率为
-<span
-class="math inline"><em>η</em> = <em>P</em><sub><em>o</em><em>u</em><em>t</em></sub>/<em>P</em><sub><em>i</em><em>n</em></sub></span>（来源：⭐⭐⭐）。高电压不等于高能量；能量还取决于电流和时间。</p>
-</section>
-<section id="数值-10" class="level3">
-<h3>数值</h3>
-<p>链路 1：电瓶到起动机再到曲轴。12.6 V 电瓶以 150 A 供电，输入功率
-<span
-class="math inline">12.6<em>V</em> × 150<em>A</em> = 1890<em>W</em></span>（来源：⭐⭐⭐）。起动机效率按
-60%-80%
-估算（通用小型直流电机工程范围，来源：⭐⭐；具体车型需实测：❓），机械输出约
-1134-1512
-W。曲轴需要克服转动惯量、摩擦、压缩压力和机油黏度；低温时需求更高。这里总效率应按
-60%-80% 量级理解，不应简单写成 30%-50%。</p>
-</section>
-<section id="实战案例-10" class="level3">
-<h3>实战案例</h3>
-<p>链路 2：电瓶到点火线圈再到火花塞。若初级电流 5 A、电瓶 12.6
-V，瞬时输入功率为 63 W（来源：⭐⭐⭐）；持续 1-3 ms，则输入能量约
-0.063-0.189 J（来源：⭐⭐⭐；时间取决于点火控制：❓）。次级电压可升到约
-10-40 kV、常见 15-40 kV，放电电流约 1-100 mA
-量级（火花放电量级，来源：⭐⭐），真正维持火花的能量常在 30-100
-mJ（点火系统通用范围，来源：⭐⭐）。点火是高电压、低能量事件——按上面的数据，输入能量约
-63-189 mJ、维持火花的能量 30-100
-mJ，两者处于同一量级；<strong>不宜用”效率”衡量点火链路</strong>（火花能否成功更取决于击穿电压、间隙与混合气条件）。点火的关键是<strong>电压极高、总能量极小</strong>（毫焦级），而不是”效率极低”。</p>
-</section>
-<section id="反直觉点-10" class="level3">
-<h3>反直觉点</h3>
-<p>起动机看起来“粗暴”，但能量转换效率不低；点火看起来电压吓人，但总能量很小。约
-10-40 kV（常见 15-40 kV）火花能击穿空气，却不能像 2 kW
-起动机那样做机械功。诊断时要分清“功率不足”和“电压不足”：启动困难多是功率链路问题，点火弱多是储能、开断速度、绝缘和间隙问题。详见
-13.1.8、13.1.9、13.3.1、13.4.1。</p>
-</section>
-</section>
-<section id="x.12-自感-互感基础" class="level2">
-<h2>13.X.12 自感 / 互感基础</h2>
-<section id="机制-11" class="level3">
-<h3>机制</h3>
-<p>自感是线圈电流变化时，线圈自己的磁场变化又反过来在线圈中感应电压；互感是一个线圈的磁场变化穿过另一个线圈，在另一个线圈中感应电压（来源：⭐⭐⭐）。点火线圈其实就是专门为短时高压设计的变压器：初级绕组少、线粗、电流大；次级绕组多、线细、电压高、电流小。铁芯负责把磁通集中起来，提高耦合。</p>
-</section>
-<section id="公式-11" class="level3">
-<h3>公式</h3>
-<p>自感可写成 <span
-class="math inline"><em>L</em> = <em>N</em><em>Φ</em>/<em>I</em></span>，表示单位电流能建立多少磁链（来源：⭐⭐⭐）。互感升压近似用
-<span
-class="math inline"><em>V</em><sub>2</sub>/<em>V</em><sub>1</sub> = <em>N</em><sub>2</sub>/<em>N</em><sub>1</sub></span>
-理解（来源：⭐⭐⭐），其中 <span
-class="math inline"><em>N</em><sub>2</sub>/<em>N</em><sub>1</sub></span>
-是次级与初级匝数比。真实点火线圈还受漏感、铁芯饱和、负载击穿电压和开关钳位影响，所以不能只靠匝比精确预测火花电压。</p>
-</section>
-<section id="数值-11" class="level3">
-<h3>数值</h3>
-<p>摩托车点火线圈匝比常在 1:50 到 1:200
-量级（通用点火线圈范围，来源：⭐⭐；具体线圈看厂家资料：❓）。如果初级断电瞬间被钳在
-200 V，1:100 匝比可在理想情况下对应 20 kV 次级电压；若需要击穿高压缩缸内
-0.8 mm
-火花塞间隙，实际电压会升到刚好击穿为止，然后进入维持放电阶段（击穿由间隙、压力和混合气决定，来源：⭐⭐⭐）。</p>
-</section>
-<section id="实战案例-11" class="level3">
-<h3>实战案例</h3>
-<p>用互感理解“副边电压高但电流小”：能量大致守恒，忽略损耗时 <span
-class="math inline"><em>V</em><sub>1</sub><em>I</em><sub>1</sub> ≈ <em>V</em><sub>2</sub><em>I</em><sub>2</sub></span>（来源：⭐⭐⭐）。初级可以是几安培，次级升到几万伏后电流只能是毫安级；否则能量凭空增加。检修时，高压线漏电、火花塞间隙过大、点火线圈绝缘老化都会让所需击穿电压超过系统能力，表现为冷车能着、热车失火或大油门断火。</p>
-</section>
-<section id="反直觉点-11" class="level3">
-<h3>反直觉点</h3>
-<p>点火线圈不是把 12 V
-静态“变压”成固定电压，而是靠初级电流先储能，再靠快速断电让磁场崩塌；次级约
-10-40 kV、常见 15-40
-kV。没有电流变化，就没有感应高压；所以点火模块、曲轴信号、初级供电和搭铁任何一个环节异常，都会让高压消失。详见
-13.1.9、13.4.1、13.4.3。</p>
-<!-- horizontal-rule -->
-</section>
-</section>
-<section id="本章小结-12" class="level2">
-<h2>本章小结</h2>
-<ul>
-<li>电气故障的底层语言是 <span
-class="math inline"><em>V</em> = <em>I</em><em>R</em></span>、<span
-class="math inline"><em>P</em> = <em>U</em><em>I</em></span>、KCL/KVL
-和能量守恒；先测带载电压，再谈换件。</li>
-<li>12 V
-系统最怕“小电阻大电流”：氧化接头、细线、坏搭铁在几安到上百安下会变成明显压降和热源。</li>
-<li>发电、整流、稳压、点火都离不开电磁感应和非线性器件；三相整流更稳，SCR
-稳压会发热，点火高压来自快速断电。</li>
-<li>保险丝、线径、接地和 EMC
-不是附属细节，而是可靠性设计；改装电器前必须算功率、线径、保险和走线。</li>
-<li>下一步学习建议：电瓶与充电见 13.1.3-13.2.4，起动系统见
-13.3，点火系统见 13.4，保险丝与灯光故障见 13.5-13.8，实战检查见
-13.9。</li>
-</ul>
-<!-- separator -->
 <!-- file: ./vol03/CH13-电气系统.md -->
+</section>
 </section>
 </section>
 <section id="第13章-电气系统" class="level1">
@@ -32761,13 +32021,16 @@ class="math inline"><em>P</em> = <em>U</em><em>I</em></span>、KCL/KVL
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="电气系统原理层" class="level2">
+<h2>13.1 电气系统原理层</h2>
 <section id="电气系统原理层系统功能与设计目标" class="level3">
 <h3>13.1.1 电气系统原理层：系统功能与设计目标</h3>
 <p>摩托车电气系统不是「电瓶+几根线」那么简单——它包含<strong>电源（电瓶+发电机+整流器）、起动系统（起动机+继电器）、点火系统（高压包+火花塞）、信号系统（灯光+喇叭+仪表）、ECU</strong>等子系统的复杂网络（来源：⭐⭐⭐）。</p>
 <p>【机制】 <strong>设计目标 1：在所有工况下稳定供电。</strong>
 摩托车电气系统面临<strong>极端工况变化</strong>： - 启动瞬间：起动机要
 100-200 A,3-5 秒短时 大电流，启动瞬间可跌到 8-10V
-量级（随内阻与温度变化，算例见 CH13.1 13.X.4） -
+量级（随内阻与温度变化，算例见 CH13.1 13.11.4） -
 怠速：发电机低转速，发电功率不够用，电瓶要辅助供电 -
 高速：发电机高转速，发电功率过剩，要稳压器把电压锁在 14V 左右 -
 熄火：纯电瓶供电，电瓶要撑住警报灯、ECU
@@ -32786,7 +32049,7 @@ ECU（来源：⭐⭐⭐）。</p>
 60-80%、起动机效率 60-80%、点火线圈效率
 80-90%。<strong>起动机链路总效率约 60-80%</strong>(不是
 30-50%)——这是为什么电气系统设计要在「功率够用」和「损耗最小」间取平衡(来源：⭐⭐)。点火是<strong>高电压、低能量</strong>事件：电压上万伏，但单次火花总能量只有几十毫焦级(详见
-13.1.9 / 13.4.1 / 13.X.11)。</p>
+13.1.9 / 13.4.1 / 13.11.11)。</p>
 <p>【机制】 <strong>设计目标 3：耐受振动、防水、宽温度。</strong>
 摩托车电气系统比汽车恶劣得多： -
 <strong>振动大</strong>：发动机振动+路面颠簸——接头必须防水抗震 -
@@ -32827,9 +32090,9 @@ kV；具体随线圈、火花塞间隙、缸压和系统类型变化） - 灯泡
 12.6-12.8V，放电中 11.5-12V，静置电压 &lt; 11.8V
 视为过放（❓，以手册为准），启动瞬间可跌到 8-10V
 量级（随内阻与温度变化，算例见 CH13.1
-13.X.4）。<strong>「12V」是设计目标，不是常数</strong>（来源：⭐⭐⭐）。</p>
+13.11.4）。<strong>「12V」是设计目标，不是常数</strong>（来源：⭐⭐⭐）。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.1</a> ——
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.1</a> ——
 欧姆/KCL/KVL 实战:7.6A 总电流 + 0.1Ω 氧化接头 → 0.76V 压降 + 5.8W
 发热,接头发黑导致灯暗</p>
 <p>【经验】
@@ -32964,7 +32227,7 @@ alternator）：转子是电磁铁（需要励磁电流）；<strong>输出电�
 60V。<strong>整流器+稳压器把交流变直流、把电压锁在
 13.5-14.5V</strong>——这是关键的下游电路。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.5</a> —— 三相相量
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.5</a> —— 三相相量
 120° 相位差 + 六二极管桥,三相整流脉动小、低转速也稳</p>
 <p>【经验】
 <strong>老师傅一句话</strong>：发电机是「能量转换器」不是「稳压器」；它输出的是高压交流电，整流稳压是后续电路的事。</p>
@@ -32991,8 +32254,8 @@ voltage）：14.0-14.4V（电瓶需要补充电时） -
 必须降下来，否则电瓶失水、寿命缩短</p>
 <p>反直觉点：<strong>稳压器是「烧能量」的系统</strong>——多余的电能变成热。<strong>这就是为什么车在高温环境+长时间高速行驶，稳压器可能热到烫手</strong>——这是正常散热，不是故障。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.5 / 13.X.6</a> ——
-三相整流 + SCR 触发角:SCR
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.5 / 13.11.6</a>
+—— 三相整流 + SCR 触发角:SCR
 触发后把定子部分能量短路成热,不是简单直流短路</p>
 <p>【经验】
 <strong>老师傅一句话</strong>：整流稳压器是发电机的「规矩先生」——把乱七八糟的交流电变成规矩的直流
@@ -33068,7 +32331,7 @@ A01/CH06 统一）：街车 0.6-0.8 mm、跑车 0.7-0.9 mm、ADV 0.8-1.0 mm、�
 混合气浓度：理论空燃比时击穿电压最低 - 电极温度：热电极降低击穿电压</p>
 <p><strong>反直觉点</strong>：<strong>火花塞间隙越小越易点火</strong>——但小间隙<strong>点火能量弱、火花核小</strong>，对稀混合气点火可靠性差。间隙不是越小越好，按车主手册和指定火花塞型号设定。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.7</a> —— RL
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.7</a> —— RL
 瞬态:继电器/点火线圈断电瞬间 U_L = -L·dI/dt,自感电动势可冲到电源电压
 10-100 倍,续流二极管/TVS 的作用</p>
 <p>【经验】
@@ -33094,7 +32357,7 @@ blow）</strong>：电机负载（启动电流大但启动后电流小） -
 10A 换成 20A
 保险丝，<strong>下游电路过流时不会熔断，可能烧毁电线、ECU</strong>。<strong>保险丝的「保护」是用熔断换安全</strong>——选大了保护失效。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.10</a> —— 保险丝
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.10</a> —— 保险丝
 I-t 特性:1.1× 4 小时 / 1.35× 1 小时 / 2× 几秒 / 5×
 毫秒,反时限保护,不是”超 10A 立刻断”</p>
 <p>【经验】
@@ -33123,8 +32386,8 @@ ECU 之间的<strong>数字通信协议</strong> -
 根线）、实时通信、诊断方便（OBD 接口读所有 ECU 数据）</p>
 <p><strong>反直觉点</strong>：<strong>继电器故障比开关故障更常见</strong>——继电器触点频繁开关会<strong>烧蚀</strong>（电弧烧），导致接触不良。<strong>启动继电器坏</strong>表现为「按启动按钮没反应」但<strong>电瓶有电</strong>——很多新手误以为是电瓶没电，其实是继电器坏了。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.2 / 13.X.3</a> ——
-线束压降:R = ρL/A,55W 大灯 4.6A × 3m 线,压降超 3-5%
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.2 / 13.11.3</a>
+—— 线束压降:R = ρL/A,55W 大灯 4.6A × 3m 线,压降超 3-5%
 要查;接地:车架兼作地线,启动大电流不混传感器参考地</p>
 <p>【经验】 <strong>老师傅一句话</strong>：电气系统问题 80%
 是「接触不良」——保险丝松、继电器触点烧、线束接头氧化；用万用表先量电压判断哪一段不通。</p>
@@ -33322,7 +32585,7 @@ Alternator）</strong>（<strong>主流</strong>）： - 永久磁铁转子 +
 <h3>13.2.5 诊断边界(数据值)</h3>
 <blockquote>
 <p>实际车型差异大,以下数据是<strong>通用工程范围</strong>,<strong>以你车主维修手册为准</strong>。本节给”什么范围算正常”的标尺。三相测量方法可结合
-<a href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.5</a>
+<a href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.5</a>
 的三相相量与整流桥理解。</p>
 </blockquote>
 <section id="a.-三相定子发电机本体" class="level4">
@@ -33490,7 +32753,7 @@ CB500F 的怠速 13.8V 正常,哈雷 Sportster 可能 13.2V
 <h3>13.3.1 起动机干什么的</h3>
 <p><strong>电启动时驱动曲轴转动</strong>。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.11</a> ——
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.11</a> ——
 功率链路:12.6V × 150A = 1890W 输入,起动机效率 60-80%,曲轴机械输出
 1134-1512W,总效率 60-80% 不是 30-50%</p>
 </section>
@@ -33572,8 +32835,8 @@ clutch):滚柱式或楔块式,<strong>只允许电机驱动曲轴</strong>,<stro
 <h3>13.4.1 点火系统干什么的</h3>
 <p><strong>在准确的时刻点燃混合气</strong>。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.7 / 13.X.11 /
-13.X.12</a> —— RL 瞬态 + 功率链路 + 互感:点火线圈 1:50-1:200
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.7 / 13.11.11 /
+13.11.12</a> —— RL 瞬态 + 功率链路 + 互感:点火线圈 1:50-1:200
 匝比,初级储能 30-100 mJ,次级升到约 10-40 kV、常见 15-40
 kV,单次火花总能量仅几十毫焦级</p>
 </section>
@@ -34059,7 +33322,7 @@ CDI</strong>（控制点火时刻）</p>
 <h3>13.8.1 案例 1：电启动没反应 ●●●</h3>
 <p><strong>症状</strong>：钥匙转到 START 位，没反应。</p>
 <p><strong>详见</strong> <a
-href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
+href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.11.4</a> ——
 戴维南等效:电瓶 12.6V + 内阻 0.02Ω + 线阻 0.01Ω,启动 150A 时端电压掉
 4.5V(→ 8.1V),按启动按钮全车灯都暗一下的原因</p>
 <p><strong>诊断流程</strong>：</p>
@@ -34075,9 +33338,8 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 3. 看启动机
    - 启动机有电但不转 = 启动机坏
    - 启动机不转 = 检查线路</code></pre>
-</section>
-<section id="测点图" class="level3">
-<h3>13.8.1 测点图</h3>
+<section id="测点图" class="level4">
+<h4>测点图</h4>
 <pre class="text"><code>graph TD
     A[症状:电启动没反应] --&gt; B{看仪表}
     B --&gt;|有电| C[测电瓶桩头电压]
@@ -34092,6 +33354,7 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <p><strong>处理</strong>： - 电瓶没电：充电或搭电 - 保险丝断：换保险丝 -
 继电器坏：换继电器 - 启动机坏：送修</p>
 </section>
+</section>
 <section id="案例-2充电指示灯亮" class="level3">
 <h3>13.8.2 案例 2：充电指示灯亮 ●●</h3>
 <p><strong>症状</strong>：启动后充电指示灯一直亮。</p>
@@ -34099,9 +33362,8 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <pre><code>1. 测电瓶电压（启动后）
 2. &lt; 13V = 充电系统不工作
 3. &gt; 15V = 调压器坏（过充电）</code></pre>
-</section>
-<section id="测点图-1" class="level3">
-<h3>13.8.2 测点图</h3>
+<section id="测点图-1" class="level4">
+<h4>测点图</h4>
 <pre class="text"><code>graph TD
     A[症状:充电指示灯亮] --&gt; B[熄火测电瓶电压]
     B --&gt;|12.4V以上| C[启动后测电瓶电压]
@@ -34117,6 +33379,7 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <p><strong>处理</strong>： - 充电系统不工作：检查发电机、调压器、线路 -
 调压器坏：换调压器 - 发电机坏：送修</p>
 </section>
+</section>
 <section id="案例-3大灯不亮" class="level3">
 <h3>13.8.3 案例 3：大灯不亮 ●●</h3>
 <p><strong>诊断</strong>：</p>
@@ -34127,9 +33390,8 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 3. 检查保险丝
 4. 检查开关
 5. 检查线路</code></pre>
-</section>
-<section id="测点图-2" class="level3">
-<h3>13.8.3 测点图</h3>
+<section id="测点图-2" class="level4">
+<h4>测点图</h4>
 <pre class="text"><code>graph TD
     A[症状:大灯不亮] --&gt;|都不亮| C[测大灯开关前电压]
     A --&gt;|单侧不亮| D[测灯泡冷态电阻]
@@ -34144,14 +33406,14 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <p><strong>处理</strong>： - 灯泡烧：换灯泡 - 保险丝烧：换保险丝 -
 开关坏：换开关 - 线路断：检修线路</p>
 </section>
+</section>
 <section id="案例-4转向灯频率不对" class="level3">
 <h3>13.8.4 案例 4：转向灯频率不对</h3>
 <p><strong>症状</strong>：转向灯频率变快或变慢。</p>
 <p><strong>原因</strong>： - <strong>频率变快</strong>：一个灯泡烧了 -
 <strong>频率变慢</strong>：电压低（电瓶电量不足）或闪光器坏</p>
-</section>
-<section id="测点图-3" class="level3">
-<h3>13.8.4 测点图</h3>
+<section id="测点图-3" class="level4">
+<h4>测点图</h4>
 <pre class="text"><code>graph TD
     A[症状:转向灯频率不对] --&gt; B{频率表现}
     B --&gt;|明显变快| C[查同侧两只灯泡是否点亮]
@@ -34167,6 +33429,7 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <p><strong>处理</strong>： - 灯泡烧：换灯泡 - 电瓶电量不足：充电 -
 闪光器坏：换闪光器</p>
 </section>
+</section>
 <section id="案例-5电瓶桩头腐蚀" class="level3">
 <h3>13.8.5 案例 5：电瓶桩头腐蚀</h3>
 <p><strong>症状</strong>：电瓶桩头有白色/绿色粉末。</p>
@@ -34177,9 +33440,8 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 4. 干燥
 5. 装回电瓶（先正后负）
 6. 在桩头上涂凡士林（防止再腐蚀）</code></pre>
-</section>
-<section id="测点图-4" class="level3">
-<h3>13.8.5 测点图</h3>
+<section id="测点图-4" class="level4">
+<h4>测点图</h4>
 <pre class="text"><code>graph TD
     A[症状:电瓶桩头腐蚀] --&gt; B[清洁前测静态电瓶电压]
     B --&gt;|12.4V以上| C[开大灯负载测桩头电压降]
@@ -34194,6 +33456,7 @@ href="CH13.1-电工学基础.md">CH13.1-电工学基础.md 13.X.4</a> ——
 <p>【经验】
 <strong>老师傅经验</strong>：<strong>凡士林</strong>是电瓶桩头的”防腐剂”——<strong>几十元一罐用好几年</strong>。<strong>很多新手不知道要涂凡士林</strong>——<strong>桩头腐蚀反复出现</strong>。</p>
 <!-- horizontal-rule -->
+</section>
 </section>
 </section>
 <section id="电气系统实战" class="level2">
@@ -34554,7 +33817,7 @@ class="level3">
 负载匹配。先看电瓶和保险，再查继电器、搭铁、插头和充电电压；改装用电设备前先算功率余量。</p>
 </section>
 </section>
-<section id="本章小结-13" class="level2">
+<section id="本章小结-12" class="level2">
 <h2>本章小结</h2>
 <section id="关键技能清单-7" class="level3">
 <h3>关键技能清单</h3>
@@ -34678,8 +33941,589 @@ class="level3">
 保险丝色码标准、摩托车维修论坛共识。</em>
 <em>所有具体车型数据<strong>未经厂家官网实时验证，使用前必须查官方维修手册</strong>。</em></p>
 <!-- separator -->
-<!-- file: ./vol03/CH14-车架与外观.md -->
+<!-- file: ./vol03/CH13.1-电工学基础.md -->
 </section>
+</section>
+</section>
+<section id="电工学基础扩展阅读" class="level1">
+<h1>13.11 电工学基础（扩展阅读）</h1>
+<blockquote>
+<p>本章是 CH13
+电气系统的“电工学知识扩展”，<strong>为有一定物理基础或想深入的车主</strong>补充
+12 个关键概念。 写作规范遵循 PRINCIPLES.md，来源等级 ⭐⭐⭐/⭐⭐/⭐/❓
+强制。</p>
+</blockquote>
+<!-- horizontal-rule -->
+<section id="欧姆定律-kclkvl-实战" class="level2">
+<h2>13.11.1 欧姆定律 + KCL/KVL 实战</h2>
+<section id="机制" class="level3">
+<h3>机制</h3>
+<p>摩托车电路先按“电源、导线、开关、负载、回路”理解。钥匙 ON
+后，电瓶正极经主保险丝、点火开关、分支保险丝送到大灯、尾灯、仪表、ECU
+等负载，最后经搭铁回到电瓶负极。KCL
+说节点电流守恒：主线电流等于各支路电流之和（来源：⭐⭐⭐）。KVL
+说闭合回路中电压升与电压降代数和为零（来源：⭐⭐⭐）。所以灯暗、继电器吸不住、仪表重启，本质上都可以回到“哪一段吃掉了电压”。</p>
+</section>
+<section id="公式" class="level3">
+<h3>公式</h3>
+<p>欧姆定律为 <span
+class="math inline"><em>V</em> = <em>I</em><em>R</em></span>，功率为
+<span
+class="math inline"><em>P</em> = <em>I</em><em>V</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。并联负载电流相加，串联电阻分压；接头氧化后不是“开路”，而是把本来接近
+<span class="math inline">0<em>Ω</em></span>
+的连接点变成一个小电阻。</p>
+</section>
+<section id="数值" class="level3">
+<h3>数值</h3>
+<p>钥匙 ON、大灯开、刹车灯亮时，可用额定功率估算总电流：55 W 大灯约
+<span
+class="math inline">55<em>W</em>/12<em>V</em> = 4.6<em>A</em></span>，21
+W 刹车灯约 <span class="math inline">1.75<em>A</em></span>，5 W 尾灯约
+<span class="math inline">0.42<em>A</em></span>，仪表和 ECU 若合计 10 W
+约 <span class="math inline">0.83<em>A</em></span>（12 V
+标称系统和功率换算来源：⭐⭐⭐；具体功率随车型而变：❓）。主回路总电流约
+<span
+class="math inline">4.6<em>A</em> + 1.75<em>A</em> + 0.42<em>A</em> + 0.83<em>A</em> = 7.6<em>A</em></span>。</p>
+</section>
+<section id="实战案例" class="level3">
+<h3>实战案例</h3>
+<p>如果主电源插头氧化，多出 <span
+class="math inline">0.1<em>Ω</em></span>（小电阻压降计算来源：⭐⭐⭐；氧化量级需实测：❓），7.6
+A 通过时压降为 <span
+class="math inline"><em>V</em> = 7.6<em>A</em> × 0.1<em>Ω</em> = 0.76<em>V</em></span>，发热为
+<span
+class="math inline"><em>P</em> = 7.6<sup>2</sup><em>A</em><sup>2</sup> × 0.1<em>Ω</em> ≈ 5.8<em>W</em></span>。5.8
+W
+集中在一个小端子上，足以让塑料发黄、端子发黑、弹片退火，接触压力继续下降，电阻继续增大。</p>
+</section>
+<section id="反直觉点" class="level3">
+<h3>反直觉点</h3>
+<p>接头发黑导致灯暗，不一定是灯泡坏了，而是灯泡没有拿到足够电压。12 V
+系统少 0.7-1.0 V
+已经很明显，卤素灯亮度对电压很敏感；同一只灯泡，在电瓶端测到 12.6
+V，不代表灯泡插头也有 12.6
+V。诊断时要在负载工作时测灯泡正负端电压，而不是只拔掉插头量空载电压。详见
+13.1.2、13.6.1、13.8.3。</p>
+</section>
+</section>
+<section id="线束压降设计" class="level2">
+<h2>13.11.2 线束压降设计</h2>
+<section id="机制-1" class="level3">
+<h3>机制</h3>
+<p>导线不是理想导体。电流从电瓶正极到负载，再从负载回到电瓶负极，正线和回路线都要算长度；灯泡、喇叭、风扇这类大电流负载尤其怕线束压降。压降设计的目标不是让导线“能通电”，而是在最大负载时仍让负载端拿到足够电压，并且导线自己不明显发热。摩托车线束又要受振动、弯折、潮气和接头老化影响，所以实际余量要比桌面计算更保守。</p>
+</section>
+<section id="公式-1" class="level3">
+<h3>公式</h3>
+<p>铜线电阻用 <span
+class="math inline"><em>R</em> = <em>ρ</em><em>L</em>/<em>A</em></span>
+估算，其中铜电阻率 <span
+class="math inline"><em>ρ</em> = 1.72 × 10<sup>−8</sup><em>Ω</em> ⋅ <em>m</em></span>（20
+°C 附近教科书值，来源：⭐⭐⭐），<span
+class="math inline"><em>L</em></span> 是来回总长度，<span
+class="math inline"><em>A</em></span> 是截面积。压降为 <span
+class="math inline"><em>V</em><sub><em>d</em><em>r</em><em>o</em><em>p</em></sub> = <em>I</em><em>R</em></span>，线损为
+<span
+class="math inline"><em>P</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。</p>
+</section>
+<section id="数值-1" class="level3">
+<h3>数值</h3>
+<p>以 12 V、55 W 大灯为例，电流约 <span
+class="math inline"><em>I</em> = 55<em>W</em>/12<em>V</em> = 4.6<em>A</em></span>（来源：⭐⭐⭐）。来回线束总长
+3 m（示例值：❓）时，不同铜线截面积计算如下：</p>
+<table>
+<thead>
+<tr>
+<th>截面积</th>
+<th style="text-align: right;">回路电阻</th>
+<th style="text-align: right;">4.6 A 压降</th>
+<th style="text-align: right;">占 12 V 比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5 mm²</td>
+<td style="text-align: right;">0.103 Ω</td>
+<td style="text-align: right;">0.47 V</td>
+<td style="text-align: right;">3.9%</td>
+</tr>
+<tr>
+<td>1.0 mm²</td>
+<td style="text-align: right;">0.052 Ω</td>
+<td style="text-align: right;">0.24 V</td>
+<td style="text-align: right;">2.0%</td>
+</tr>
+<tr>
+<td>1.5 mm²</td>
+<td style="text-align: right;">0.034 Ω</td>
+<td style="text-align: right;">0.16 V</td>
+<td style="text-align: right;">1.3%</td>
+</tr>
+<tr>
+<td>2.5 mm²</td>
+<td style="text-align: right;">0.021 Ω</td>
+<td style="text-align: right;">0.10 V</td>
+<td style="text-align: right;">0.8%</td>
+</tr>
+</tbody>
+</table>
+<p>这些是理想铜线值（来源：⭐⭐⭐），实际还要加开关、保险丝座、接插件、搭铁点电阻（来源：⭐⭐）。</p>
+</section>
+<section id="实战案例-1" class="level3">
+<h3>实战案例</h3>
+<p>在线测压降要让负载工作：大灯打开，万用表黑表笔接电瓶正极，红表笔接大灯正极，读数就是正线压降；再把黑表笔接大灯负极，红表笔接电瓶负极，读数就是回路线压降。正线和回路线加起来超过系统电压的
+3%-5%，也就是 12 V 系统约 0.36-0.60
+V，就要查线束、接头、开关和搭铁（通用低压电路经验阈值，来源：⭐⭐）。</p>
+</section>
+<section id="反直觉点-1" class="level3">
+<h3>反直觉点</h3>
+<p>空载测电压常常会骗人。一个氧化接头在万用表的微小测量电流下几乎不掉压，看起来“有
+12 V”；但大灯一亮，4-5 A
+通过，压降立刻显现。电气诊断要优先做“带负载压降测试”，这比拆开全车线束找断线更快。详见
+13.1.11、13.6.1、13.8.3。</p>
+</section>
+</section>
+<section id="接地搭铁设计原理" class="level2">
+<h2>13.11.3 接地（搭铁）设计原理</h2>
+<section id="机制-2" class="level3">
+<h3>机制</h3>
+<p>摩托车的“负极线”不一定是一根完整回线，车架、发动机壳体和专用地线共同构成回流路径。典型路径可写成：电瓶负极
+→ 粗搭铁线 → 车架主搭铁点 → 发动机壳体 →
+启动机外壳；另一条小电流路径是：电瓶负极 → 车架 → 线束地汇流点 → ECU
+传感器地 →
+传感器。车架既是结构件，又是电路的一部分，这是摩托车电气和桌面电路最不同的地方。</p>
+</section>
+<section id="公式-2" class="level3">
+<h3>公式</h3>
+<p>接地问题仍服从 <span
+class="math inline"><em>V</em> = <em>I</em><em>R</em></span>（来源：⭐⭐⭐）。同样是
+<span class="math inline">0.01<em>Ω</em></span> 的地线电阻，150 A
+启动电流会产生 <span class="math inline">1.5<em>V</em></span> 压降；但
+0.001 A 传感器电流只产生 <span
+class="math inline">0.00001<em>V</em></span>，几乎可以忽略。问题在于两者如果共用同一段地线，大电流的地电位抬升会叠加到传感器参考地上。</p>
+</section>
+<section id="数值-2" class="level3">
+<h3>数值</h3>
+<p>启动机电流可达 100-200
+A（通用摩托车启动系统范围，来源：⭐⭐），本节按 150 A 计算；ECU
+传感器信号电流常在 mA 或更低量级，某些高阻输入接近 <span
+class="math inline">0.001<em>A</em></span>
+或更低（电子测量输入通用量级，来源：⭐⭐）。一个节气门位置、水温或进气压力传感器如果参考地漂移
+0.1 V，ECU
+读数就可能明显偏移（低压模拟传感器原理，来源：⭐⭐⭐；允许误差看车型：❓）。</p>
+</section>
+<section id="实战案例-2" class="level3">
+<h3>实战案例</h3>
+<p>单点接地适合低噪声电子系统，把多个传感器地汇到 ECU
+附近，减少地环路。多点接地适合车灯、喇叭、风扇等分散大电流负载，线束短、成本低。星形接地是把大电流地、传感器地、屏蔽地分支汇到同一参考点，常见于对抗干扰要求高的
+ECU
+附近。检修时，启动无力但电瓶正常，要查电瓶负极到发动机壳体的粗搭铁线；怠速异常、传感器报码，则要查
+ECU 地和传感器地。</p>
+</section>
+<section id="反直觉点-2" class="level3">
+<h3>反直觉点</h3>
+<p>“搭铁良好”不是一句口号，而是电压参考是否稳定。车架螺栓看着紧，不代表电气上低阻；油漆、锈蚀、铝氧化层、松动垫片都可能让地线变成隐形电阻。最稳的判断方式仍是带负载测压降：启动时测电瓶负极到发动机壳体，如果出现明显电压，搭铁路径就有问题。详见
+13.1.11、13.3.1、13.7.3。</p>
+</section>
+</section>
+<section id="戴维南等效电路" class="level2">
+<h2>13.11.4 戴维南等效电路</h2>
+<section id="机制-3" class="level3">
+<h3>机制</h3>
+<p>戴维南等效把复杂电源网络简化成“一个理想电压源 +
+一个串联内阻”。对修车最有用的地方，是把电瓶、桩头、主线、继电器触点、搭铁线都看成一个会随电流掉压的电源。起动机一按下，负载电流突然变大，总线电压不是由“电瓶标称
+12 V”决定，而是由开路电压减去所有内阻压降决定。</p>
+</section>
+<section id="公式-3" class="level3">
+<h3>公式</h3>
+<p>等效端电压可写为 <span
+class="math inline"><em>U</em><sub><em>端</em></sub> = <em>U</em><sub><em>o</em><em>c</em></sub> − <em>I</em>(<em>R</em><sub><em>内</em></sub> + <em>R</em><sub><em>线</em></sub> + <em>R</em><sub><em>触</em><em>点</em></sub>)</span>（来源：⭐⭐⭐）。这里
+<span
+class="math inline"><em>U</em><sub><em>o</em><em>c</em></sub></span>
+是电瓶空载电压，<span class="math inline"><em>I</em></span>
+是负载电流，后面的电阻包括电瓶内阻和外部连接电阻。功率损失仍为 <span
+class="math inline"><em>P</em> = <em>I</em><sup>2</sup><em>R</em></span>（来源：⭐⭐⭐）。</p>
+</section>
+<section id="数值-3" class="level3">
+<h3>数值</h3>
+<p>案例：电瓶开路电压 12.6 V，内阻 <span
+class="math inline">0.02<em>Ω</em></span>，线阻和触点合计 <span
+class="math inline">0.01<em>Ω</em></span>，启动电流 150
+A（示例参数，来源：⭐⭐；具体车型需实测：❓）。端电压为 <span
+class="math inline"><em>U</em><sub><em>端</em></sub> = 12.6<em>V</em> − 150<em>A</em> × (0.02<em>Ω</em> + 0.01<em>Ω</em>) = 8.1<em>V</em></span>。这时不是电瓶“消失了”，而是
+4.5 V 掉在电瓶内阻和线路电阻上，热也在这些位置产生。</p>
+</section>
+<section id="实战案例-3" class="level3">
+<h3>实战案例</h3>
+<p>判断起动机能不能转，可以把按钮端当作戴维南输出端。先测电瓶静态电压，再按启动测电瓶桩头电压，最后测起动机端子到壳体电压。如果电瓶桩头仍有
+10 V 以上（阈值依车型和温度，来源：❓），起动机端只剩 7-8
+V，问题多半在线路、继电器或搭铁；如果电瓶桩头本身掉到很低，问题更像电瓶容量、内阻或低温性能。</p>
+</section>
+<section id="反直觉点-3" class="level3">
+<h3>反直觉点</h3>
+<p>按启动按钮时全车灯都暗一下，不是大灯线路突然坏了，而是起动机把公共电源总线拉低。灯、仪表、ECU
+和起动机共享同一电瓶等效源，大电流负载优先暴露内阻。新手容易只看静态
+12.6 V
+就判断电瓶好；实战中，带载电压才反映电瓶和主回路能不能供出功率。详见
+13.1.4、13.1.8、13.8.1、13.9.1。</p>
+</section>
+</section>
+<section id="三相相量与整流桥" class="level2">
+<h2>13.11.5 三相相量与整流桥</h2>
+<section id="机制-4" class="level3">
+<h3>机制</h3>
+<p>摩托车永磁发电机通常输出三相交流。三组定子绕组在空间上错开，转子磁场扫过它们时，产生三条相位相差
+120° 的正弦波（来源：⭐⭐⭐）。文字相量图可写成：A 相在 0°，B 相滞后
+120°，C 相滞后
+240°；任意时刻总有一相较高、一相较低，六二极管桥就选择最高相接直流正端、最低相接直流负端。整流后每个交流周期有
+6 个脉动峰，明显小于单相整流的低频起伏。</p>
+</section>
+<section id="公式-4" class="level3">
+<h3>公式</h3>
+<p>三相桥式整流的平均直流电压常用 <span
+class="math inline">$U_{平均}=(3\sqrt{2}/\pi) \times U_{相} \approx 1.35
+\times U_{相}$</span> 估算（来源：⭐⭐⭐）。这里按维修常用口径，把 <span
+class="math inline"><em>U</em><sub><em>相</em></sub></span>
+理解为任意两根定子线之间测到的交流有效值；如果教材把相电压定义为相对中性点电压，系数写法会不同，计算前必须确认定义。</p>
+</section>
+<section id="数值-4" class="level3">
+<h3>数值</h3>
+<p>三相桥有 6 个大功率二极管，任意瞬间通常有 2
+个二极管串在电流路径上（来源：⭐⭐⭐）。硅二极管大电流正向压降常在
+0.7-1.0 V 量级（来源：⭐⭐），所以整流桥路径压降约 1.4-2.0
+V（来源：⭐⭐）。发电机低转速时，本来交流幅值就低，二极管压降和线阻会让可用直流电压更紧张；这就是为什么怠速开大灯时电瓶可能仍在补电。</p>
+</section>
+<section id="实战案例-4" class="level3">
+<h3>实战案例</h3>
+<p>测三相发电机时，通常拔开调压整流器插头，在三根黄线或白线之间两两测交流电压，三组读数应大致接近（测量方法来源：⭐⭐；数值看维修手册：❓）。若某一组明显低，可能是定子绕组局部短路或接头烧蚀；若三组都随转速升高而升高，定子大体正常，故障更可能在整流稳压器或电瓶侧。</p>
+</section>
+<section id="反直觉点-4" class="level3">
+<h3>反直觉点</h3>
+<p>三相整流“更稳”不是因为电压神奇地变成直流，而是因为三条波形错开后，最低谷被其他相填上了。单相像一个人推车，力一阵一阵；三相像三个人错开节奏推车，输出更连续。低转速时三相仍有更密集的脉动峰，所以调压器和电瓶更容易把电压滤平。详见
+13.1.6、13.1.7、13.2.2、13.2.3。</p>
+</section>
+</section>
+<section id="scr可控硅触发角与导通角" class="level2">
+<h2>13.11.6 SCR（可控硅）触发角与导通角</h2>
+<section id="机制-5" class="level3">
+<h3>机制</h3>
+<p>SCR
+可控硅可以理解成“被触发后会锁住导通的单向开关”。摩托车稳压器在检测到电压超过阈值后，会在交流半周的某个时刻触发
+SCR，让定子部分电流走旁路，把本来要进入电瓶和负载的能量改为在线圈、电阻、半导体和散热片上变成热（来源：⭐⭐⭐）。这不是拿电瓶直流正负极硬短路，而是在发电机交流侧或整流侧按时机分流多余能量。</p>
+</section>
+<section id="公式-5" class="level3">
+<h3>公式</h3>
+<p>本节只讲物理意义。触发角 <span class="math inline"><em>α</em></span>
+是从交流波形过零点到 SCR 被点亮的角度；导通角 <span
+class="math inline"><em>θ</em></span> 是 SCR
+在这一半周里真正导通的角度（来源：⭐⭐⭐）。触发越早，导通越久，被分流的能量越多；触发越晚，留给电瓶和负载的能量越多。到电流过零或低于维持电流时，SCR
+才自然关断。</p>
+</section>
+<section id="数值-5" class="level3">
+<h3>数值</h3>
+<p>12 V 铅酸系统常把运行充电电压控制在约 13.5-14.5 V
+范围（通用充电系统目标，来源：⭐⭐；车型以手册为准：❓）。高速时永磁发电机可输出远高于电瓶需要的交流电压（发电机随转速升高原理来源：⭐⭐⭐），稳压器要处理的多余功率会转成热。散热片温度明显高并不自动等于故障，但烫到变色、插头熔化、充电电压失控就必须检修。</p>
+</section>
+<section id="实战案例-5" class="level3">
+<h3>实战案例</h3>
+<p>遇到电瓶过充、灯泡频繁烧、调压器插头发黑，先测电瓶两端：怠速、3000
+rpm、开灯、关灯各测一次。若电压明显超过手册上限（阈值看车型：❓），可能是稳压器失控或地线参考不良；若电压偏低且定子三相正常，可能是稳压器内部开路、整流二极管损坏或接头压降过大。</p>
+</section>
+<section id="反直觉点-5" class="level3">
+<h3>反直觉点</h3>
+<p>SCR
+稳压器发热不是“设计很烂”的直接证据，而是并联分流式稳压的工作方式。永磁发电机不能像汽车励磁发电机那样轻松减少磁场，转子磁铁一直在扫定子，过剩能量必须有去处。工程取舍是结构简单、可靠、成本低，但代价是稳压器和定子承受热负担。详见
+13.1.7、13.2.3、13.8.2。</p>
+</section>
+</section>
+<section id="rl-瞬态与续流保护" class="level2">
+<h2>13.11.7 RL 瞬态与续流保护</h2>
+<section id="机制-6" class="level3">
+<h3>机制</h3>
+<p>继电器线圈、喷油器线圈、点火线圈初级都是电感。电感的本性是反抗电流变化：通电时电流不能瞬间升到最大，断电时电流也不愿意瞬间变成零（来源：⭐⭐⭐）。开关断开的一瞬间，如果原来的电流无路可走，电感会把自身磁场能量变成高电压，强行寻找放电路径，于是触点打火、晶体管击穿、ECU
+受干扰就出现了。</p>
+</section>
+<section id="公式-6" class="level3">
+<h3>公式</h3>
+<p>电感电压为 <span
+class="math inline"><em>U</em><sub><em>L</em></sub> = −<em>L</em> × <em>d</em><em>I</em>/<em>d</em><em>t</em></span>（来源：⭐⭐⭐）。负号表示电感产生的电压方向总是反抗电流变化。储能公式为
+<span
+class="math inline">$W=\frac{1}{2}LI^2$</span>（来源：⭐⭐⭐）。断电越快，<span
+class="math inline"><em>d</em><em>I</em>/<em>d</em><em>t</em></span>
+越大，尖峰电压越高。</p>
+</section>
+<section id="数值-6" class="level3">
+<h3>数值</h3>
+<p>摩托车小继电器线圈电感可在 100-500 mH
+量级（通用继电器量级，来源：⭐⭐；具体件需测量：❓）。若断电 0.1 ms
+内电流变化率达到 <span
+class="math inline">10<sup>5</sup><em>A</em>/<em>s</em></span>（快速开断示例，来源：⭐⭐），代入
+<span
+class="math inline"><em>U</em><sub><em>L</em></sub> = <em>L</em><em>d</em><em>I</em>/<em>d</em><em>t</em></span>，理论尖峰可到
+10-50 kV。实际会被寄生电容、空气击穿、触点电弧、二极管或 TVS
+限制，不会无限升高（来源：⭐⭐⭐）。</p>
+</section>
+<section id="实战案例-6" class="level3">
+<h3>实战案例</h3>
+<p>普通继电器线圈两端常并联续流二极管，断电时电流绕线圈和二极管衰减，保护开关晶体管（来源：⭐⭐⭐）。点火线圈不能简单用慢速续流二极管把尖峰钳得太低，否则升压不足；常用
+TVS、点火模块钳位和火花塞间隙共同决定能量释放。点火线圈初级断电产生
+100-300 V 量级初级尖峰（来源：⭐⭐），再乘 1:50 到 1:200
+匝比（来源：⭐⭐），次级达到约 10-40 kV、常见 15-40 kV
+是合理结果，具体随线圈、火花塞间隙、缸压和系统类型变化。</p>
+</section>
+<section id="反直觉点-6" class="level3">
+<h3>反直觉点</h3>
+<p>断开电路不一定让电压变小，断开电感反而可能让电压冲到电源电压的 10-100
+倍（来源：⭐⭐⭐）。所以“12 V
+车没有高压危险”只对电瓶直流端大体成立，不适用于点火线圈次级和开断瞬间。拔高压帽、试火花、测点火模块时必须按维修手册操作。详见
+13.1.9、13.4.1、13.4.3。</p>
+</section>
+</section>
+<section id="二极管-稳压管非线性" class="level2">
+<h2>13.11.8 二极管 / 稳压管非线性</h2>
+<section id="机制-7" class="level3">
+<h3>机制</h3>
+<p>二极管不是一个“只许单向通过的理想门”，而是非线性器件。正向时电压超过一定范围后电流快速上升；反向时只有很小漏电；反向电压再高到击穿区，普通二极管可能损坏，稳压管和
+TVS
+则利用可控击穿来钳位电压（来源：⭐⭐⭐）。摩托车整流桥、稳压基准、瞬态抑制都靠这种非线性。</p>
+</section>
+<section id="公式-7" class="level3">
+<h3>公式</h3>
+<p>维修中常用近似模型：硅二极管正向导通压降 <span
+class="math inline"><em>V</em><sub><em>f</em></sub></span> 约 0.7
+V，锗二极管约 0.3 V，肖特基二极管约 0.3
+V（器件基础量级，来源：⭐⭐；具体看型号曲线：❓）。大电流发热用 <span
+class="math inline"><em>P</em> = <em>I</em> × <em>V</em><sub><em>f</em></sub></span>
+估算（来源：⭐⭐⭐）。</p>
+</section>
+<section id="数值-7" class="level3">
+<h3>数值</h3>
+<p>三相整流桥任一时刻通常两只二极管导通（来源：⭐⭐⭐）。若每只大功率硅二极管压降
+0.7-1.0 V（来源：⭐⭐），总压降约 1.4-2.0 V。10 A
+充电电流下，每只导通二极管发热约 <span
+class="math inline">10<em>A</em> × 0.8<em>V</em> = 8<em>W</em></span>，两只合计约
+16
+W（计算来源：⭐⭐⭐；压降示例来源：⭐⭐）。这就是整流调压器必须贴散热片、涂导热介质、固定在通风位置的原因。</p>
+</section>
+<section id="实战案例-7" class="level3">
+<h3>实战案例</h3>
+<p>二极管损坏有两种常见方向：短路会让交流漏到直流侧、电瓶异常放电或保险丝烧；开路会少用一部分波形，充电能力下降、脉动变大。万用表二极管挡可以做初筛：正向有压降、反向不导通才像正常（方法来源：⭐⭐）。但功率器件有时冷态正常、热态失效，所以充电系统仍要结合运行电压和温升判断。</p>
+</section>
+<section id="反直觉点-7" class="level3">
+<h3>反直觉点</h3>
+<p>二极管“导通”不等于“没有损耗”。在 5 V 数字电路里 0.7 V 很大，在 12 V
+车电系统里也不小；大电流下压降乘电流就是热。整流桥不是被动无损零件，它本身就是充电系统热源之一。详见
+13.1.7、13.2.3、13.8.2。</p>
+</section>
+</section>
+<section id="emc-滤波与抗干扰" class="level2">
+<h2>13.11.9 EMC 滤波与抗干扰</h2>
+<section id="机制-8" class="level3">
+<h3>机制</h3>
+<p>EMC
+是电磁兼容：既不让自己的电路干扰别人，也不被别人干扰。摩托车最强的干扰源通常是点火系统，火花塞间隙被约
+10-40 kV、常见 15-40 kV
+高压击穿时（来源：⭐⭐），电流在极短时间内突变，线束像天线一样辐射宽频噪声。ECU
+传感器线、仪表线、收音机和改装电子设备如果布线或滤波差，就可能被误触发、死机或读数跳动。</p>
+</section>
+<section id="公式-8" class="level3">
+<h3>公式</h3>
+<p>电容对高频阻抗为 <span
+class="math inline"><em>X</em><sub><em>C</em></sub> = 1/(2<em>π</em><em>f</em><em>C</em>)</span>，频率越高，电容越像低阻旁路（来源：⭐⭐⭐）。电感和磁环对高频呈现更大阻抗，可把共模或差模高频噪声衰减掉（来源：⭐⭐⭐）。这些不是为了改变直流
+12 V，而是给 1-100 MHz
+量级干扰提供更短或更难走的路径（典型干扰频段来源：⭐⭐）。</p>
+</section>
+<section id="数值-8" class="level3">
+<h3>数值</h3>
+<p>常见做法包括：每个 IC 电源脚旁并 0.1 μF
+陶瓷去耦电容（数字电路通用经验，来源：⭐⭐）；电源线或信号线穿磁环，按干扰频段选择阻抗曲线（来源：⭐⭐）；高压点火线用碳芯线或电阻线，火花塞帽内常带
+kΩ
+级电阻以抑制射频噪声（通用点火抗干扰设计，来源：⭐⭐；具体阻值看手册：❓）；关键传感器使用双绞线或屏蔽线（来源：⭐⭐）。</p>
+</section>
+<section id="实战案例-8" class="level3">
+<h3>实战案例</h3>
+<p>改装行车记录仪、USB 充电器、LED
+灯条后，如果仪表闪烁、收音机噪声变大、ABS 或 ECU
+偶发报码，要从走线和供电查起。电源线加保险、从电瓶或受控电源取电、负极回到可靠搭铁点；信号线远离高压线和点火线圈；长线可加磁环；敏感线不要和火花塞高压线平行捆扎。高压线与低压信号线分开走，比事后加滤波更有效。</p>
+</section>
+<section id="反直觉点-8" class="level3">
+<h3>反直觉点</h3>
+<p>抗干扰不是“多包几层胶布”。绝缘胶布解决的是短路风险，不解决高频电磁耦合。高频噪声可以通过空间辐射、电容耦合、地线共阻抗进入电路；线没破皮也会被干扰。布局、接地、屏蔽、滤波要一起看。详见
+13.1.1、13.1.11、13.4.1、13.7.4。</p>
+</section>
+</section>
+<section id="保险丝-i-t-特性数学描述" class="level2">
+<h2>13.11.10 保险丝 I-t 特性（数学描述）</h2>
+<section id="机制-9" class="level3">
+<h3>机制</h3>
+<p>保险丝靠电流发热熔断，保护的是线束和下游设备。它的行为不是“超过额定电流立刻断”，而是反时限：过载越大，熔断越快；轻微过载可能很久都不断（来源：⭐⭐⭐）。这符合热过程直觉：金属丝温度取决于发热
+<span
+class="math inline"><em>I</em><sup>2</sup><em>R</em></span>、散热、环境温度和持续时间。保险丝额定值是长期承载能力，不是精密电流开关。</p>
+</section>
+<section id="公式-9" class="level3">
+<h3>公式</h3>
+<p>保险丝选型常用 <span
+class="math inline"><em>I</em><sup>2</sup><em>t</em> = <em>K</em></span>
+表示熔化热概念（来源：⭐⭐⭐）。<span
+class="math inline"><em>I</em><sup>2</sup><em>t</em></span>
+越大，进入熔体的热量越多；短路保护要求故障电流能快速给够 <span
+class="math inline"><em>I</em><sup>2</sup><em>t</em></span>，选择性保护则希望下级保险丝先断、上级主保险丝后断或不断（来源：⭐⭐）。</p>
+</section>
+<section id="数值-9" class="level3">
+<h3>数值</h3>
+<p>以 10 A
+汽车片式保险丝为例，可用下表理解过载倍数与时间关系（反时限示意，来源：⭐⭐；具体曲线看厂家数据表：❓）：</p>
+<table>
+<thead>
+<tr>
+<th>电流倍数</th>
+<th style="text-align: right;">电流</th>
+<th>典型结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1×</td>
+<td style="text-align: right;">11 A</td>
+<td>4 小时内可能不熔</td>
+</tr>
+<tr>
+<td>1.35×</td>
+<td style="text-align: right;">13.5 A</td>
+<td>约 1 小时量级</td>
+</tr>
+<tr>
+<td>2×</td>
+<td style="text-align: right;">20 A</td>
+<td>几秒到几十秒</td>
+</tr>
+<tr>
+<td>5×</td>
+<td style="text-align: right;">50 A</td>
+<td>毫秒级到很短时间</td>
+</tr>
+</tbody>
+</table>
+<p>这些数字不能替代维修手册，只用于说明保险丝不是瞬时开关。</p>
+</section>
+<section id="实战案例-9" class="level3">
+<h3>实战案例</h3>
+<p>如果 10 A 保险丝带着 11 A
+改装负载，可能骑一段才断；如果线束短路到车架，电流可能几十安甚至更高，保险丝会很快熔断。反复烧同一保险丝时，不能换
+15 A 或 20 A 试试，因为原线束可能只按 10 A
+回路设计（线束保护原则来源：⭐⭐）。正确做法是断开负载、查短路、查磨破线、查进水插头。</p>
+</section>
+<section id="反直觉点-9" class="level3">
+<h3>反直觉点</h3>
+<p>保险丝保护的第一对象通常是线，不是昂贵
+ECU。把保险丝加大，等于允许线束在更高电流下继续发热；故障没“修好”，只是把熔断点从几元保险丝转移到线束、接头或电器内部。详见
+13.1.10、13.5.1、13.5.4、13.9.3。</p>
+</section>
+</section>
+<section id="功率与能量守恒链路" class="level2">
+<h2>13.11.11 功率与能量守恒链路</h2>
+<section id="机制-10" class="level3">
+<h3>机制</h3>
+<p>电气系统所有“有劲没劲”的问题，最后都落到功率和能量守恒。电瓶输出电功率，电机把一部分变成机械功，剩下变成铜损、铁损、摩擦热；点火线圈把低压电能暂存成磁能，再在极短时间内变成高压火花。不要只看电压高低，还要问电流多大、持续多久、能量到哪去了。</p>
+</section>
+<section id="公式-10" class="level3">
+<h3>公式</h3>
+<p>功率为 <span
+class="math inline"><em>P</em> = <em>U</em><em>I</em></span>，能量为
+<span
+class="math inline"><em>E</em> = <em>P</em><em>t</em></span>，电感储能为
+<span
+class="math inline">$W=\frac{1}{2}LI^2$</span>（来源：⭐⭐⭐）。效率为
+<span
+class="math inline"><em>η</em> = <em>P</em><sub><em>o</em><em>u</em><em>t</em></sub>/<em>P</em><sub><em>i</em><em>n</em></sub></span>（来源：⭐⭐⭐）。高电压不等于高能量；能量还取决于电流和时间。</p>
+</section>
+<section id="数值-10" class="level3">
+<h3>数值</h3>
+<p>链路 1：电瓶到起动机再到曲轴。12.6 V 电瓶以 150 A 供电，输入功率
+<span
+class="math inline">12.6<em>V</em> × 150<em>A</em> = 1890<em>W</em></span>（来源：⭐⭐⭐）。起动机效率按
+60%-80%
+估算（通用小型直流电机工程范围，来源：⭐⭐；具体车型需实测：❓），机械输出约
+1134-1512
+W。曲轴需要克服转动惯量、摩擦、压缩压力和机油黏度；低温时需求更高。这里总效率应按
+60%-80% 量级理解，不应简单写成 30%-50%。</p>
+</section>
+<section id="实战案例-10" class="level3">
+<h3>实战案例</h3>
+<p>链路 2：电瓶到点火线圈再到火花塞。若初级电流 5 A、电瓶 12.6
+V，瞬时输入功率为 63 W（来源：⭐⭐⭐）；持续 1-3 ms，则输入能量约
+0.063-0.189 J（来源：⭐⭐⭐；时间取决于点火控制：❓）。次级电压可升到约
+10-40 kV、常见 15-40 kV，放电电流约 1-100 mA
+量级（火花放电量级，来源：⭐⭐），真正维持火花的能量常在 30-100
+mJ（点火系统通用范围，来源：⭐⭐）。点火是高电压、低能量事件——按上面的数据，输入能量约
+63-189 mJ、维持火花的能量 30-100
+mJ，两者处于同一量级；<strong>不宜用”效率”衡量点火链路</strong>（火花能否成功更取决于击穿电压、间隙与混合气条件）。点火的关键是<strong>电压极高、总能量极小</strong>（毫焦级），而不是”效率极低”。</p>
+</section>
+<section id="反直觉点-10" class="level3">
+<h3>反直觉点</h3>
+<p>起动机看起来“粗暴”，但能量转换效率不低；点火看起来电压吓人，但总能量很小。约
+10-40 kV（常见 15-40 kV）火花能击穿空气，却不能像 2 kW
+起动机那样做机械功。诊断时要分清“功率不足”和“电压不足”：启动困难多是功率链路问题，点火弱多是储能、开断速度、绝缘和间隙问题。详见
+13.1.8、13.1.9、13.3.1、13.4.1。</p>
+</section>
+</section>
+<section id="自感-互感基础" class="level2">
+<h2>13.11.12 自感 / 互感基础</h2>
+<section id="机制-11" class="level3">
+<h3>机制</h3>
+<p>自感是线圈电流变化时，线圈自己的磁场变化又反过来在线圈中感应电压；互感是一个线圈的磁场变化穿过另一个线圈，在另一个线圈中感应电压（来源：⭐⭐⭐）。点火线圈其实就是专门为短时高压设计的变压器：初级绕组少、线粗、电流大；次级绕组多、线细、电压高、电流小。铁芯负责把磁通集中起来，提高耦合。</p>
+</section>
+<section id="公式-11" class="level3">
+<h3>公式</h3>
+<p>自感可写成 <span
+class="math inline"><em>L</em> = <em>N</em><em>Φ</em>/<em>I</em></span>，表示单位电流能建立多少磁链（来源：⭐⭐⭐）。互感升压近似用
+<span
+class="math inline"><em>V</em><sub>2</sub>/<em>V</em><sub>1</sub> = <em>N</em><sub>2</sub>/<em>N</em><sub>1</sub></span>
+理解（来源：⭐⭐⭐），其中 <span
+class="math inline"><em>N</em><sub>2</sub>/<em>N</em><sub>1</sub></span>
+是次级与初级匝数比。真实点火线圈还受漏感、铁芯饱和、负载击穿电压和开关钳位影响，所以不能只靠匝比精确预测火花电压。</p>
+</section>
+<section id="数值-11" class="level3">
+<h3>数值</h3>
+<p>摩托车点火线圈匝比常在 1:50 到 1:200
+量级（通用点火线圈范围，来源：⭐⭐；具体线圈看厂家资料：❓）。如果初级断电瞬间被钳在
+200 V，1:100 匝比可在理想情况下对应 20 kV 次级电压；若需要击穿高压缩缸内
+0.8 mm
+火花塞间隙，实际电压会升到刚好击穿为止，然后进入维持放电阶段（击穿由间隙、压力和混合气决定，来源：⭐⭐⭐）。</p>
+</section>
+<section id="实战案例-11" class="level3">
+<h3>实战案例</h3>
+<p>用互感理解“副边电压高但电流小”：能量大致守恒，忽略损耗时 <span
+class="math inline"><em>V</em><sub>1</sub><em>I</em><sub>1</sub> ≈ <em>V</em><sub>2</sub><em>I</em><sub>2</sub></span>（来源：⭐⭐⭐）。初级可以是几安培，次级升到几万伏后电流只能是毫安级；否则能量凭空增加。检修时，高压线漏电、火花塞间隙过大、点火线圈绝缘老化都会让所需击穿电压超过系统能力，表现为冷车能着、热车失火或大油门断火。</p>
+</section>
+<section id="反直觉点-11" class="level3">
+<h3>反直觉点</h3>
+<p>点火线圈不是把 12 V
+静态“变压”成固定电压，而是靠初级电流先储能，再靠快速断电让磁场崩塌；次级约
+10-40 kV、常见 15-40
+kV。没有电流变化，就没有感应高压；所以点火模块、曲轴信号、初级供电和搭铁任何一个环节异常，都会让高压消失。详见
+13.1.9、13.4.1、13.4.3。</p>
+<!-- horizontal-rule -->
+</section>
+</section>
+<section id="本章小结-13" class="level2">
+<h2>本章小结</h2>
+<ul>
+<li>电气故障的底层语言是 <span
+class="math inline"><em>V</em> = <em>I</em><em>R</em></span>、<span
+class="math inline"><em>P</em> = <em>U</em><em>I</em></span>、KCL/KVL
+和能量守恒；先测带载电压，再谈换件。</li>
+<li>12 V
+系统最怕“小电阻大电流”：氧化接头、细线、坏搭铁在几安到上百安下会变成明显压降和热源。</li>
+<li>发电、整流、稳压、点火都离不开电磁感应和非线性器件；三相整流更稳，SCR
+稳压会发热，点火高压来自快速断电。</li>
+<li>保险丝、线径、接地和 EMC
+不是附属细节，而是可靠性设计；改装电器前必须算功率、线径、保险和走线。</li>
+<li>下一步学习建议：电瓶与充电见 13.1.3-13.2.4，起动系统见
+13.3，点火系统见 13.4，保险丝与灯光故障见 13.5-13.8，实战检查见
+13.9。</li>
+</ul>
+<!-- separator -->
+<!-- file: ./vol03/CH14-车架与外观.md -->
 </section>
 </section>
 <section id="第14章-车架与外观" class="level1">
@@ -34813,6 +34657,9 @@ CH11</li>
 </ul>
 <!-- horizontal-rule -->
 </section>
+</section>
+<section id="车架系统原理层" class="level2">
+<h2>14.1 车架系统原理层</h2>
 <section id="车架系统原理层系统功能与设计目标" class="level3">
 <h3>14.1.1 车架系统原理层：系统功能与设计目标</h3>
 <p>摩托车车架（frame）不是「把零件焊在一起」的简单结构——它<strong>承载发动机+骑手+油箱+悬挂+车轮所有重量和力</strong>，同时<strong>决定整车的刚性、轻量化、操控性、安全性</strong>（来源：⭐⭐⭐）。</p>
@@ -45971,8 +45818,8 @@ ABS 模块故障码都需要重点检查。 <strong>处理建议</strong>（参 
 <strong>踩坑过程</strong>：以为是发电机
 <strong>可能原因</strong>：电瓶老化、接地不良、插头氧化、定子输出异常或整流调压器故障。
 <strong>处理建议</strong>：充电相关参 CH13
-13.X（具体章节按车型查）；电气总览见 13.2.5，充电系统诊断见
-13.5.3。按手册测怠速和 3000 rpm
+13.11（电工学基础扩展册，具体章节按车型查）；电气总览见
+13.2.5，充电系统诊断见 13.5.3。按手册测怠速和 3000 rpm
 充电电压、定子交流输出和插头压降，再决定是否更换部件。
 <strong>教训</strong>：充电故障必须实测电压，不能直接归因于某类品牌调压器。</p>
 </section>
@@ -49183,72 +49030,61 @@ Maintenance》</p>
 </section>
 </section>
 </section>
-  </article>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+</article></main>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
 (function() {
-  var searchIndex = [];
-  var currentChap = '';
-  document.querySelectorAll('article.content h1, article.content h2, article.content h3').forEach(function(h, i) {
-    if (!h.id) h.id = 'h_' + i;
-    var text = h.textContent.replace(/\s+/g, ' ').trim();
-    searchIndex.push({ id: h.id, title: text, tag: h.tagName, chap: currentChap });
-    if (h.tagName === 'H1' || h.tagName === 'H2') currentChap = text;
+  var articles = [];
+  var nodes = document.querySelectorAll('article.content section, article.content h1[id], article.content h2[id], article.content h3[id]');
+  for (var i = 0; i < nodes.length; i++) {
+    var el = nodes[i];
+    var heading = el.id || el.textContent.split('\n')[0].trim().substring(0, 80);
+    if (!heading) continue;
+    var text = el.textContent.replace(/\s+/g, ' ').trim();
+    if (text.length < 30) continue;
+    articles.push({ id: heading, title: heading, body: text });
+  }
+  var fuse = new Fuse(articles, {
+    keys: ['title', 'body'],
+    threshold: 0.3,
+    ignoreLocation: true,
+    includeMatches: true,
+    minMatchCharLength: 2
   });
-  var fuse = new Fuse(searchIndex, { keys: ['title'], threshold: 0.4, distance: 100, includeScore: true, minMatchCharLength: 1 });
   var input = document.getElementById('search');
   var results = document.getElementById('search-results');
+  if (!input || !results) return;
+  var debounce;
   input.addEventListener('input', function() {
-    var q = input.value.trim();
-    if (q.length === 0) { results.classList.remove('active'); return; }
-    var matches = fuse.search(q, {limit: 30});
-    if (matches.length === 0) {
-      results.innerHTML = '<div class="no-result">没有匹配项。试试其他关键词，比如「液压」「点火」「气门间隙」</div>';
+    clearTimeout(debounce);
+    var q = this.value.trim();
+    debounce = setTimeout(function() {
+      if (q.length < 2) { results.classList.remove('active'); results.innerHTML = ''; return; }
+      var hits = fuse.search(q, { limit: 30 });
+      if (hits.length === 0) {
+        results.innerHTML = '<div class="no-result">无匹配结果</div>';
+        results.classList.add('active');
+        return;
+      }
+      results.innerHTML = hits.map(function(h) {
+        var m = h.matches && h.matches[0];
+        var start = (m && m.indices && m.indices[0]) ? Math.max(0, m.indices[0][0] - 50) : 0;
+        var excerpt = h.item.body.substring(start, start + 250);
+        return '<div class="result" data-anchor="' + h.item.id + '"><h4>' + h.item.title + '</h4><div class="excerpt">' + excerpt + '...</div></div>';
+      }).join('');
       results.classList.add('active');
-      return;
-    }
-    var html = matches.map(function(m) {
-      var tagBadge = m.item.tag === 'H1' ? '卷' : (m.item.tag === 'H2' ? '章' : '节');
-      var chap = m.item.chap !== m.item.title && m.item.tag !== 'H1' ? '<div class="meta">' + escapeHtml(m.item.chap) + '</div>' : '';
-      var hl = highlight(m.item.title, q);
-      return '<div class="result" data-id="' + m.item.id + '"><h4>' + hl + '</h4>' + chap + '<div class="meta">[' + tagBadge + '] 匹配度 ' + ((1 - m.score) * 100).toFixed(0) + '%</div></div>';
-    }).join('');
-    results.innerHTML = html;
-    results.classList.add('active');
-    results.querySelectorAll('.result').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var id = el.getAttribute('data-id');
-        var target = document.getElementById(id);
-        if (target) {
-          target.scrollIntoView({behavior: 'smooth', block: 'start'});
-          target.classList.add('target-highlight');
-          setTimeout(function() { target.classList.remove('target-highlight'); }, 2000);
-        }
-        results.classList.remove('active');
-        input.value = '';
-      });
-    });
+      var rs = results.querySelectorAll('.result');
+      for (var j = 0; j < rs.length; j++) {
+        rs[j].addEventListener('click', function() {
+          var a = this.dataset.anchor;
+          var t = document.getElementById(a);
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          results.classList.remove('active');
+        });
+      }
+    }, 200);
   });
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') { results.classList.remove('active'); input.value = ''; input.blur(); }
-  });
-  document.addEventListener('click', function(e) {
-    if (!results.contains(e.target) && e.target !== input) results.classList.remove('active');
-  });
-  var menuBtn = document.querySelector('.menu-toggle');
-  var sidebar = document.querySelector('aside.sidebar');
-  if (menuBtn) menuBtn.addEventListener('click', function() { sidebar.classList.toggle('open'); });
-  function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-  function highlight(text, q) {
-    var safe = escapeHtml(text);
-    if (!q) return safe;
-    var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\]/g, '\$&') + ')', 'gi');
-    return safe.replace(re, '<mark>$1</mark>');
-  }
 })();
 </script>
-
 </body>
 </html>
