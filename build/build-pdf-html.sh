@@ -120,7 +120,7 @@ from pathlib import Path
 
 # 构建目录：优先用环境变量 BUILD_DIR（脚本调用时导出），否则回退到当前工作目录
 build = Path(os.environ.get('BUILD_DIR', '.')).resolve()
-src = (build / 'site_raw.html').read_text()
+src = (build / 'site_raw.html').read_text(encoding='utf-8')
 
 # CSS(简版,只保留关键)
 css = """
@@ -252,7 +252,7 @@ if '<header class="app-bar"' not in out:
 if 'id="search-results"' not in out:
     out = re.sub(r'</header>', '</header><div id="search-results"></div>', out, count=1)
 
-(build / '摩托车维修全手册_网站.html').write_text(out)
+(build / '摩托车维修全手册_网站.html').write_text(out, encoding='utf-8')
 print('✅ HTML 输出:', build / '摩托车维修全手册_网站.html')
 PYEOF
 

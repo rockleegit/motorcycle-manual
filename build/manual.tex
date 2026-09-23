@@ -53,6 +53,16 @@
 \newunicodechar{▭}{{\symfont\char"25AD}}
 \newunicodechar{◀}{{\symfont\char"25C0}}
 \newunicodechar{▶}{{\symfont\char"25B6}}
+\newunicodechar{①}{{\symfont\char"2460}}
+\newunicodechar{②}{{\symfont\char"2461}}
+\newunicodechar{③}{{\symfont\char"2462}}
+\newunicodechar{④}{{\symfont\char"2463}}
+\newunicodechar{⑤}{{\symfont\char"2464}}
+\newunicodechar{⑥}{{\symfont\char"2465}}
+\newunicodechar{⑦}{{\symfont\char"2466}}
+\newunicodechar{⑧}{{\symfont\char"2467}}
+\newunicodechar{⑨}{{\symfont\char"2468}}
+\newunicodechar{⑩}{{\symfont\char"2469}}
 \newunicodechar{️}{\relax}                 % U+FE0F 变体选择符，丢弃
 % ────────────────────────────────────────────────────────────────
 
@@ -329,7 +339,7 @@ Bike）}\label{ux8fd0ux52a8ux8dd1ux8f66sport-bike}
 
 \textbf{为什么长这样}： - 高速时整流罩减少风阻 - 趴着骑可以减少迎风面积
 - 高转速发动机需要大进气量，整流罩上有进气口 -
-高速稳定性靠低重心和长轴距
+高速稳定性更多来自前伸角/拖曳距几何、重心分配和整流罩
 
 \textbf{详细特点}：
 
@@ -441,10 +451,10 @@ Cam时代确实有些问题，但新款已改善 - ``巡航车都贵'' ---
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-年代 & 1999-2017 & 2017+ \\
+年代 & 约 2012-2016 & 2017+ \\
 排量 & 1690cc & 1868cc \\
 气门数 & 4（每缸2气门） & 8 \\
-平衡轴 & 无 & 有 \\
+平衡轴 & A 版无 / B 版有（Softail/Dyna） & 有 \\
 火花塞 & 1个/缸 & 2个/缸（共4个） \\
 张紧器问题 & 频繁 & 已改善 \\
 配件丰富度 & 高 & 高 \\
@@ -646,16 +656,17 @@ RM-Z450 & 铃木 & 449cc & 长寿命 \\
 \bottomrule\noalign{}
 \endlastfoot
 Vespa GTS 300 & 比亚乔 & 278cc & 单缸+CVT，复古 \\
-PCX160 & 本田 & 157cc & 省油之王 \\
+PCX160 & 本田 & 157cc & 省油取向（⭐） \\
 NMAX 155 & 雅马哈 & 155cc & 运动踏板 \\
 TMAX 560 & 雅马哈 & 562cc & 大踏板，性能强 \\
 GTS 300 Super & 比亚乔 & 278cc & 运动版 \\
 \end{longtable}
 }
 
-【维修】 \textbf{维修场景}： - CVT皮带每25000-30000km更换 -
-齿轮油定期更换 - 踏板车发动机多为单缸小排量 - 维修空间小（被覆盖件包裹）
-- 火花塞位置通常深而狭窄
+【维修】 \textbf{维修场景}： - CVT 皮带按手册与磨损状态更换（常见量级
+2-3 万 km，以车主手册为准） - 齿轮油定期更换 -
+踏板车发动机多为单缸小排量 - 维修空间小（被覆盖件包裹） -
+火花塞位置通常深而狭窄
 
 【注意】 \textbf{常见误解}： - ``踏板车都是小排量'' --- 错。TMAX
 560、Gilera GP800都是大排量 - ``踏板车没技术'' --- 错。CVT系统很精密
@@ -771,17 +782,30 @@ Shotgun 650 & 皇家恩菲尔德 & 648cc & 双缸 \\
 \textbf{双缸还有细分}：
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3077}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}@{}}
 \toprule\noalign{}
-类型 & 英文 & 缸夹角 & 特点 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+类型
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+英文
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+缸夹角
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+特点
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 并列双缸 & Parallel Twin & 0° & 简单、平衡性好 \\
-V型双缸 & V-Twin & 60°-90° & 紧凑、独特声浪 \\
+V型双缸 & V-Twin & 45°-90° & 紧凑、独特声浪 \\
 横V双缸 & Transverse V-Twin & 90° & 低重心（摩托古兹） \\
-跨平面双缸 & Crossplane & 270° & 不规则点火（雅马特色） \\
+跨平面双缸 & Crossplane & 0°（并列布置） & 曲轴相位角 270°（点火间隔
+270°/450°），不规则点火（雅马特色） \\
 \end{longtable}
 }
 
@@ -1252,8 +1276,9 @@ Drive）}\label{ux94feux6761ux4f20ux52a8chain-drive}
 \end{longtable}
 }
 
-【维修】 \textbf{维修场景}： - 每500km清洁润滑（雨后立即润滑） -
-每5000km检查张力 - 每30000km更换链条链轮 - 配套更换（不要新旧混用）
+【维修】 \textbf{维修场景}： - 每500km清洁润滑（雨后立即润滑） - 每
+500-1000 km 或至少每月检查松紧 - 每30000km更换链条链轮 -
+配套更换（不要新旧混用）
 
 \subsubsection{皮带传动（Belt
 Drive）}\label{ux76aeux5e26ux4f20ux52a8belt-drive}
@@ -1554,7 +1579,7 @@ ATDC - 总排气持续角：240°
 \begin{verbatim}
 第一冲程（活塞上行）：
 - 活塞从下止点向上
-- 先关闭排气口，再关闭扫气口
+- 先关闭扫气口，再关闭排气口
 - 压缩燃烧室内的混合气
 - 同时，曲轴箱吸入新的新鲜混合气
 - 上止点前点火
@@ -1657,7 +1682,7 @@ ATDC - 总排气持续角：240°
 - 一般 5-25° ATDC
 \end{verbatim}
 
-\textbf{【数据】 数据举例}（雅马哈R1）：
+\textbf{【数据】 数据举例}（雅马哈R1，⭐ 车型数据，以车主手册为准）：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}ll@{}}
@@ -1700,10 +1725,12 @@ ATDC - 总排气持续角：240°
 
 \textbf{常见点火顺序}：
 
-\textbf{直列双缸}：
+\textbf{直列双缸}（按曲轴相位分列点火间隔）：
 
 \begin{verbatim}
-0° - 360° - 720°（每360°一次）
+180° 曲轴：点火间隔 180°/540°
+270° 曲轴：点火间隔 270°/450°
+360° 曲轴：点火间隔 360°/360°
 \end{verbatim}
 
 \textbf{直列三缸}：
@@ -2422,7 +2449,8 @@ CH12）}：检查蹄片厚度与制动鼓内径，超标即更换；清理鼓内
        [底板摇篮]
 \end{verbatim}
 
-特点： - 发动机作为受力部件 - 简单 - 维护方便 - 应用：复古车、部分街车
+特点： - 发动机不参与车架受力，被摇篮管包托（受力发动机是双翼梁/Trellis
+等类型特征） - 简单 - 维护方便 - 应用：复古车、部分街车
 
 \textbf{双摇篮式车架}：
 
@@ -2439,8 +2467,8 @@ CH12）}：检查蹄片厚度与制动鼓内径，超标即更换；清理鼓内
 像编织的网格
 \end{verbatim}
 
-特点： - 轻量化 - 刚性好 - 现代运动车主流 -
-代表：杜卡迪Monster、雅马哈MT系列
+特点： - 轻量化 - 刚性好 - 现代运动车主流 - 代表：杜卡迪 Monster
+系列、杜卡迪 Scrambler
 
 \textbf{铝合金车架}：
 
@@ -2617,7 +2645,7 @@ CH12）}：检查蹄片厚度与制动鼓内径，超标即更换；清理鼓内
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-漏气速度 & 扎钉后通常较慢 & 可能快速漏气，也偶有慢漏 \\
+漏气速度 & 穿刺割破内胎后易快速放气 & 扎钉多为慢漏（钉体堵孔） \\
 补胎方式 & 拆轮拆胎，换或补内胎 & 可塞条应急，正规做法是拆胎内补 \\
 \end{longtable}
 }
@@ -2753,7 +2781,8 @@ CH12）}：检查蹄片厚度与制动鼓内径，超标即更换；清理鼓内
 副轴 & Output Shaft & 输出动力的轴 \\
 1档齿轮 & 1st Gear & 一档齿轮 \\
 拨叉 & Shift Fork & 推动齿轮的部件 \\
-换挡轴 & Shift Drum & 控制拨叉 \\
+换挡轴 & Shift Shaft & 传递脚踏换挡动作 \\
+换挡鼓 & Shift Drum & 驱动拨叉换挡 \\
 换挡凸轮 & Shift Cam & 换挡轴上的凸轮 \\
 换挡杆 & Shift Lever & 脚踩操纵 \\
 速比 & Gear Ratio & 输入与输出转速比 \\
@@ -3061,7 +3090,7 @@ O型圈 & O-Ring & 圆形密封圈 \\
 为什么重要： - 间隙过小 → 气门关闭不严 → 烧气门 - 间隙过大 →
 异响、动力下降
 
-检查频率：5000-10000km
+检查频率：10000-40000 km（车型差异很大，以车主手册为准）
 
 \textbf{重点2：火花塞}
 
@@ -3099,7 +3128,7 @@ O型圈 & O-Ring & 圆形密封圈 \\
 
 为什么重要： - 堵塞会影响供油
 
-更换周期：20000-50000km
+更换周期：10000-20000 km 量级，以车主手册为准
 
 \textbf{重点2：燃油泵}
 
@@ -3127,7 +3156,8 @@ O型圈 & O-Ring & 圆形密封圈 \\
 
 \textbf{重点2：链条}
 
-维护频率： - 清洁润滑：每500km - 张力检查：每5000km - 更换：每30000km
+维护频率： - 清洁润滑：每500km - 松紧检查：每 500-1000 km 或至少每月 -
+更换：每30000km
 
 \textbf{重点3：变速箱油}
 
@@ -3160,7 +3190,7 @@ O型圈 & O-Ring & 圆形密封圈 \\
 
 更换周期：1-2年
 
-\textbf{重点3：链条轴承}
+\textbf{重点3：车轮轴承（轮毂轴承）}
 
 更换时机：异响、松动
 
@@ -3174,7 +3204,7 @@ O型圈 & O-Ring & 圆形密封圈 \\
 
 为什么重要： - 全车电气依赖它 - 老化无征兆
 
-更换周期：3-5年
+更换周期：约 2-5 年（看使用状况、气候、停放）
 
 \textbf{重点2：整流器}
 
@@ -3656,6 +3686,11 @@ JIS 刀头再用力，不要直接加力。⭐
 链条调节螺母 & 14mm \\
 \end{longtable}
 }
+
+\begin{quote}
+⚠️
+上表为车型专属示例（⭐），不同年份/批次可能不同，工具规格以车主手册为准。
+\end{quote}
 
 \subsubsection{英制扳手}\label{ux82f1ux5236ux6273ux624b}
 
@@ -4322,7 +4357,10 @@ Insize & 0.02mm & 200-500元 \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-火花塞 & 15-25Nm（❓ 以维修手册为准） \\
+火花塞 M10 平座 & 10-12Nm（❓ 以维修手册/NGK 为准） \\
+火花塞 M12 平座 & 15-20Nm（❓ 以维修手册/NGK 为准） \\
+火花塞 14mm 平座 & 25-30Nm（❓ 以维修手册/NGK 为准） \\
+火花塞 18mm 平座 & 35-40Nm（❓ 以维修手册/NGK 为准） \\
 缸盖螺丝 & 30-50Nm（❓ 以维修手册为准） \\
 油底壳螺丝 & 8-15Nm（❓ 以维修手册为准） \\
 主轴瓦盖 & 50-80Nm（❓ 以维修手册为准） \\
@@ -4337,8 +4375,8 @@ Insize & 0.02mm & 200-500元 \\
 
 \subsubsection{推荐配置}\label{ux63a8ux8350ux914dux7f6e}
 
-\textbf{新手配置}（1个扭力扳手）： - 3/8'' 驱动 5-50Nm（覆盖80\%维修） -
-价格：200-500元
+\textbf{新手配置}（1个扭力扳手）： - 3/8'' 驱动
+5-50Nm（覆盖大多数常见维修） - 价格：200-500元
 
 \textbf{进阶配置}（2个扭力扳手）： - 3/8'' 驱动 5-50Nm（精密） - 1/2''
 驱动 20-200Nm（大扭矩） - 价格：500-1500元
@@ -5340,8 +5378,9 @@ OBD诊断仪 & 1个 & 800元 \\
 
 \subsubsection{不同螺丝拧紧方式}\label{ux4e0dux540cux87baux4e1dux62e7ux7d27ux65b9ux5f0f}
 
-\textbf{缸盖螺丝}（重要）： 1. 分多次拧紧（不要一次到位） 2.
-纯示意：例如分级递增，具体数值不可照抄 3. 按对角顺序 4.
+\textbf{缸盖螺丝}（重要）： 1. 分多次拧紧（不要一次到位） 2. 分 2-3
+级递增至规定扭矩（各级值查维修手册），最后按手册规定角度或终值拧紧 3.
+按对角顺序 4.
 按车型维修手册确认扭矩、顺序、是否使用角度规、螺栓是否可重复使用、螺纹/垫面是否润滑
 ⭐
 
@@ -5542,6 +5581,11 @@ OBD诊断仪 & 1个 & 800元 \\
 卡尺 & & 测量 \\
 \end{longtable}
 }
+
+\begin{quote}
+⚠️
+上表为车型专属示例（⭐），不同年份/批次可能不同，工具规格以车主手册为准。
+\end{quote}
 
 \subsection{通用配置（任何车型）}\label{ux901aux7528ux914dux7f6eux4efbux4f55ux8f66ux578b}
 
@@ -5834,10 +5878,11 @@ Uvex & 高端 & 80-300元 \\
 \textbf{防尘口罩}： - 过滤粉尘、研磨颗粒（无油雾） - 处理打磨粉尘 -
 价格：1-5元/个
 
-\textbf{有机蒸气滤盒（褐色）}： - 过滤化油器清洗剂、油漆、汽油蒸气 -
-必须密合，滤盒到期或闻到异味就更换 - 价格：50-200元
+\textbf{有机蒸气滤盒（GB 2890 A 型，褐色）}： -
+过滤化油器清洗剂、油漆、汽油蒸气 - 必须密合，滤盒到期或闻到异味就更换 -
+价格：50-200元
 
-\textbf{酸性气体滤盒（白色）}： - 过滤电瓶酸雾 -
+\textbf{酸性气体滤盒（GB 2890 E 型，黄色）}： - 过滤电瓶酸雾 -
 必须按滤盒标识和说明书选型
 
 \textbf{颗粒物/烟尘防护（P100/FFP3）}： - 过滤焊接烟尘、打磨粉尘 -
@@ -6033,6 +6078,8 @@ Uvex & 高端 & 80-300元 \\
 \end{longtable}
 }
 
+【来源】 ⭐⭐：油品 MSDS/教科书物性数据
+
 【问答】 \textbf{新手问答}：闪点是什么？
 
 答：液体蒸气能\textbf{瞬间被点燃的最低温度}。汽油-43°C意味着\textbf{几乎所有情况下}汽油蒸气都能被点燃。
@@ -6145,7 +6192,7 @@ Uvex & 高端 & 80-300元 \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-DOT3/4 & 沸点 205-230°C \\
+DOT3/4 & 干沸点 205/230°C（湿沸点约 140/155°C） \\
 DOT5.1 & 沸点 260°C \\
 腐蚀性 & 强 \\
 毒性 & 中等 \\
@@ -6457,7 +6504,7 @@ DOT5.1 & 沸点 260°C \\
 
 \subsection{3.6.2 烫伤预防}\label{ux70ebux4f24ux9884ux9632}
 
-\textbf{操作前}： - 让车冷却（至少30分钟） -
+\textbf{操作前}： - 一般金属件至少冷却 30 分钟；排气件见下文 -
 测试温度（用手靠近，不直接接触）
 
 \textbf{操作中}： - 戴耐高温手套 - 用工具而非手 - 标记高温部件
@@ -6883,7 +6930,7 @@ DOT5.1 & 沸点 260°C \\
 重点：
 - 戴手套
 - 戴护目镜
-- 戴工具清理
+- 用工具清理（不要用手直接抠）
 - 链条工具使用
 - 链条接扣小心
 \end{verbatim}
@@ -7072,7 +7119,7 @@ DOT5.1 & 沸点 260°C \\
 行业标准、⭐ 通用经验、❓ 存疑）；● 表示重要度
 
 \textbf{学完本章后，你将能}： - 遇到任何故障不再乱猜 - 有系统地排查问题
-- 避免花冤枉钱换零件 - 节省80\%诊断时间
+- 避免花冤枉钱换零件 - 节省大量诊断时间
 
 \section{4.1
 故障诊断的核心思想}\label{ux6545ux969cux8bcaux65adux7684ux6838ux5fc3ux601dux60f3}
@@ -7102,7 +7149,7 @@ DOT5.1 & 沸点 260°C \\
 
 \subsubsection{原则1：从简到繁}\label{ux539fux52191ux4eceux7b80ux5230ux7e41}
 
-\textbf{为什么}： - 简单问题占80\% - 复杂问题占20\% -
+\textbf{为什么}： - 简单问题占大多数 - 复杂问题占少数 -
 大部分故障不需要大修
 
 \textbf{实际应用}： - 先检查最容易的（电源、油液、空气） -
@@ -7554,23 +7601,34 @@ How long & 多久了 & 3天 \\
 
 \textbf{应用}： - 线圈电阻 - 传感器电阻 - 线路通断
 
-\textbf{方法}： 1. 选择电阻档（Ω） 2. 红黑表笔接触元件两端 3. 读数 4.
-\textbf{必须断电测量}
+【注意】 测电阻必须断电；在路测量至少断开元件一端
+
+\textbf{方法}： 1. 选择电阻档（Ω） 2. 红黑表笔接触元件两端 3. 读数
 
 \textbf{判断}：
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}lll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3000}}@{}}
 \toprule\noalign{}
-元件 & 正常值 & 异常 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+元件
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+正常值
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+异常
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 点火线圈初级 & 0.5-3Ω（以维修手册为准） & 0或∞ 异常 \\
 点火线圈次级 & 5-15kΩ（以维修手册为准） & 0或∞ 异常 \\
-氧传感器加热 & 几Ω & 0或∞ 异常 \\
-喷油嘴 & 几Ω & 0或∞ 异常 \\
+氧传感器加热 & 常见 2-20Ω（❓，以维修手册为准） & 0或∞ 异常 \\
+喷油嘴 & 高阻型 12-16Ω、低阻型（峰值保持）0.5-3Ω，以维修手册为准 & 0或∞
+异常 \\
 \end{longtable}
 }
 
@@ -7610,7 +7668,7 @@ P04XX & 排放控制 & 检查排放 \\
 P05XX & 车速、怠速 & 检查传感器 \\
 P06XX & 电脑和输出 & 检查ECU \\
 P07XX & 变速箱 & 检查变速箱 \\
-P08XX-P09XX & 其他 & - \\
+P08XX-P09XX & 变速箱 & 检查变速箱 \\
 \end{longtable}
 }
 
@@ -7662,8 +7720,9 @@ P0500 & 车速传感器 & 传感器、线路 \\
 
 \textbf{应用}： - 检查气缸密封 - 判断气门、活塞环状态
 
-\textbf{方法}： 1. 拆下火花塞 2. 安装压力表 3. 启动电机 5 秒（可重复 2-3
-次取最高值）（来源：⭐） 4. 读压力值
+\textbf{方法}： 1. 关闭发动机，拆下全部火花塞 2. 安装压力表 3.
+节气门全开 4. 起动机拖转至读数不再上升（可重复 2-3
+次取最高值）（来源：⭐） 5. 读压力值
 
 \textbf{判断}：
 
@@ -7681,9 +7740,8 @@ P0500 & 车速传感器 & 传感器、线路 \\
 \end{longtable}
 }
 
-\textbf{步骤补充}： 1. 关闭发动机 2. 拆下所有火花塞 3. 安装压力表 4.
-捏住节气门（保持全开） 5. 启动电机5秒（来源：⭐） 6. 读数 7.
-重复2-3次取最高值（来源：⭐）
+汽油机常见 10-15 bar（⭐/❓）；各缸差 \textless10-15\%
+为正常（⭐/❓，以维修手册为准）
 
 \subsubsection{燃油压力测试}\label{ux71c3ux6cb9ux538bux529bux6d4bux8bd5}
 
@@ -7852,7 +7910,7 @@ bar（来源：❓；摩托车直喷少见，以车型维修手册为准） \\
 
 2. 测燃油压力：用压力表
 
-3. 喷油嘴测试：优先用诊断仪作动测试、听诊器/试灯/示波器确认脉冲；拆喷油嘴喷射测试仅限有接油容器、远离火源、断开点火高压并按手册泄压后进行（来源：⭐）
+3. 喷油嘴测试：优先用诊断仪作动测试、听诊器/试灯/示波器确认脉冲；拆喷油嘴喷射测试仅限在开放空间/通风良好处进行，备接油容器、远离火源、断开点火高压并按手册泄压后进行（来源：⭐）
 \end{verbatim}
 
 \textbf{检查气缸压力}：
@@ -8117,6 +8175,7 @@ bar（来源：❓；摩托车直喷少见，以车型维修手册为准） \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+燃油 & 最高 & 火灾；立即熄火禁火、远离火源 \\
 油底壳 & 高 & 漏完就拉缸 \\
 缸盖 & 中等 & 漏气、机油少 \\
 变速箱 & 中等 & 漏齿轮油 \\
@@ -8140,6 +8199,7 @@ bar（来源：❓；摩托车直喷少见，以车型维修手册为准） \\
    - 刹车油：浅色
    - 冷却液：绿色/红色
    - 前叉油：浅黄色
+   - 燃油（汽油味、挥发快→立即熄火禁火、远离火源）
 
 3. 检查密封
    - 密封件是否老化
@@ -8745,7 +8805,7 @@ ________
 
 \begin{verbatim}
 1. 测电瓶静态电压
-   - 铅酸电瓶满电常见：约12.6V（来源：⭐⭐ 物理）
+   - 铅酸电瓶静置电压：≥12.6V 满电；12.4-12.6V 需补电；<12.4V 该充电（来源：⭐⭐⭐ 电化学常识）
    - AGM、锂电池静态电压与放电曲线不同，以电瓶厂家说明和车型手册为准
    - 明显异常：<12V（先充电/负载测试，不只看静态电压）
 
@@ -8835,7 +8895,7 @@ ________
 \end{verbatim}
 
 \textbf{处理}： - 点火线圈：更换 -
-CDI/ECU：不要直接更换，先做低成本验证（来源：⭐⭐⭐） 1. 测电瓶电压 2.
+CDI/ECU：不要直接更换，先做低成本验证（来源：⭐） 1. 测电瓶电压 2.
 查接地（主搭铁 / ECU搭铁） 3. 查保险丝 + 继电器 4.
 查曲轴/凸轮位置传感器信号 5. 查线路（接头/插头/线束） 6.
 以上都没问题，才怀疑 CDI / ECU - 高压线：更换 - 接插件：清洁或更换
@@ -8869,9 +8929,9 @@ CDI/ECU：不要直接更换，先做低成本验证（来源：⭐⭐⭐） 1. 
    - 电喷进气道喷射常见怠速 2.5-3.5 bar、预压 2.5-4.0 bar；具体看手册；真空调压车型还要看相对歧管压差（来源：⭐/❓）
 
 4. 拆喷油嘴测试
-   - 启动车辆看是否喷油
+   - 用启动电机拖转观察喷油（**不要着车**；断开点火高压）
    - 喷油量是否正常
-   - 【严重警告】 测试前必须：备接油容器、远离火源、断开点火高压、按手册给燃油系统泄压（详见 CH04 4.4 节）
+   - 【严重警告】 测试前必须：开放空间/通风良好、备灭火器与接油容器、远离火源、断开点火高压、按手册给燃油系统泄压（详见 CH04 4.4 节）
 
 5. 检查燃油滤芯
    - 是否堵塞
@@ -8903,13 +8963,16 @@ CDI/ECU：不要直接更换，先做低成本验证（来源：⭐⭐⭐） 1. 
    - 低于标准：故障
 
 3. 漏气部位：
-   - 进气管漏气：冒气声
-   - 排气漏气：排气有异响
-   - 缸垫漏气：冷却液中有气泡
+   - 进气门不严→化油器/节气门处冒气
+   - 排气门不严→排气口漏气
+   - 缸垫不严→水箱冒泡
+   - 精确定漏点需做漏气量（leak-down）测试
 \end{verbatim}
 
-\textbf{处理}： - 活塞环磨损：镗缸+换环 - 气门密封：研磨或更换 -
-缸垫漏气：更换缸垫 - 气缸磨损：镗缸+换活塞
+\textbf{处理}： -
+活塞环磨损：换环为主（测缸径、查镀层后再定是否镗缸/换缸；若镗缸必须配加大活塞组件）
+- 气门密封：研磨或更换 - 缸垫漏气：更换缸垫 -
+气缸磨损：镗缸+换活塞（镗缸须配加大活塞+环）
 
 \subsubsection{【中频】
 故障6：化油器故障（老车）}\label{ux4e2dux9891-ux6545ux969c6ux5316ux6cb9ux5668ux6545ux969cux8001ux8f66}
@@ -9185,7 +9248,7 @@ TPS传感器故障
 3. 拆检
 \end{verbatim}
 
-\textbf{处理}： - 镗缸 - 换活塞 - 镗缸+换活塞+换环
+\textbf{处理}： - 镗缸（须配加大活塞+环） - 换活塞 - 镗缸+换活塞+换环
 
 \subsubsection{【中频】
 故障20：传动链条异响}\label{ux4e2dux9891-ux6545ux969c20ux4f20ux52a8ux94feux6761ux5f02ux54cd}
@@ -9464,7 +9527,8 @@ chain）。正时链条异响需检查正时链条张紧器，涉及发动机内
 3. 涂肥皂水
 \end{verbatim}
 
-\textbf{处理}： - 拔钉 - 补胎 - 换胎
+\textbf{处理}： - 拔钉 - 补胎 - 换胎 -
+仅胎面小穿刺可补；胎侧/胎肩损伤必须换胎；不得带钉继续行驶，拔钉后必须立即补胎或换胎
 
 \subsection{5.3.2 减震故障}\label{ux51cfux9707ux6545ux969c}
 
@@ -9496,8 +9560,9 @@ chain）。正时链条异响需检查正时链条张紧器，涉及发动机内
 
 \begin{verbatim}
 1. 按压测试
-   - 软：失效
-   - 硬：好
+   - 压下松手一次回到原位=好
+   - 反复弹跳=阻尼失效
+   - 按不动/回不去=卡滞
 2. 测阻尼
 3. 听异响
 \end{verbatim}
@@ -10125,15 +10190,29 @@ CVT皮带检查/更换按车型手册，不写死 25000 km（来源：❓） -
 \subsubsection{常见故障汇总}\label{ux5e38ux89c1ux6545ux969cux6c47ux603b-4}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-故障 & 频率 & 症状 & 处理 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+故障
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+频率
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+症状
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+处理
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 ❓ Desmo气门需调整 & 【高频】 & 异响 & 调整气门，先咨询专业 \\
-❓ 皮带/链条 & 【中频】 & 传动异响 & 更换 \\
+❓ 链条（终传） & 【中频】 & 异响 & 调整/更换 \\
+❓ 配气皮带（部分 2 气门机型） & 预防维护项 & 不是异响项 &
+按手册周期\textbf{预防更换}（断裂是顶气门级事故） \\
 ❓ 整流器 & 【中频】 & 充电异常 & 换前先查接地/线束，先咨询专业 \\
 ❓ 启动电机 & 【中频】 & 启动困难 & 维修 \\
 ❓ 电瓶 & 【中频】 & 亏电 & 换 \\
@@ -10207,12 +10286,12 @@ Hall传感器故障率较高 - 部分配件偏贵
 故障频率综合表}\label{ux6545ux969cux9891ux7387ux7efcux5408ux8868}
 
 \subsection{5.9.1
-高频/中频故障速查（前20）}\label{ux9ad8ux9891ux4e2dux9891ux6545ux969cux901fux67e5ux524d20}
+常见故障（按主题排列）}\label{ux5e38ux89c1ux6545ux969cux6309ux4e3bux9898ux6392ux5217}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
 \toprule\noalign{}
-排名 & 故障 & 频率 & 紧急度 \\
+序号 & 故障 & 频率 & 紧急度 \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -10243,14 +10322,15 @@ Hall传感器故障率较高 - 部分配件偏贵
 \subsection{5.9.2
 高紧急度故障（必须立即处理）}\label{ux9ad8ux7d27ux6025ux5ea6ux6545ux969cux5fc5ux987bux7acbux5373ux5904ux7406}
 
-\textbf{以下故障属于''立即停车、不要试图骑回家''的级别}。本章按系统分节，这几种情况的具体处置分别在对应系统章节，下表给出查检路径：
+\textbf{以下故障属于''立即停车、不要试图骑回家''的级别}。骑行中遇到时\textbf{先按现场应急处置做}，停车后再查对应章节：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3077}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 故障
@@ -10259,27 +10339,74 @@ Hall传感器故障率较高 - 部分配件偏贵
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 后果
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+现场应急处置
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 详见
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-制动失灵 & 【严重警告】 & 严重事故 & 本章 5.4.1；CH12 制动系统 \\
-油门卡死 & 【严重警告】 & 严重事故 & CH07 燃油供给系统（油门操纵） \\
-油门线断裂 & 【严重警告】 & 严重事故 & CH07 燃油供给系统（拉线维护） \\
-链条断裂 & 【严重警告】 & 严重事故 & CH10 传动系统 \\
-方向柱松脱 & 【严重警告】 & 严重事故 & CH11 行走系统 / CH14
-车架与外观 \\
-充电电压过高 & 【严重警告】 & 电路起火 & CH13 电气系统（整流稳压器） \\
-燃油泄漏 & 【严重警告】 & 火灾 & CH04 4.4.6 漏油诊断；CH07
-燃油供给系统 \\
-轮胎爆裂 & 【严重警告】 & 严重事故 & CH11 行走系统（轮胎） \\
+制动失灵 & 【严重警告】 & 严重事故 & 见下方① & 本章 5.4.1；CH12 12.7 \\
+油门卡死 & 【严重警告】 & 严重事故 & 见下方② & 本节（CH07
+无独立小节） \\
+油门线断裂 & 【严重警告】 & 严重事故 & 见下方③ & 本节（CH07
+无独立小节） \\
+链条断裂 & 【严重警告】 & 严重事故 & 见下方④ & 本节；CH10 10.2 链条 \\
+方向柱松脱 & 【严重警告】 & 严重事故 & 见下方⑤ & 本节 \\
+充电电压过高 & 【严重警告】 & 电路起火 & 见下方⑥ & 本节；CH13 13.2.3 \\
+燃油泄漏 & 【严重警告】 & 火灾 & 见下方⑦ & CH04 4.4.6；本节 \\
+轮胎爆裂 & 【严重警告】 & 严重事故 & 见下方⑧ & 本节；CH11 11.6.2 \\
 \end{longtable}
 }
 
 \textbf{通用处置原则}：靠边停车 → 熄火 → 远离车流 →
 判断能否自行处理；涉及制动、转向、轮胎、燃油泄漏的，\textbf{一律不要继续行驶}。
+
+\subsubsection{现场应急处置（骑行中发生时先做这一步）}\label{ux73b0ux573aux5e94ux6025ux5904ux7f6eux9a91ux884cux4e2dux53d1ux751fux65f6ux5148ux505aux8fd9ux4e00ux6b65}
+
+\begin{quote}
+【严重警告】
+以下是骑行安全通用处置（⭐，以安驾培训和车主手册为准）。\textbf{宁可停在路边等救援，不要骑回家。}
+\end{quote}
+
+\textbf{① 制动失灵} 1.
+不要反复猛捏/猛踩------建立不起压力时猛操作只会更慌 2.
+\textbf{逐级降挡}，用发动机制动减速（降挡配合补油或放开离合要柔和，避免后轮锁死）
+3. 间歇性轻捏/轻踩刹车，看能否重新建立压力 4.
+找上坡、缓冲带、开阔地带减速，靠边停车后\textbf{不要继续行驶}
+
+\textbf{② 油门卡死}（回不到怠速，车持续加速） 1.
+\textbf{立即捏住离合}切断动力（最关键一步，捏住后发动机不会拖着车走） 2.
+同时用\textbf{紧急熄火开关/电门}熄火 3. 车速下降后用刹车平稳减速、靠边停
+4. \textbf{不要}边骑边试图掰油门 5.
+停车后查：油门线是否卡滞/外皮破股、回位弹簧是否断、手把胶套或线束是否顶住油门
+
+\textbf{③ 油门线断裂} 1. 保持冷静，油门手把会松脱，车会收油 2. 捏离合 +
+熄火，带挡滑行或靠刹车减速 3. 靠边停，\textbf{不要继续骑行}
+
+\textbf{④ 链条断裂}（骑行中断链） 1. 立即\textbf{松油门、捏离合} 2.
+\textbf{不要急刹后轮}------断链可能缠住后轮/牙盘，导致后轮锁死或卡住 3.
+平稳刹车减速，靠边停 4.
+检查链条碎片是否打断线束、打坏油底壳或油管（比链条本身更要紧）
+
+\textbf{⑤ 方向柱松脱}（车把松动、方向发飘） 1. 双手用力握把控制方向 2.
+\textbf{不要急刹前刹}（前轮几何已乱，急刹前刹极易摔车） 3.
+平稳减速靠边停，\textbf{不要继续骑行}
+
+\textbf{⑥ 充电电压过高}（灯泡易烧、电瓶发烫/鼓包/有酸味） 1.
+尽快靠边\textbf{熄火} 2.
+过充会导致电解液沸腾、电瓶鼓包、烧灯泡/ECU，有起火风险 3.
+短途应急可关大灯等大负载，但仍应尽快熄火并救援，不要跑长途
+
+\textbf{⑦ 燃油泄漏}（闻到汽油味、地面有油迹） 1.
+立即\textbf{熄火}、禁火禁烟、把车推离车流 2. \textbf{不要尝试启动} 3.
+呼叫救援，现场不要检修油路
+
+\textbf{⑧ 轮胎爆裂} 1. 双手用力握把，\textbf{不要急刹} 2.
+\textbf{前轮}爆：重心略后移，不要捏死前刹，用后刹+发动机制动柔和减速 3.
+\textbf{后轮}爆：不要踩死后刹，用前刹柔和减速 4.
+平稳减速靠边停，\textbf{不要继续骑行}
 
 \subsection{5.9.3 季节性故障}\label{ux5b63ux8282ux6027ux6545ux969c}
 
@@ -10427,7 +10554,8 @@ Hall传感器故障率较高 - 部分配件偏贵
 按车型/火花塞型号；铜/镍常见 10000-20000
 km，铂金/铱金可更长（来源：⭐/❓） & 火花塞检查/更换 \\
 常见 10000-20000 km；工况差异大，以手册为准（来源：❓） & 空气滤芯 \\
-常见 1-2 年或按手册；也看含水率/制动系统状态（来源：⭐） & 刹车油 \\
+常见每 1-2 年或按手册，先到为准；也看含水率/制动系统状态（来源：⭐） &
+刹车油 \\
 常见 10000-20000 km；车型差异大，以手册为准（来源：❓） & 燃油滤芯 \\
 多数不是固定里程必换；按手册、异响和张紧器/导轨状态检查（来源：⭐/❓） &
 正时链条 \\
@@ -10447,11 +10575,12 @@ km，铂金/铱金可更长（来源：⭐/❓） & 火花塞检查/更换 \\
 \bottomrule\noalign{}
 \endlastfoot
 500km & 链条润滑 \\
+500-1000 km & 磨合期首保：换机油+滤芯（以车主手册为准） \\
 10000km & 机油+滤芯 \\
 20000km & 空气滤芯 \\
-30000km & 刹车油 \\
+2 年或按手册（先到为准） & 刹车油 \\
 32000km（20000 英里） & 检查气门间隙 \\
-40000km & 冷却液 \\
+40000km 或按手册年限，先到为准 & 冷却液 \\
 \end{longtable}
 }
 
@@ -10472,8 +10601,8 @@ km，铂金/铱金可更长（来源：⭐/❓） & 火花塞检查/更换 \\
 \endlastfoot
 3000km & 机油+齿轮油 \\
 10000km & 空气滤芯 \\
-15000km & CVT皮带检查 \\
-按车型手册 & CVT皮带检查/更换（常见 20000-30000km，❓） \\
+------ & CVT
+皮带检查/更换：按手册与磨损判断，不写死固定里程（来源：❓） \\
 \end{longtable}
 }
 
@@ -10596,7 +10725,7 @@ km，铂金/铱金可更长（来源：⭐/❓） & 火花塞检查/更换 \\
 \subsection{6.0.3 速查表（30
 秒定位你的问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux95eeux9898}
 
-\textbf{症状 → 可能原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -10607,7 +10736,7 @@ km，铂金/铱金可更长（来源：⭐/❓） & 火花塞检查/更换 \\
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -10677,8 +10806,8 @@ Clymer 第三方维修手册（淘宝、京东几十到几百元） 4.
 汽油和空气燃烧时会释放热量，让气缸内气体温度、压力快速升高；高压气体推活塞，活塞经连杆推曲轴，曲轴把往复运动变成旋转运动（来源：⭐⭐⭐）。新手最该抓住的主线是：燃烧产生压力，压力推活塞，连杆把力传给曲轴，曲轴输出扭矩。
 
 【机制】 \textbf{设计目标 2：在很小体积里反复承受高温高压。}
-汽油机燃烧火焰温度可达约 2000 K
-量级，燃烧室局部温度和零件温度不是一回事，零件必须靠冷却、润滑和材料强度把热负荷压住（来源：⭐⭐⭐）。小排量摩托车发动机体积小、转速高、散热面积有限，所以设计不能只追求功率，还要保证活塞、气门、缸壁、轴瓦长期不被热和摩擦毁掉。
+汽油机燃烧火焰温度可达约 2000°C（约 2300
+K），燃烧室局部温度和零件温度不是一回事，零件必须靠冷却、润滑和材料强度把热负荷压住（来源：⭐⭐⭐）。小排量摩托车发动机体积小、转速高、散热面积有限，所以设计不能只追求功率，还要保证活塞、气门、缸壁、轴瓦长期不被热和摩擦毁掉。
 
 【机制】 \textbf{设计目标 3：在性能、油耗、寿命、成本之间折中。}
 压缩比高、气门开得大、转速拉得高，功率通常更好；但爆震风险、热负荷、磨损和制造成本也会上升（来源：⭐⭐⭐）。通勤车更看重低速易骑、油耗和寿命；跑车更愿意用高转速、多气门、水冷和更复杂的控制换高功率；复古和巡航车常用较低转速和更厚重的机械感换耐用、低速扭矩和维护简单（来源：⭐，以你车主手册为准）。
@@ -10738,9 +10867,9 @@ Clymer 第三方维修手册（淘宝、京东几十到几百元） 4.
 行程，多缸发动机再乘以气缸数（来源：⭐⭐⭐）。行业上发动机排量通常按缸径、行程和缸数定义，具体标称会有四舍五入和市场命名（来源：⭐⭐）。
 
 缸径和行程决定的不只是``多少
-cc''。短行程大缸径发动机，活塞平均速度较低、气门面积更容易做大，适合高转速和大进气量；长行程小缸径发动机，曲柄半径较大，低转时扭矩感常更明显，但高转时活塞速度、侧向力和摩擦会更难控制（来源：⭐⭐⭐）。活塞平均速度可粗略理解为
-2 × 行程 ×
-转速，行程越长、转速越高，活塞在缸里往返得越狠（来源：⭐⭐⭐）。
+cc''。短行程大缸径发动机，活塞平均速度较低、气门面积更容易做大，适合高转速和大进气量；长行程小缸径发动机，曲柄半径较大，低转时扭矩感常更明显，但高转时活塞速度、侧向力和摩擦会更难控制（来源：⭐⭐⭐）。活塞平均速度
+Cm = 2 × 行程(S) × 转速(n) / 60（S 用 m、n 用 r/min 时 Cm 为
+m/s，⭐⭐⭐），行程越长、转速越高，活塞在缸里往返得越狠。
 
 常见量产摩托车发动机的活塞平均速度在高转时可到十几到二十多 m/s
 量级，赛车或极高性能发动机会更高（来源：⭐，未实时验证）。反直觉点：同样
@@ -10760,7 +10889,7 @@ cc，单缸、双缸、四缸的性格会完全不同。单缸每次燃烧大、
 0，在中间某个区域速度最大（来源：⭐⭐⭐）。所以发动机高转时真正可怕的不是``活塞一直快''，而是每一圈都要从
 0 加速到高速再刹到 0，惯性力随转速平方上升（来源：⭐⭐⭐）。
 
-连杆比 = 连杆中心距 / 曲柄半径。摩托车发动机常见连杆比大致在 1.6-2.2
+连杆比 = 连杆长度 / 活塞行程。摩托车发动机常见连杆比大致在 1.5-2.2
 量级（来源：⭐，未实时验证）。连杆比大，侧向力小一些、摩擦小一些，但发动机可能更高；连杆比小，结构紧凑，但活塞侧压力和磨损更难控制。反直觉点：敲缸、拉缸不只是``润滑不好''，活塞侧推、热膨胀和缸壁油膜一起决定它会不会伤。
 
 【经验】
@@ -11360,8 +11489,8 @@ ECU / CDI / TCI（点火控制来源，含义不同）
 
 【注意】 \textbf{别把 CDI 和 ECU 混称}： - \textbf{CDI}（Capacitor
 Discharge Ignition）=
-电容放电点火模块/点火方式，主要控制点火，不等于行车电脑。 - \textbf{TCI
-/ IDI}（Transistor Coil Ignition）=
+电容放电点火模块/点火方式，主要控制点火，不等于行车电脑。 -
+\textbf{TCI}（Transistor Controlled Ignition，晶体管控制点火）=
 电感式晶体管点火，通过控制点火线圈初级电流通断产生高压。 -
 \textbf{ECU}（Engine Control Unit）=
 行车电脑，现代电喷车几乎都用，通常控制喷油、点火、怠速、诊断、防盗等。
@@ -11425,17 +11554,30 @@ NGK CR9E，\textbf{9 就是热值}。\textbf{数字 =
 ●●}\label{ux706bux82b1ux585eux6750ux8d28ux600eux4e48ux9009}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}@{}}
 \toprule\noalign{}
-材质 & 典型寿命（行业共识） & 价格 & 适合 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+材质
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+典型寿命（行业共识）
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+价格
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+适合
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-镍铜合金 & 15,000-25,000 km & 低 & 老车、低预算 \\
-铂金 & 40,000-60,000 km & 中 & 街车主力 \\
-铱金 & 60,000-100,000 km & 高 & 现代高性能车 \\
-双铱金/铱铂金 & 100,000+ km & 最高 & 顶配 \\
+镍铜合金 & 10000-20000 km（❓） & 低 & 老车、低预算 \\
+铂金 & 维护良好下约 40000-60000 km（❓） & 中 & 街车主力 \\
+铱金 & 30000-60000 km（❓ 车型差异极大，以车主手册为准） & 高 &
+现代高性能车 \\
+双铱金/铱铂金 & 维护良好下可更长（❓，以车主手册为准） & 最高 & 顶配 \\
 \end{longtable}
 }
 
@@ -11446,7 +11588,7 @@ NGK CR9E，\textbf{9 就是热值}。\textbf{数字 =
 
 答：寿命长是肯定的，但\textbf{除非你的车原厂就用贵的火花塞}，否则不要自己升级。贵火花塞的电极直径细（铱金
 0.4mm vs 铜
-2.5mm），点火能量集中，但\textbf{如果原车点火系统设计是按铜火花塞来的}，换铱金反而可能点火不好。
+2.5mm），点火能量集中；\textbf{同热值、同规格、同间隙的前提下可以换，收益有限；不得跨热值乱换}。
 
 【经验】
 \textbf{老师傅经验}：原厂型号是最可靠的起点。副厂火花塞可以用，但必须按原厂等价型号或火花塞厂商目录确认热值、电极材质、间隙、螺纹长度、六角对边和电阻结构。新手不要凭''升级''宣传改型号。
@@ -11545,7 +11687,7 @@ NGK 10 & Denso 30 \\
 \begin{verbatim}
 R - 电阻型
 A - 凸出电极
-8 - 热值（5=热 → 12=冷）
+8 - 热值（Champion 数字越大越热，与 NGK 相反；NGK 5=热 → 12=冷）
 H - 螺纹长度（H=12.7mm）
 C - 六角对边（C=16mm, F=21mm）
 \end{verbatim}
@@ -11598,8 +11740,8 @@ BPR6ES & W20EPR-U & RN9YC & 老车常用 \\
 
 答： - 如果\textbf{原厂就是铱金} = \textbf{直接买同型号正品}（NGK
 SILMAR9C9 等） - 如果\textbf{原厂是铜/铂金} =
-\textbf{想升级可以}（\textbf{热值必须一样}） -
-\textbf{不要随便''升级''}------\textbf{热值不匹配会损坏发动机}
+\textbf{同热值、同规格、同间隙的前提下可以换，收益有限；不得跨热值乱换}
+- \textbf{不要随便''升级''}------\textbf{热值不匹配会损坏发动机}
 
 \subsection{6.4.6 火花塞间隙 ●●}\label{ux706bux82b1ux585eux95f4ux9699}
 
@@ -11684,7 +11826,7 @@ ADV/旅行车 & 0.8-1.0 mm \\
 \textbf{步骤}：
 
 \begin{verbatim}
-1. 冷车 30 分钟（重要！热车拆会损坏缸盖螺纹）
+1. 停机数小时/隔夜，接近环境温度后再作业（重要！热车拆会损坏缸盖螺纹）
 2. 准备工具：火花塞套筒、扭力扳手、新火花塞
 3. 拆座椅或边盖（如需要，挡住火花塞的话）
 4. 拔火花塞帽（抓住帽拔，不要拉线！）
@@ -11735,16 +11877,14 @@ ADV/旅行车 & 0.8-1.0 mm \\
 \textbf{不要}让杂物掉进火花塞孔！掉进缸里就完了。
 
 【经验】
-\textbf{老师傅经验}：装火花塞前\textbf{用压缩空气吹一下火花塞孔}。这一下能避免
-50\%
-的''杂物掉进缸里''事故。\textbf{那粒小沙子看着没事，跑到活塞顶上能磨出划痕}。
+\textbf{老师傅经验}：装火花塞前\textbf{用压缩空气吹一下火花塞孔}。这一下能避免很多''杂物掉进缸里''事故。\textbf{那粒小沙子看着没事，跑到活塞顶上能磨出划痕}。
 
 【维修】 \textbf{维修场景}：自己换火花塞全过程
 
 \begin{verbatim}
 工具：火花塞套筒（16 或 21mm，看车）、扭力扳手、新火花塞
 
-1. 冷车 30 分钟
+1. 停机数小时/隔夜，接近环境温度后再作业
 2. 拆座椅（部分车型需要）
 3. 拔火花塞帽（抓帽不抓线）
 4. 套筒逆时针拆旧火花塞
@@ -11840,8 +11980,7 @@ ADV/旅行车 & 0.8-1.0 mm \\
 \textbf{重要}：拆下来的东西一定要\textbf{标记}。传感器、油管、水管接头位置不能搞混。\textbf{拍照最保险}。
 
 【经验】
-\textbf{老师傅经验}：拆之前\textbf{画一张接线图}，每个插头标号。复装时按图对接，\textbf{新手最快的方法}。\textbf{靠记忆复装，10
-次有 3 次装错}。
+\textbf{老师傅经验}：拆之前\textbf{画一张接线图}，每个插头标号。复装时按图对接，\textbf{新手最快的方法}。\textbf{靠记忆复装，常会装错}。
 
 \subsubsection{找正时}\label{ux627eux6b63ux65f6}
 
@@ -12206,7 +12345,7 @@ mm：研磨（送到机加工店） - \textgreater{} 0.10 mm：报废换新
 - 气门油封：换油封（不用镗缸，便宜很多）
 - 缸体磨损：镗缸+换活塞+换环
 
-【费用】 省钱贴士：换油封比镗缸便宜 70%。先判断是哪个问题再修。
+【费用】 省钱贴士：换油封比镗缸便宜得多。先判断是哪个问题再修。
 \end{verbatim}
 
 \section{6.7 配气机构维修}\label{ux914dux6c14ux673aux6784ux7ef4ux4fee}
@@ -12359,7 +12498,7 @@ mm：研磨（送到机加工店） - \textgreater{} 0.10 mm：报废换新
 
 \textbf{这是新手最常买错的零件之一}------看着外形差不多就买，结果\textbf{装不上}或\textbf{滤纸不行}。
 
-\paragraph{机滤的三大核心组件}\label{ux673aux6ee4ux7684ux4e09ux5927ux6838ux5fc3ux7ec4ux4ef6}
+\paragraph{机滤的四大核心组件}\label{ux673aux6ee4ux7684ux56dbux5927ux6838ux5fc3ux7ec4ux4ef6}
 
 \textbf{机滤看着简单，其实有 4
 个关键部件}------\textbf{任何一个坏了，机滤就失效}：
@@ -12377,7 +12516,7 @@ mm：研磨（送到机加工店） - \textgreater{} 0.10 mm：报废换新
   \textbf{外壳}（金属壳）：\textbf{承受压力 + 密封}
 \end{enumerate}
 
-【严重警告】 \textbf{为什么要懂这三个}：
+【严重警告】 \textbf{为什么要懂这四个}：
 
 \begin{itemize}
 \tightlist
@@ -12411,8 +12550,8 @@ Valve）}\label{ux9006ux6b62ux9600anti-drainback-valve}
 \textbf{作用}：\textbf{停车后防止机油从滤芯漏回油底壳}。
 
 \textbf{为什么重要}： - 摩托车经常\textbf{侧倾停车}------机油可能漏出 -
-漏了 = \textbf{下次启动前油道是空的} - 干启动 = \textbf{磨损}（启动瞬间
-80\% 的发动机磨损来自冷启动）
+漏了 = \textbf{下次启动前油道是空的} - 干启动 =
+\textbf{磨损}（启动瞬间、尤其冷启动，是发动机磨损的主要来源之一）
 
 【经验】
 \textbf{老师傅经验}：便宜机滤的逆止阀和旁通阀一致性可能较差。不要用''机油窗气泡''判断逆止阀好坏；更可靠的做法是按原厂滤芯型号选正品，冷启动后若长时间机油压力报警或异响，应立即熄火检查。
@@ -12909,7 +13048,7 @@ kg），必须有举升设备或两个人。一个人干这事会砸伤脚或腰
 \textbf{详细步骤}：
 
 \begin{verbatim}
-1. 冷车 30 分钟
+1. 停机数小时/隔夜，接近环境温度后再作业
 2. 拆座椅
 3. 拔电瓶负极
 4. 拆油箱（部分车型需要）
@@ -12929,17 +13068,15 @@ kg），必须有举升设备或两个人。一个人干这事会砸伤脚或腰
 \end{verbatim}
 
 \textbf{凯旋 1200X 参考扭矩}（AI 训练数据，\textbf{用前查手册}）： -
-气门室盖：约 10 Nm - 调整螺母：约 10 Nm - 火花塞：约 20 Nm（凯旋 1200X
-手册值------\textbf{高于 NGK 对 M10 平座的通用值 10-12
-Nm}；\textbf{以凯旋手册为准，不要类推到其他 M10 火花塞}） - 缸盖螺丝：40
-Nm + 90°
+气门室盖：约 10 Nm - 调整螺母：约 10 Nm - 火花塞：参考 M10
+平座铝缸盖通用 10-12 Nm（❓，必须以凯旋维修手册为准）；有资料提到 20
+Nm（❓ 存疑，勿照抄，以维修手册为准） - 缸盖螺丝：40 Nm + 90°
 
 【来源】 \textbf{数据来源等级}：⭐（AI 训练数据）。
 
 \textbf{注意}：火花塞扭矩取决于\textbf{螺纹规格}（10/12/14mm）和\textbf{安装形式}（平座/锥座）。14mm
-铝缸盖 25-30 Nm（铸铁缸盖 25-35 Nm）。\textbf{凯旋 1200X 手册值 20 Nm
-明显高于 NGK 对 M10 平座的通用值 10-12
-Nm------差异大，}以凯旋手册为准\textbf{，但不要用此值类推其他 M10
+铝缸盖 25-30 Nm（铸铁缸盖 25-35 Nm）。\textbf{凯旋 1200X
+火花塞扭矩以维修手册为准，不要照抄网络值，也不要用此值类推其他 M10
 火花塞}------\textbf{用前必查说明书和火花塞包装}。
 
 \subsection{6.11.2 实战
@@ -13259,7 +13396,7 @@ MA2，否则离合打滑） - 冷却液混用（不同类型会反应生成胶�
   黄油粘气门卡簧}：装气门卡簧时涂一点黄油在槽里，黄油的粘性防止卡簧脱落。
 \item
   \textbf{【维修】
-  压缩空气吹火花塞孔}：装火花塞前吹一下，杂物掉进缸里的事故减少 50\%。
+  压缩空气吹火花塞孔}：装火花塞前吹一下，杂物掉进缸里的事故明显减少。
 \item
   \textbf{【维修】 手指法找
   TDC}：用手指堵火花塞孔，转曲轴感到气压就是压缩冲程。最简单实用的方法。
@@ -13328,7 +13465,7 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 缸垫：买正品（\textbf{不要用副厂便宜货}，漏气返工更贵）
 
 \textbf{送修的智慧}： - 拆缸盖 →
-第一次送修（\textbf{没经验硬干，毁发动机的概率 30\%+}） - 调气门 →
+第一次送修（\textbf{没经验硬干，容易毁发动机}） - 调气门 →
 第一次送修，看着师傅做一次 - 换正时链条 →
 建议送修（\textbf{错一次就毁发动机}）
 
@@ -13397,7 +13534,7 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 
 【经验】
 \textbf{老师傅经验}：\textbf{清单没勾完，不要开始动手}。清单是修车师傅用
-10 年经验换来的。\textbf{勾完清单再动手，能避免 90\% 的翻车}。
+10 年经验换来的。\textbf{勾完清单再动手，能避免大部分翻车}。
 
 \subsection{6.13.8 进阶学习路径
 ●●}\label{ux8fdbux9636ux5b66ux4e60ux8defux5f84}
@@ -13516,20 +13653,20 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 \textbf{踩坑过程}：清洗节气门、调怠速------都没用
 \textbf{可能原因}：\textbf{怠速控制阀（ISC）脏了}------藏在节气门体里
 \textbf{处理建议}：拆下 ISC 阀，用化油器清洗剂清洗
-\textbf{教训}：\textbf{怠速不稳的 80\% 是 ISC
+\textbf{教训}：\textbf{怠速不稳常见原因是 ISC
 阀或节气门脏}------先清洗这两个再查别处
 
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{换了 N
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{换了 N
 个零件} = \textbf{没有先诊断} = \textbf{花了几千元才发现是个小问题} 2.
 \textbf{听商家忽悠换件} = \textbf{原厂件更可靠} = \textbf{省钱反而亏钱}
 3. \textbf{不查手册} = \textbf{用了错误数据} = \textbf{修出新故障} 4.
 \textbf{没拍照就拆} = \textbf{装不回去} = \textbf{小问题变大故障} 5.
 \textbf{不试车就交车} = \textbf{留下隐患} = \textbf{下次再修}
 
-【经验】 \textbf{老师傅总结}：\textbf{论坛上 80\% 的''修车经历''}
+【经验】 \textbf{老师傅总结}：\textbf{论坛上很多''修车经历''}
 都是\textbf{本可以避免的}------\textbf{诊断对了，5
 分钟搞定；诊断错了，5000 元也修不好}。\textbf{这就是 CH20
 强调的''诊断比维修重要''}。
@@ -13545,8 +13682,7 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{接受''可能修不好''}：\textbf{新手第一次修车 50\%
-  概率修不好}------\textbf{正常}。\textbf{别怕修坏}------\textbf{坏了再修}。
+  \textbf{接受''可能修不好''}：\textbf{新手第一次修车很可能修不好}------\textbf{正常}。\textbf{别怕修坏}------\textbf{坏了再修}。
 \item
   \textbf{接受''花时间''}：\textbf{修车时间 = 预估 ×
   2}------\textbf{新手要 × 3}。\textbf{别急}------\textbf{急就出错}。
@@ -13582,7 +13718,7 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 \end{longtable}
 }
 
-\textbf{车友群能解决 90\% 的问题}： -
+\textbf{车友群能解决不少问题}： -
 ``我的车这个声音正常吗？''------群里问，3 分钟有答案 -
 ``这个配件怎么买？''------群里人直接发链接 -
 ``这个店靠谱吗？''------本地车友直接推荐
@@ -13592,9 +13728,7 @@ NGK、Denso、Champion（\textbf{不要买''通用''杂牌}） -
 本地摩托车经销商（很多有自己的客户群） 4. 摩托车骑行活动（线下认识）
 
 【经验】
-\textbf{老师傅经验}：\textbf{老师傅很多''经验''就是从车友群学来的}------\textbf{不是师傅自己琢磨的}。\textbf{新手
-80\%
-的问题}------\textbf{群里早有人遇到过}------\textbf{搜一下就有答案}。
+\textbf{老师傅经验}：\textbf{老师傅很多''经验''就是从车友群学来的}------\textbf{不是师傅自己琢磨的}。\textbf{新手的常见问题}------\textbf{群里早有人遇到过}------\textbf{搜一下就有答案}。
 
 \subsection{6.13.12
 维修资料从哪里找（资源清单）●}\label{ux7ef4ux4feeux8d44ux6599ux4eceux54eaux91ccux627eux8d44ux6e90ux6e05ux5355}
@@ -13633,10 +13767,11 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 \textbf{可信度低}： - 单人帖、无回复、无来源的''经验'' -
 ``网上说''的引用 - 维修店老板推的东西（特别是他店里卖的）
 
-【经验】 \textbf{老师傅经验}：\textbf{网上 50\%
-的''经验''是错的}------\textbf{特别是}： - ``加了 XX 油省油
-20\%''（不可能） - ``XX 牌火花塞比 NGK 好''（NGK 行业标杆） - ``XX
-改装提升 50\%''（夸大） - ``我的车用 XX 修好了''（个案，不能推及）
+【经验】
+\textbf{老师傅经验}：\textbf{网上相当一部分''经验''是错的}------\textbf{特别是}：
+- ``加了 XX 油省油 20\%''（不可能） - ``XX 牌火花塞比 NGK 好''（NGK
+行业标杆） - ``XX 改装提升 50\%''（夸大） - ``我的车用 XX
+修好了''（个案，不能推及）
 
 \textbf{怎么识别错信息}： 1. \textbf{看来源}：官网 \textgreater{} Haynes
 \textgreater{} 论坛 \textgreater{} 营销文 2.
@@ -13715,11 +13850,13 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 \begin{itemize}
 \tightlist
 \item
-  ⭐⭐⭐ = 通用物理原理/行业共识
+  ⭐⭐⭐ = 物理/化学基本定律、教科书标准
 \item
-  ⭐⭐ = 权威第三方通用规范（如 NGK 火花塞扭矩通用值）
+  ⭐⭐ = 行业标准、权威第三方规范（如 NGK 火花塞扭矩通用值）
 \item
-  ⭐ = AI 训练数据中的具体车型数据（\textbf{必须查官方手册验证}）
+  ⭐ = 通用经验/AI 训练数据，未实时验证（\textbf{必须查官方手册验证}）
+\item
+  ❓ = 存疑/待验证
 \end{itemize}
 
 \textbf{用车前}：用说明书、厂家官网、Haynes/Clymer
@@ -13759,16 +13896,15 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 \item
   \textbf{原理层}（7.1-7.3）：化油器、电喷、直喷三种燃油系统的工作原理；电控传感器与开环/闭环工况控制
 \item
-  \textbf{维修技能层}（7.4-7.6）：化油器清洗、燃油滤芯更换（按车主手册；本章未展开步骤）、油管维护、油泵测试
+  \textbf{维修技能层}（7.4-7.6）：化油器清洗、燃油滤芯更换（按车主手册；本章未展开步骤）、油管维护
 \item
-  \textbf{故障诊断层}（7.7-7.9）：油路堵塞、混合气失调、供油不足
+  \textbf{故障诊断层}（7.7-7.9）：燃油压力测试、油泵测试、油路堵塞、混合气失调、供油不足
 \item
   \textbf{经验沉淀层}（7.10）：新手必踩的坑 + 老师傅不外传的诀窍
 \end{itemize}
 
 注：原 7.3 曾因历史修订并入 7.4 而留下跳号，现已恢复为 \textbf{7.3
-电控传感器与工况控制}（含 7.3.1-7.3.5），跳号已填补；7.10.8
-仍已并入相邻小节，章节号保留跳号。
+电控传感器与工况控制}（含 7.3.1-7.3.5），跳号已填补。
 
 \subsection{7.0.2 符号说明}\label{ux7b26ux53f7ux8bf4ux660e-1}
 
@@ -13796,7 +13932,7 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 \subsection{7.0.3 速查表（30
 秒定位你的油路问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux6cb9ux8defux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -13807,7 +13943,7 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -13864,7 +14000,7 @@ r/motorcycles / r/Fixxit}：英文社区 - \textbf{AdvRider / ADV Pulse}：ADV
 燃油进眼/皮肤立即清水冲洗
 
 【经验】
-\textbf{老师傅经验}：\textbf{化油器清洗剂比汽油好用一万倍}------不伤手、不易燃、不伤橡胶件。\textbf{汽油清洗化油器是上世纪的做法}，现在只有最老的车主才这么干。
+老师傅经验：化清剂溶解积碳比汽油强，但它是易燃气雾剂，必须远离火源/高温件，在通风处使用；对橡胶膜片/密封件有溶胀风险，橡胶件按手册用专用清洗剂或化清剂快洗快干。汽油清洗化油器是老办法，易燃且对橡胶同样有害。
 
 \section{7.1
 燃油系统原理层：系统功能与设计目标}\label{ux71c3ux6cb9ux7cfbux7edfux539fux7406ux5c42ux7cfbux7edfux529fux80fdux4e0eux8bbeux8ba1ux76eeux6807}
@@ -14951,8 +15087,8 @@ ECU 故意干的。
 
 【经验】
 \textbf{老师傅经验}：\textbf{油耗飙升第一查氧传感器}。\textbf{氧传感器寿命约
-10 万
-km}，到时间油耗会慢慢涨。\textbf{很多人以为油耗高是油品问题，其实是氧传感器老化}。\textbf{换氧传感器约
+10-16 万
+km（❓，以手册为准）}，到时间油耗会慢慢涨。\textbf{很多人以为油耗高是油品问题，其实是氧传感器老化}。\textbf{换氧传感器约
 200-800 元（视车型与是否原厂，含工时，❓）}，比加满油箱便宜多了。
 
 \subsection{7.8.4 案例 4：加速无力
@@ -15163,7 +15299,8 @@ km}，到时间油耗会慢慢涨。\textbf{很多人以为油耗高是油品问
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{【维修】 化油器清洗剂比汽油好用}：不伤手、不易燃、不伤橡胶。
+  \textbf{【维修】
+  化清剂溶解积碳比汽油强}：但是易燃气雾剂，必须远离火源/高温件、通风使用；对橡胶膜片/密封件有溶胀风险，橡胶件快洗快干。
 \item
   \textbf{【维修】 化油器拆前拍 5 张照片}：装回去看照片，省一半时间。
 \item
@@ -15391,7 +15528,7 @@ km}，到时间油耗会慢慢涨。\textbf{很多人以为油耗高是油品问
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-1}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不查故障码}
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不查故障码}
 = \textbf{修了 1 万个零件 = 修不好} = \textbf{ECU 自带诊断} 2.
 \textbf{乱换传感器} = \textbf{原厂没坏} = \textbf{换了反而坏} 3.
 \textbf{不测压力} = \textbf{不知道是油泵还是喷油嘴} = \textbf{换了浪费}
@@ -15504,9 +15641,9 @@ ECU} 5. \textbf{不查钥匙电池} = \textbf{以为是电瓶坏} =
 \begin{itemize}
 \tightlist
 \item
-  \textbf{原理层}（8.1-8.5）：进气系统、空气滤芯、进气传感器、排气系统、排气系统维修
+  \textbf{原理层}（8.1、8.3-8.4、8.6）：进气系统原理、进气传感器、排气系统详解、氧传感器
 \item
-  \textbf{核心部件层}（8.6）：氧传感器（核心部件）
+  \textbf{维修技能层}（8.2、8.5）：更换空气滤芯、排气系统维修
 \item
   \textbf{改装层}（8.7-8.8）：进气改装、排气改装的原理与利弊
 \item
@@ -15531,8 +15668,9 @@ ECU} 5. \textbf{不查钥匙电池} = \textbf{以为是电瓶坏} =
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
+  【来源】 \textbf{数据来源等级}：⭐⭐⭐ =
+  物理/化学基本定律、教科书标准；⭐⭐ = 行业标准、权威第三方规范；⭐ =
+  通用经验/AI 训练数据，未实时验证；❓ = 存疑/待验证
 \item
   ⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐ 行业标准、⭐ 通用经验、❓
   存疑）；● 表示重要度
@@ -15541,7 +15679,7 @@ ECU} 5. \textbf{不查钥匙电池} = \textbf{以为是电瓶坏} =
 \subsection{8.0.3 速查表（30
 秒定位你的进排气问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux8fdbux6392ux6c14ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -15552,7 +15690,7 @@ ECU} 5. \textbf{不查钥匙电池} = \textbf{以为是电瓶坏} =
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -15709,10 +15847,10 @@ effect）}（来源：⭐⭐⭐）。
 \textbf{可变进气道长度技术}（如雅马哈
 YCC-I）通过切换管长，让一台发动机在不同转速都有最佳脉冲
 
-反直觉点：管径大不一定好。管径大流阻小，但\textbf{气流速度降低，惯性效应减弱}，脉冲效果反而差。所以赛车（高转速取向）用短管，民用（低转扭矩取向）用偏长的管。
+反直觉点：管长和管径要分开看。\textbf{管长决定谐振频率}（长管谐振频率低，利于低转惯性充气；短管谐振频率高，利于高转）；\textbf{管径决定气速与阻力}（管径大流阻小但气速低、惯性效应减弱，管径小能维持气速却增加高转阻力）。所以\textbf{高转速匹配短而相对粗的进气管}（谐振频率高、适应大流量）；\textbf{低转速用细长管}维持气速与惯性。
 
 【经验】
-\textbf{老师傅一句话}：进气道不是「越粗越通畅」就好，是「管长管径匹配转速」才好；赛车管短，民用管偏长。
+\textbf{老师傅一句话}：进气道不是「越粗越通畅」就好，是「管长管径匹配转速」才好；高转短而相对粗，低转细而长。
 
 \subsection{8.1.5
 核心物理原理四：节气门体与旁通空气（ISC）}\label{ux6838ux5fc3ux7269ux7406ux539fux7406ux56dbux8282ux6c14ux95e8ux4f53ux4e0eux65c1ux901aux7a7aux6c14isc}
@@ -15723,8 +15861,8 @@ YCC-I）通过切换管长，让一台发动机在不同转速都有最佳脉冲
 怠速时节气门接近全关，进气极少。\textbf{为了让怠速稳定，必须有旁通空气通道}------绕过节气门的细管路，由
 \textbf{ISC（Idle Speed Control）阀}或\textbf{步进电机}控制开度。ECU
 根据水温、进气温度、电瓶电压/发电负载、挡位/离合/车速等车型相关信号调整
-ISC 开度，维持目标怠速转速（来源：⭐⭐⭐，\textbf{典型怠速 1100-1400
-rpm}）。
+ISC 开度，维持目标怠速转速（来源：⭐⭐⭐；\textbf{典型怠速 1100-1400
+rpm}（⭐，车型经验值，以车主手册为准））。
 
 现代电子节气门（drive-by-wire）去掉了拉线，由 ECU
 直接控制节气门开度，集成 ISC
@@ -15801,8 +15939,9 @@ ECU}------ECU
 亥姆霍兹共振腔（处理排气轰鸣） - 中段：多孔吸声材料（处理中高频噪声） -
 出口段：扩散管（让气流平稳流出）
 
-反直觉点：\textbf{消声器不是「隔音越多越好」}。消声太好会让排气背压剧增，发动机动力下降；同时驾驶感缺乏「排气声浪」反馈。\textbf{赛车消声器往往牺牲一些消声效果换性能}；家用消声器则要符合噪声法规（如
-80-95 dB 限值）（来源：⭐⭐，以当地法规为准）。
+反直觉点：\textbf{消声器不是「隔音越多越好」}。消声太好会让排气背压剧增，发动机动力下降；同时驾驶感缺乏「排气声浪」反馈。\textbf{赛车消声器往往牺牲一些消声效果换性能}；家用消声器则要符合噪声法规（约
+74-83 dB(A)（按排量分档，ECE R41/R92、GB 16169
+口径，⭐⭐），以当地法规为准）。
 
 【经验】
 \textbf{老师傅一句话}：消声器不是「隔音越死越好」；太静没声浪反馈，太响违规又扰民；要按用途和法规平衡。
@@ -15940,8 +16079,7 @@ lag）：低转速废气能量不够，涡轮不工作，要等转速上去才�
 主要组件与工作机制：从空气到废气}\label{ux4e3bux8981ux7ec4ux4ef6ux4e0eux5de5ux4f5cux673aux5236ux4eceux7a7aux6c14ux5230ux5e9fux6c14}
 
 【机制】 \textbf{空滤盒 +
-空滤}：进气管最前端的盒子，盒内是纸质/棉质/海绵滤芯。\textbf{作用是过滤灰尘}------0.1
-mm 的灰尘磨气缸 5 万公里就报废发动机（来源：⭐⭐⭐）。
+空滤}：进气管最前端的盒子，盒内是纸质/棉质/海绵滤芯。\textbf{作用是过滤灰尘}------灰尘会磨损缸壁/活塞环（⭐）。
 
 【机制】 \textbf{节气门体}：蝶阀 + TPS（节气门位置传感器）+
 ISC（怠速控制阀）。\textbf{作用是控制进气量}------TPS 告诉 ECU 开度，ISC
@@ -16086,9 +16224,9 @@ EGR，要按厂家维修手册检查阀体、通道、真空/电控执行器和�
 
 \textbf{挡灰尘}------这是空气滤芯的全部工作，但极其重要：
 
-\textbf{为什么重要}： - 一粒 0.1mm 的灰尘进到活塞和气缸之间 -
-像砂纸一样磨气缸壁 - 5 万公里下来，发动机报废 - \textbf{空滤 50
-元，省发动机几千到几万元}
+\textbf{为什么重要}： - 灰尘进入活塞和气缸之间，会像砂纸一样磨气缸壁 -
+长期下来，缸壁/活塞环磨损、发动机报废（灰尘会磨损缸壁/活塞环，⭐；无固定里程）
+- \textbf{空滤 50 元，省发动机几千到几万元}
 
 \subsection{8.2.2
 空气滤芯类型}\label{ux7a7aux6c14ux6ee4ux82afux7c7bux578b}
@@ -16428,9 +16566,9 @@ EGR，要按厂家维修手册检查阀体、通道、真空/电控执行器和�
 \textbf{Hengst} & 德国 & 高端 \\
 \textbf{Fram} & 美国 & 多家 OEM \\
 \textbf{WIX} & 美国 & 高端 \\
-\textbf{K\&N} & 美国 & \textbf{改装之王}（可洗） \\
+\textbf{K\&N} & 美国 & 以改装件著称（⭐，可洗） \\
 \textbf{DNA} & 希腊 & 高端改装 \\
-\textbf{Twin Air} & 荷兰 & \textbf{越野之王} \\
+\textbf{Twin Air} & 荷兰 & 以越野著称（⭐） \\
 \textbf{Unifilter} & 澳大利亚 & 越野改装 \\
 \end{longtable}
 }
@@ -16596,9 +16734,9 @@ Length）：各缸到触媒/集合器的路径长度尽量一致，让排气脉�
 
 \textbf{作用}：把有害气体（CO、HC、NOx）变成无害气体（CO₂、H₂O、N₂）。
 
-\textbf{化学反应}： - CO + O₂ → CO₂ - HC + O₂ → CO₂ + H₂O - NO/NO₂ 被
-CO、HC、H₂ 等还原剂还原成 N₂，并生成 CO₂/H₂O；例如：2NO + 2CO → N₂ +
-2CO₂（来源：⭐⭐⭐）
+\textbf{化学反应}： - 2CO + O₂ → 2CO₂ - CxHy + (x+y/4)O₂ → xCO₂ +
+(y/2)H₂O - NO/NO₂ 被 CO、HC、H₂ 等还原剂还原成 N₂，并生成
+CO₂/H₂O；例如：2NO + 2CO → N₂ + 2CO₂（来源：⭐⭐⭐）
 
 \textbf{寿命}：一般 8-16 万 km
 
@@ -16792,8 +16930,8 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 \begin{itemize}
 \tightlist
 \item
-  一般 10-16 万
-  km（具体看燃油、机油消耗、冷启动频率、加热器状态和车型手册）
+  一般约 10-16 万
+  km（❓，以手册为准；具体看燃油、机油消耗、冷启动频率、加热器状态和车型手册）
 \item
   达到手册建议里程、响应变慢、报码或油耗/排放异常时检查；按诊断结果更换
 \end{itemize}
@@ -16801,7 +16939,7 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 \subsection{8.6.5 氧传感器故障
 ●●●}\label{ux6c27ux4f20ux611fux5668ux6545ux969c}
 
-\textbf{故障表现}： - 油耗飙升 20-50\% - 怠速不稳 - 动力下降 -
+\textbf{故障表现}： - 油耗明显飙升 - 怠速不稳 - 动力下降 -
 排放超标（过不了年检） - 故障灯亮
 
 \textbf{诊断}：
@@ -16863,14 +17001,17 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 \subsection{8.7.2
 常见进气改装}\label{ux5e38ux89c1ux8fdbux6c14ux6539ux88c5}
 
-\textbf{1. 高流量空滤（K\&N 等）} - 提升：1-3\% 功率 -
+\textbf{1. 高流量空滤（K\&N 等）} -
+提升：视车型和匹配程度（❓，不承诺固定百分比） -
 缺点：过滤效率略降、价格贵 - 适合：街车轻度改装
 
-\textbf{2. 高流量进气管（高流量风箱）} - 提升：3-8\% 功率 -
-缺点：可能影响低速扭矩 - 适合：运动车、街车升级
+\textbf{2. 高流量进气管（高流量风箱）} -
+提升：视车型和匹配程度（❓，不承诺固定百分比） - 缺点：可能影响低速扭矩
+- 适合：运动车、街车升级
 
-\textbf{3. 进气导风管（Ram Air）} - 利用车速冲压进气 - 提升：高速时
-3-8\%（\textbf{赛道/极高速下才明显}） - 适合：赛道车
+\textbf{3. 进气导风管（Ram Air）} - 利用车速冲压进气 -
+提升：高速时视车型和匹配程度（❓，不承诺固定百分比；\textbf{赛道/极高速下才明显}）
+- 适合：赛道车
 
 \subsection{8.7.3 进气改装的真相
 ●●●}\label{ux8fdbux6c14ux6539ux88c5ux7684ux771fux76f8}
@@ -16878,9 +17019,9 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 【严重警告】 \textbf{重要事实}：
 
 \textbf{原厂进气系统的设计非常成熟}。\textbf{没有配套改装的进气改装，收益极小}：
-- 单独换空滤：1-3\% 提升（\textbf{几乎感觉不到}） - 单独换进气管：3-5\%
-提升（\textbf{可能感觉不到}） - 空滤+进气管+ECU 调校：8-15\%
-提升（\textbf{能感觉到}）
+- 单独换空滤：收益有限（\textbf{几乎感觉不到}） -
+单独换进气管：视车型和匹配程度（❓，不承诺固定百分比；可能感觉不到） -
+空滤+进气管+ECU 调校：配套齐全时才可能有可感提升（❓，视车型和匹配程度）
 
 【注意】 \textbf{改装的副作用}： - 低速扭矩可能下降 - 油耗增加 -
 噪音增加（进气噪音） - 滤芯寿命缩短（要更频繁保养） - 保修失效
@@ -16910,13 +17051,16 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 常见排气改装}\label{ux5e38ux89c1ux6392ux6c14ux6539ux88c5}
 
 \textbf{1. 全段排气（Race Exhaust / Full System）} - 替换原厂整段排气管
-- 提升：5-12\%（\textbf{配合 ECU 调校后}；单换排气 3-8\%） -
+- 提升：视车型和匹配程度（❓，不承诺固定百分比；\textbf{配合 ECU
+调校后}才可能有可感提升，单换排气收益有限） -
 缺点：噪音大、可能违法、价格贵（3000-30000 元）
 
 \textbf{2. 滑动段排气管（Slip-On）} - 只换消音器段，保留原厂触媒和头段 -
-提升：2-5\% - 缺点：噪音中等、相对便宜（1000-5000 元）
+提升：视车型和匹配程度（❓，不承诺固定百分比） -
+缺点：噪音中等、相对便宜（1000-5000 元）
 
-\textbf{3. 高流量触媒（High-Flow Cat）} - 减少排气阻力 - 提升：3-8\% -
+\textbf{3. 高流量触媒（High-Flow Cat）} - 减少排气阻力 -
+提升：视车型和匹配程度（❓，不承诺固定百分比） -
 缺点：价格贵、可能影响排放
 
 \subsection{8.8.3 排气改装的真相
@@ -16924,8 +17068,7 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 
 【严重警告】 \textbf{重要事实}：
 
-\textbf{滑动段（Slip-On）的真实提升是 2-5\%}。\textbf{很多商家夸大到
-10-20\%}。\textbf{5\% 的提升在日常骑行中几乎感觉不到}。
+\textbf{滑动段（Slip-On）的提升视车型和匹配程度（❓，不承诺固定百分比）}。\textbf{很多商家夸大宣传}。\textbf{有限的提升在日常骑行中通常感觉不到}。
 
 【注意】 \textbf{改装的副作用}： - 噪音大幅增加（可能违法、扰民） -
 扭矩曲线变化（低速可能下降） - 油耗增加 - 排放超标 - 保修失效 -
@@ -16935,8 +17078,9 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 改了进气 + 改了排气 + ECU 调校 = 真正有效果 - 单独改任何一项 =
 心理安慰大于实际效果
 
-\textbf{改装预算分配建议}（真实有效）： - 滑动段排气：30\% -
-高流量空滤：20\% - ECU 调校（Flash）：\textbf{50\%}（这是最关键的）
+\textbf{改装预算分配建议}（真实有效，❓，不承诺固定比例）： -
+\textbf{ECU 调校（Flash）优先}（这是最关键的） - 其次滑动段排气 -
+高流量空滤可后置
 
 \textbf{改装店最喜欢推荐''全段排气''}，\textbf{因为利润最高}。\textbf{但对你来说，ECU
 调校价值最大}。
@@ -16957,8 +17101,8 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
   \textbf{拆触媒}：道路车辆通常违法或无法通过排放/年检，按当地法规处理
 \end{itemize}
 
-【费用】 \textbf{省钱贴士}：\textbf{改装钱留着做保养}。\textbf{5000
-元的改装提升 5\%，不如 5000 元的保养让车多用 5 年}。
+【费用】
+\textbf{省钱贴士}：\textbf{改装钱留着做保养}。\textbf{改装提升通常有限，不如把同样的钱花在保养上让车多用更久}。
 
 \section{8.9
 常见进排气故障诊断}\label{ux5e38ux89c1ux8fdbux6392ux6c14ux6545ux969cux8bcaux65ad}
@@ -17269,17 +17413,33 @@ Sensor）●●●}\label{ux6c27ux4f20ux611fux5668oux2082-sensor}
 \textbf{很多新手纠结''改装''还是''原厂''。} 老师傅的实话：
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}@{}}
 \toprule\noalign{}
-项目 & 改装投入 & 收益 & 推荐 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+项目
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+改装投入
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+收益
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+推荐
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-换 K\&N 空滤 & 500 元 & 1-3\% 动力 & ✗ 不推荐 \\
-滑动段排气 & 3000 元 & 2-5\% 动力 & 【注意】 看需求 \\
-ECU 调校（Flash） & 2000 元 & 3-8\% 动力 & ✓ 推荐 \\
-全段排气 & 8000 元 & 5-12\% 动力（配合 ECU 调校） & 【注意】 慎重 \\
+换 K\&N 空滤 & 500 元 & 视车型和匹配程度（❓，不承诺固定百分比） & ✗
+不推荐 \\
+滑动段排气 & 3000 元 & 视车型和匹配程度（❓，不承诺固定百分比） &
+【注意】 看需求 \\
+ECU 调校（Flash） & 2000 元 & 视车型和匹配程度（❓，不承诺固定百分比） &
+✓ 推荐 \\
+全段排气 & 8000 元 & 视车型和匹配程度（❓，不承诺固定百分比；配合 ECU
+调校） & 【注意】 慎重 \\
 日常保养 & 每年 2000 元 & 延寿 + 维持性能 & ✓✓ 强烈推荐 \\
 \end{longtable}
 }
@@ -17390,7 +17550,7 @@ ECU 调校（Flash） & 2000 元 & 3-8\% 动力 & ✓ 推荐 \\
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-2}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不查进气管}
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不查进气管}
 = \textbf{回火、加速无力的真凶} 2. \textbf{不清洁 MAF} =
 \textbf{油耗高、加速差} = \textbf{简单喷剂解决} 3. \textbf{不检查空滤} =
 \textbf{进气管漏气} = \textbf{简单 100 元} 4. \textbf{不查 PCV 阀} =
@@ -17522,8 +17682,9 @@ ECU 调校 & ●●● & 否（送专业改装店） & - \\
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
+  【来源】 \textbf{数据来源等级}：⭐⭐⭐ =
+  物理/化学基本定律、教科书标准；⭐⭐ = 行业标准、权威第三方规范；⭐ =
+  通用经验/AI 训练数据，未实时验证；❓ = 存疑/待验证
 \item
   ⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐ 行业标准、⭐ 通用经验、❓
   存疑）；● 表示重要度
@@ -17532,7 +17693,7 @@ ECU 调校 & ●●● & 否（送专业改装店） & - \\
 \subsection{9.0.3 速查表（30
 秒定位你的冷却问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux51b7ux5374ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -17543,7 +17704,7 @@ ECU 调校 & ●●● & 否（送专业改装店） & - \\
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -17595,17 +17756,20 @@ ECU 调校 & ●●● & 否（送专业改装店） & - \\
 冷却系统不是「让发动机变冷」的系统------是\textbf{让发动机维持在设计温度窗口}的系统。温度太低，机油黏、磨损大、排放差；温度太高，机油烧、零件变形、爆震、卡死。\textbf{冷却的本质是热平衡管理}（来源：⭐⭐⭐）。
 
 【机制】 \textbf{设计目标 1：把燃烧产生的多余热量带走。}
-汽油机燃烧温度约 2000°C，但燃料能量只有 25-40\%
+汽油机燃烧温度约 2000°C（约 2300 K），但燃料能量只有 25-40\%
 变成机械功（曲轴扭矩），\textbf{剩下 60-75\%
 是废热}（来源：⭐⭐⭐）。这部分废热必须散掉，否则发动机温度持续上升直到零件失效。\textbf{热平衡公式}：散热量
 = 发热量。散热跟不上发热，发动机就过热。
 
-【机制】 \textbf{设计目标 2：维持工作温度稳定（80-105°C 区间）。}
-发动机\textbf{只在窄温度窗口内效率最高}： - 低于
+【机制】 \textbf{设计目标 2：维持工作温度稳定。} 正常工作液温约
+\textbf{80-105°C}；\textbf{风扇约 90-110°C 开启、85-95°C
+关闭}（以维修手册为准）；\textbf{持续 \textgreater110-115°C
+应停车检查}。发动机\textbf{只在窄温度窗口内效率最高}： - 低于
 80°C：机油黏度大、磨损增加、燃烧不充分、HC 排放高 -
 80-105°C：最佳工作区间，热效率高、机油正常工作 - 高于
-105°C：爆震风险、机油氧化加速、密封件老化 - 高于
-120°C：拉缸、气缸垫冲毁风险
+105°C：爆震风险、机油氧化加速、密封件老化 - 持续
+\textgreater110-115°C：应停车检查；更高（如
+\textgreater120°C）拉缸、气缸垫冲毁风险
 
 \textbf{冷却系统的任务不是「越冷越好」}，而是\textbf{让温度稳定在
 80-105°C}（具体看车型，以维修手册为准）。这就是为什么有节温器、副水箱、散热器风扇------都是「\textbf{温控器件}」（来源：⭐⭐⭐）。
@@ -17659,12 +17823,10 @@ W/(m²·K)。\textbf{这就是风冷车怠速容易过热的物理原因}（来�
 \textbf{水冷}的核心是冷却液在缸套/缸盖周围\textbf{强制循环}，靠液体温度升高（不沸腾）带出热量，再经散热器向空气散热（来源：⭐⭐⭐）。局部热点可能出现受控核态沸腾（沸腾换热系数极高），但系统设计目标是\textbf{避免大量沸腾、气泡滞留和膜态沸腾}；膜态沸腾会让金属壁面温度飙升，严重时烧缸（来源：⭐⭐⭐）。
 
 冷却液侧常见换热工况（不要和传导/对流/辐射这三种传热方式混用）： 1.
-\textbf{强制对流换热}：冷却液在水道里流动并升温。\textbf{Q = m·c·ΔT}（m
-是流量，c 是比热，ΔT 是温升） 2.
-\textbf{单相对流换热}：冷却液未达到沸腾状态，主要靠液体流动带热。 3.
-\textbf{核态沸腾（nucleate
+\textbf{单相强制对流}：冷却液未达到沸腾状态，在水道里流动并升温，主要靠液体流动带热。\textbf{Q
+= m·c·ΔT}（m 是流量，c 是比热，ΔT 是温升） 2. \textbf{核态沸腾（nucleate
 boiling）}：只允许在缸壁热点\textbf{局部、短时、受控}出现，气泡必须被流动冷却液及时带走并冷凝。
-4. \textbf{膜态沸腾（film
+3. \textbf{膜态沸腾（film
 boiling）}：气泡太多形成气膜，\textbf{传热效率反而急剧下降}------这是危险的「传热危机」。
 
 \textbf{临界热流密度 CHF}（Critical Heat
@@ -17686,11 +17848,12 @@ CHF}。常见做法： - 加大冷却液流速（让气泡及时被冲走） -
 
 \textbf{为什么是乙二醇}： 1. \textbf{降冰点}：纯水冰点 0°C；50\%
 乙二醇水溶液冰点约 -35°C；60\% 乙二醇冰点约
--50°C。\textbf{注意}：再浓冰点反而上升，\textbf{最优约 50-60\%}。 2.
-\textbf{提沸点}：纯水沸点 100°C；50\% 乙二醇沸点约
-106-108°C（常压）；\textbf{加压系统}（压力盖 1.1 bar）沸点可达
-120-130°C。\textbf{每加 1 bar 压力，沸点约升 15-20°C}。 3.
-\textbf{比热容}：纯水 4.18 kJ/(kg·K)；50\% 乙二醇约 3.5
+-50°C。\textbf{注意}：冰点最低点在约 60-70\% 浓度附近（见 9.2.3
+浓度表）；防冻兼顾沸点与流动性，\textbf{常用
+30-50\%}（以冷却液厂家说明为准）。 2. \textbf{提沸点}：纯水沸点
+100°C；50\% 乙二醇沸点约 106-108°C（常压）；\textbf{加压系统}（压力盖
+1.1 bar）沸点可达 120-130°C。\textbf{每加 1 bar 压力，沸点约升
+15-20°C}。 3. \textbf{比热容}：纯水 4.18 kJ/(kg·K)；50\% 乙二醇约 3.5
 kJ/(kg·K)。\textbf{乙二醇降低了比热容}（每 kg
 储能少），但\textbf{显著扩展了工作温度范围}。 4.
 \textbf{添加剂}：防腐剂（防缸体铝腐蚀）、防锈剂、防泡沫剂、pH 缓冲剂。
@@ -17755,11 +17918,14 @@ bar）打开，多余蒸汽/水泄到副水箱 -
 【机制】 水泵（water
 pump）的作用是\textbf{推动冷却液循环}。摩托车水泵通常是\textbf{离心式}------叶轮在壳体内高速旋转，液体被甩到外缘，从出口流出（来源：⭐⭐⭐）。
 
-离心泵的基本方程（欧拉方程）：
+叶轮两侧离心静压升的粗估（注意：这不是完整欧拉方程）：
 
-H = (u₂² - u₁²) / (2g)
+H ≈ (u₂² - u₁²) / (2g)
 
-其中 H 是扬程（m），u 是叶轮圆周速度（m/s），g 是重力加速度（m/s²）。
+其中 H 是扬程（m），u 是叶轮圆周速度（m/s），g
+是重力加速度（m/s²）。真实欧拉方程（叶轮理论扬程，⭐⭐⭐）为
+\texttt{H\_th\ =\ (u₂·c\_θ2\ −\ u₁·c\_θ1)/g}，其中 c\_θ
+为绝对速度的圆周分量。
 
 \textbf{叶轮转速}：常见 3000-6000
 rpm（曲轴通过齿轮或链条驱动）。\textbf{扬程}：常见 2-5
@@ -17957,8 +18123,7 @@ hp）：水冷必需（雅马哈 MT-09、川崎 Ninja 1000、本田 CBR1000RR �
 \item
   散热器瓶颈是空气侧换热；骑车时风是天然冷却，怠速靠风扇（来源：⭐⭐⭐）。
 \item
-  风扇温度阈值常见 90-110°C 开；功率 30-150 W
-  直接吃电瓶（来源：⭐⭐⭐）。
+  风扇温度阈值常见 90-110°C 开；功率 30-150 W 直接吃电瓶（⭐）。
 \item
   副水箱是缓冲+排气+补给容器；冷车检查液位，热车绝对不开盖（来源：⭐⭐⭐）。
 \item
@@ -18316,7 +18481,7 @@ off-start/开始打开温度 & 80-90°C（85°C 常见） \\
 \end{verbatim}
 
 【经验】
-\textbf{老师傅经验}：\textbf{水泵漏水是冷却系统第二大故障源}（第一是节温器）。\textbf{漏水征兆}：副水箱液位持续下降、水泵下方有水垢痕迹。\textbf{看到水垢就别等了}，\textbf{直接换}。
+\textbf{老师傅经验}：\textbf{水泵漏水是冷却系统常见故障之一}。\textbf{漏水征兆}：副水箱液位持续下降、水泵下方有水垢痕迹。\textbf{看到水垢就别等了}，\textbf{直接换}。
 
 【送修】 \textbf{该送修了}： - 水泵位置太深（部分车型） -
 水泵集成在缸体里 - 水泵叶轮破碎（要拆发动机）
@@ -18353,8 +18518,7 @@ off-start/开始打开温度 & 80-90°C（85°C 常见） \\
 \end{verbatim}
 
 【经验】
-\textbf{老师傅经验}：\textbf{散热片脏了}用\textbf{低压水冲洗}。\textbf{不要用高压水枪}------会把散热片冲倒，\textbf{散热效率下降
-50\%}。\textbf{很多新手喜欢用高压水枪洗车}，\textbf{结果把水箱洗坏了}。
+\textbf{老师傅经验}：\textbf{散热片脏了}用\textbf{低压水冲洗}。\textbf{不要用高压水枪}------会把散热片冲倒，\textbf{散热效率明显下降}。\textbf{很多新手喜欢用高压水枪洗车}，\textbf{结果把水箱洗坏了}。
 
 \subsection{9.5.3 散热器清洁}\label{ux6563ux70edux5668ux6e05ux6d01}
 
@@ -18546,7 +18710,7 @@ off-start/开始打开温度 & 80-90°C（85°C 常见） \\
 6. 检查地面有无漏液
 7. 检查风扇、水泵、节温器、压力盖
 8. 找原因：
-   - 液位低 = 漏水
+   - 液位低 = 可能漏水（也可能是正常消耗或进缸烧掉，需进一步检查）
    - 风扇不转 = 电气故障
    - 冷却液浑浊 = 长期不换
    - 压力盖失效 = 沸点降低/冷却液流失
@@ -18747,7 +18911,7 @@ off-start/开始打开温度 & 80-90°C（85°C 常见） \\
 \textbf{发动机报废}
 
 \textbf{水泵/散热器类}： 10. \textbf{用高压水枪洗散热片} ------
-散热片倒伏，散热效率下降 50\% 11. \textbf{水泵漏水不修} ------
+散热片倒伏，散热效率明显下降 11. \textbf{水泵漏水不修} ------
 冷却液持续减少 12. \textbf{风扇不转还骑} ------ 夏天堵车 = 必然过热
 
 \textbf{应急类}： 13. \textbf{过热立即开盖或猛加冷水} ------
@@ -19131,9 +19295,6 @@ ECT 温度（来源：⭐） \textbf{处理建议}：换节温器
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
-\item
   ⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐ 行业标准、⭐ 通用经验、❓
   存疑）；● 表示重要度
 \end{itemize}
@@ -19141,7 +19302,7 @@ ECT 温度（来源：⭐） \textbf{处理建议}：换节温器
 \subsection{10.0.3 速查表（30
 秒定位你的传动问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux4f20ux52a8ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -19152,7 +19313,7 @@ ECT 温度（来源：⭐） \textbf{处理建议}：换节温器
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -19202,7 +19363,7 @@ CVT/轴传动/独立变速箱车型适用） \\
 \subsection{10.1.1
 传动系统原理层：系统功能与设计目标}\label{ux4f20ux52a8ux7cfbux7edfux539fux7406ux5c42ux7cfbux7edfux529fux80fdux4e0eux8bbeux8ba1ux76eeux6807}
 
-摩托车传动系统的任务是把曲轴的旋转「翻译」成后轮的旋转，同时在\textbf{扭矩、转速、路况、骑手意图}之间做动态调节。\textbf{这不是单一部件，是曲轴→初级减速→离合器→变速箱→次级减速→最终传动→后轮}的一条长链（来源：⭐⭐⭐）。
+摩托车传动系统的任务是把曲轴的旋转「翻译」成后轮的旋转，同时在\textbf{扭矩、转速、路况、骑手意图}之间做动态调节。\textbf{这不是单一部件，是曲轴→初级减速→离合器→变速箱→最终传动→后轮}的一条长链（来源：⭐⭐⭐）。
 
 【机制】 \textbf{设计目标 1：在宽广工况下保持发动机工作在经济区间。}
 发动机\textbf{只在窄转速区间效率最高}（一般 3000-6000 rpm
@@ -19454,7 +19615,8 @@ i = n_s / n_r = D_r / D_s
 
 其中： - v\_chain：链条线速度（m/s） - D\_s：前链轮（countershaft
 sprocket）节圆直径 - D\_r：后链轮（rear sprocket）节圆直径 -
-n\_s、n\_r：前后链轮转速（rpm） - i：最终传动比（典型 2.5-3.5）
+n\_s、n\_r：前后链轮转速（rpm） - i：最终传动比（典型
+2.5-3.5，⭐，以车主手册为准）
 
 \textbf{链节距}（pitch）：常见
 428、520、525、530。\textbf{数字越大链条越粗，能传递的扭矩越大}。街车常用
@@ -19503,8 +19665,8 @@ n\_s、n\_r：前后链轮转速（rpm） - i：最终传动比（典型 2.5-3.5
 \textbf{调紧}：调整后轮轴位置维持正确垂度（垂度太大链条会跳齿；太小会卡死）
 
 反直觉点：\textbf{链条越用越长，不是因为被「拉」长，而是销轴和套筒之间的间隙变大}。这就是为什么
-O 形圈链条（X 形油封）寿命长------O
-圈把润滑脂封在销轴和套筒之间，\textbf{隔绝灰尘和湿气}。
+O 形/X
+形密封圈链条寿命长------密封圈把润滑脂封在销轴和套筒之间，\textbf{隔绝灰尘和湿气}。
 
 【经验】
 \textbf{老师傅一句话}：链条拉长不是物理伸长，是间隙变大；润滑是封住润滑脂不让它被挤出，O
@@ -19575,18 +19737,18 @@ oil）必须按车型手册更换}。不同车型差异很大，常见范围只�
 【机制】 \textbf{变速箱}：通过不同齿比组合实现 5-6
 个档位；齿比分布几何级数（来源：⭐⭐⭐）。
 
-【机制】 \textbf{次级减速（countershaft）}：变速箱输出轴 → 一次小减速（i
-≈ 1.5-2.5），输出到前链轮/前皮带轮/传动轴（来源：⭐⭐⭐）。
+【机制】
+\textbf{输出轴与最终传动接口}：链传动车前链轮直接装在输出轴上，链条副即最终传动；部分踏板/轴传动车在终传前另有一次减速（按车型）（来源：⭐）。
 
 【机制】
-\textbf{最终传动}：链条/皮带/轴传动，把次级减速的输出传到后轮。\textbf{总传动比
-≈ 初级减速 × 变速箱档位 × 次级减速 × 最终传动}（来源：⭐⭐⭐）。
+\textbf{最终传动}：链条/皮带/轴传动，把变速箱输出传到后轮。\textbf{总传动比
+≈ 初级减速 × 变速箱档位 × 最终传动}（来源：⭐⭐⭐）。
 
 【机制】
 \textbf{后轮}：接受最终传动输出的旋转，通过轮胎和地面接触产生牵引力（来源：⭐⭐⭐）。
 
 【经验】
-\textbf{老师傅一句话}：传动链是「曲轴→初级→离合→变速箱→次级→最终→后轮」；每一级都有「减速增扭」的工程目的，整个链决定车的性格。
+\textbf{老师傅一句话}：传动链是「曲轴→初级→离合→变速箱→最终→后轮」；每一级都有「减速增扭」的工程目的，整个链决定车的性格。
 
 \subsection{10.1.13
 类型对比与工程取舍}\label{ux7c7bux578bux5bf9ux6bd4ux4e0eux5de5ux7a0bux53d6ux820d-3}
@@ -19642,7 +19804,7 @@ oil）必须按车型手册更换}。不同车型差异很大，常见范围只�
 \begin{itemize}
 \tightlist
 \item
-  传动系统是「曲轴→初级→离合→变速箱→次级→最终→后轮」的长链；目标是让发动机在
+  传动系统是「曲轴→初级→离合→变速箱→最终→后轮」的长链；目标是让发动机在
   20 倍速域里都工作在合适区间（来源：⭐⭐⭐）。
 \item
   离合器靠摩擦传递扭矩 T =
@@ -19815,9 +19977,8 @@ mm，ADV/越野可能更大 \\
 \end{longtable}
 }
 
-【来源】
-\textbf{数据来源等级}：⭐⭐⭐（链条垂度必须按车型说明书测量；20-35 mm
-只是常见街车范围）。
+【来源】 \textbf{数据来源等级}：⭐（链条垂度必须按车型说明书测量；20-35
+mm 只是常见街车范围，行业经验范围）。
 
 【严重警告】
 \textbf{严重警告}：\textbf{链条松紧不当是事故隐患}！\textbf{链条脱落 =
@@ -20348,9 +20509,18 @@ K\&N 链条油
 ●●●}\label{ux79bbux5408ux5668ux6545ux969c-1}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}lll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
-故障 & 症状 & 处理 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+故障
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+症状
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+处理
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -20359,7 +20529,8 @@ K\&N 链条油
 \textbf{分离不彻底} & 换挡困难、熄火 & 调离合线/补液压油/排气 \\
 \textbf{接合不平顺} & 起步闯动 & 调离合线/换离合片 \\
 \textbf{异响} & 离合器有金属声 & 送修（内部零件磨损） \\
-\textbf{拉线断了} & 离合器突然分离不了 & 换拉线（应急：可以骑回家） \\
+\textbf{拉线断了} & 离合器突然分离不了 &
+换拉线；仅低速短距离应急挪车可凑合，起步/换挡/停车均不可控，城区道路应拖车（⭐/❓） \\
 \end{longtable}
 }
 
@@ -20963,7 +21134,8 @@ API GL 和厂家规格选；湿式离合共用机油按说明书指定的 JASO M
 
 \textbf{离合器类}： 7. \textbf{离合器打滑继续骑} ------ 烧离合片 8.
 \textbf{液压离合用错油} ------ DOT 4 系统和矿物油系统不能混用 9.
-\textbf{离合线断了继续骑} ------ \textbf{危险}（无法控制动力）
+\textbf{离合线断了继续骑} ------
+仅低速短距离应急挪车可凑合，起步/换挡/停车均不可控，城区道路应拖车（⭐/❓）
 
 \textbf{变速箱类}： 10. \textbf{空挡滑行下长坡} ------
 空挡滑行时发动机怠速运转、机油泵照常工作；真正的风险是\textbf{失去发动机制动和动力可控性}
@@ -21123,8 +21295,8 @@ km；维护差时更短}（❓，以手册为准）。\textbf{链条保养不当
 \textbf{这是从 ADVrider、Reddit、BikeChat
 等论坛口径整理的未实时验证案例}------给新手看''别人怎么翻车的''。
 
-\subsubsection{案例 A：宝马 R1200GS
-链条异响}\label{ux6848ux4f8b-aux5b9dux9a6c-r1200gs-ux94feux6761ux5f02ux54cd}
+\subsubsection{案例 A：铃木 SV650
+链条异响（示例车型（❓））}\label{ux6848ux4f8b-aux94c3ux6728-sv650-ux94feux6761ux5f02ux54cdux793aux4f8bux8f66ux578b}
 
 \textbf{症状}：骑 1 万 km 后链条响 \textbf{踩坑过程}：以为是链条松
 \textbf{可能原因}：\textbf{链条和链轮都到寿命}
@@ -21213,7 +21385,7 @@ km；维护差时更短}（❓，以手册为准）。\textbf{链条保养不当
 \subsubsection{这些案例的共同教训
 ❓}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-4}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1.
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1.
 \textbf{链条+链轮不同时换} = \textbf{新链条被旧链轮磨坏} =
 \textbf{白花钱} 2. \textbf{不调链条} = \textbf{磨损加快} =
 \textbf{寿命减半} 3. \textbf{链条油用错} = \textbf{WD-40 没用} =
@@ -21348,22 +21520,20 @@ km；维护差时更短}（❓，以手册为准）。\textbf{链条保养不当
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
-\item
-  \textbf{符号约定}：⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐
-  行业标准、⭐ 通用经验、❓ 存疑）；● 表示重要度
+  【来源】 \textbf{数据来源等级}：⭐⭐⭐ =
+  物理/化学基本定律、教科书标准；⭐⭐ = 行业标准、权威第三方规范；⭐ =
+  通用经验/AI 训练数据，未实时验证；❓ = 存疑/待验证；● = 重要度
 \end{itemize}
 
 \subsection{11.0.3 速查表（30
 秒定位你的行走问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux884cux8d70ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
-症状 & 最可能的 3 个原因 & 怎么办 \\
+症状 & 常见原因 & 怎么办 \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -21544,12 +21714,13 @@ km/h），摩托圆弧胎面适用性更差。\textbf{结论是雨天必须减�
 前叉\textbf{压缩行程}吸收 → 弹簧储能 - \textbf{回弹}：弹簧释放 →
 阻尼把能量变热耗散 → 防止「无限弹跳」
 
-\textbf{伸缩式（telescopic）前叉}（摩托车主流）： -
-\textbf{两根套管}：外管（接车架）、内管（接前轴） - 内管在外管内上下滑动
-- 内部有：\textbf{弹簧}（线性或渐进）+ \textbf{阻尼器}（油 + 节流孔）
+\textbf{伸缩式（telescopic）前叉}（正立叉，摩托车主流）： -
+\textbf{两根套管}：内管/立管在上、被联板夹持接车架；外管/滑筒在下、接前轴
+- 内管在外管内上下滑动 - 内部有：\textbf{弹簧}（线性或渐进）+
+\textbf{阻尼器}（油 + 节流孔）
 
-\textbf{倒置式（inverted）前叉}： -
-外管粗且固定在车架上端，内管较细并连接前轴（与伸缩式相反） -
+\textbf{倒置式（inverted / USD）前叉}： -
+外管在上、被联板夹持接车架，内管在下接前轴（与正立叉相反） -
 优势：刚性高（粗外管受力）、簧下质量小（下端细内管较轻） - 常见于运动车
 
 \textbf{关键概念}： - \textbf{行程}（travel）：前叉能压缩的总长度，常见
@@ -21777,7 +21948,7 @@ stem）：前叉和车架的连接结构。\textbf{让前叉能左右转动}，�
 \item
   \textbf{拖曳距（trail）}：前轮接地点到转向轴延长线与地面交点之间的距离。拖曳距通常越大，自稳定性越强，但转向更重；拖曳距过小会让车更灵活，也可能更神经质。
 \item
-  \textbf{前伸距/主销后倾角（rake）}：转向轴相对垂直方向的后倾角。它和前轮半径、前叉长度、offset
+  \textbf{前倾角/主销后倾角（rake）}：转向轴相对垂直方向的后倾角（角度）。它和前轮半径、前叉长度、offset
   一起影响 trail。
 \item
   \textbf{offset（前叉偏移）}：前轴相对转向轴的偏移量。offset
@@ -21912,9 +22083,9 @@ CH14 车架几何（来源：⭐）。
 \begin{verbatim}
 [上联板]
    ↓
-[叉管（上）] ← 活塞杆、密封
+[内管/立管（上）] ← 正立叉：被联板夹持、接车架（USD 则上下对调）
    ↓
-[叉筒（下）] ← 内管、油液、弹簧
+[外管/滑筒（下）] ← 油封、油液，接前轴
    ↓
 [前轴]
 \end{verbatim}
@@ -22219,7 +22390,11 @@ CH14 车架几何（来源：⭐）。
 \subsection{11.6.3 实战
 3：判断轮胎是否该换}\label{ux5b9eux6218-3ux5224ux65adux8f6eux80ceux662fux5426ux8be5ux6362}
 
-（见本节）；拆装轮胎建议送修（需要扒胎机和动平衡）
+判断标准（满足任一即换）： 1. 胎面磨损到磨损标记（TWI） 2.
+胎纹深度不足（\textgreater50cc 摩托 EU/UK 法定 1.0mm） 3. 胎龄 5
+年以上且硬化/裂纹 4. 侧壁损伤（割伤、鼓包、帘线暴露）
+
+（⭐/❓，以车主手册和当地法规为准）；拆装轮胎建议送修（需要扒胎机和动平衡）
 
 \subsection{11.6.4 实战 4：调整前叉预载
 ●●}\label{ux5b9eux6218-4ux8c03ux6574ux524dux53c9ux9884ux8f7d}
@@ -22501,7 +22676,7 @@ km}。\textbf{胎压正确}操控好、油耗低、磨损均匀。\textbf{从胎
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-5}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不查胎压} =
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不查胎压} =
 \textbf{轮胎磨损快} = \textbf{几百元} 2. \textbf{不查花纹深度} =
 \textbf{湿滑失控} = \textbf{危险} 3. \textbf{不查前叉油封} =
 \textbf{漏油严重 = 换前叉} = \textbf{千元} 4. \textbf{越野不清石子} =
@@ -22651,9 +22826,6 @@ km}。\textbf{胎压正确}操控好、油耗低、磨损均匀。\textbf{从胎
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
-\item
   \textbf{符号约定}：⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐
   行业标准、⭐ 通用经验、❓ 存疑）；● 表示重要度
 \end{itemize}
@@ -22661,12 +22833,12 @@ km}。\textbf{胎压正确}操控好、油耗低、磨损均匀。\textbf{从胎
 \subsection{12.0.3 速查表（30
 秒定位你的刹车问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux5239ux8f66ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
-症状 & 最可能的 3 个原因 & 怎么办 \\
+症状 & 常见原因 & 怎么办 \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -23060,9 +23232,9 @@ ABS 碟刹 & 临界抱死控制能力强 & 成本高，排气和诊断复杂 &
 
 \textbf{国际通用：SAE J866 摩擦系数等级}（来源：⭐⭐，行业通用规范）
 
-SAE J866
-摩擦材料等级用双字母表示：第一个字母是冷态/常温摩擦系数等级，第二个字母是热态摩擦系数等级（GB
-级别）；常见 GG、FF、HH 等。
+SAE J866 摩擦材料等级用双字母表示：双字母=冷态/热态摩擦系数各一字母（F
+0.35-0.45、G 0.45-0.55、H 0.55-0.65）；FF 表示冷/热均为 F 级，常见
+GG、FF、HH 等。
 
 \textbf{摩擦系数等级（两个字母分别按冷态、热态读取）}：
 
@@ -23086,11 +23258,12 @@ SAE J866
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{FF} & 0.35-0.45 & \textbf{最低}、安静、刹车力弱 &
+\textbf{FF} & 冷/热均 F（0.35-0.45） & \textbf{最低}、安静、刹车力弱 &
 不常用、老车 \\
-\textbf{GG} & 0.45-0.55 & \textbf{中等}、平衡好 & \textbf{街车主流} \\
-\textbf{HH} & 0.55-0.65 & \textbf{最高}、刹车力强、可能噪音大 &
-\textbf{运动车、赛道} \\
+\textbf{GG} & 冷/热均 G（0.45-0.55） & \textbf{中等}、平衡好 &
+\textbf{街车主流} \\
+\textbf{HH} & 冷/热均 H（0.55-0.65） &
+\textbf{最高}、刹车力强、可能噪音大 & \textbf{运动车、赛道} \\
 \end{longtable}
 }
 
@@ -23101,18 +23274,24 @@ SAE J866
 \textbf{常见组合}：
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
-组合 & 含义 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+组合
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+含义
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{GG / GG} & 街车均衡------\textbf{最常用} \\
-\textbf{HH / HH} & 高性能------运动车 \\
-\textbf{FF / FF} & 老车、低端------\textbf{不建议} \\
-\textbf{HG / HG} & 混合------\textbf{有些厂家定制} \\
-\textbf{GF} & \textbf{不常见}------日系厂家偶用 \\
+\textbf{GG} & 冷/热均为 G 级------街车均衡，\textbf{最常用} \\
+\textbf{HH} & 冷/热均为 H 级------高性能、运动车 \\
+\textbf{FF} & 冷/热均为 F 级------老车、低端------\textbf{不建议} \\
+\textbf{FG / GF / HF} 等 & 冷热等级不同的合法双字母组合（❓，以 J866
+标准为准） \\
 \end{longtable}
 }
 
@@ -23207,8 +23386,7 @@ ADV 长下坡 = 救命靠烧结片}。
 
 \begin{verbatim}
 Brembo 07.BB04.11
-    摩擦系数：FF（最低）
-    高温稳定性：FF（一般）
+    摩擦系数代码：FF（冷/热均为 F 级，F 约 0.35-0.45）
     ECE R90 认证：✓
     工作温度：200-300°C
 \end{verbatim}
@@ -23239,21 +23417,36 @@ BB - 类型代码（BB = 街车片、RC = 赛车片、SC = 烧结陶瓷片 等�
 选片实战速查（新手版）}\label{ux9009ux7247ux5b9eux6218ux901fux67e5ux65b0ux624bux7248}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3571}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2143}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2143}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2143}}@{}}
 \toprule\noalign{}
-你的需求 & 推荐 & 等级 & 材质 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+你的需求
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+推荐
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+等级
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+材质
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{日常通勤} & GG/GG 街车片 & GG & NAO 或半金属 \\
-\textbf{山路激烈骑} & GG/HG 或 HG/HG & HG & 半金属 \\
-\textbf{赛道} & HH/HH & HH & 半金属或烧结 \\
+\textbf{日常通勤} & GG 街车片 & GG & NAO 或半金属 \\
+\textbf{山路激烈骑} & HG 等冷热不同组合 & HG ❓（以 J866 标准为准） &
+半金属 \\
+\textbf{赛道} & HH & HH & 半金属或烧结 \\
 \textbf{ADV/越野} & 烧结片 & --- & Sintered \\
-\textbf{雨天多} & GG/GG & GG & 半金属 \\
+\textbf{雨天多} & GG & GG & 半金属 \\
 \textbf{低温地区} & 高摩擦系数 & GG 或 HH & 半金属 \\
-\textbf{哈雷/美系} & HH/FF & HH & 半金属 \\
-\textbf{大排量豪华车} & 陶瓷或烧结 & HG/HG & Ceramic \\
+\textbf{哈雷/美系} & 高摩擦系数片（原标 HH/FF ❓，以 J866 标准为准） &
+HH 或按手册 & 半金属 \\
+\textbf{大排量豪华车} & 陶瓷或烧结 & HG ❓（以 J866 标准为准） &
+Ceramic \\
 \end{longtable}
 }
 
@@ -23283,14 +23476,13 @@ R90 认证 - 标志在包装上（\textbf{E 加数字}） -
 
 \begin{verbatim}
 示例：Brembo 07.BB04.11
-    摩擦系数：FF
-    高温稳定性：FF
+    摩擦系数代码：FF（冷/热均为 F 级，F 约 0.35-0.45）
     工作温度：200-300°C
 
 示例：EBC FA213HH
     FA = 街车片
     213 = 适用车型代号
-    HH = 摩擦系数等级
+    HH = 摩擦系数等级（冷/热均为 H 级）
 \end{verbatim}
 
 【经验】
@@ -23309,7 +23501,7 @@ R90 认证 - 标志在包装上（\textbf{E 加数字}） -
 1. 找到刹车片位置（通过轮辐看卡钳内部）
 2. 看摩擦材料剩余厚度（不含钢背板）
 3. 标准：新片厚度 7-10 mm（包括背板）
-4. 磨损极限：典型 1.5-2.5 mm 摩擦材料，以车主/维修手册为准
+4. 警戒值约 2mm 准备更换；极限以手册为准（常见 1.5-2.5mm 背板到盘）；手册极限优先
 5. 磨到钢背板 = **必须换**
 \end{verbatim}
 
@@ -23351,8 +23543,8 @@ R90 认证 - 标志在包装上（\textbf{E 加数字}） -
 ⏱ 用时：30-60 分钟 【费用】 费用：刹车片 100-500 元（4 片一组）
 
 【注意】 \textbf{重要}： - \textbf{必须换一组}（\textbf{前 2 片或后 2
-片}，不要只换 1 片） - \textbf{新刹车片要''磨合''}（前 100 km
-轻刹车，让摩擦面贴合） - \textbf{液压系统有气泡要排气}
+片}，不要只换 1 片） - \textbf{新刹车片要''磨合''}（50-200 km
+轻-中刹磨合，以片/盘厂家说明为准） - \textbf{液压系统有气泡要排气}
 
 【经验】
 \textbf{老师傅经验}：\textbf{压活塞}最常翻车------\textbf{液压油回流会从主缸溢出来}！\textbf{喷到车漆上立刻腐蚀}！\textbf{要事先用抹布盖住主缸}，\textbf{盖子松开让空气进出}。
@@ -23365,16 +23557,16 @@ R90 认证 - 标志在包装上（\textbf{E 加数字}） -
 \textbf{新刹车片需要磨合}：
 
 \begin{verbatim}
-1. 前 100 km 用中等力度刹车
+1. 前 50-200 km 用轻-中力度刹车（以片/盘厂家说明为准）
 2. 不要急刹车（避免局部过热）
 3. 不要长下坡连续刹车（热衰减）
-4. 100 km 后恢复正常使用
+4. 磨合期后恢复正常使用
 \end{verbatim}
 
 【经验】
-\textbf{老师傅经验}：新刹车片应按刹车片/刹车盘厂家磨合流程操作；常见做法是前
+\textbf{老师傅经验}：新刹车片应按刹车片/刹车盘厂家磨合流程操作；统一按
 50-200 km
-避免急刹和连续重刹。磨合后仍明显变弱，应检查排气、污染、装配和片盘匹配（来源：⭐）。
+轻-中刹磨合（以片/盘厂家说明为准）。磨合后仍明显变弱，应检查排气、污染、装配和片盘匹配（来源：⭐）。
 
 \section{12.4 刹车油（核心）●●●}\label{ux5239ux8f66ux6cb9ux6838ux5fc3}
 
@@ -23564,11 +23756,10 @@ ABS/CBS/电子液压系统不得套用（来源：⭐） -
 的系统 \\
 \textbf{DOT 4} & 230°C & 155°C & 乙二醇醚/硼酸酯体系 &
 \textbf{现代摩托车主流} \\
-\textbf{DOT 4 LV} & 230°C & 155°C & 与 DOT 4 同体系（FMVSS
-116），\textbf{低粘度}，利于 ABS/稳定控制系统 & 说明书要求低粘度（DOT 4
-LV）时使用 \\
-\textbf{ISO 4925 Class 6} & 250°C & 165°C & ISO
-体系的低粘度等级，沸点要求高于 DOT 4 LV & 说明书要求 Class 6 时使用 \\
+\textbf{DOT 4 LV} & ≥250°C & ≥165°C & SAE J1704 / ISO 4925 Class
+6（低粘度） & 说明书要求低粘度（DOT 4 LV）时使用 \\
+\textbf{ISO 4925 Class 6} & 250°C & 165°C & ISO 体系的低粘度等级（与 DOT
+4 LV / SAE J1704 对应） & 说明书要求 Class 6 时使用 \\
 \textbf{DOT 5.1} & 260°C & 180°C & 非硅油体系，高沸点、低温流动性好 &
 高性能或说明书允许的系统 \\
 \textbf{DOT 5}（硅油基） & 260°C & 180°C & \textbf{硅油} &
@@ -23579,11 +23770,11 @@ LV）时使用 \\
 【来源】 \textbf{数据来源等级}：⭐⭐（DOT 系列依据 FMVSS 116，Class
 系列依据 ISO 4925，\textbf{具体看厂家技术参数}）。
 
-【注意】 \textbf{DOT 4 LV 与 ISO 4925 Class 6
-是两套标准，不能混为一谈}： - \textbf{DOT 4 LV}：属 FMVSS 116
-体系，沸点要求与 DOT 4 相同（干/湿
-230°C/155°C），区别只在\textbf{粘度更低} - \textbf{ISO 4925 Class 6}：属
-ISO 体系，\textbf{沸点要求更高}（干/湿 250°C/165°C） -
+【注意】 \textbf{低粘度刹车油（DOT 4 LV / SAE J1704 / ISO 4925 Class
+6）}： - \textbf{DOT 4 LV} 通常对应 \textbf{SAE J1704 / ISO 4925 Class
+6（低粘度）}：干/湿沸点 ≥250°C/≥165°C，并有更低的低温粘度要求，利于
+ABS/稳定控制系统 - \textbf{普通 DOT 4}（FMVSS 116）：干/湿
+230°C/155°C，无低粘度要求 -
 \textbf{选油以说明书标注的规格为准}，两者不要互相替代
 
 【注意】 \textbf{DOT 5 vs DOT 5.1 不是一回事}： - \textbf{DOT 5} =
@@ -23782,12 +23973,14 @@ DOT 4 要看说明书和密封件要求
 
 \subsection{12.4.7 离合液压油 ●}\label{ux79bbux5408ux6db2ux538bux6cb9}
 
-\textbf{液压离合的车} = 用\textbf{刹车油}（DOT 4）作为液压介质。
+\textbf{液压离合用油}：以油壶盖/手册标注为准；DOT4
+与矿物油系统不可互换，加错会溶胀密封件。
 
-\textbf{注意}： - \textbf{离合和刹车可使用同规格 DOT
-制动液}，但通常是\textbf{独立液压回路}（独立主缸 + 独立管路 +
-独立从动缸） - \textbf{检查液位} = \textbf{看离合主缸液位} -
-\textbf{更换} = \textbf{按离合液压回路单独更换}（可与刹车油同周期维护）
+\textbf{注意}： - \textbf{离合与刹车若同为 DOT
+制动液系统可用同规格油液}，但通常是\textbf{独立液压回路}（独立主缸 +
+独立管路 + 独立从动缸）；部分车型离合用矿物油，以油壶盖/手册为准 -
+\textbf{检查液位} = \textbf{看离合主缸液位} - \textbf{更换} =
+\textbf{按离合液压回路单独更换}（可与刹车油同周期维护）
 
 \subsection{12.4.8 刹车油储存与购买注意事项
 ●}\label{ux5239ux8f66ux6cb9ux50a8ux5b58ux4e0eux8d2dux4e70ux6ce8ux610fux4e8bux9879}
@@ -23980,7 +24173,7 @@ ABS 保护}。\textbf{尽快送修}。
 \textbf{长期使用可能裂}（赛车上常见）
 
 【注意】 \textbf{街车没必要}： - \textbf{不激烈骑} = \textbf{打孔盘} =
-\textbf{噱头} = \textbf{贵 30\%} - \textbf{真的} =
+\textbf{噱头} = \textbf{通常更贵} - \textbf{真的} =
 \textbf{街车用原厂规格盘就行}
 
 【经验】 \textbf{老师傅经验}：刹车盘先看原厂规格、厚度下限、安装尺寸和
@@ -24286,7 +24479,7 @@ M10 & 45-55 Nm \\
 \textbf{诊断}：
 
 \begin{verbatim}
-1. 看主缸液位（低 = 漏）
+1. 液位低→先看刹车片厚度与渗漏痕迹（刹车片磨损活塞外伸会使液位自然下降，确认渗漏才判漏油）
 2. 捏手柄有气泡感 = 有空气
 3. 捏到底无刹车 = 严重漏油
 \end{verbatim}
@@ -24374,8 +24567,8 @@ M10 & 45-55 Nm \\
 \begin{verbatim}
 1. 找到刹车片（通过轮辐看卡钳）
 2. 看摩擦材料剩余厚度（不含钢背板）
-3. 剩余约 2 mm = 准备更换
-4. 磨损槽磨平或接近 1.5 mm = 必须立即换
+3. 警戒值约 2mm 准备更换
+4. 极限以手册为准（常见 1.5-2.5mm 背板到盘）；手册极限优先
 \end{verbatim}
 
 \subsection{12.8.2 实战 2：换刹车片
@@ -24410,7 +24603,7 @@ M10 & 45-55 Nm \\
 
 \textbf{骑前检查类}： 1. \textbf{骑前不查刹车片} ------
 \textbf{磨光继续骑 = 几千元的损失} 2. \textbf{骑前不查刹车油位} ------
-\textbf{油位低 = 漏 = 刹车失灵风险}
+液位低→先看刹车片厚度与渗漏痕迹；刹车片磨损活塞外伸会使液位自然下降，确认渗漏才判漏油
 
 \textbf{液压系统类}： 3. \textbf{捏到底无刹车还骑} ------
 \textbf{失灵风险}！\textbf{拖车回家} 4. \textbf{液压系统漏油不修} ------
@@ -24453,7 +24646,8 @@ M10 & 45-55 Nm \\
 \item
   \textbf{【维修】 换刹车片一组全换}：不要只换 1 片
 \item
-  \textbf{【维修】 新刹车片磨合 100 km}：前 100 km 轻刹车
+  \textbf{【维修】 新刹车片磨合 50-200
+  km}：轻-中刹磨合（以片/盘厂家说明为准）
 \item
   \textbf{【维修】 ABS 灯亮要降级处理}：基础刹车可能仍可用，但没有 ABS
   保护；低速谨慎移车或拖车送修
@@ -24535,7 +24729,7 @@ M10 & 45-55 Nm \\
 ●●●}\label{ux9a91ux524dux5fc5ux67e5ux6e05ux5355-1}
 
 \begin{verbatim}
-[ ] 刹车片厚度（> 2 mm）
+[ ] 刹车片厚度（警戒约 2mm 准备更换；极限以手册为准，常见 1.5-2.5mm 背板到盘）
 [ ] 刹车油液位（在 MIN-MAX）
 [ ] 液压系统无漏油痕迹
 [ ] 捏刹车手柄手感（无软、无空气感）
@@ -24544,8 +24738,8 @@ M10 & 45-55 Nm \\
 \end{verbatim}
 
 【经验】 \textbf{老师傅经验}：\textbf{骑前 30 秒}做这套检查 =
-\textbf{减少 90\% 的刹车事故}。\textbf{老司机}都有这习惯------\textbf{捏
-1-2 下}，\textbf{看一眼油壶}，\textbf{心里有数}。
+\textbf{显著减少刹车事故}。\textbf{老司机}都有这习惯------\textbf{捏 1-2
+下}，\textbf{看一眼油壶}，\textbf{心里有数}。
 
 \subsection{12.9.7 进阶学习路径
 ●●}\label{ux8fdbux9636ux5b66ux4e60ux8defux5f84-5}
@@ -24648,8 +24842,9 @@ DOT 5.1 或更高温度窗口刹车片（来源：⭐）
 刹车片磨合问题}\label{ux6848ux4f8b-iux94c3ux6728-sv650-ux5239ux8f66ux7247ux78e8ux5408ux95eeux9898}
 
 \textbf{症状}：新刹车片装上 200 km 刹车软 \textbf{踩坑过程}：新片
-\textbf{可能原因}：\textbf{没磨合} \textbf{处理建议}：\textbf{磨合 200
-km} \textbf{教训}：\textbf{新片} = \textbf{必磨合} = \textbf{200 km}
+\textbf{可能原因}：\textbf{没磨合} \textbf{处理建议}：\textbf{按 50-200
+km 轻-中刹磨合（以片/盘厂家说明为准）} \textbf{教训}：\textbf{新片} =
+\textbf{必磨合} = \textbf{50-200 km 轻-中刹（以片/盘厂家说明为准）}
 
 \subsection{案例 J：本田 NC750X
 联动刹车失衡}\label{ux6848ux4f8b-jux672cux7530-nc750x-ux8054ux52a8ux5239ux8f66ux5931ux8861}
@@ -24662,7 +24857,7 @@ km} \textbf{教训}：\textbf{新片} = \textbf{必磨合} = \textbf{200 km}
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-6}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不换刹车油}
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不换刹车油}
 = \textbf{沸点降} = \textbf{激烈刹车失灵} = \textbf{保命} 2.
 \textbf{不换刹车片} = \textbf{磨到金属} = \textbf{刹车盘报废} =
 \textbf{千元} 3. \textbf{不排气} = \textbf{刹车软} = \textbf{危险} 4.
@@ -24819,9 +25014,6 @@ ABS 故障诊断 & ●●●● & 否（送修） & - \\
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
-\item
   \textbf{符号约定}：⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐
   行业标准、⭐ 通用经验、❓ 存疑）；● 表示重要度
 \end{itemize}
@@ -24829,7 +25021,7 @@ ABS 故障诊断 & ●●●● & 否（送修） & - \\
 \subsection{13.0.3 速查表（30
 秒定位你的电气问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux7535ux6c14ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -24840,7 +25032,7 @@ ABS 故障诊断 & ●●●● & 否（送修） & - \\
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -25069,7 +25261,7 @@ PbSO₄}------充电时难以还原，\textbf{永久损失容量}（来源：⭐
 \textbf{普通铅酸}（flooded） & 液态电解液 & 便宜 &
 漏液风险、要加水、怕振动 & 2-3 年 \\
 \textbf{AGM}（Absorbed Glass Mat） & 玻璃纤维吸附电解液 &
-免维护、防漏、抗振 & 比普通铅酸贵 30-50\% & 3-5 年 \\
+免维护、防漏、抗振 & 比普通铅酸更贵 & 3-5 年 \\
 \textbf{锂电}（LiFePO4） & 锂离子化学 & 极轻（1/3 铅酸）、寿命长 & 贵
 3-10 倍、低温性能差、需专用充电 & 5-8 年 \\
 \end{longtable}
@@ -25216,23 +25408,21 @@ ECU 信号）切断初级电流 3. \textbf{感应升压}：初级电流突然断
 10-40 kV，常见 15-40 kV） 4. \textbf{击穿放电}：高压击穿火花塞间隙 →
 火花放电 → 引燃混合气
 
-\textbf{两种主要点火方式}： -
-\textbf{电感放电点火（IDI）}：传统点火，\textbf{线圈储能 →
-断电升压}。能量 30-80 mJ。 -
-\textbf{电容放电点火(CDI)}:常见于小排量、越野车、老车型。\textbf{储能路径}:触发线圈(磁电机)或
+\textbf{主要点火方式（CDI / 电感储能 IDI 两类，再叠加 ECU 控制）}： -
+\textbf{电容放电点火（CDI）}：常见于小排量、越野车、老车型。\textbf{储能路径}：触发线圈(磁电机)或
 DC-DC 升压 → 储能电容 → 触发晶闸管(SCR) → 点火线圈初级 → 升压到次级 →
-火花塞。\textbf{典型储能}:常见 30-200 mJ 量级(按 ½CV²
-估算，具体电容/电压因设计而异 ❓),\textbf{次级电压约 10-40 kV，常见
-15-40 kV}。 - \textbf{电感式晶体管点火(TCI /
-IDI)}:常见于现代中大排量。\textbf{储能路径}:电瓶 12V →
+火花塞。\textbf{次级电压约 10-40 kV，常见 15-40 kV}。 -
+\textbf{电感储能点火（IDI，含
+TCI/晶体管点火）}：常见于现代中大排量。\textbf{储能路径}：电瓶 12V →
 点火线圈初级持续通电储能 → 触发晶体管(IGBT)断开初级 →
-磁场崩溃在次级感应出高压 → 火花塞。\textbf{典型储能}:30-100
-mJ(取决于初级电流和电感),\textbf{次级电压约 10-40 kV，常见 15-40 kV}。 -
-\textbf{ECU 控制点火}:现代电喷车几乎都用。\textbf{ECU
-根据曲位/转速/进气压力/温度算最佳点火时刻},触发可以是 CDI
-形式(电容储能)或 IDI 形式(电感储能),\textbf{统称 ECU
-控制点火}。能量数值与上述相同,但\textbf{时刻精度 ±1°曲轴转角}(无 ECU
-时代 ±3-5°)。 - \textbf{电感+电容复合}：高端车用，能量足、电压足。
+磁场崩溃在次级感应出高压 → 火花塞。\textbf{次级电压约 10-40 kV，常见
+15-40 kV}。 - \textbf{ECU 控制点火}：现代电喷车几乎都用。\textbf{ECU
+根据曲位/转速/进气压力/温度算最佳点火时刻}，触发可以是 CDI
+形式(电容储能)或 IDI 形式(电感储能)，\textbf{统称 ECU
+控制点火}。\textbf{时刻精度 ±1°曲轴转角}（无 ECU 时代 ±3-5°）。 -
+\textbf{电感+电容复合}：高端车用，能量足、电压足。
+
+\textbf{典型储能能量}：约 \texttt{30-200\ mJ（❓/⭐，以手册为准）}。
 
 \textbf{击穿电压}（V\_breakdown）影响因素： - 火花塞间隙（与 A01/CH06
 统一）：街车 0.6-0.8 mm、跑车 0.7-0.9 mm、ADV 0.8-1.0 mm、赛车 0.9-1.0
@@ -25310,14 +25500,14 @@ mm；以车主手册为准（来源：⭐/❓） -
 13.11.3} ------ 线束压降:R = ρL/A,55W 大灯 4.6A × 3m 线,压降超 3-5\%
 要查;接地:车架兼作地线,启动大电流不混传感器参考地
 
-【经验】 \textbf{老师傅一句话}：电气系统问题 80\%
-是「接触不良」------保险丝松、继电器触点烧、线束接头氧化；用万用表先量电压判断哪一段不通。
+【经验】
+\textbf{老师傅一句话}：电气系统问题相当一部分是「接触不良」------保险丝松、继电器触点烧、线束接头氧化；用万用表先量电压判断哪一段不通。
 
 \subsection{13.1.12
 主要组件与工作机制：从电瓶到火花塞}\label{ux4e3bux8981ux7ec4ux4ef6ux4e0eux5de5ux4f5cux673aux5236ux4eceux7535ux74f6ux5230ux706bux82b1ux585e}
 
-【机制】 \textbf{电瓶}：12V 直流电源。化学能 ↔ 电能；AGM 主流；容量 4-30
-Ah（来源：⭐⭐⭐）。
+【机制】 \textbf{电瓶}：12V 直流电源。化学能 ↔ 电能；AGM
+主流（来源：⭐⭐⭐）；容量 4-30 Ah（来源：⭐，以车主手册为准）。
 
 【机制】
 \textbf{发电机}：永磁转子+定子绕组。曲轴带动；输出三相交流电（来源：⭐⭐⭐）。
@@ -25403,8 +25593,8 @@ ECU 控制点火(CDI 或 IDI 形式)}------更精确、能量足、可随工况�
 3. \textbf{保险丝}：先看主保险丝再查分路保险丝 4.
 \textbf{接地线}：电瓶负极到车架的接地线\textbf{最容易被腐蚀}------很多故障是「接地不良」
 
-【经验】 \textbf{老师傅一句话}：电气故障 80\%
-是「简单问题」：电瓶没电、保险丝烧、接地线松、继电器坏；\textbf{先查这几个再查
+【经验】
+\textbf{老师傅一句话}：电气故障大多是简单问题（⭐）：电瓶没电、保险丝烧、接地线松、继电器坏；\textbf{先查这几个再查
 ECU}。
 
 【机制小结】
@@ -25442,9 +25632,8 @@ ECU}。
   CAN 总线让多 ECU 共用 2
   根线通信；线束简化、实时性好、需诊断仪（来源：⭐⭐⭐）。
 \item
-  电气故障 80\%
-  是「简单问题」：电瓶、保险丝、接地、继电器------先查这些再查
-  ECU（来源：⭐⭐⭐）。
+  电气故障大多是简单问题（⭐）：电瓶、保险丝、接地、继电器------先查这些再查
+  ECU。
 \end{itemize}
 
 \section{13.2
@@ -25660,7 +25849,7 @@ CB500F 的怠速 13.8V 正常,哈雷 Sportster 可能 13.2V
 倍}(行星齿轮或外啮合),扭矩相应放大,然后用\textbf{单向离合器}把扭矩传给曲轴,松开按钮时离合器脱开,曲轴不会反拖起动机
 
 \textbf{结构三件套}: 1.
-\textbf{串激直流电机}:电枢绕组与励磁绕组串联,低速大扭矩,过载能力强(堵转不烧),\textbf{正是起动机需要的特性}
+\textbf{串激直流电机}:电枢绕组与励磁绕组串联,低速大扭矩,短时过载能力强；堵转或长时间通电会过热烧毁绕组,\textbf{正是起动机需要的特性}
 2. \textbf{减速齿轮组}:行星齿轮(现代主流)或外啮合齿轮,把 8000-12000 rpm
 降到曲轴拖转约 150-300 rpm,\textbf{减速比约 20-80 倍,扭矩同步放大} 3.
 \textbf{单向离合器}(超越离合器 / roller
@@ -25743,8 +25932,8 @@ clutch):滚柱式或楔块式,\textbf{只允许电机驱动曲轴},\textbf{不�
 
 \textbf{详见} \href{CH13.1-电工学基础.md}{CH13.1-电工学基础.md 13.11.7 /
 13.11.11 / 13.11.12} ------ RL 瞬态 + 功率链路 + 互感:点火线圈
-1:50-1:200 匝比,初级储能 30-100 mJ,次级升到约 10-40 kV、常见 15-40
-kV,单次火花总能量仅几十毫焦级
+1:50-1:200 匝比,储能约 30-200 mJ（❓/⭐，以手册为准）,次级升到约 10-40
+kV、常见 15-40 kV,单次火花总能量仅几十毫焦级
 
 \subsection{13.4.2
 点火系统类型}\label{ux70b9ux706bux7cfbux7edfux7c7bux578b}
@@ -25822,7 +26011,7 @@ CDI}（控制点火时刻）
 \begin{itemize}
 \tightlist
 \item
-  数字 = 最大电流（A）
+  数字 = 额定（持续）电流（A）
 \item
   颜色对应电流（标准色码，\textbf{SAE J1284}）：
 
@@ -26376,7 +26565,8 @@ graph TD
 6. 看外壳（无鼓包、无漏液）
 \end{verbatim}
 
-\subsection{13.9.2 换电瓶要点 ●●●}\label{ux6362ux7535ux74f6ux8981ux70b9}
+\subsection{13.9.2 实战 2：换电瓶要点
+●●●}\label{ux5b9eux6218-2ux6362ux7535ux74f6ux8981ux70b9}
 
 （本节只给要点，\textbf{完整拆装步骤与规格以车主手册为准}；电瓶类型见
 13.1.5，安全口径见 13.10.1）
@@ -26614,10 +26804,11 @@ r/motorcycles、BikeChat)、厂商维修手册案例库、4S
 ❓。
 
 \textbf{适用边界}: -
-摩托车品牌:主要参考日本四大厂(本田、雅马哈、铃木、川崎)、欧洲品牌(宝马、杜卡迪、KTM、凯旋)、美洲品牌(哈雷、印度皇家恩菲尔德)
-- 车龄:覆盖 2000-2025 年车型,老车(2000 年前)经验可能不再适用 -
-排量:125cc - 1800cc 主流车型,小踏板(\textless{} 125cc)和大排量
-(\textgreater{} 1800cc)未充分覆盖 -
+摩托车品牌:主要参考日本四大厂(本田、雅马哈、铃木、川崎)、欧洲品牌(宝马、杜卡迪、KTM、凯旋)、美洲品牌(哈雷、印第安
+Indian 等)、亚洲/其他(皇家恩菲尔德 Royal Enfield 等) - 车龄:覆盖
+2000-2025 年车型,老车(2000 年前)经验可能不再适用 - 排量:125cc - 1800cc
+主流车型,小踏板(\textless{} 125cc)和大排量 (\textgreater{}
+1800cc)未充分覆盖 -
 地区:基于温带气候经验,极端气候(沙漠/极地/高海拔)可能不适用
 
 \textbf{判断经验可信度的 4 个标准}: 1.
@@ -26722,7 +26913,7 @@ I：带防盗芯片/无钥匙系统车型钥匙识别失败}\label{ux6848ux4f8b-
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-7}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不测电压} =
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不测电压} =
 \textbf{电瓶早坏} = \textbf{几百} 2. \textbf{不查保险丝} =
 \textbf{以为是零件坏} = \textbf{换零件浪费} 3. \textbf{改装不看功率} =
 \textbf{电瓶没电} = \textbf{必加继电器} 4. \textbf{不查继电器} =
@@ -27079,11 +27270,10 @@ SCR
 \subsection{数值}\label{ux6570ux503c-6}
 
 摩托车小继电器线圈电感可在 100-500 mH
-量级（通用继电器量级，来源：⭐⭐；具体件需测量：❓）。若断电 0.1 ms
-内电流变化率达到 \(10^5 A/s\)（快速开断示例，来源：⭐⭐），代入
-\(U_L=LdI/dt\)，理论尖峰可到 10-50
-kV。实际会被寄生电容、空气击穿、触点电弧、二极管或 TVS
-限制，不会无限升高（来源：⭐⭐⭐）。
+量级（通用继电器量级，来源：⭐⭐；具体件需测量：❓）。示例：断电时 dI/dt
+约 \(10^3 A/s\)（❓，与触点断开速度和线圈电流有关），代入
+\(U_L=LdI/dt\)，无吸收时尖峰约 0.1-1
+kV。实际会被续流管/TVS/寄生电容钳制（来源：⭐⭐⭐）。
 
 \subsection{实战案例}\label{ux5b9eux6218ux6848ux4f8b-6}
 
@@ -27360,18 +27550,18 @@ kV。没有电流变化，就没有感应高压；所以点火模块、曲轴信
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（物理定律、教科书标准）/
-  ⭐⭐（行业标准、权威第三方规范）/ ⭐（一般经验值，以车主手册为准）/
-  ❓（未验证，待查）
+  【来源】
+  \textbf{数据来源等级}：⭐⭐⭐（物理/化学基本定律、教科书标准）/
+  ⭐⭐（行业标准、权威第三方规范）/
+  ⭐（通用经验/AI训练数据，未实时验证）/ ❓（存疑/待验证）
 \item
-  \textbf{符号约定}：⭐ 标注来源等级（⭐⭐⭐ 教科书/定律、⭐⭐
-  行业标准、⭐ 通用经验、❓ 存疑）；● 表示重要度
+  \textbf{符号约定}：● 表示重要度
 \end{itemize}
 
 \subsection{14.0.3 速查表（30
 秒定位你的车架/外观问题）}\label{ux901fux67e5ux886830-ux79d2ux5b9aux4f4dux4f60ux7684ux8f66ux67b6ux5916ux89c2ux95eeux9898}
 
-\textbf{症状 → 最可能的 3 个原因 → 怎么办}：
+\textbf{症状 → 常见原因 → 怎么办}：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -27382,7 +27572,7 @@ kV。没有电流变化，就没有感应高压；所以点火模块、曲轴信
 \begin{minipage}[b]{\linewidth}\raggedright
 症状
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-最可能的 3 个原因
+常见原因
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 怎么办
 \end{minipage} \\
@@ -27575,7 +27765,7 @@ mm（长）
 angle）：转向轴和垂直方向的夹角。\textbf{越大越稳定}（直线），\textbf{越小越灵活}（转弯）。
 - 街车：24-27° - 运动车：23-25° - 巡航车：28-35°
 
-\textbf{拖曳距}（trail）：前轴接地中心到转向轴延长线与地面交点的距离。\textbf{和前倾角、前叉长度相关}。
+\textbf{拖曳距}（trail）：前轮接地点（胎印中心）到转向轴延长线与地面交点的距离。\textbf{和前倾角、前叉长度相关}。
 - 街车：90-110 mm - 运动车：85-100 mm - 巡航车：100-150 mm
 
 \textbf{反直觉点}：\textbf{拖曳距越大，自稳定性越好}------前轮会「自动」回到正前方。这就是为什么\textbf{直线骑手不需要一直修正方向}------拖曳距的物理效应。\textbf{代价是转弯需要更大的力矩}------转弯重。
@@ -27787,8 +27977,8 @@ protection）：外加电流让金属保持阴极（不被腐蚀）------\textbf
 
 \textbf{反直觉点}：\textbf{漆面破损是「腐蚀起点」}------一旦漆面有划痕、缺口，\textbf{水汽从此进入}------下方金属在漆膜下悄悄腐蚀（丝状腐蚀）。\textbf{定期检查、补漆}是延长车架寿命的关键。
 
-【经验】 \textbf{老师傅一句话}：防锈的 80\%
-是「保持漆面完整」------划痕、掉漆、石子崩坑都是腐蚀起点；\textbf{看到漆面伤了要尽快补}。
+【经验】
+\textbf{老师傅一句话}：防锈的关键是「保持漆面完整」------划痕、掉漆、石子崩坑都是腐蚀起点；\textbf{看到漆面伤了要尽快补}。
 
 \subsection{14.1.11
 核心物理原理十：塑料件老化的化学}\label{ux6838ux5fc3ux7269ux7406ux539fux7406ux5341ux5851ux6599ux4ef6ux8001ux5316ux7684ux5316ux5b66}
@@ -27796,8 +27986,9 @@ protection）：外加电流让金属保持阴极（不被腐蚀）------\textbf
 【机制】
 摩托车塑料件（整流罩、油箱护板、侧盖等）会\textbf{老化}------\textbf{紫外线（UV）断链、热氧化、增塑剂迁移}三种机理（来源：⭐⭐⭐）。
 
-\textbf{UV 断链}： - 紫外线（\textless{} 400 nm）能量足以断裂 C-C
-键、C-H 键 - 聚合物链断裂 → 分子量降低 → 机械性能下降（变脆、易裂） -
+\textbf{UV 断链}： -
+短波紫外线（UVB/UVC）可直接断链；UVA（315-400nm）多经氧化/光敏剂途径加速老化
+- 聚合物链断裂 → 分子量降低 → 机械性能下降（变脆、易裂） -
 表现：颜色变浅、变粉、变脆
 
 \textbf{热氧化}： - 高温下氧气和聚合物反应 - 生成羰基、羧基等极性基团 →
@@ -27972,8 +28163,7 @@ Panigale V4}） 2.
 \item
   锈蚀是金属失去电子的电化学反应；异种金属接触加速腐蚀（电势差驱动）（来源：⭐⭐⭐）。
 \item
-  防锈分被动（涂装、镀层）和主动（阴极保护、缓蚀剂）；保持漆面完整是
-  80\% 防护（来源：⭐⭐⭐）。
+  防锈分被动（涂装、镀层）和主动（阴极保护、缓蚀剂）；保持漆面完整是防护的关键（来源：⭐⭐⭐）。
 \item
   塑料件老化是 UV 断链+热氧化+增塑剂迁移；碳黑是高效 UV
   吸收剂（来源：⭐⭐⭐）。
@@ -28595,7 +28785,7 @@ Wax}：性价比高 - \textbf{AutoGlym}：欧洲货
 全面紧螺丝：省 100-300 元/年 - 轻微除锈：省 100-300 元/年
 
 \textbf{一年总计省 1200-3100
-元}。\textbf{而且车更保值}------\textbf{保养好的车卖价高 10-20\%}。
+元}。\textbf{而且车更保值}------\textbf{保养好的车卖价更高}。
 
 \subsection{14.7.5 容易漏的小细节
 ●●}\label{ux5bb9ux6613ux6f0fux7684ux5c0fux7ec6ux8282-8}
@@ -28750,7 +28940,7 @@ Wax}：性价比高 - \textbf{AutoGlym}：欧洲货
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-8}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不装保护贴}
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不装保护贴}
 = \textbf{越野时车架划伤} = \textbf{贴贴} 2. \textbf{不补漆} =
 \textbf{划伤生锈} = \textbf{补漆笔 50 元} 3. \textbf{不紧螺丝} =
 \textbf{单摇臂松动} = \textbf{按扭矩} 4. \textbf{不查锁头} =
@@ -28882,8 +29072,10 @@ Wax}：性价比高 - \textbf{AutoGlym}：欧洲货
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（通用工程经验）/ ⭐（行业经验）/ ❓（车型差异大或未核验）
+  【来源】
+  \textbf{数据来源等级}：⭐⭐⭐（物理/化学基本定律、教科书标准）/
+  ⭐⭐（行业标准、权威第三方规范）/
+  ⭐（通用经验/AI训练数据，未实时验证）/ ❓（存疑/待验证）
 \end{itemize}
 
 \subsection{15.0.3 速查表（30
@@ -28905,16 +29097,15 @@ Wax}：性价比高 - \textbf{AutoGlym}：欧洲货
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{骑前检查} & \textbf{每天/每骑（⭐⭐
-通用经验；以车主手册为准）} \\
+\textbf{骑前检查} & \textbf{每天/每骑（⭐ 通用经验；以车主手册为准）} \\
 \textbf{链条清洁+上油} & \textbf{500-1000 km（⭐
-行业经验；雨天/泥泞后加做；以车主手册为准）} \\
-\textbf{检查胎压} & \textbf{每骑（⭐⭐ 通用经验；以车主手册为准）} \\
-\textbf{检查机油} & \textbf{每骑（⭐⭐ 通用经验；以车主手册为准）} \\
-\textbf{检查刹车} & \textbf{每骑（⭐⭐ 通用经验；以车主手册为准）} \\
-\textbf{检查灯光} & \textbf{每骑（⭐⭐ 通用经验；以车主手册为准）} \\
-\textbf{检查电瓶} & \textbf{每月（⭐ 行业经验；以车主手册为准）} \\
-\textbf{更换机油+滤芯} & \textbf{5000-10000 km（⭐⭐
+通用经验；雨天/泥泞后加做；以车主手册为准）} \\
+\textbf{检查胎压} & \textbf{每骑（⭐ 通用经验；以车主手册为准）} \\
+\textbf{检查机油} & \textbf{每骑（⭐ 通用经验；以车主手册为准）} \\
+\textbf{检查刹车} & \textbf{每骑（⭐ 通用经验；以车主手册为准）} \\
+\textbf{检查灯光} & \textbf{每骑（⭐ 通用经验；以车主手册为准）} \\
+\textbf{检查电瓶} & \textbf{每月（⭐ 通用经验；以车主手册为准）} \\
+\textbf{更换机油+滤芯} & \textbf{5000-10000 km（⭐
 通用经验；合成油可更长；以车主手册为准）} \\
 \textbf{更换终传/齿轮油} & \textbf{仅限说明书要求的车型} \\
 \textbf{清洁空气滤芯} & \textbf{5000 km（❓
@@ -28922,14 +29113,13 @@ Wax}：性价比高 - \textbf{AutoGlym}：欧洲货
 \textbf{更换空气滤芯} & \textbf{10000-20000 km（❓
 工况差异大；以车主手册为准）} \\
 \textbf{更换火花塞} & \textbf{铜/镍 10000-20000 km（❓）；铂金
-30000-50000 km（⭐）；铱金 30000-60000 km（❓
-车型差异极大，部分手册显著更短）；以车主手册为准} \\
+30000-50000 km（⭐/❓）；铱金 30000-60000 km（❓
+车型差异极大，以车主手册为准）} \\
 \textbf{检查气门间隙} & \textbf{10000-40000 km（❓
 车型差异大；以车主手册为准）} \\
 \textbf{更换冷却液} & \textbf{常见 2-3 年 / 20000-40000
 km（⭐）；OAT/HOAT 等可达 5 年；以车主手册为准} \\
-\textbf{更换刹车油} & \textbf{1-2 年（⭐⭐
-通用经验；以车主手册为准）} \\
+\textbf{更换刹车油} & \textbf{1-2 年（⭐ 通用经验；以车主手册为准）} \\
 \textbf{更换燃油滤芯} & \textbf{10000-20000 km（❓
 车型差异大；以车主手册为准）} \\
 \textbf{更换链条+链轮} & \textbf{30000-50000 km（❓
@@ -28977,7 +29167,7 @@ km，旅行胎可达 3 万 km+（❓，以磨损指示为准）或时间约 5
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{骑前检查} & 每骑（⭐⭐；以车主手册为准） &
+\textbf{骑前检查} & 每骑（⭐；以车主手册为准） &
 胎压、刹车、灯光、机油、链条 & \textbf{车主必做} \\
 \textbf{洗车} & 每月 1-2 次（⭐；以车主手册为准） & 洗车液 + 海绵 &
 车主 \\
@@ -29015,8 +29205,8 @@ km）保养}\label{ux4e2dux671f5000-20000-kmux4fddux517b}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{更换机油} & 5000-10000 km（⭐⭐；合成油可更长；以车主手册为准）
-& 排油 + 加新油 + 换滤芯 & \textbf{车主必做} \\
+\textbf{更换机油} & 5000-10000 km（⭐；合成油可更长；以车主手册为准） &
+排油 + 加新油 + 换滤芯 & \textbf{车主必做} \\
 \textbf{更换终传/齿轮油} & 按说明书 &
 踏板终传、轴传动后牙包、独立齿轮箱才有 & 车主/送修 \\
 \textbf{清洁空气滤芯} & 5000 km（❓；以车主手册为准） & 拆下 + 吹 + 装回
@@ -29024,13 +29214,12 @@ km）保养}\label{ux4e2dux671f5000-20000-kmux4fddux517b}
 \textbf{更换空气滤芯} & 10000-20000 km（❓；以车主手册为准） & 换新滤芯
 & 车主 \\
 \textbf{更换火花塞} & 铜/镍 10000-20000 km（❓）；铂金 30000-50000
-km（⭐）；铱金 30000-60000 km（❓
-车型差异极大，部分手册显著更短）；以车主手册为准 & 拆下 + 检查 + 换新 &
-车主 \\
+km（⭐/❓）；铱金 30000-60000 km（❓ 车型差异极大，以车主手册为准） &
+拆下 + 检查 + 换新 & 车主 \\
 \textbf{更换燃油滤芯} & 10000-20000 km（❓；以车主手册为准） & 换新滤芯
 & 车主 \\
-\textbf{更换刹车油} & 1-2 年（⭐⭐；以车主手册为准） & 排 + 加新油 +
-排气 & 车主/送修 \\
+\textbf{更换刹车油} & 1-2 年（⭐；以车主手册为准） & 排 + 加新油 + 排气
+& 车主/送修 \\
 \textbf{更换冷却液} & 常见 2-3 年 / 20000-40000 km（⭐）；OAT/HOAT
 等可达 5 年；以车主手册为准 & 排 + 加新冷却液 + 排气 & 车主 \\
 \textbf{检查气门间隙} & 10000-40000 km（❓；以车主手册为准） & 塞尺测量
@@ -29106,9 +29295,9 @@ km）保养}\label{ux957fux671f30000-kmux4fddux517b}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{更换机油} & 5000-10000 km（⭐⭐；以车主手册为准） & 矿物油
+\textbf{更换机油} & 5000-10000 km（⭐；以车主手册为准） & 矿物油
 5000（⭐）、半合成 7500（⭐）、全合成 10000（⭐），均以车主手册为准 \\
-\textbf{更换机油滤芯} & 每次换机油（⭐⭐；以车主手册为准） & 旋装式 \\
+\textbf{更换机油滤芯} & 每次换机油（⭐；以车主手册为准） & 旋装式 \\
 \textbf{更换终传/齿轮油} & 按说明书 &
 仅限踏板终传、轴传动后牙包或独立齿轮箱 \\
 \textbf{清洁空气滤芯} & 5000 km（❓；以车主手册为准） &
@@ -29116,8 +29305,7 @@ km）保养}\label{ux957fux671f30000-kmux4fddux517b}
 \textbf{更换空气滤芯} & 10000-20000 km（❓；以车主手册为准） &
 纸质一次性 \\
 \textbf{更换火花塞} & 铜/镍 10000-20000 km（❓）；铂金 30000-50000
-km（⭐）；铱金 30000-60000 km（❓
-车型差异极大，部分手册显著更短）；以车主手册为准 &
+km（⭐/❓）；铱金 30000-60000 km（❓ 车型差异极大，以车主手册为准） &
 不简化为单一数字（\textbf{见 CH06.4.5}） \\
 \textbf{检查气门间隙} & 10000-40000 km（❓；以车主手册为准） &
 车型差异大，示例数字也必须回查手册 \\
@@ -29241,7 +29429,7 @@ km（⭐；雨天/泥泞后加做；以车主手册为准） & \textbf{车主必
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{检查胎压} & 每骑（⭐⭐；以车主手册为准） & 冷胎测 \\
+\textbf{检查胎压} & 每骑（⭐；以车主手册为准） & 冷胎测 \\
 \textbf{更换轮胎} & 双标准：里程差异极大：运动胎常 1-2 万 km，旅行胎可达
 3 万 km+（❓，以磨损指示为准）或时间约 5
 年（⭐，老化/裂纹与里程无关）；两个标准哪个先到就换；以车主手册为准 &
@@ -29255,7 +29443,7 @@ km（⭐；雨天/泥泞后加做；以车主手册为准） & \textbf{车主必
 \textbf{更换刹车片} & 视磨损 & \textless{} 1.5
 mm（❓；以维修手册磨损极限为准）必换 \\
 \textbf{更换刹车盘} & 视磨损 & \textless{} MIN 必换 \\
-\textbf{更换刹车油} & 1-2 年（⭐⭐；以车主手册为准） & DOT 4 为主 \\
+\textbf{更换刹车油} & 1-2 年（⭐；以车主手册为准） & DOT 4 为主 \\
 \textbf{更换车轮轴承} & 50000-100000 km（❓；以旷量和手册为准） &
 旷量就换 \\
 \end{longtable}
@@ -29299,10 +29487,10 @@ mm（❓；以维修手册磨损极限为准）必换 \\
 
 \textbf{哪个先到}就按哪个做保养；下面数字都是通用经验，\textbf{以车主手册为准}。
 
-\textbf{例子}： - 换机油：5000 km（⭐⭐）或 1
+\textbf{例子}： - 换机油：5000 km（⭐）或 1
 年（⭐），\textbf{以车主手册为准} - 骑得少（2000 km/年，❓）：\textbf{1
 年（⭐）到了做保养} - 骑得多（10000 km/年，❓）：\textbf{5000
-km（⭐⭐）到了做保养}
+km（⭐）到了做保养}
 
 \subsection{15.3.2
 不同使用频率的保养策略}\label{ux4e0dux540cux4f7fux7528ux9891ux7387ux7684ux4fddux517bux7b56ux7565}
@@ -29380,7 +29568,7 @@ km（⭐⭐）到了做保养}
 
 \textbf{激烈驾驶} = \textbf{高转速、高负荷、高温}。
 
-\textbf{保养周期缩短}： - 机油：5000 km（⭐⭐；而不是 10000
+\textbf{保养周期缩短}： - 机油：5000 km（⭐；而不是 10000
 km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册为准） -
 火花塞：减半（❓；按材质和车主手册判断） - 链条：300-500 km
 上油（⭐；以车主手册为准） - 刹车片：1.5-2 倍缩短（❓；看磨损极限） -
@@ -29392,7 +29580,7 @@ km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册�
 
 \textbf{保养周期调整}： -
 \textbf{空气滤芯}：\textbf{每次骑完清洁}（❓；灰尘大；以车主手册为准） -
-\textbf{机油}：5000 km（⭐⭐；以车主手册为准） -
+\textbf{机油}：5000 km（⭐；以车主手册为准） -
 \textbf{链条}：每次骑完清洁+上油（⭐；以车主手册为准） -
 \textbf{轮胎}：1.5 倍缩短（❓；看胎面、胎龄和裂纹） - \textbf{轴承}：1.5
 倍缩短（❓；看旷量/进水）
@@ -29401,7 +29589,7 @@ km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册�
 
 \textbf{城市通勤} = \textbf{频繁启停、低速、温度变化大}。
 
-\textbf{保养周期调整}： - 机油：5000-7500 km（⭐⭐；以车主手册为准） -
+\textbf{保养周期调整}： - 机油：5000-7500 km（⭐；以车主手册为准） -
 \textbf{空气滤芯}：5000 km（❓；堵了影响最大；以车主手册为准） -
 \textbf{刹车}：检查更频繁（\textbf{堵车多}） - \textbf{电瓶}：2-3
 年（❓；频繁启动消耗大；以实际状态为准）
@@ -29430,10 +29618,10 @@ km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册�
 
 \textbf{高温} = \textbf{油液氧化快、橡胶老化快}。
 
-\textbf{保养调整}： - \textbf{机油}：5000 km（⭐⭐；以车主手册为准） -
+\textbf{保养调整}： - \textbf{机油}：5000 km（⭐；以车主手册为准） -
 \textbf{冷却液}：每年检查（⭐；高温易变质；以车主手册为准） -
-\textbf{轮胎}：高温下压力大，\textbf{冷胎压按上限} -
-\textbf{电瓶液}：蒸发快（铅酸电瓶）
+\textbf{轮胎}：冷胎一律按手册/标签规定值，不因高温自行提高；高负载值仅在载重时使用；热胎读数不作调整依据
+- \textbf{电瓶液}：蒸发快（铅酸电瓶）
 
 \subsection{15.4.7
 灰尘大的环境（工地/矿区）}\label{ux7070ux5c18ux5927ux7684ux73afux5883ux5de5ux5730ux77ffux533a}
@@ -29442,7 +29630,7 @@ km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册�
 
 \textbf{保养调整}： -
 \textbf{空气滤芯}：每次骑完清洁（❓；以车主手册为准） -
-\textbf{机油}：5000 km（⭐⭐；以车主手册为准） -
+\textbf{机油}：5000 km（⭐；以车主手册为准） -
 \textbf{链条}：每次骑完清洁（⭐；以车主手册为准）
 
 \section{15.5
@@ -29462,7 +29650,7 @@ km；以车主手册为准） - 空气滤芯：5000 km（❓；以车主手册�
 - 或\textbf{1-3 个月}（⭐；以车主手册为准）
 
 【来源】
-\textbf{数据来源等级}：⭐（行业经验；\textbf{你的车首次保养看说明书}）。
+\textbf{数据来源等级}：⭐（通用经验；\textbf{你的车首次保养看说明书}）。
 
 \subsection{15.5.3
 首次保养项目}\label{ux9996ux6b21ux4fddux517bux9879ux76ee}
@@ -29686,7 +29874,7 @@ AI 准 100 倍}。（⭐）
 ●●●}\label{ux4fddux517bux8bb0ux5f55ux7684ux91cdux8981ux6027}
 
 \textbf{为什么记录保养}： - 不漏项 -
-二手车保值（\textbf{保养记录完整的车多卖 10-20\%}） -
+二手车可能更保值（❓，无统计来源，受车况/地区/市场影响） -
 故障时容易查（\textbf{上次换什么}） - 质保有效
 
 \textbf{记录方式}： - 简单的：手写本子 - 进阶的：Excel 表格 -
@@ -29944,9 +30132,10 @@ km（❓）} 当固定值 \textbf{教训}：\textbf{链条} =
 \textbf{每周} & 洗车、检查轮胎花纹、检查漏油 & \textbf{30 分钟} \\
 \textbf{每月} & 全面目视检查、电瓶电压、链条调整 & \textbf{1-2 小时} \\
 \textbf{每季} & 紧螺丝、链条深度清洁、防锈 & \textbf{2-4 小时} \\
-\textbf{每半年} &
-油液\textbf{检查}（更换按车主手册周期）、火花塞、气门间隙：按手册（常见
-1-4 万 km） & \textbf{半天} \\
+\textbf{每半年} & 油液\textbf{检查}（更换按车主手册周期） &
+\textbf{半天} \\
+\textbf{按里程项（见 CH15）} & 气门间隙 10000-40000 km；火花塞按类型 1-6
+万 km & --- \\
 \textbf{每年} & 全车大保养、燃油滤清器、悬挂轴承、长期存放准备 &
 \textbf{半天-1 天} \\
 \textbf{冬季前/后} & 电瓶、冷却液、防冻 & \textbf{半天} \\
@@ -30177,11 +30366,11 @@ km（❓）} 当固定值 \textbf{教训}：\textbf{链条} =
 \begin{verbatim}
 1. 架起大撑
 2. 每 500-1000 km 或至少每月检查链条松紧（❓，以手册为准）
-3. 松后轴螺母（参照车主手册扭矩，通常 50-100 Nm；来源：⭐⭐）
+3. 松后轴螺母（参照车主手册/维修手册扭矩，通常 50-100 Nm；来源：⭐，以维修手册为准）
 4. 超出手册自由行程再调整；常见参考 20-35 mm，最终以车主手册为准（来源：⭐）
 5. 左右刻度只作初判
 6. 最终复核轮轴/后轮对中
-7. 拧紧后轴螺母（用扭矩扳手，按车主手册规定扭矩；来源：⭐⭐）
+7. 拧紧后轴螺母（用扭矩扳手，按车主手册/维修手册规定扭矩；来源：⭐，以维修手册为准）
 \end{verbatim}
 
 \begin{quote}
@@ -30211,7 +30400,8 @@ km（❓）} 当固定值 \textbf{教训}：\textbf{链条} =
 
 【经验】
 \textbf{老师傅经验}：\textbf{保养记录}是\textbf{老司机和新手的分水岭}。\textbf{老司机}一本记录册子能用
-10 年。\textbf{新车卖}的时候，\textbf{保养记录完整的车多卖 10-20\%}。
+10
+年。\textbf{新车卖}的时候，\textbf{可能更保值（❓，无统计来源，受车况/地区/市场影响）}。
 
 \section{16.4 季节性检查}\label{ux5b63ux8282ux6027ux68c0ux67e5}
 
@@ -30365,10 +30555,10 @@ km（❓）} 当固定值 \textbf{教训}：\textbf{链条} =
 ●●}\label{ux6bcfux534aux5e74ux68c0ux67e5ux6e05ux5355}
 
 \begin{verbatim}
-1. 气门间隙检查（按车主手册周期；来源：⭐）
-2. 油液检查（更换按车主手册周期；来源：⭐）
-3. 火花塞检查/更换（按车主手册周期；来源：⭐）
-4. 链条检查（含链轮磨损和紧点检查；深度清洁见每季项目；来源：⭐）
+1. 油液检查（更换按车主手册周期；来源：⭐）
+2. 链条检查（含链轮磨损和紧点检查；深度清洁见每季项目；来源：⭐）
+
+按里程项（见 CH15）：气门间隙 10000-40000 km；火花塞按类型 1-6 万 km
 \end{verbatim}
 
 \subsection{16.4.8 每年检查清单
@@ -30667,9 +30857,9 @@ km（❓）} 当固定值 \textbf{教训}：\textbf{链条} =
 \textbf{每周} & 洗车、轮胎花纹、漏油 & 30 分钟 \\
 \textbf{每月} & 全面目视、电瓶、链条调整 & 1-2 小时 \\
 \textbf{每季} & 紧螺丝、链条深度清洁、防锈 & 2-4 小时 \\
-\textbf{每半年} &
-油液\textbf{检查}（更换按车主手册周期）、火花塞、气门间隙：按手册（常见
-1-4 万 km） & 半天 \\
+\textbf{每半年} & 油液\textbf{检查}（更换按车主手册周期） & 半天 \\
+\textbf{按里程项（见 CH15）} & 气门间隙 10000-40000 km；火花塞按类型 1-6
+万 km & --- \\
 \textbf{每年} & 全车大保养、燃油滤清器、悬挂轴承、长期存放准备 & 半天-1
 天 \\
 \textbf{季节转换} & 春季全车检查、冬季防护 & 半天 \\
@@ -30996,7 +31186,8 @@ D4683、D4741、D5481 等 HTHS 测试框架）。
 \endlastfoot
 小排量（125-250cc） & 1.0-1.5 L \\
 中排量（300-650cc） & 2.0-3.5 L \\
-大排量（700+cc） & 3.5-5.0 L \\
+中大排量（700-800cc） & 2.0-3.5 L \\
+大排量（800cc+） & 3.0-5.5 L \\
 \end{longtable}
 }
 
@@ -31172,7 +31363,7 @@ HOAT（混合） & 产品配方/标准/厂家规格 & 混合配方，部分车�
 
 \subsection{17.3.3 冷却液浓度}\label{ux51b7ux5374ux6db2ux6d53ux5ea6-1}
 
-\textbf{标准 50\%}：50\% 乙二醇水溶液常压下沸点约 108-110°C，冰点约
+\textbf{标准 50\%}：50\% 乙二醇水溶液常压下沸点约 106-108°C，冰点约
 -35°C；加压冷却系统（约 1.0-1.1 bar）沸点可升至约
 120°C。沸点取决于常压/系统表压/产品配方，以上为典型值，具体看产品数据表和车主手册。
 
@@ -31640,8 +31831,8 @@ H：终传齿轮油粘度用错}\label{ux6848ux4f8b-hux7ec8ux4f20ux9f7fux8f6eux6
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-11}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{用错 JASO} =
-\textbf{离合打滑} 2. \textbf{用错 DOT} = \textbf{刹车失灵} 3.
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{用错 JASO}
+= \textbf{离合打滑} 2. \textbf{用错 DOT} = \textbf{刹车失灵} 3.
 \textbf{混用冷却液} = \textbf{化学反应} 4. \textbf{用便宜假油} =
 \textbf{发动机磨损} 5. \textbf{不按季节} = \textbf{难启动}
 
@@ -31876,7 +32067,7 @@ ECU Flash 调校 & ●●● & \textbf{必须送修} &
 CH11/CH16，以车主手册为准 - \textbf{链条}：松紧、润滑、左右对中，参 CH10
 - \textbf{火花塞间隙}：参 CH06，按车型手册确认 - \textbf{气门间隙}：参
 CH06，冷车用塞尺测 -
-\textbf{进气漏气}：怠速时少量喷化油器清洗剂/进气检漏剂，若转速变化，优先查接口和密封
+\textbf{进气漏气}：怠速时少量喷化油器清洗剂/进气检漏剂，若转速变化，优先查接口和密封；在发动机与排气冷却后进行，远离排气管/线束，通风、备灭火器；优先用专用检漏剂/烟雾检漏（易燃气雾剂，防火）
 - \textbf{电瓶电压}：12.6V 左右通常表示铅酸电瓶满电，参
 CH13；不同电瓶类型以手册为准 - \textbf{制动液}：液位、颜色、规格，参
 CH12
@@ -32629,8 +32820,7 @@ LED 大灯 & 亮度提升 & ●● & ✓ 推荐 & 200-1000 元 \\
 【来源】
 \textbf{性能收益数据说明}：性能收益数据多为\textbf{营销宣称}，\textbf{以同车型同工况实测为准}；以下只作典型经验（❓）：ECU
 Flash 5-15\%（取决于原厂 ECU 余量）；全段排气 + 高流量空滤 + ECU 配合
-5-15\%；卡钳升级
-10-30\%（取决于主缸/盘径匹配）；刹车片：改善脚感与热衰减（峰值力提升不保证）。这些数字\textbf{不}作为\textbf{确定收益}。来源：行业通用经验（⭐），具体车型实测优先（❓）。
+5-15\%；卡钳升级：改善脚感/散热/抗衰减；收益取决于主缸-盘径-刹车片-ABS-轮胎匹配，不做百分比承诺（⭐/❓）；刹车片：改善脚感与热衰减（峰值力提升不保证）。这些数字\textbf{不}作为\textbf{确定收益}。来源：行业通用经验（⭐），具体车型实测优先（❓）。
 
 \section{19.1
 改装前必看（强烈建议先读）●●●}\label{ux6539ux88c5ux524dux5fc5ux770bux5f3aux70c8ux5efaux8baeux5148ux8bfb}
@@ -32646,9 +32836,10 @@ Flash 5-15\%（取决于原厂 ECU 余量）；全段排气 + 高流量空滤 + 
 
 \textbf{真相 2}：\textbf{改装是''系统问题''}。
 
-\textbf{单点改装} = 浪费钱。 - 单独换空滤 → 1-3\%（几乎感觉不到） -
-单独换排气 → 2-5\%（几乎感觉不到） - 空滤 + 排气 + ECU →
-5-15\%（典型经验，❓；以同车型同工况实测为准）
+\textbf{单点改装} = 浪费钱。 - 单独换空滤 →
+视车型和匹配程度（❓，不承诺固定百分比；几乎感觉不到） - 单独换排气 →
+视车型和匹配程度（❓，不承诺固定百分比；几乎感觉不到） - 空滤 + 排气 +
+ECU → 5-15\%（典型经验，❓；以同车型同工况实测为准）
 
 \textbf{真相 3}：\textbf{改装有副作用}。
 
@@ -32893,9 +33084,7 @@ braided）主要\textbf{减少管路膨胀、改善手感反馈}；\textbf{不�
 
 \textbf{项目}：换多活塞卡钳（如 Brembo）。
 
-\textbf{真实效果}：\textbf{10-30\%
-刹车力提升}属于典型经验（❓），取决于主缸、盘径、刹车片、ABS
-和轮胎匹配；不要把卡钳单独当成确定收益。
+\textbf{真实效果}：改善脚感/散热/抗衰减；收益取决于主缸-盘径-刹车片-ABS-轮胎匹配，不做百分比承诺（⭐/❓）。
 
 \textbf{成本}：3000-15000 元。
 
@@ -33248,7 +33437,7 @@ Cage）●●}\label{ux9632ux6454ux67b6crash-cage}
 \item
   \textbf{噪音分贝}：排气噪音要看 ECE R41、国家标准或地方检测口径
 \item
-  \textbf{排放标准}：欧 III/IV/V/VI、国 III/IV/V
+  \textbf{排放标准}：欧 3/4/5/5+（按注册地与年款判断）、国 III/IV/V
   等标准要按车辆注册地和年款判断
 \item
   \textbf{检测口径}：路检、年检、事故定损和保险调查的判断标准可能不同
@@ -33449,7 +33638,7 @@ Cage）●●}\label{ux9632ux6454ux67b6crash-cage}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{滑动段排气}：2-5\%（心理安慰大于实际）
+  \textbf{滑动段排气}：收益有限（❓，不承诺固定百分比；心理安慰大于实际）
 \item
   \textbf{全段排气}：3-8\%（单独换）/ 5-15\%（配合
   ECU/空滤）；典型经验（❓），看具体车
@@ -33627,6 +33816,7 @@ CO2 化学检测验证。单一现象不能定论。
    - 1 个缸不工作 vs 多个缸不工作
 2. 检查进气漏气（化油器清洗剂喷接口）
    - 转速变化 = 漏气点
+   - 安全限定：在发动机与排气冷却后进行，远离排气管/线束，通风、备灭火器；优先用专用检漏剂/烟雾检漏（易燃气雾剂，防火）
 3. 检查燃油压力（电喷车）
 4. 检查节气门脏污
 5. 检查怠速阀
@@ -33767,7 +33957,7 @@ CO2 化学检测验证。单一现象不能定论。
 \subsection{20.5.2 诊断过程}\label{ux8bcaux65adux8fc7ux7a0b-4}
 
 \begin{verbatim}
-1. 检查刹车油液位（低 = 漏）
+1. 检查刹车油液位（低 → 先看刹车片厚度与渗漏痕迹；刹车片磨损活塞外伸会使液位自然下降，确认渗漏才判漏油）
 2. 检查是否有漏油痕迹
 3. 捏手柄听/感受（"气泡感"只是线索，不能单独定论）
 4. 检查刹车片厚度
@@ -33855,7 +34045,7 @@ ADV）用规定气泵；预载用于调整初始静态下沉，不是改变弹�
 1. 检查链条松紧/自由行程（以车主维修手册为准；常见参考 20-35 mm，视车型）
 2. 检查链条油（干燥）
 3. 检查链轮齿形（变尖）
-4. 测量链条拉伸/磨损（按手册规定节数；常见按 20 节测量，超过原始长度约 1.5-2% 可判报废（ANSI 滚子链口径；部分密封链厂家以 1% 作为预警线，以链条厂家手册为准），❓）
+4. 测量链条拉伸/磨损（按手册规定节数；常见按 20 节测量；密封链约 1% 伸长即到磨损极限；非密封链约 2%（DID 口径）；JIS 3%；以链条厂家手册为准，❓）
 \end{verbatim}
 
 【来源 ⭐】
@@ -34036,8 +34226,8 @@ OK 的电瓶冬天可能不行}。 【来源 ⭐】 低温电瓶性能需按电�
 \section{20.11 【经验】
 老师傅经验沉淀（应写尽写）}\label{ux7ecfux9a8c-ux8001ux5e08ux5085ux7ecfux9a8cux6c89ux6dc0ux5e94ux5199ux5c3dux5199-14}
 
-\subsection{20.11.1 新手必记的 8 个故障真相
-●●●}\label{ux65b0ux624bux5fc5ux8bb0ux7684-8-ux4e2aux6545ux969cux771fux76f8}
+\subsection{20.11.1 新手必记的 8 个故障真相 ●●●（⭐ 教学化归纳/❓
+待验证）}\label{ux65b0ux624bux5fc5ux8bb0ux7684-8-ux4e2aux6545ux969cux771fux76f8-ux6559ux5b66ux5316ux5f52ux7eb3-ux5f85ux9a8cux8bc1}
 
 \textbf{真相 1}：\textbf{故障的''简单解释''通常是错的}。 -
 启动困难不一定是火花塞------可能是电瓶、油泵、ECU。 -
@@ -34067,8 +34257,8 @@ OK 的电瓶冬天可能不行}。 【来源 ⭐】 低温电瓶性能需按电�
 \textbf{真相 8}：\textbf{不知道原因别瞎修}。 - \textbf{瞎修} =
 \textbf{小病变大病}。 - \textbf{查清楚再动手}。
 
-\subsection{20.11.2 老师傅不外传的 8 个诀窍
-●●●}\label{ux8001ux5e08ux5085ux4e0dux5916ux4f20ux7684-8-ux4e2aux8bc0ux7a8d-12}
+\subsection{20.11.2 老师傅不外传的 8 个诀窍 ●●●（⭐ 教学化归纳/❓
+待验证）}\label{ux8001ux5e08ux5085ux4e0dux5916ux4f20ux7684-8-ux4e2aux8bc0ux7a8d-ux6559ux5b66ux5316ux5f52ux7eb3-ux5f85ux9a8cux8bc1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -34113,10 +34303,10 @@ OK 的电瓶冬天可能不行}。 【来源 ⭐】 低温电瓶性能需按电�
 = \textbf{维修错误} = \textbf{浪费时间+金钱}。\textbf{花 1 小时诊断} =
 \textbf{省 3 小时维修}。
 
-\subsection{20.11.4
-不同车型的常见故障}\label{ux4e0dux540cux8f66ux578bux7684ux5e38ux89c1ux6545ux969c}
+\subsection{20.11.4 不同车型的常见故障（⭐ 教学化归纳/❓
+待验证）}\label{ux4e0dux540cux8f66ux578bux7684ux5e38ux89c1ux6545ux969c-ux6559ux5b66ux5316ux5f52ux7eb3-ux5f85ux9a8cux8bc1}
 
-\textbf{老师傅经验}：
+\textbf{老师傅经验}（⭐ 教学化归纳/❓ 待验证）：
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}ll@{}}
@@ -34306,7 +34496,7 @@ CH04。❓
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-12}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{乱猜} =
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{乱猜} =
 \textbf{换了 N 个零件 = 修不好} 2. \textbf{不读故障码} = \textbf{ECU
 自带诊断} 3. \textbf{不查传感器} =
 \textbf{跳过传感器直接换件是常见误诊来源} 4. \textbf{不看数据} =
@@ -34358,10 +34548,9 @@ CH04。❓
 论坛/技师经验整理}------\textbf{所有具体车型故障诊断}未经过厂家官方实时验证，统一按
 \textbf{❓ 教学化整理，未逐案验证到原帖/原案例；车型仅作场景示例} 处理。
 
-\textbf{已用 ⭐/❓ 标注每个案例/经验的来源等级；● 表示重要度}： - ⭐⭐⭐
-= 通用故障诊断原理 - ⭐⭐ = 行业共识 - ⭐ =
-\textbf{具体案例}（\textbf{AI
-训练数据，未经验证}------\textbf{实际诊断以说明书和师傅为准}）
+\textbf{已尽量标注来源等级；● 表示重要度}： - ⭐⭐⭐ =
+物理/化学基本定律、教科书标准 - ⭐⭐ = 行业标准、权威第三方规范 - ⭐ =
+通用经验/AI 训练数据，未实时验证（实际诊断以说明书和师傅为准）
 
 \textbf{用车前}：用说明书、厂家官网、Haynes/Clymer
 手册至少\textbf{两个独立来源}核实关键故障诊断。\textbf{本章不替代官方资料，是入门案例库}。
@@ -34378,8 +34567,7 @@ CH04。❓
 雅马哈常见故障？看 21.2 - 川崎常见故障？看 21.3 - 铃木常见故障？看 21.4
 - 想看教学化案例？看 21.7
 
-\textbf{一句话定位本章}：日本四大厂（本田、雅马哈、川崎、铃木）占全球摩托车销量约
-35-45\%（口径不同）。\textbf{这一章帮你认识自己的车}------\textbf{常见故障、保养要点、典型参数}。\textbf{这一章是工具书}------\textbf{车主自查第一站}。
+\textbf{一句话定位本章}：日本四大厂（本田、雅马哈、川崎、铃木）合计占全球摩托车销量相当大比例（❓，统计口径差异大，具体以行业销量数据为准）。\textbf{这一章帮你认识自己的车}------\textbf{常见故障、保养要点、典型参数}。\textbf{这一章是工具书}------\textbf{车主自查第一站}。
 \end{quote}
 
 \section{21.0 阅读说明}\label{ux9605ux8bfbux8bf4ux660e-20}
@@ -34518,7 +34706,8 @@ CH04。❓
 ❓}\label{ux672cux7530ux4fddux517bux8981ux70b9}
 
 \textbf{机油}： - \textbf{JASO MA/MA2}（湿式离合器） - 粘度：10W-40 主流
-- 容量因车型不同（CBR1000RR 约 3.5L，CB500F 约 2.5L）
+- 容量因车型不同（CBR1000RR 约 3.5L；CB500F 约
+2.5-2.7L，含/不含滤芯口径不同，以车主手册为准）
 
 \textbf{火花塞}： - \textbf{NGK} 是本田常用（\textbf{SILMAR9C9} 等型号）
 - 间隙按说明书
@@ -34745,7 +34934,9 @@ Ninja H2/H2R 等机械增压车型）
 
 \textbf{专用工具}： - TDC 工具 - 飞轮固定
 
-\textbf{老师傅经验}： - \textbf{铃木配件便宜}------\textbf{性价比最高} -
+\textbf{老师傅经验}： -
+\textbf{铃木配件相对便宜}------\textbf{性价比取向（⭐
+经验口碑，非统计结论）} -
 \textbf{铃木说明书简单}------\textbf{信息不全}------\textbf{要靠
 Haynes/Clymer 补}
 
@@ -34850,8 +35041,7 @@ Haynes/Clymer 补}
 
 \textbf{2. 详细说明书}
 
-\textbf{日本车说明书}比欧洲车\textbf{详细}------\textbf{重要数据}（扭矩、容量、规格）\textbf{都写了}。\textbf{仔细看说明书}------\textbf{能解决
-80\% 的问题}。
+\textbf{日本车说明书}比欧洲车\textbf{详细}------\textbf{重要数据}（扭矩、容量、规格）\textbf{都写了}。\textbf{仔细看说明书}------\textbf{能解决大部分问题}。
 
 \textbf{3. 大品牌配件通用}
 
@@ -34869,8 +35059,8 @@ Haynes/Clymer 补}
 
 \textbf{本田} = 可靠性和配件口碑强，热门车型维修资源多。 \textbf{雅马哈}
 = \textbf{运动取向车型多}------链条张力仍按车主手册和实际工况维护。
-\textbf{川崎} = \textbf{最性能}------\textbf{运动车最强}。 \textbf{铃木}
-= \textbf{最便宜}------\textbf{性价比高}。
+\textbf{川崎} = 以运动性能见长（⭐ 经验口碑，非统计结论）。
+\textbf{铃木} = 价格相对亲民、性价比取向（⭐ 经验口碑，非统计结论）。
 
 \textbf{选哪个？}------\textbf{看你骑什么}。 \textbf{通勤} →
 \textbf{本田} \textbf{跑山} → \textbf{雅马哈} \textbf{赛道} →
@@ -35071,7 +35261,7 @@ Haynes/Clymer 补}
 \subsection{这些案例的共同教训
 ●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-13}
 
-\textbf{新手最常踩的 5 个大坑}（基于论坛统计）： 1. \textbf{不按时保养}
+\textbf{新手最常踩的 5 个大坑}（❓ 教学化归纳）： 1. \textbf{不按时保养}
 = \textbf{链条/皮带早坏} 2. \textbf{报码不读码/不按手册初始化} =
 \textbf{误判故障} 3. \textbf{ADV 不清散热} = \textbf{夏天高温} 4.
 \textbf{高里程渗漏不排查来源} = \textbf{小漏拖成大修} 5.
@@ -35089,13 +35279,15 @@ Haynes/Clymer 补}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{本田} = \textbf{最耐用}（新手第一辆首选）
+  \textbf{本田} = 以耐用口碑见长（⭐
+  经验口碑，非统计结论）（新手可考虑）
 \item
-  \textbf{雅马哈} = \textbf{最运动}（MT 系列）
+  \textbf{雅马哈} = 运动取向车型多（⭐ 经验口碑，非统计结论）（MT 系列）
 \item
-  \textbf{川崎} = \textbf{最性能}（运动车首选）
+  \textbf{川崎} = 以运动性能见长（⭐
+  经验口碑，非统计结论）（运动车取向）
 \item
-  \textbf{铃木} = \textbf{最便宜}（性价比首选）
+  \textbf{铃木} = 价格相对亲民（⭐ 经验口碑，非统计结论）（性价比取向）
 \end{enumerate}
 
 \subsection{常见常见关注点}\label{ux5e38ux89c1ux5e38ux89c1ux5173ux6ce8ux70b9}
@@ -35156,11 +35348,13 @@ Guzzi）}\label{ux7b2c22ux7ae0-ux6b27ux6d32ux54c1ux724cux51efux65cbux5b9dux9a6cu
 \item
   \textbf{杜卡迪}（22.3）：极致性能
 \item
-  \textbf{KTM}（22.4）：越野之王
+  \textbf{KTM}（22.4）：以越野/ADV 见长（⭐）
 \item
   \textbf{其他欧系}（22.5）：Aprilia、Moto Guzzi
 \item
   \textbf{经验沉淀}（22.6）：欧洲车维修经验
+\item
+  \textbf{网络实战案例}（22.7）
 \end{itemize}
 
 \subsection{22.0.2 符号说明}\label{ux7b26ux53f7ux8bf4ux660e-16}
@@ -35179,9 +35373,10 @@ Guzzi）}\label{ux7b2c22ux7ae0-ux6b27ux6d32ux54c1ux724cux51efux65cbux5b9dux9a6cu
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）/
-  ❓（教学化整理、待验证或无具体出处）
+  【来源】
+  \textbf{数据来源等级}：⭐⭐⭐（物理/化学基本定律、教科书标准）/
+  ⭐⭐（行业标准、权威第三方规范）/ ⭐（通用经验/AI
+  训练数据，\textbf{未实时验证}）/ ❓（存疑/待验证）
 \end{itemize}
 
 \subsection{22.0.3 速查表（30
@@ -35214,7 +35409,7 @@ Guzzi）}\label{ux7b2c22ux7ae0-ux6b27ux6d32ux54c1ux724cux51efux65cbux5b9dux9a6cu
 \textbf{宝马}（BMW） & 性能均衡；R/K 等部分车型轴传动，F/G/S
 等不少车型链条，按车架号/手册确认；ShiftCam & ●●●● & 高 \\
 \textbf{杜卡迪}（Ducati） & L 型双缸 / V4、极致性能 & ●●●●● & 很高 \\
-\textbf{KTM} & 越野/ADV 之王 & ●●● & 中高 \\
+\textbf{KTM} & 以越野/ADV 见长（⭐） & ●●● & 中高 \\
 \textbf{Aprilia} & 运动车、RSV4 工厂 & ●●●● & 中高 \\
 \textbf{Moto Guzzi} & 横置 V 双、个性 & ●●●●● & 高 \\
 \end{longtable}
@@ -35281,8 +35476,8 @@ Tiger 1050/1200 / Speed Triple 1050）= 三缸（来源：⭐，按车型手册�
 \textbf{气门间隙}： - 凯旋不同车型/年份差异大（常见 10000-40000 km
 量级），按车主手册（来源：⭐）
 
-\textbf{油门响应}： - \textbf{每 1-2 万 km 清洗节气门} + \textbf{重置
-ECU}
+\textbf{油门响应}： -
+按症状（怠速不稳/油耗异常）和车主手册判断是否清洗；清洗后按手册规定的条件做初始化/学习（❓）
 
 \subsection{22.1.5
 凯旋维修工具}\label{ux51efux65cbux7ef4ux4feeux5de5ux5177}
@@ -35336,7 +35531,7 @@ ECU}
 \bottomrule\noalign{}
 \endlastfoot
 \textbf{R nineT} & 复古 & R nineT、R nineT Scrambler \\
-\textbf{R 1250 GS} & ADV & R 1250 GS（\textbf{ADV 之王}） \\
+\textbf{R 1250 GS} & ADV & R 1250 GS（以 ADV 见长，⭐） \\
 \textbf{S 1000 RR} & 运动 & S 1000 RR \\
 \textbf{F 750/850 GS} & 中量 ADV & F 750 GS、F 850 GS \\
 \textbf{K 1600} & 豪华旅行 & K 1600 GTL \\
@@ -35561,8 +35756,9 @@ Desmo 气门调整 & \textbf{送修为主} & 2000-4000 元（\textbf{有工具}�
 
 \textbf{KTM 精神}：``\textbf{Ready to Race}''。
 
-\textbf{核心特点}： - \textbf{越野之王}（达喀尔常年冠军） - \textbf{LC4
-引擎} = KTM 大单缸（690/640 等）；\textbf{LC8c} =
+\textbf{核心特点}： -
+\textbf{以越野见长（⭐）}（达喀尔等赛事成绩以官方记录为准，❓） -
+\textbf{LC4 引擎} = KTM 大单缸（690/640 等）；\textbf{LC8c} =
 并列双缸（790/890）；不同平台/不同型号（来源：⭐） - \textbf{LC8
 引擎}（V 型双缸） - \textbf{Duke 系列}（街车） - \textbf{Adventure
 系列}（ADV）
@@ -35755,8 +35951,7 @@ CH10。
 \end{quote}
 
 【经验】 \textbf{老师傅经验}：\textbf{欧洲车} =
-\textbf{性能和个性的代价}------\textbf{维修比日本车贵 2-3
-倍}------\textbf{但驾驶乐趣也高 2-3 倍}。
+\textbf{性能和个性的代价}------\textbf{维修通常更贵，幅度按车型/地区实际报价对比（⭐/❓）}------\textbf{驾驶乐趣更强（定性描述，因人而异）}。
 
 \subsection{22.6.3 欧洲车维修建议
 ●}\label{ux6b27ux6d32ux8f66ux7ef4ux4feeux5efaux8bae}
@@ -35908,9 +36103,9 @@ Haynes/Clymer
 链条松}\label{ux6848ux4f8b-bux675cux5361ux8fea-monster-ux94feux6761ux677e}
 
 \textbf{症状}：链条松快 \textbf{踩坑过程}：以为是质量
-\textbf{可能原因}：\textbf{杜卡迪链条}------按垂度/手感检查调整，不要套固定周期，以车主手册为准
+\textbf{可能原因}：链条张紧不当、润滑不足或磨损------按垂度/手感检查调整，不要套固定周期，以车主手册为准
 \textbf{处理建议}：\textbf{按垂度/手感检查调整，不要套固定周期，以车主手册为准}
-\textbf{教训}：\textbf{杜卡迪} = \textbf{链条频繁调}
+\textbf{教训}：链条按垂度/磨损和车主手册检查，不按品牌设固定频率
 
 \subsection{案例 C：凯旋 Tiger 900
 充电故障}\label{ux6848ux4f8b-cux51efux65cb-tiger-900-ux5145ux7535ux6545ux969c}
@@ -35975,9 +36170,8 @@ Haynes/Clymer
 
 \textbf{症状}：ADV 长距离烂路/尘土路后高温
 \textbf{踩坑过程}：以为是节温器 \textbf{可能原因}：\textbf{散热片堵}
-\textbf{处理建议}：\textbf{清散热片} \textbf{教训}：Panigale
-是街道/赛道跑车，不适合 ADV 越野场景；ADV 场景应使用 Multistrada/V4
-Granturismo 案例（来源：⭐）。
+\textbf{处理建议}：\textbf{清散热片} \textbf{教训}：Multistrada 是 ADV
+车型，长距离烂路/尘土路后要重点清洁散热片并检查冷却系统（来源：⭐）。
 
 \subsection{这些案例的共同教训
 ●●}\label{ux8fd9ux4e9bux6848ux4f8bux7684ux5171ux540cux6559ux8bad-14}
@@ -35985,10 +36179,11 @@ Granturismo 案例（来源：⭐）。
 \textbf{新手最常踩的 5 个大坑}（❓
 教学化整理，未逐案验证；``论坛统计''无具体出处，车型仅作场景示例）： 1.
 \textbf{不查钥匙电池} = \textbf{欧系启动} = \textbf{简单 5 元} 2.
-\textbf{不按时调链条} = \textbf{杜卡迪链条} =
-\textbf{按垂度/手感检查调整，以车主手册为准} 3. \textbf{不测电压} =
-\textbf{调压器} = \textbf{欧系常见} 4. \textbf{不清喷油嘴} =
-\textbf{欧系电喷} 5. \textbf{不配钥匙} = \textbf{欧系钥匙贵}
+\textbf{不按时检查链条} =
+\textbf{链条按垂度/磨损和车主手册检查，不按品牌设固定频率} 3.
+\textbf{不测电压} = \textbf{调压器} = \textbf{欧系常见} 4.
+\textbf{不清喷油嘴} = \textbf{欧系电喷} 5. \textbf{不配钥匙} =
+\textbf{欧系钥匙贵}
 
 【经验】 \textbf{老师傅总结}：\textbf{欧系车} =
 \textbf{性能强+维修贵}------\textbf{修欧系} =
@@ -36011,7 +36206,7 @@ Granturismo 案例（来源：⭐）。
 \item
   \textbf{杜卡迪} = 极致性能，\textbf{Desmo 气门命门}
 \item
-  \textbf{KTM} = 越野之王，\textbf{空气滤芯命门}
+  \textbf{KTM} = 以越野/ADV 见长（⭐），\textbf{空气滤芯命门}
 \end{enumerate}
 
 \subsection{欧洲车 vs
@@ -36042,8 +36237,9 @@ Granturismo 案例（来源：⭐）。
 \subsection{重要提醒}\label{ux91cdux8981ux63d0ux9192-16}
 
 \begin{quote}
-\textbf{欧洲车} = \textbf{性能和个性的代价}------\textbf{维修比日本车贵
-2-3 倍}。 \textbf{加入车友群}------\textbf{知道最近的修车店}。
+\textbf{欧洲车} =
+\textbf{性能和个性的代价}------\textbf{维修通常更贵，幅度按车型/地区实际报价对比（⭐/❓）}。
+\textbf{加入车友群}------\textbf{知道最近的修车店}。
 \textbf{小保养可自己}------\textbf{大保养送修}。
 \end{quote}
 
@@ -36069,7 +36265,7 @@ Granturismo 案例（来源：⭐）。
 \begin{itemize}
 \tightlist
 \item
-  \textbf{哈雷}（23.1）：美式 V 双之王
+  \textbf{哈雷}（23.1）：美式 V 双代表（⭐）
 \item
   \textbf{印第安}（23.2）：美式巡航
 \item
@@ -36078,6 +36274,8 @@ Granturismo 案例（来源：⭐）。
   \textbf{对比}（23.4）：美洲车 vs 欧日
 \item
   \textbf{经验沉淀}（23.5）：美洲车维修经验
+\item
+  \textbf{网络实战案例}（23.6）
 \end{itemize}
 
 \subsection{23.0.2 符号说明}\label{ux7b26ux53f7ux8bf4ux660e-17}
@@ -36135,9 +36333,9 @@ Granturismo 案例（来源：⭐）。
 \textbf{核心特点}： - \textbf{V 型双缸}（夹角因平台而异：Milwaukee-Eight
 107/114/117/121 = 45° V 双；Twin Cam 88/96/103/110 = 45°；Revolution
 Max（Sportster S/Pan America 等）为 60°；按具体车型手册核对 ⭐） -
-\textbf{风冷+油冷}（大部分车型） - \textbf{美式巡航}（Cruiser 之王） -
-\textbf{Sportster}（入门系列） - \textbf{Softail}（硬尾，无可见后避震）
-- \textbf{Touring}（旅行系列）
+\textbf{风冷+油冷}（大部分车型） - \textbf{美式巡航}（以美式 Cruiser
+见长，⭐） - \textbf{Sportster}（入门系列） -
+\textbf{Softail}（硬尾，无可见后避震） - \textbf{Touring}（旅行系列）
 
 \subsection{23.1.2
 哈雷主要车型}\label{ux54c8ux96f7ux4e3bux8981ux8f66ux578b}
@@ -36294,7 +36492,8 @@ Sport/街车平台，链条终传等维护按 FTR 车主手册判断（⭐）。
 或厂家规范；分腔车型（哈雷/印第安部分）发动机油、primary（主传动）油、变速箱油不可混用（⭐）。
 - 粘度：部分印第安巡航车型常见 20W-50；FTR、Scout、PowerPlus
 等不能套用，按车主手册、环境温度、API/JASO 和厂家规范选择（⭐）。 -
-容量：Thunder Stroke 约 5.5L（\textbf{很大}，❓ 以车主手册为准）
+容量：Thunder Stroke 约 5.5 qt（≈5.2L，❓
+请核对车主手册单位；含/不含滤芯口径以手册为准）
 
 \textbf{气门/配气机构}： - 印第安 Thunder Stroke/PowerPlus/FTR/Scout
 的配气结构和检查周期按具体发动机维修手册判断，不能把哈雷或日系机械挺柱流程直接套用（⭐⭐）。
@@ -36304,8 +36503,7 @@ Sport/街车平台，链条终传等维护按 FTR 车主手册判断（⭐）。
 \subsection{23.2.5
 印第安维修成本}\label{ux5370ux7b2cux5b89ux7ef4ux4feeux6210ux672c}
 
-\textbf{印第安}和\textbf{哈雷维修成本接近}------\textbf{比日本车贵 2-3
-倍}。
+\textbf{印第安}和\textbf{哈雷维修成本接近}------\textbf{通常比日本车更贵，幅度按车型/地区实际报价对比（⭐/❓）}。
 
 \section{23.3 其他美洲品牌}\label{ux5176ux4ed6ux7f8eux6d32ux54c1ux724c}
 
@@ -36323,8 +36521,9 @@ Sport/街车平台，链条终传等维护按 FTR 车主手册判断（⭐）。
 
 \textbf{背景}：美国电动摩托品牌。
 
-\textbf{特点}： - 纯电动 - \textbf{没有发动机、离合器、油液} -
-维护成本低
+\textbf{特点}： - 纯电动 -
+\textbf{没有发动机机油/变速箱油/火花塞/气门}（仍有刹车油、减震油等，按手册维护）
+- 维护成本低
 
 \textbf{维修}： - 电池衰减（\textbf{主要问题}） - 控制器 - 充电器
 
@@ -36529,13 +36728,12 @@ Nm 哈雷常用） - 液压挺柱/推杆/凸轮链条张紧器相关专用工具
 - Milwaukee-Eight 专用工具
 
 【费用】
-\textbf{省钱贴士}：\textbf{哈雷/印第安配件比日本车贵}------\textbf{加入车友群}------\textbf{团购}------\textbf{能省
-10-30\%}。
+\textbf{省钱贴士}：\textbf{哈雷/印第安配件比日本车贵}------\textbf{加入车友群}------\textbf{团购}------\textbf{可能省一些，幅度看渠道（⭐/❓）}。
 
 \subsection{23.5.7 美洲车与改装
 ●●}\label{ux7f8eux6d32ux8f66ux4e0eux6539ux88c5}
 
-\textbf{美洲车是''改装之王''}------\textbf{改装文化极深}：
+\textbf{美洲车改装文化极深（⭐ 经验口碑，非统计结论）}：
 
 \textbf{常见改装}： - 排气管（\textbf{Screamin' Eagle}
 是哈雷官方改装品牌） - 空气滤芯 - ECU（\textbf{Screamin' Eagle} 也有） -
@@ -36737,8 +36935,9 @@ Softail/Dyna/Touring 等常见）；Pan America 等 ADV
 \subsection{重要提醒}\label{ux91cdux8981ux63d0ux9192-17}
 
 \begin{quote}
-\textbf{美洲车} = \textbf{个性文化的代价}------\textbf{维修比日本车贵
-2-3 倍}。 \textbf{Twin Cam/Milwaukee-Eight 液压挺柱} =
+\textbf{美洲车} =
+\textbf{个性文化的代价}------\textbf{维修通常更贵，幅度按车型/地区实际报价对比（⭐/❓）}。
+\textbf{Twin Cam/Milwaukee-Eight 液压挺柱} =
 \textbf{按维修手册检查}------不要套用传统塞尺调气门。 \textbf{加入
 H.O.G.} 或车友会------\textbf{美洲车主文化}。
 \end{quote}
@@ -36841,7 +37040,7 @@ H.O.G.} 或车友会------\textbf{美洲车主文化}。
 \textbf{力帆}（Lifan） & 老品牌、性价比 & 低 & KPS150、KP350 \\
 \textbf{大运}（Dayun） & 独立国产厂 & 低 & 通勤/巡航系列 \\
 \textbf{大阳}（Dayang） & 另一家国产厂，踏板为主 & 低 & 踏板系列 \\
-\textbf{银钢}（Yinjiang） & 小排量为主 & 低 & 小排量系列 \\
+\textbf{银钢}（Yingang） & 小排量为主 & 低 & 小排量系列 \\
 \textbf{升仕}（Zontes） & 新势力、性价比高 & 中低 & 350GK、310M \\
 \end{longtable}
 }
@@ -37082,7 +37281,7 @@ Haynes/Clymer
 \endlastfoot
 \textbf{RC 401 / RK600} & 运动 / 街车 & RC 401、RK600 \\
 \textbf{RZ3S} & 街车 & RZ3S \\
-\textbf{RX 401} & 复古（❓ 定位待核实，以官方车型页为准） & RX 401 \\
+\textbf{RX 401} & ADV/休旅（❓，以官方车型页为准） & RX 401 \\
 \textbf{RA 401 / RA600} & ADV / 巡航（❓ 定位待核实；24.7.9 节记''RA600
 偏巡航''，以官方车型页为准） & RA 401、RA600 \\
 \end{longtable}
@@ -37163,7 +37362,7 @@ Dayun 写成大阳。
 【来源】
 \textbf{数据来源等级}：⭐（品牌中英文名称需以厂家官网和车辆铭牌复核）。
 
-\subsection{24.6.3 银钢（Yinjiang）}\label{ux94f6ux94a2yinjiang}
+\subsection{24.6.3 银钢（Yingang）}\label{ux94f6ux94a2yingang}
 
 \textbf{特点}：小排量为主、代步车。
 
@@ -37224,7 +37423,7 @@ Dayun 写成大阳。
 万+}：日欧品牌或国产中大排------ 可靠性、配置、保值和维修便利性逐项比较
 
 \textbf{新手第一辆推荐}： 1. \textbf{五羊本田
-190}（\textbf{最便宜的合资}） 2. \textbf{春风
+190}（价格相对亲民的合资，❓ 以实际售价对比为准） 2. \textbf{春风
 300SR}（\textbf{性价比运动车}） 3. \textbf{钱江闪
 300}（\textbf{性价比街车}） 4. \textbf{升仕
 350GK}（\textbf{性价比复古}）
@@ -37591,9 +37790,8 @@ ABS 模块故障码都需要重点检查。 \textbf{处理建议}（参 CH12.7 A
 
 \textbf{症状}：充电灯亮 \textbf{踩坑过程}：以为是发电机
 \textbf{可能原因}：电瓶老化、接地不良、插头氧化、定子输出异常或整流调压器故障。
-\textbf{处理建议}：充电相关参 CH13
-13.11（电工学基础扩展册，具体章节按车型查）；电气总览见
-13.2.5，充电系统诊断见 13.5.3。按手册测怠速和 3000 rpm
+\textbf{处理建议}：充电系统见 CH13 的 13.2（案例见
+13.8.2）。按手册测怠速和 3000 rpm
 充电电压、定子交流输出和插头压降，再决定是否更换部件。
 \textbf{教训}：充电故障必须实测电压，不能直接归因于某类品牌调压器。
 
@@ -37602,8 +37800,8 @@ ABS 模块故障码都需要重点检查。 \textbf{处理建议}（参 CH12.7 A
 
 \textbf{症状}：ADV 链条断 \textbf{踩坑过程}：以为是链条质量
 \textbf{可能原因}：越野冲击、润滑不足、张紧过紧/过松、链轮磨耗、装配或配件来源都可能相关。
-\textbf{处理建议}（参 CH10 10.X + A01 链条速查表）： 1.
-\textbf{张紧度}：按手册测最紧点，不能只在任意位置估算。 2.
+\textbf{处理建议}（参 CH10 10.2 链条检查/调整小节 + A01 链条速查表）：
+1. \textbf{张紧度}：按手册测最紧点，不能只在任意位置估算。 2.
 \textbf{链轮磨耗}：检查齿形、偏磨和跳齿痕迹。 3.
 \textbf{后轮定位}：核对左右刻度和车轮对中状态。 4.
 \textbf{润滑记录}：确认润滑周期、油品和清洁方式。 5.
@@ -37745,8 +37943,10 @@ Haynes/Clymer 手册交叉核实关键数据。
 \item
   【经验】 老师傅经验（本章独有的沉淀块）
 \item
-  【来源】 \textbf{数据来源等级}：⭐⭐⭐（通用原理）/
-  ⭐⭐（权威第三方通用规范）/ ⭐（AI 训练数据，\textbf{未实时验证}）
+  【来源】
+  \textbf{数据来源等级}：⭐⭐⭐（物理/化学基本定律、教科书标准）/
+  ⭐⭐（行业标准、权威第三方规范）/ ⭐（通用经验/AI
+  训练数据，\textbf{未实时验证}）/ ❓（存疑/待验证，以车主手册为准）
 \end{itemize}
 
 \subsection{25.0.3 速查表（30
@@ -38194,10 +38394,13 @@ CH11，来源：⭐）
 \textbf{SYM（三阳）} & DRG、Fiddle \\
 \textbf{比亚乔} & Beverly、Liberty \\
 \textbf{Vespa} & Primavera、Sprint \\
-\textbf{九号} & E300P \\
-\textbf{小牛} & N1S、U 系列 \\
 \end{longtable}
 }
+
+\begin{quote}
+九号 E300P、小牛 N1S/U 系列为电动踏板，已列于 25.1.2；维护见
+25.1，无机油/火花塞/气门/CVT 皮带，勿套用本节燃油踏板保养项。
+\end{quote}
 
 \subsection{25.6.8 踏板车的核心组件
 ●●●}\label{ux8e0fux677fux8f66ux7684ux6838ux5fc3ux7ec4ux4ef6}
@@ -38802,9 +39005,10 @@ ADV/旅行车 & 0.8-1.0 mm；\textbf{以车主手册为准} &
 链条自由行程 & 20-35 mm；\textbf{以车主手册为准} &
 后轮着地或按手册规定支撑，在上下链条中点上下推拉测总位移 &
 车型、摇臂角度和载荷会改变标准 & ⭐ \\
-链条松紧检查 & 500-1000 km；\textbf{以车主手册为准} &
+链条松紧检查 & 500-1000 km 或至少每月；\textbf{以车主手册为准} &
 找到最紧点再测，不能只测一个位置 & 雨天、泥地、长途后加查 & ⭐ \\
-链条调整 & 1000-3000 km 检查并按需调整；\textbf{以车主手册为准} &
+链条调整 & 检查松紧 500-1000 km
+或至少每月；超自由行程再调整；\textbf{以车主手册为准} &
 左右调整刻度只能初判，最后看轮轴对中 & 调完必须复查自由行程和后轴扭矩 &
 ⭐ \\
 链条/链轮更换 & 与 CH15 一致：30000-50000
@@ -39057,8 +39261,14 @@ M12 以上 & 12mm+ & ❓；\textbf{必须按车主手册/维修手册} &
 \endlastfoot
 \textbf{气门室盖} & 8-12 Nm；\textbf{以车主手册为准} &
 小螺丝易滑牙，按顺序分次拧 & ⭐ \\
-\textbf{火花塞 M10/M12/M14} & 8-25 Nm；\textbf{以车主手册/NGK
-或火花塞厂家资料为准} & 新垫圈、旧垫圈、锥座/平座不同 & ⭐⭐ \\
+火花塞 M10 平座 & 10-12 Nm；以车主手册/NGK 为准 & 铝缸盖参考值 &
+⭐⭐/❓ \\
+火花塞 M12 平座 & 15-20 Nm；以车主手册/NGK 为准 & 铝缸盖参考值 &
+⭐⭐/❓ \\
+火花塞 14mm 平座 & 25-30 Nm；以车主手册/NGK 为准 & 铝缸盖参考值 &
+⭐⭐/❓ \\
+火花塞 18mm 平座 & 35-40 Nm；以车主手册/NGK 为准 & 铝缸盖参考值 &
+⭐⭐/❓ \\
 \textbf{机油放油螺丝} & 20-30 Nm；\textbf{以车主手册为准} &
 铝油底壳易滑牙，垫片状态影响密封 & ⭐ \\
 \textbf{链条调整器} & 10-15 Nm；\textbf{以车主手册为准} &
@@ -39073,6 +39283,8 @@ M12 以上 & 12mm+ & ❓；\textbf{必须按车主手册/维修手册} &
 通常有顺序、分级扭矩和角度紧固 & ❓ \\
 \end{longtable}
 }
+
+【注意】 火花塞锥座型无垫圈、扭矩另值；新旧垫圈不同。
 
 【注意】
 扭矩受\textbf{润滑/干燥螺纹、螺纹胶、螺栓材质、母材材质、垫圈状态、是否重复使用}影响很大。同一个螺栓涂油后达到相同预紧力所需扭矩可能明显下降，所以看到``干式/湿式/涂胶''必须按手册条件执行。
@@ -39325,13 +39537,14 @@ DOT 5 & 260°C & 180°C & \textbf{硅油基，只用于明确要求 DOT 5 的系
 胎压、刹车、灯光、机油、链条 & ⭐⭐ \\
 \textbf{链条清洁+上油} & 500-1000 km；\textbf{以车主手册为准} &
 雨天/泥泞后加做 & ⭐ \\
-\textbf{链条调整检查} & 1000-3000 km；\textbf{以车主手册为准} &
+\textbf{链条调整检查} & 检查松紧 500-1000 km
+或至少每月；超自由行程再调整；\textbf{以车主手册为准} &
 先找最紧点，再测自由行程 & ⭐ \\
 \textbf{机油+滤芯} & 按车型手册；通勤常见 5000-10000
 km，严苛城市通勤常取 5000-7500 km；\textbf{以车主手册为准} &
 容量、粘度、滤芯扭矩都查手册 & ⭐/❓ \\
 \textbf{火花塞} & 铜/镍 10000-20000 km（❓）；铂金 30000-50000
-km（⭐）；铱金 60000-100000 km（⭐）；\textbf{以车主手册为准} &
+km（⭐/❓）；铱金 30000-60000 km（❓ 车型差异极大，以车主手册为准） &
 不再简化为``10000 km 必换'' & ⭐/❓ \\
 \textbf{刹车油} & 1-2 年或按手册；\textbf{以车主手册为准} &
 吸水后湿沸点下降 & ⭐⭐ \\

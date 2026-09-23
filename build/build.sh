@@ -159,10 +159,16 @@ pandoc "$MERGED" \
   -o "$BUILD/site_raw.html" 2>/dev/null
 
 # 用 Python 注入搜索 UI 和样式
-python3 -c "
+# Windows 的 python3 可能是 Store 占位符（--version 能过、跑脚本 exit 49）；
+# 真跑一段代码探测，失败就换 python。
+PYTHON_BIN="python3"
+if ! python3 -c "pass" >/dev/null 2>&1; then
+  PYTHON_BIN="python"
+fi
+"$PYTHON_BIN" -c "
 from pathlib import Path
 import re
-src = Path('$BUILD/site_raw.html').read_text()
+src = Path('$BUILD/site_raw.html').read_text(encoding='utf-8')
 toc_match = re.search(r'<nav id=\"TOC\"[^>]*>(.*?)</nav>', src, re.DOTALL)
 toc_inner = toc_match.group(1) if toc_match else '<ul><li>无目录</li></ul>'
 
@@ -298,8 +304,8 @@ app_bar = '<header class=\"app-bar\"><button class=\"menu-toggle\">☰</button><
 app_bar = app_bar.replace('__TOC__', toc_inner)
 src = re.sub(r'<body([^>]*)>', r'<body\1>\\n' + app_bar, src, count=1)
 src = src.replace('</body>', '  </article>\\n</main>\\n' + js + '\\n</body>')
-Path('$SITE_HTML').write_text(src)
-print('✓ site.html size:', Path('$SITE_HTML').stat().st_size, 'bytes')
+Path('$SITE_HTML').write_text(src, encoding='utf-8')
+print('site.html size:', Path('$SITE_HTML').stat().st_size, 'bytes')
 "
 echo ""
 echo "🌐 HTML 站点输出：$SITE_HTML"
